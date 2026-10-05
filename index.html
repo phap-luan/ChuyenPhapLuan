@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đọc Sách Cổ Điển - Dàn Trang Chuẩn</title>
+    <style>
+        :root {
+            --bg-color: #2b1e16;
+            --paper-bg: #f4ecd8;
+            --paper-pattern: #ebdcb9;
+            --border-color: #8c2d19;
+            --color-even: #1d5c2b; /* Xanh lá cho câu chẵn */
+            --color-odd: #9e2a2b;  /* Đỏ / Nâu cho câu lẻ */
+            --text-pinyin: #664422;
+            --bg-hover: rgba(140, 45, 25, 0.12);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "Kaiti SC", "STKaiti", "KaiTi", "SimKai", "DFKai-SB", "Noto Serif CJK SC", serif;
+            background-color: var(--bg-color);
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            padding: 10px;
+            user-select: none;
+        }
+
+        /* Top Bar Navigation */
+        .top-nav {
+            width: 100%;
+            max-width: 1100px;
+            background: #4a1f18;
+            color: #e6c594;
+            padding: 10px 15px;
+            border-radius: 6px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+            border: 1px solid #7a3528;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .top-nav h1 {
+            font-size: 18px;
+            letter-spacing: 1px;
+            font-weight: normal;
+        }
+
+        .controls {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        button, select {
+            background: #e6c594;
+            color: #3a1700;
+            border: 1px solid #8c4a27;
+            padding: 6px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 13px;
+            transition: all 0.2s;
+        }
+
+        button:hover, select:hover {
+            background: #fff0d4;
+            box-shadow: 0 0 5px rgba(230, 197, 148, 0.5);
+        }
+
+        .page-info {
+            font-size: 14px;
+            font-weight: bold;
+            color: #5c2419;
+            margin: 0 10px;
+        }
+
+        /* Bottom Pagination Controls */
+        .bottom-pagination {
+            margin-top: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            width: 100%;
+        }
+
+        /* Main Container */
+        .book-wrapper {
+            position: relative;
+            background-color: var(--paper-bg);
+            background-image: radial-gradient(var(--paper-pattern) 1px, transparent 0);
+            background-size: 20px 20px;
+            border: 8px solid #5c2419;
+            box-shadow: inset 0 0 20px rgba(0,0,0,0.3), 0 10px 25px rgba(0,0,0,0.8);
+            border-radius: 4px;
+            padding: 8px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 100vw;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .book-frame {
+            border: 2px solid var(--border-color);
+            padding: 4px;
+            display: inline-block;
+            background-color: rgba(255, 255, 255, 0.2);
+            max-height: 82vh;
+            overflow-y: auto;
+        }
+
+        /* Classical Grid - Vertical Writing */
+        .page-grid {
+            display: grid;
+            grid-auto-flow: column;
+            grid-template-rows: repeat(43, auto);
+            direction: rtl;
+            border-top: 2px solid var(--border-color);
+            border-bottom: 2px solid var(--border-color);
+        }
+
+        .grid-normal  { grid-template-columns: repeat(13, minmax(38px, max-content)); }
+        .grid-title-1 { grid-template-columns: minmax(76px, max-content) repeat(11, minmax(38px, max-content)); }
+        .grid-title-2 { grid-template-columns: minmax(76px, max-content) minmax(76px, max-content) repeat(9, minmax(38px, max-content)); }
+
+        .title-col {
+            grid-row: 1 / -1;
+            writing-mode: vertical-rl;
+            text-orientation: upright;
+            border-left: 1px solid var(--border-color);
+            border-right: 1px solid var(--border-color);
+            background-color: rgba(140, 45, 25, 0.05);
+            font-weight: bold;
+            color: #2b1e16;
+            display: block !important;
+            text-align: left !important;
+            padding-top: 15px !important;
+            box-sizing: border-box;
+        }
+
+        .title-col-1 {
+            font-size: 40px;
+            letter-spacing: 6px;
+            padding-right: 18px !important;
+        }
+
+        .title-col-2 {
+            font-size: 35px;
+            letter-spacing: 4px;
+            padding-right: 20px !important;
+        }
+
+        .cell {
+            direction: ltr;
+            border-left: 1px solid rgba(140, 45, 25, 0.3);
+            border-bottom: 1px solid transparent;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 0px 1px;
+            cursor: pointer;
+            transition: background-color 0.15s;
+            position: relative;
+            min-height: 28px;
+        }
+
+        .cell:hover {
+            background-color: var(--bg-hover);
+        }
+
+        .cell-even { color: var(--color-even); }
+        .cell-odd { color: var(--color-odd); }
+
+        .cell-hanzi {
+            font-size: 35px;
+            line-height: 1.1;
+        }
+
+        .cell-punctuation .cell-hanzi {
+            display: flex !important;
+            justify-content: center !important;
+            align-items: center !important;
+            width: 100%;
+            height: 100%;
+            transform: translateX(10px) translateY(-16px) !important;
+        }
+
+        .cell-pinyin {
+            font-size: 11px;
+            font-family: Arial, sans-serif;
+            color: var(--text-pinyin);
+            line-height: 1;
+            display: none;
+            text-align: center;
+            margin-top: 1px;
+            white-space: nowrap;
+        }
+
+        .show-pinyin .cell-pinyin { 
+            display: block; 
+        }
+
+        .empty-cell {
+            border-left: 1px solid rgba(140, 45, 25, 0.3);
+            border-bottom: 0px solid transparent;
+            min-height: 28px;
+        }
+
+        /* Modal Explanations & TXT Content */
+        .modal-overlay {
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0,0,0,0.75);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s;
+        }
+
+        .modal-overlay.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .modal-box {
+            background: var(--paper-bg);
+            border: 4px solid #5c2419;
+            width: 90%;
+            max-width: 650px;
+            max-height: 80vh;
+            border-radius: 8px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
+
+        .modal-header {
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .modal-title {
+            font-size: 18px;
+            color: #5c2419;
+            font-weight: bold;
+        }
+
+        .modal-close {
+            background: var(--border-color);
+            color: white;
+            border: none;
+            padding: 4px 10px;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+
+        .modal-content {
+            overflow-y: auto;
+            font-size: 15px;
+            line-height: 1.6;
+            color: #222;
+        }
+
+        .custom-table-container td:first-child,
+        .modal-content [data-cau-id] {
+            font-family: "Kaiti SC", "STKaiti", "KaiTi", "SimKai", "Noto Serif CJK SC", serif;
+        }
+
+        /* Bảng hiển thị chi tiết từ file JS trong Popup */
+        .custom-table-container {
+            overflow-x: auto;
+            margin-top: 15px;
+        }
+        .custom-table-container table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: rgba(255, 255, 255, 0.4);
+            font-size: 14px;
+            font-family: Arial, sans-serif;
+        }
+        .custom-table-container th, 
+        .custom-table-container td {
+            border: 1px solid var(--border-color);
+            padding: 6px 8px;
+            text-align: center;
+        }
+        .custom-table-container th {
+            background-color: rgba(140, 45, 25, 0.15);
+            font-weight: bold;
+            color: #5c2419;
+        }
+
+        /* Nút bấm loa phát âm thanh trong bảng Popup */
+        .btn-play-audio {
+            background: #f4ecd8;
+            border: 1px solid #8c2d19;
+            color: #8c2d19;
+            border-radius: 50%;
+            width: 32px;
+            height: 32px;
+            font-size: 16px;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s ease;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .btn-play-audio:hover {
+            background: #8c2d19;
+            color: #fff;
+            transform: scale(1.1);
+        }
+
+        .btn-play-audio:active {
+            transform: scale(0.95);
+        }
+    </style>
+
+    <!-- Nhúng file popup.js xử lý riêng Modal và TXT -->
+    <script src="popup.js"></script>
+</head>
+<body>
+
+    <div class="top-nav">
+        <h1>📖 古典閱覽</h1>
+        
+        <div class="controls">
+            <label><b></b></label>
+            <select id="selectBai">
+                <option value="01">Bài 1</option>
+                <option value="02">Bài 2</option>
+                <option value="03">Bài 3</option>
+                <option value="04">Bài 4</option>
+                <option value="05">Bài 5</option>
+                <option value="06">Bài 6</option>
+                <option value="07">Bài 7</option>
+                <option value="08">Bài 8</option>
+                <option value="09">Bài 9</option>
+            </select>
+
+            <label><b></b></label>
+            <input type="number" id="inputPhan" value="1" min="1" max="99" style="width: 50px; padding: 5px; border-radius: 4px; border: 1px solid #8c4a27; font-weight: bold;">
+
+            <button id="btnLoadData">🚀 Tải Phần Này</button>
+            <button id="togglePinyinBtn">🔤 Pinyin: ẨN</button>
+        </div>
+    </div>
+
+    <!-- Main Book Frame -->
+    <div class="book-wrapper">
+        <div class="book-frame">
+            <div id="pageGrid" class="page-grid grid-title-2">
+                <!-- Content generated dynamically -->
+            </div>
+        </div>
+        
+        <!-- Điều Hướng Trang (Đã chuyển xuống dưới) -->
+        <div class="bottom-pagination">
+            <button id="btnPrevPage">◀ Trang Trước</button>
+            <span class="page-info" id="pageDisplay">Trang 1 / 1</span>
+            <button id="btnNextPage">Trang Sau ▶</button>
+        </div>
+    </div>
+
+    <!-- Modal Popup -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal-box">
+            <div class="modal-header">
+                <div class="modal-title" id="modalTitle">Phân Tích Chi Tiết Câu</div>
+                <button class="modal-close" id="modalCloseBtn">✕ Đóng</button>
+            </div>
+            <div class="modal-content" id="modalContent">
+                Đang tải dữ liệu...
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let currentPhanData = null;
+        let generatedPages = [];
+        let currentPageIdx = 0;
+        let showPinyin = false;
+
+        const ROWS_PER_COL = 43;
+
+        const pageGrid = document.getElementById('pageGrid');
+        const togglePinyinBtn = document.getElementById('togglePinyinBtn');
+        const selectBai = document.getElementById('selectBai');
+        const inputPhan = document.getElementById('inputPhan');
+        const btnLoadData = document.getElementById('btnLoadData');
+
+        const btnPrevPage = document.getElementById('btnPrevPage');
+        const btnNextPage = document.getElementById('btnNextPage');
+        const pageDisplay = document.getElementById('pageDisplay');
+
+        const modalOverlay = document.getElementById('modalOverlay');
+        const modalCloseBtn = document.getElementById('modalCloseBtn');
+
+        function loadPhanScript(bai, phan) {
+            const baiStr = String(bai).padStart(2, '0');
+            const phanStr = String(phan).padStart(2, '0');
+            const scriptPath = `data/bai_${baiStr}/phan_${phanStr}/data.js`;
+
+            const oldScript = document.getElementById('dynamic-data-script');
+            if (oldScript) oldScript.remove();
+
+            const script = document.createElement('script');
+            script.id = 'dynamic-data-script';
+            script.src = scriptPath;
+
+            script.onload = () => {
+                if (window.CURRENT_PHAN_DATA) {
+                    currentPhanData = window.CURRENT_PHAN_DATA;
+                    processBookPagination();
+                } else {
+                    alert(`Không tìm thấy dữ liệu hợp lệ trong file: ${scriptPath}`);
+                }
+            };
+
+            script.onerror = () => {
+                alert(`Không thể tải: ${scriptPath}\nVui lòng kiểm tra lại cấu trúc thư mục data/`);
+            };
+
+            document.head.appendChild(script);
+        }
+
+        function processBookPagination() {
+            if (!currentPhanData || !currentPhanData.doan_list) return;
+
+            generatedPages = [];
+            let currentPage = [];
+            let currentColCount = 0;
+            let currentCellInCol = 0;
+
+            const meta = currentPhanData.meta || {};
+            const t1 = meta.tieude1 || '';
+            const t2 = meta.tieude2 || '';
+
+            let maxColsPage1 = 13;
+            if (t1 && t2) maxColsPage1 = 9;
+            else if (t1) maxColsPage1 = 11;
+
+            let maxColsCurrentPage = maxColsPage1;
+
+            currentPhanData.doan_list.forEach((doan) => {
+                if (currentCellInCol > 0) {
+                    while (currentCellInCol < ROWS_PER_COL) {
+                        currentPage.push({ type: 'empty' });
+                        currentCellInCol++;
+                    }
+                    currentCellInCol = 0;
+                    currentColCount++;
+                }
+
+                if (currentColCount >= maxColsCurrentPage) {
+                    generatedPages.push(currentPage);
+                    currentPage = [];
+                    currentColCount = 0;
+                    maxColsCurrentPage = 13;
+                }
+
+                if (doan.content && Array.isArray(doan.content)) {
+                    doan.content.forEach((sentence, sIdx) => {
+                        const hanziChars = sentence.hanzi ? sentence.hanzi.split('') : [];
+                        const pinyinList = sentence.pinyin ? sentence.pinyin.trim().split(/\s+/) : [];
+                        let pinyinIdx = 0;
+
+                        hanziChars.forEach((char) => {
+                            let pinyinVal = '';
+                            if (/[\u4e00-\u9fa5]/.test(char) && pinyinIdx < pinyinList.length) {
+                                pinyinVal = pinyinList[pinyinIdx];
+                                pinyinIdx++;
+                            }
+
+                            currentPage.push({
+                                type: 'char',
+                                char: char,
+                                pinyin: pinyinVal,
+                                sentence: sentence,
+                                sentenceIdx: sIdx
+                            });
+
+                            currentCellInCol++;
+
+                            if (currentCellInCol >= ROWS_PER_COL) {
+                                currentCellInCol = 0;
+                                currentColCount++;
+
+                                if (currentColCount >= maxColsCurrentPage) {
+                                    generatedPages.push(currentPage);
+                                    currentPage = [];
+                                    currentColCount = 0;
+                                    maxColsCurrentPage = 13;
+                                }
+                            }
+                        });
+                    });
+                }
+            });
+
+            if (currentPage.length > 0) {
+                while (currentPage.length % ROWS_PER_COL !== 0) {
+                    currentPage.push({ type: 'empty' });
+                }
+                generatedPages.push(currentPage);
+            }
+
+            currentPageIdx = 0;
+            renderPage(currentPageIdx);
+        }
+
+        function renderPage(pageIdx) {
+            if (generatedPages.length === 0) return;
+
+            pageGrid.innerHTML = '';
+            const pageData = generatedPages[pageIdx];
+            const meta = currentPhanData.meta || {};
+
+            const t1 = meta.tieude1 || '';
+            const t2 = meta.tieude2 || '';
+
+            if (pageIdx === 0) {
+                if (t1 && t2) {
+                    pageGrid.className = "page-grid grid-title-2";
+                } else if (t1) {
+                    pageGrid.className = "page-grid grid-title-1";
+                } else {
+                    pageGrid.className = "page-grid grid-normal";
+                }
+
+                if (t1) {
+                    const titleCol1 = document.createElement('div');
+                    titleCol1.className = 'title-col title-col-1'; 
+                    titleCol1.textContent = t1;
+                    pageGrid.appendChild(titleCol1);
+                }
+
+                if (t2) {
+                    const titleCol2 = document.createElement('div');
+                    titleCol2.className = 'title-col title-col-2'; 
+                    titleCol2.textContent = t2;
+                    pageGrid.appendChild(titleCol2);
+                }
+            } else {
+                pageGrid.className = "page-grid grid-normal";
+            }
+
+            if (showPinyin) pageGrid.classList.add('show-pinyin');
+
+            pageData.forEach((cellData) => {
+                if (cellData.type === 'empty') {
+                    const emptyCell = document.createElement('div');
+                    emptyCell.className = 'empty-cell';
+                    pageGrid.appendChild(emptyCell);
+                } else if (cellData.type === 'char') {
+                    const cell = document.createElement('div');
+                    const colorClass = (cellData.sentenceIdx % 2 === 0) ? 'cell-even' : 'cell-odd';
+                    cell.className = `cell ${colorClass}`;
+
+                    const isPunctuation = /^[，。、、，,.\s《》""''“”‘’]+$/.test(cellData.char);
+                    if (isPunctuation) {
+                        cell.classList.add('cell-punctuation');
+                    }
+
+                    const hanziDiv = document.createElement('div');
+                    hanziDiv.className = 'cell-hanzi';
+                    hanziDiv.textContent = cellData.char;
+
+                    const pinyinDiv = document.createElement('div');
+                    pinyinDiv.className = 'cell-pinyin';
+                    pinyinDiv.textContent = cellData.pinyin;
+
+                    cell.appendChild(hanziDiv);
+                    cell.appendChild(pinyinDiv);
+
+                    // Khi click ô chữ, gọi hàm openExplanation trong popup.js
+                    cell.addEventListener('click', () => {
+                        if (typeof openExplanation === 'function') {
+                            openExplanation(cellData.sentence);
+                        }
+                    });
+
+                    pageGrid.appendChild(cell);
+                }
+            });
+
+            pageDisplay.textContent = `Trang ${pageIdx + 1} / ${generatedPages.length}`;
+        }
+
+        btnPrevPage.addEventListener('click', () => {
+            if (currentPageIdx > 0) {
+                currentPageIdx--;
+                renderPage(currentPageIdx);
+            }
+        });
+
+        btnNextPage.addEventListener('click', () => {
+            if (currentPageIdx < generatedPages.length - 1) {
+                currentPageIdx++;
+                renderPage(currentPageIdx);
+            }
+        });
+
+        window.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') btnNextPage.click();
+            if (e.key === 'ArrowRight') btnPrevPage.click();
+        });
+
+        btnLoadData.addEventListener('click', () => {
+            loadPhanScript(selectBai.value, inputPhan.value);
+        });
+
+        togglePinyinBtn.addEventListener('click', () => {
+            showPinyin = !showPinyin;
+            pageGrid.classList.toggle('show-pinyin', showPinyin);
+            togglePinyinBtn.textContent = showPinyin ? "🔤 Pinyin: HIỆN" : "🔤 Pinyin: ẨN";
+        });
+
+        window.addEventListener('DOMContentLoaded', () => {
+            loadPhanScript(1, 1);
+        });
+    </script>
+</body>
+</html>
