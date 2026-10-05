@@ -1,0 +1,32 @@
+/* Exported Rich Text & Table Data */
+(function() {
+  window.RENDER_PAYLOAD = {
+    cau_id: "b01p01-d01-001",
+    editorHtml: "<div style=\"margin-bottom: 12px; line-height: 1.5\">\n        <p>\n          <span style=\"font-size: 14px; font-weight: bold; color: #1e40af;\">原文</span>\n          <span style=\"font-size: 10px; color: #64748b;\"> Nguyên Văn:</span><br>\n          <span style=\"font-size: 28px; font-weight: bold; color: #0f172a;\">我在整個傳法、傳功過程中，本著對社會負責，對學員負責，收到的效果是好的，對整個社會的影響也是比較好的。</span>\n          <span style=\"font-size: 14px; color: #2563eb; cursor: pointer;\">[(wo3)(men2)]</span><br>\n          <span style=\"font-size: 16px; color: #2563eb; font-style: italic;\">wǒ zài zhěng gè chuán fǎ chuán gōng guò chéng zhōng běn zhe duì shè huì fù zé duì xué yuán fù zé</span>\n        </p><p><span style=\"font-style: italic;\"><font color=\"#22c55e\">wǒ zài zhěng gè chuán fǎ chuán gōng guò chéng zhōng běn zhe duì shè huì fù zé duì xué yuán fù zé</font></span><span style=\"font-size: 16px; color: #2563eb; font-style: italic;\"></span></p>\n\n        <p style=\"margin-top: 5px;\">\n          <span style=\"font-size: 14px; font-weight: bold; color: #1e40af;\">直譯</span>\n          <span style=\"font-size: 10px; color: #64748b;\"> Dịch thô:</span><br>\n          <span></span>\n        </p><p style=\"margin-top: 5px;\"><span style=\"color: rgb(51, 65, 85); font-size: 18px;\"><b>Tôi trong toàn bộ quá trình truyền Pháp, truyền Công, xuất phát từ trách nhiệm với xã hội, trách nhiệm với học viên</b></span><span style=\"font-size: 10px; color: #64748b;\"></span></p>\n\n        <p style=\"margin-top: 5px;\">\n          <span style=\"font-size: 14px; font-weight: bold; color: #1e40af;\">順譯</span>\n          <span style=\"font-size: 10px; color: #64748b;\"> Dịch xuôi:</span><br>\n          <span></span>\n        </p><p style=\"margin-top: 5px;\"><span style=\"color: rgb(51, 65, 85); font-size: 18px;\"><b>Tôi trong toàn bộ quá trình truyền Pháp, truyền Công, xuất phát từ trách nhiệm với xã hội, trách nhiệm với học viên</b></span><span style=\"font-size: 10px; color: #64748b;\"></span></p>\n\n        <p style=\"margin-top: 5px;\">\n          <span style=\"font-size: 14px; font-weight: bold; color: #1e40af;\">官方定譯</span>\n          <span style=\"font-size: 10px; color: #64748b;\"> Bản dịch trong sách:</span><br>\n          <span style=\"font-size: 18px; color: #334155;\"><b>Tôi trong toàn bộ quá trình truyền Pháp, truyền Công, xuất phát từ trách nhiệm với xã hội, trách nhiệm với học viên</b></span>\n        </p>\n\n        <hr style=\"margin: 15px 0; border: none; border-top: 1px dashed #cbd5e1;\">\n\n        <p>\n          <span style=\"font-size: 14px; font-weight: bold; color: #1e40af;\">分析句子結構</span>\n          <span style=\"font-size: 10px; color: #64748b;\"> Phân tích cấu trúc câu:</span><br>\n          ➡️ 1. <br>\n          ➡️ 2. <br>\n          ➡️ 3. \n        </p>\n      </div>",
+    tableData: [{"hanzi":"我","audio":"[(wo3)]","pinyin":"wǒ","nghia":"Tôi"},{"hanzi":"在","audio":"[(zai4)]","pinyin":"zài","nghia":"Ở, trong, tại"},{"hanzi":"整個","audio":"[(zheng3)(ge4)]","pinyin":"zhěnggè","nghia":"Toàn bộ, cả, toàn thể"},{"hanzi":"傳法","audio":"[(chuan2)(fa3)]","pinyin":"chuán fǎ","nghia":"Truyền Pháp (giảng dạy giáo lý)"},{"hanzi":"傳功","audio":"[(chuan2)(gong1)]","pinyin":"chuán gōng","nghia":"Truyền công (dạy phương pháp luyện công)"},{"hanzi":"過程","audio":"[(guo4)(cheng2)]","pinyin":"guòchéng","nghia":"Quá trình, tiến trình"},{"hanzi":"中","audio":"[(zhong1)]","pinyin":"zhōng","nghia":"Trong (khoảng thời gian/phạm vi)"},{"hanzi":"本著","audio":"[(ben3zhe)]","pinyin":"běnzhe","nghia":"Căn cứ vào, dựa trên tinh thần, xuất phát từ"},{"hanzi":"對","audio":"[(dui4)]","pinyin":"duì","nghia":"Đối với, với"},{"hanzi":"社會","audio":"[(she4)(hui4)]","pinyin":"shèhuì","nghia":"Xã hội"},{"hanzi":"負責","audio":"[(fu4)(ze2)]","pinyin":"fùzé","nghia":"Chịu trách nhiệm, có trách nhiệm"},{"hanzi":"對","audio":"[(dui4)]","pinyin":"duì","nghia":"Đối với, với"},{"hanzi":"學員","audio":"[(xue2)(yuan2)]","pinyin":"xuéyuán","nghia":"Học viên"},{"hanzi":"負責","audio":"[(fu4)(ze2)]","pinyin":"fùzé","nghia":"Chịu trách nhiệm, có trách nhiệm"},{"hanzi":"收到","audio":"[(shou1)(dao4)]","pinyin":"shōudào","nghia":"Nhận được, thu được"},{"hanzi":"的","audio":"[(de)]","pinyin":"de","nghia":"(Nối bổ ngữ/định ngữ)"},{"hanzi":"效果","audio":"[(xiao4)(guo3)]","pinyin":"xiàoguǒ","nghia":"Hiệu quả, kết quả"},{"hanzi":"是","audio":"[(shi4)]","pinyin":"shì","nghia":"Là"},{"hanzi":"好","audio":"[(hao3)]","pinyin":"hǎo","nghia":"Tốt, hay"},{"hanzi":"對","audio":"[(dui4)]","pinyin":"duì","nghia":"Đối với, với"},{"hanzi":"整個","audio":"[(zheng3)(ge4)]","pinyin":"zhěnggè","nghia":"Toàn bộ, toàn thể"},{"hanzi":"社會","audio":"[(she4)(hui4)]","pinyin":"shèhuì","nghia":"Xã hội"},{"hanzi":"的","audio":"[(de)]","pinyin":"de","nghia":"Của"},{"hanzi":"影響","audio":"[(ying3)(xiang3)]","pinyin":"yǐngxiǎng","nghia":"Ảnh hưởng, tác động"},{"hanzi":"也","audio":"[(ye3)]","pinyin":"yě","nghia":"Cũng"},{"hanzi":"是","audio":"[(shi4)]","pinyin":"shì","nghia":"Là"},{"hanzi":"比較","audio":"[(bi3)(jiao4)]","pinyin":"bǐjiào","nghia":"Khá, tương đối"},{"hanzi":"好","audio":"[(hao3)]","pinyin":"hǎo","nghia":"Tốt, hay"}]
+  };
+
+  window.renderContent = function(targetEditorId, targetTableId) {
+    if (targetEditorId) {
+      var editorEl = document.getElementById(targetEditorId);
+      if (editorEl) editorEl.innerHTML = window.RENDER_PAYLOAD.editorHtml;
+    }
+    
+    if (targetTableId) {
+      var tableEl = document.getElementById(targetTableId);
+      if (tableEl) {
+        var html = '<table border="1" style="border-collapse: collapse; width: 100%;">';
+        html += '<thead><tr><th>Hanzi</th><th>Audio</th><th>Pinyin</th><th>Nghĩa</th></tr></thead><tbody>';
+        window.RENDER_PAYLOAD.tableData.forEach(function(item) {
+          html += '<tr><td>' + item.hanzi + '</td><td>' + item.audio + '</td><td>' + item.pinyin + '</td><td>' + item.nghia + '</td></tr>';
+        });
+        html += '</tbody></table>';
+        tableEl.innerHTML = html;
+      }
+    }
+  };
+
+  document.addEventListener("DOMContentLoaded", function() {
+    window.renderContent("rendered-editor", "rendered-table");
+  });
+})();

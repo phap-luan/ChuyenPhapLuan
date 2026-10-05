@@ -1,0 +1,13 @@
+[
+  {
+    "bai": 1,
+    "ten_bai": "Bài 1",
+    "phan_list": [
+      {
+        "phan": 1,
+        "ten_phan": "Phần 1: Chơn Chính Đưa Người Lên Tầng Cao",
+        "doan_files": ["b01p01-d01.json", "b01p01-d02.json"]
+      }
+    ]
+  }
+]
