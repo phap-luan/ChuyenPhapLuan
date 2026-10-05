@@ -109,27 +109,28 @@
     box-sizing: border-box;
 }
 
-       /* Main Container - Cho phép cuộn ngang nội dung */
-/* Main Container - Sửa lỗi khuất dòng chữ Hán (RTL) */
+    /* Main Container - Tính chuẩn chiều cao thực tế trên Mobile */
 .book-wrapper {
     position: relative;
     margin-top: var(--top-bar-height);
-    height: calc(100vh - var(--top-bar-height) - var(--bottom-bar-height));
+    /* Dùng 100dvh để tự động co giãn chính xác theo màn hình mobile */
+    height: calc(100dvh - var(--top-bar-height) - var(--bottom-bar-height));
     background-color: var(--paper-bg);
     background-image: radial-gradient(var(--paper-pattern) 1px, transparent 0);
     background-size: 20px 20px;
     border: 8px solid #5c2419;
     box-shadow: inset 0 0 20px rgba(0,0,0,0.3), 0 10px 25px rgba(0,0,0,0.8);
     border-radius: 0;
-    padding: 8px 16px; /* Bổ sung padding 16px hai bên để không bị sát lề */
+    /* Thêm padding phía dưới để đẩy nội dung lên trên bottombar */
+    padding: 8px 16px 16px 16px; 
     display: flex;
-    justify-content: flex-start; /* Không dùng center để tránh tràn lề RTL */
-    align-items: center;
+    justify-content: flex-start;
+    align-items: flex-start; /* Chuyển từ center sang flex-start để không bị ép tràn dưới */
     width: 100vw;
-    overflow-x: auto; /* Bật cuộn ngang */
+    overflow-x: auto;
     overflow-y: hidden;
     -webkit-overflow-scrolling: touch;
-    direction: rtl; /* Đảm bảo luồng cuộn tuân theo chiều từ phải sang trái */
+    direction: rtl;
 }
 
 .book-frame {
@@ -139,10 +140,12 @@
     background-color: rgba(255, 255, 255, 0.2);
     height: 100%;
     max-height: 100%;
-    overflow-y: auto;
+    /* Bật cuộn dọc cho khung sách để khi cần có thể vuốt lên thấy trọn vẹn ô cuối */
+    overflow-y: auto; 
     max-width: none;
     flex-shrink: 0;
-    margin: 0 auto; /* Căn giữa tự nhiên khi chiều rộng khung nhỏ hơn màn hình */
+    margin: 0 auto;
+    box-sizing: border-box;
 }
         /* Classical Grid - Vertical Writing */
         .page-grid {
