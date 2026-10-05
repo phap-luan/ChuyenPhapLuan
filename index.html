@@ -32,39 +32,34 @@
             flex-direction: column;
             align-items: center;
             height: 100vh;
-            overflow: hidden; /* Dùng overflow hidden để tránh cuộn toàn trang */
+            overflow: hidden;
             user-select: none;
         }
 
-        /* Top Bar Navigation - Gắn cố định ở trên */
-      .top-nav {
-    position: fixed;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    height: var(--top-bar-height);
-    background: #4a1f18;
-    color: #e6c594;
-    padding: 8px 15px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
-    border-bottom: 1px solid #7a3528;
-    z-index: 100;
-    box-sizing: border-box;
-}
-
-        .top-nav h1 {
-            font-size: 18px;
-            letter-spacing: 1px;
-            font-weight: normal;
+        /* Top Bar Navigation - Gắn cố định ở trên & Căn giữa controls */
+        .top-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: var(--top-bar-height);
+            background: #4a1f18;
+            color: #e6c594;
+            padding: 0 15px;
+            display: flex;
+            justify-content: center; /* Căn giữa controls */
+            align-items: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+            border-bottom: 1px solid #7a3528;
+            z-index: 100;
         }
 
         .controls {
             display: flex;
-            gap: 8px;
+            gap: 10px;
             align-items: center;
+            justify-content: center;
+            position: relative;
         }
 
         button, select {
@@ -77,11 +72,91 @@
             font-weight: bold;
             font-size: 13px;
             transition: all 0.2s;
+            height: 36px;
         }
 
         button:hover, select:hover {
             background: #fff0d4;
             box-shadow: 0 0 5px rgba(230, 197, 148, 0.5);
+        }
+
+        /* Custom Dropdown Chois Phần */
+        .phan-dropdown-container {
+            position: relative;
+            display: inline-block;
+        }
+
+        .btn-phan-select {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 6px;
+            min-width: 140px;
+            background: #e6c594;
+            border: 1px solid #8c4a27;
+            color: #3a1700;
+            padding: 4px 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        /* Menu danh sách các Phần xổ xuống */
+        .phan-list-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            margin-top: 5px;
+            width: 260px;
+            max-height: 350px;
+            overflow-y: auto;
+            background: #ffffff;
+            border: 2px solid #8c2d19;
+            border-radius: 6px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+            z-index: 2000;
+            direction: ltr; /* Hiển thị văn bản xuôi */
+        }
+
+        .phan-list-menu.show {
+            display: block;
+        }
+
+        /* Item 2 dòng */
+        .phan-item {
+            padding: 8px 12px;
+            cursor: pointer;
+            border-bottom: 1px solid #e0e0e0;
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+            transition: background-color 0.2s;
+        }
+
+        /* Khung lẻ màu trắng, khung chẵn màu xám nhạt */
+        .phan-item:nth-child(odd) {
+            background-color: #ffffff;
+        }
+        .phan-item:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .phan-item:hover {
+            background-color: #e6c594 !important;
+        }
+
+        .phan-item-hanzi {
+            font-family: "Kaiti SC", "STKaiti", "KaiTi", "SimKai", serif;
+            font-size: 16px;
+            font-weight: bold;
+            color: #8c2d19;
+        }
+
+        .phan-item-viet {
+            font-family: Arial, sans-serif;
+            font-size: 13px;
+            color: #444444;
         }
 
         .page-info {
@@ -91,62 +166,59 @@
             margin: 0 10px;
         }
 
-        /* Bottom Pagination Controls - Gắn cố định ở dưới */
+        /* Bottom Pagination Controls */
         .bottom-pagination {
-    position: fixed;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    height: var(--bottom-bar-height);
-    background: #4a1f18;
-    border-top: 1px solid #7a3528;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    z-index: 100;
-    box-shadow: 0 -4px 10px rgba(0,0,0,0.5);
-    box-sizing: border-box;
-}
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100vw;
+            height: var(--bottom-bar-height);
+            background: #4a1f18;
+            border-top: 1px solid #7a3528;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            z-index: 100;
+            box-shadow: 0 -4px 10px rgba(0,0,0,0.5);
+        }
 
-    /* Main Container - Tính chuẩn chiều cao thực tế trên Mobile */
-.book-wrapper {
-    position: relative;
-    margin-top: var(--top-bar-height);
-    /* Dùng 100dvh để tự động co giãn chính xác theo màn hình mobile */
-    height: calc(100dvh - var(--top-bar-height) - var(--bottom-bar-height));
-    background-color: var(--paper-bg);
-    background-image: radial-gradient(var(--paper-pattern) 1px, transparent 0);
-    background-size: 20px 20px;
-    border: 8px solid #5c2419;
-    box-shadow: inset 0 0 20px rgba(0,0,0,0.3), 0 10px 25px rgba(0,0,0,0.8);
-    border-radius: 0;
-    /* Thêm padding phía dưới để đẩy nội dung lên trên bottombar */
-    padding: 8px 16px 16px 16px; 
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start; /* Chuyển từ center sang flex-start để không bị ép tràn dưới */
-    width: 100vw;
-    overflow-x: auto;
-    overflow-y: hidden;
-    -webkit-overflow-scrolling: touch;
-    direction: rtl;
-}
+        /* Main Container */
+        .book-wrapper {
+            position: relative;
+            margin-top: var(--top-bar-height);
+            height: calc(100dvh - var(--top-bar-height) - var(--bottom-bar-height));
+            background-color: var(--paper-bg);
+            background-image: radial-gradient(var(--paper-pattern) 1px, transparent 0);
+            background-size: 20px 20px;
+            border: 8px solid #5c2419;
+            box-shadow: inset 0 0 20px rgba(0,0,0,0.3), 0 10px 25px rgba(0,0,0,0.8);
+            border-radius: 0;
+            padding: 8px 16px 16px 16px; 
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            width: 100vw;
+            overflow-x: auto;
+            overflow-y: hidden;
+            -webkit-overflow-scrolling: touch;
+            direction: rtl;
+        }
 
-.book-frame {
-    border: 2px solid var(--border-color);
-    padding: 4px;
-    display: inline-block;
-    background-color: rgba(255, 255, 255, 0.2);
-    height: 100%;
-    max-height: 100%;
-    /* Bật cuộn dọc cho khung sách để khi cần có thể vuốt lên thấy trọn vẹn ô cuối */
-    overflow-y: auto; 
-    max-width: none;
-    flex-shrink: 0;
-    margin: 0 auto;
-    box-sizing: border-box;
-}
+        .book-frame {
+            border: 2px solid var(--border-color);
+            padding: 4px;
+            display: inline-block;
+            background-color: rgba(255, 255, 255, 0.2);
+            height: 100%;
+            max-height: 100%;
+            overflow-y: auto; 
+            max-width: none;
+            flex-shrink: 0;
+            margin: 0 auto;
+            box-sizing: border-box;
+        }
+
         /* Classical Grid - Vertical Writing */
         .page-grid {
             display: grid;
@@ -308,129 +380,53 @@
             line-height: 1.6;
             color: #222;
         }
-
-        .custom-table-container td:first-child,
-        .modal-content [data-cau-id] {
-            font-family: "Kaiti SC", "STKaiti", "KaiTi", "SimKai", "Noto Serif CJK SC", serif;
-        }
-
-        /* Bảng hiển thị chi tiết 5 cột trong Popup (Bảng 2) */
-        .custom-table-container {
-            overflow-x: auto;
-            margin-top: 15px;
-        }
-        .custom-table-container table {
-            width: 100%;
-            border-collapse: collapse;
-            background-color: rgba(255, 255, 255, 0.4);
-            font-size: 14px;
-            font-family: Arial, sans-serif;
-        }
-        .custom-table-container th, 
-        .custom-table-container td {
-            border: 1px solid var(--border-color);
-            padding: 6px 8px;
-            text-align: center;
-        }
-        .custom-table-container th {
-            background-color: rgba(140, 45, 25, 0.15);
-            font-weight: bold;
-            color: #5c2419;
-        }
-
-        /* Nút bấm loa phát âm thanh trong bảng Popup */
-        .btn-play-audio {
-            background: #f4ecd8;
-            border: 1px solid #8c2d19;
-            color: #8c2d19;
-            border-radius: 50%;
-            width: 30px;
-            height: 30px;
-            font-size: 15px;
-            cursor: pointer;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.2s ease;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-
-        .btn-play-audio:hover {
-            background: #8c2d19;
-            color: #fff;
-            transform: scale(1.1);
-        }
-
-        .btn-play-audio:active {
-            transform: scale(0.95);
-        }
-
-        #rendered-editor table {
-            border-collapse: collapse !important;
-            margin: 10px auto !important;
-            background-color: transparent !important;
-            border: none !important;
-            display: inline-table !important;
-        }
-
-        #rendered-editor td {
-            border: none !important;
-            white-space: nowrap !important;
-            text-align: center !important;
-            padding: 2px 6px !important;
-            vertical-align: bottom !important;
-        }
-
-        #rendered-editor tr:nth-child(1) td { font-size: 14px !important; }
-        #rendered-editor tr:nth-child(2) td { font-size: 13px !important; font-family: Arial, sans-serif !important; }
-        #rendered-editor tr:nth-child(3) td { 
-            font-family: "Kaiti SC", "STKaiti", "KaiTi", "SimKai", "DFKai-SB", serif !important;
-            font-weight: bold !important; 
-            font-size: 28px !important;
-            line-height: 1.2 !important;
-        }
-        #rendered-editor tr:nth-child(4) td { font-size: 14px !important; font-family: Arial, sans-serif !important; }
-        #rendered-editor tr:nth-child(5) td { font-size: 13px !important; font-family: Arial, sans-serif !important; }
     </style>
 
     <script src="popup.js"></script>
 </head>
 <body>
 
-    <!-- Top Bar Navigation (Gắn cố định ở top) -->
+    <!-- Top Bar Navigation (Gắn cố định ở top & Căn giữa) -->
     <div class="top-nav" id="topNav">
-        <h1>📖 古典閱覽</h1>
-        
         <div class="controls">
+            <!-- Chọn Bài -->
             <select id="selectBai">
-                <option value="01">Bài 1</option>
-                <option value="02">Bài 2</option>
-                <option value="03">Bài 3</option>
-                <option value="04">Bài 4</option>
-                <option value="05">Bài 5</option>
-                <option value="06">Bài 6</option>
-                <option value="07">Bài 7</option>
-                <option value="08">Bài 8</option>
-                <option value="09">Bài 9</option>
+                <option value="01">第一講</option>
+                <option value="02">第二講</option>
+                <option value="03">第三講</option>
+                <option value="04">第四講</option>
+                <option value="05">第五講</option>
+                <option value="06">第六講</option>
+                <option value="07">第七講</option>
+                <option value="08">第八講</option>
+                <option value="09">第九講</option>
             </select>
 
-            <input type="number" id="inputPhan" value="1" min="1" max="99" style="width: 50px; padding: 5px; border-radius: 4px; border: 1px solid #8c4a27; font-weight: bold;">
+            <!-- Custom Select Box Chois Phần -->
+            <div class="phan-dropdown-container">
+                <button type="button" class="btn-phan-select" id="btnPhanToggle">
+                    <span id="currentPhanLabel">Phần 1</span> ▼
+                </button>
+                <div class="phan-list-menu" id="phanListMenu">
+                    <!-- Danh sách các phần sẽ được Render tự động ở đây -->
+                </div>
+            </div>
 
-            <button id="btnLoadData">🚀 Tải Phần Này</button>
+            <!-- Nút Toggle Pinyin -->
             <button id="togglePinyinBtn">🔤 Pinyin: ẨN</button>
         </div>
     </div>
 
-    <!-- Main Book Frame (Ở giữa, tự động tính chiều cao) -->
+    <!-- Main Book Frame -->
     <div class="book-wrapper" id="bookWrapper">
         <div class="book-frame">
             <div id="pageGrid" class="page-grid grid-title-2">
-                <!-- Content generated dynamically -->
+                <!-- Nội dung sách -->
             </div>
         </div>
     </div>
 
-    <!-- Bottom Pagination Controls (Gắn cố định ở bottom) -->
+    <!-- Bottom Pagination Controls -->
     <div class="bottom-pagination" id="bottomNav">
         <button id="btnPrevPage">◀ Trang Trước</button>
         <span class="page-info" id="pageDisplay">Trang 1 / 1</span>
@@ -451,154 +447,219 @@
     </div>
 
     <script>
-        let currentPhanData = null;
-        let generatedPages = [];
-        let currentPageIdx = 0;
-        let showPinyin = false;
+        // CẤU TRÚC DANH SÁCH TÊN PHẦN THEO TỪNG BÀI (Chỉnh sửa danh sách ở đây)
+       // CẤU TRÚC DANH SÁCH TÊN PHẦN THEO TỪNG BÀI
+const DANH_SACH_PHAN = {
+    "01": [
+        { id: 1, hanzi: "真正往高層次上帶人", viet: "1.Chân Bổn Luận" },
+        { id: 2, hanzi: "不同層次有不同層次的法", viet: "2.Khí Công Và Thể Dục" },
+        { id: 3, hanzi: "真、善、忍是衡量好壞人的唯一標準", viet: "Phần 3: Khí Công Và Ý Niệm" },
+        { id: 4, hanzi: "氣功是史前文化", viet: "Phần 4: Thần Tiên Truyền" }
+    ],
+    "02": [
+        { id: 1, hanzi: "第一節：陰陽學說", viet: "Phần 1: Học Thuyết Âm Dương" },
+        { id: 2, hanzi: "第二節：五行生克", viet: "Phần 2: Ngũ Hành Sinh Khắc" },
+        { id: 3, hanzi: "第三節：臟腑經絡", viet: "Phần 3: Tạng Phủ Kinh Lạc" }
+    ],
+    "03": [
+        { id: 1, hanzi: "第一節：修心養性", viet: "Phần 1: Tu Tâm Dưỡng Tánh" },
+        { id: 2, hanzi: "第二節：天人合一", viet: "Phần 2: Thiên Nhân Hợp Nhất" }
+    ]
+    // Bạn cứ tiếp tục điền đủ 60 phần vào đây theo dạng "01", "02",... "09"
+};
 
-        const ROWS_PER_COL = 43;
+let currentPhanData = null;
+let generatedPages = [];
+let currentPageIdx = 0;
+let showPinyin = false;
+let selectedPhanId = 1;
 
-        const pageGrid = document.getElementById('pageGrid');
-        const togglePinyinBtn = document.getElementById('togglePinyinBtn');
-        const selectBai = document.getElementById('selectBai');
-        const inputPhan = document.getElementById('inputPhan');
-        const btnLoadData = document.getElementById('btnLoadData');
+const ROWS_PER_COL = 43;
 
-        const btnPrevPage = document.getElementById('btnPrevPage');
-        const btnNextPage = document.getElementById('btnNextPage');
-        const pageDisplay = document.getElementById('pageDisplay');
+const pageGrid = document.getElementById('pageGrid');
+const togglePinyinBtn = document.getElementById('togglePinyinBtn');
+const selectBai = document.getElementById('selectBai');
 
-        const modalOverlay = document.getElementById('modalOverlay');
-        const modalCloseBtn = document.getElementById('modalCloseBtn');
+const btnPhanToggle = document.getElementById('btnPhanToggle');
+const currentPhanLabel = document.getElementById('currentPhanLabel');
+const phanListMenu = document.getElementById('phanListMenu');
 
-        // Đồng bộ chiều rộng giữa Top Bar, Bottom Bar và Book Wrapper
-       function syncBarsWidth() {
-    const topNav = document.getElementById('topNav');
-    const bottomNav = document.getElementById('bottomNav');
+const btnPrevPage = document.getElementById('btnPrevPage');
+const btnNextPage = document.getElementById('btnNextPage');
+const pageDisplay = document.getElementById('pageDisplay');
 
-    if (topNav && bottomNav) {
-        // Đặt cố định chiều rộng bằng 100% màn hình thiết bị
-        topNav.style.width = '100vw';
-        bottomNav.style.width = '100vw';
+// Hàm Cập nhật danh sách các Phần vào Menu xổ xuống
+function updatePhanDropdownList(baiValue) {
+    phanListMenu.innerHTML = '';
+    
+    // Lấy danh sách phần của bài hiện tại
+    const list = DANH_SACH_PHAN[baiValue] || [
+        { id: 1, hanzi: "第一節：內容", viet: "Phần 1: Nội dung" }
+    ];
+
+    list.forEach(item => {
+        const div = document.createElement('div');
+        div.className = 'phan-item';
+        div.innerHTML = `
+            <div class="phan-item-hanzi">${item.hanzi}</div>
+            <div class="phan-item-viet">${item.viet}</div>
+        `;
+        
+        // Sự kiện khi bấm chọn 1 phần
+        div.addEventListener('click', (e) => {
+            e.stopPropagation();
+            selectedPhanId = item.id;
+            
+            // HIỂN THỊ TÊN CHỮ HÁN LÊN NÚT BẤM KHI CHỌN
+            currentPhanLabel.textContent = item.hanzi;
+            
+            phanListMenu.classList.remove('show');
+            
+            // Tải dữ liệu phần được chọn ngay lập tức
+            loadPhanScript(selectBai.value, selectedPhanId);
+        });
+
+        phanListMenu.appendChild(div);
+    });
+
+    // Cập nhật nhãn nút bấm mặc định là chữ Hán của Phần 1 khi tải/đổi Bài
+    if (list.length > 0) {
+        currentPhanLabel.textContent = list[0].hanzi;
     }
 }
 
-        window.addEventListener('resize', syncBarsWidth);
+// Bật/tắt menu xổ xuống
+btnPhanToggle.addEventListener('click', (e) => {
+    e.stopPropagation();
+    phanListMenu.classList.toggle('show');
+});
 
-        function loadPhanScript(bai, phan) {
-            const baiStr = String(bai).padStart(2, '0');
-            const phanStr = String(phan).padStart(2, '0');
-            const scriptPath = `data/bai_${baiStr}/phan_${phanStr}/data.js`;
+// Ẩn dropdown khi click bên ngoài
+document.addEventListener('click', () => {
+    phanListMenu.classList.remove('show');
+});
 
-            const oldScript = document.getElementById('dynamic-data-script');
-            if (oldScript) oldScript.remove();
+// Khi thay đổi Bài -> Cập nhật danh sách Phần và tự động tải Phần 1
+selectBai.addEventListener('change', () => {
+    selectedPhanId = 1;
+    updatePhanDropdownList(selectBai.value);
+    loadPhanScript(selectBai.value, 1);
+});
 
-            const script = document.createElement('script');
-            script.id = 'dynamic-data-script';
-            script.src = scriptPath;
+function loadPhanScript(bai, phan) {
+    const baiStr = String(bai).padStart(2, '0');
+    const phanStr = String(phan).padStart(2, '0');
+    const scriptPath = `data/bai_${baiStr}/phan_${phanStr}/data.js`;
 
-            script.onload = () => {
-                if (window.CURRENT_PHAN_DATA) {
-                    currentPhanData = window.CURRENT_PHAN_DATA;
-                    processBookPagination();
-                } else {
-                    alert(`Không tìm thấy dữ liệu hợp lệ trong file: ${scriptPath}`);
-                }
-            };
+    const oldScript = document.getElementById('dynamic-data-script');
+    if (oldScript) oldScript.remove();
 
-            script.onerror = () => {
-                alert(`Không thể tải: ${scriptPath}\nVui lòng kiểm tra lại cấu trúc thư mục data/`);
-            };
+    const script = document.createElement('script');
+    script.id = 'dynamic-data-script';
+    script.src = scriptPath;
 
-            document.head.appendChild(script);
+    script.onload = () => {
+        if (window.CURRENT_PHAN_DATA) {
+            currentPhanData = window.CURRENT_PHAN_DATA;
+            processBookPagination();
+        } else {
+            alert(`Không tìm thấy dữ liệu hợp lệ trong file: ${scriptPath}`);
         }
+    };
 
-        function processBookPagination() {
-            if (!currentPhanData || !currentPhanData.doan_list) return;
+    script.onerror = () => {
+        alert(`Không thể tải: ${scriptPath}\nVui lòng kiểm tra lại cấu trúc thư mục data/`);
+    };
 
-            generatedPages = [];
-            let currentPage = [];
-            let currentColCount = 0;
-            let currentCellInCol = 0;
+    document.head.appendChild(script);
+}
 
-            const meta = currentPhanData.meta || {};
-            const t1 = meta.tieude1 || '';
-            const t2 = meta.tieude2 || '';
+function processBookPagination() {
+    if (!currentPhanData || !currentPhanData.doan_list) return;
 
-            let maxColsPage1 = 13;
-            if (t1 && t2) maxColsPage1 = 9;
-            else if (t1) maxColsPage1 = 11;
+    generatedPages = [];
+    let currentPage = [];
+    let currentColCount = 0;
+    let currentCellInCol = 0;
 
-            let maxColsCurrentPage = maxColsPage1;
+    const meta = currentPhanData.meta || {};
+    const t1 = meta.tieude1 || '';
+    const t2 = meta.tieude2 || '';
 
-            currentPhanData.doan_list.forEach((doan) => {
-                if (currentCellInCol > 0) {
-                    while (currentCellInCol < ROWS_PER_COL) {
-                        currentPage.push({ type: 'empty' });
-                        currentCellInCol++;
-                    }
-                    currentCellInCol = 0;
-                    currentColCount++;
-                }
+    let maxColsPage1 = 13;
+    if (t1 && t2) maxColsPage1 = 9;
+    else if (t1) maxColsPage1 = 11;
 
-                if (currentColCount >= maxColsCurrentPage) {
-                    generatedPages.push(currentPage);
-                    currentPage = [];
-                    currentColCount = 0;
-                    maxColsCurrentPage = 13;
-                }
+    let maxColsCurrentPage = maxColsPage1;
 
-                if (doan.content && Array.isArray(doan.content)) {
-                    doan.content.forEach((sentence, sIdx) => {
-                        const hanziChars = sentence.hanzi ? sentence.hanzi.split('') : [];
-                        const pinyinList = sentence.pinyin ? sentence.pinyin.trim().split(/\s+/) : [];
-                        let pinyinIdx = 0;
-
-                        hanziChars.forEach((char) => {
-                            let pinyinVal = '';
-                            if (/[\u4e00-\u9fa5]/.test(char) && pinyinIdx < pinyinList.length) {
-                                pinyinVal = pinyinList[pinyinIdx];
-                                pinyinIdx++;
-                            }
-
-                            currentPage.push({
-                                type: 'char',
-                                char: char,
-                                pinyin: pinyinVal,
-                                sentence: sentence,
-                                sentenceIdx: sIdx
-                            });
-
-                            currentCellInCol++;
-
-                            if (currentCellInCol >= ROWS_PER_COL) {
-                                currentCellInCol = 0;
-                                currentColCount++;
-
-                                if (currentColCount >= maxColsCurrentPage) {
-                                    generatedPages.push(currentPage);
-                                    currentPage = [];
-                                    currentColCount = 0;
-                                    maxColsCurrentPage = 13;
-                                }
-                            }
-                        });
-                    });
-                }
-            });
-
-            if (currentPage.length > 0) {
-                while (currentPage.length % ROWS_PER_COL !== 0) {
-                    currentPage.push({ type: 'empty' });
-                }
-                generatedPages.push(currentPage);
+    currentPhanData.doan_list.forEach((doan) => {
+        if (currentCellInCol > 0) {
+            while (currentCellInCol < ROWS_PER_COL) {
+                currentPage.push({ type: 'empty' });
+                currentCellInCol++;
             }
-
-            currentPageIdx = 0;
-            renderPage(currentPageIdx);
+            currentCellInCol = 0;
+            currentColCount++;
         }
 
-        function renderPage(pageIdx) {
+        if (currentColCount >= maxColsCurrentPage) {
+            generatedPages.push(currentPage);
+            currentPage = [];
+            currentColCount = 0;
+            maxColsCurrentPage = 13;
+        }
+
+        if (doan.content && Array.isArray(doan.content)) {
+            doan.content.forEach((sentence, sIdx) => {
+                const hanziChars = sentence.hanzi ? sentence.hanzi.split('') : [];
+                const pinyinList = sentence.pinyin ? sentence.pinyin.trim().split(/\s+/) : [];
+                let pinyinIdx = 0;
+
+                hanziChars.forEach((char) => {
+                    let pinyinVal = '';
+                    if (/[\u4e00-\u9fa5]/.test(char) && pinyinIdx < pinyinList.length) {
+                        pinyinVal = pinyinList[pinyinIdx];
+                        pinyinIdx++;
+                    }
+
+                    currentPage.push({
+                        type: 'char',
+                        char: char,
+                        pinyin: pinyinVal,
+                        sentence: sentence,
+                        sentenceIdx: sIdx
+                    });
+
+                    currentCellInCol++;
+
+                    if (currentCellInCol >= ROWS_PER_COL) {
+                        currentCellInCol = 0;
+                        currentColCount++;
+
+                        if (currentColCount >= maxColsCurrentPage) {
+                            generatedPages.push(currentPage);
+                            currentPage = [];
+                            currentColCount = 0;
+                            maxColsCurrentPage = 13;
+                        }
+                    }
+                });
+            });
+        }
+    });
+
+    if (currentPage.length > 0) {
+        while (currentPage.length % ROWS_PER_COL !== 0) {
+            currentPage.push({ type: 'empty' });
+        }
+        generatedPages.push(currentPage);
+    }
+
+    currentPageIdx = 0;
+    renderPage(currentPageIdx);
+}
+
+function renderPage(pageIdx) {
     if (generatedPages.length === 0) return;
 
     pageGrid.innerHTML = '';
@@ -674,51 +735,39 @@
 
     pageDisplay.textContent = `Trang ${pageIdx + 1} / ${generatedPages.length}`;
     
-    // TỰ ĐỘNG CUỘN VỀ SÁT MÉP BÊN PHẢI KHI MỞ / CHUYỂN TRANG
+    // Tự động cuộn về bên phải khi mở trang
     setTimeout(() => {
         const bookWrapper = document.getElementById('bookWrapper');
         if (bookWrapper) {
-            // Đặt vị trí cuộn về ngoài cùng bên phải
             bookWrapper.scrollLeft = bookWrapper.scrollWidth;
-        }
-        if (typeof syncBarsWidth === 'function') {
-            syncBarsWidth();
         }
     }, 50);
 }
 
-        btnPrevPage.addEventListener('click', () => {
-            if (currentPageIdx > 0) {
-                currentPageIdx--;
-                renderPage(currentPageIdx);
-            }
-        });
+btnPrevPage.addEventListener('click', () => {
+    if (currentPageIdx > 0) {
+        currentPageIdx--;
+        renderPage(currentPageIdx);
+    }
+});
 
-        btnNextPage.addEventListener('click', () => {
-            if (currentPageIdx < generatedPages.length - 1) {
-                currentPageIdx++;
-                renderPage(currentPageIdx);
-            }
-        });
+btnNextPage.addEventListener('click', () => {
+    if (currentPageIdx < generatedPages.length - 1) {
+        currentPageIdx++;
+        renderPage(currentPageIdx);
+    }
+});
 
-        window.addEventListener('keydown', (e) => {
-            if (e.key === 'ArrowLeft') btnNextPage.click();
-            if (e.key === 'ArrowRight') btnPrevPage.click();
-        });
+togglePinyinBtn.addEventListener('click', () => {
+    showPinyin = !showPinyin;
+    pageGrid.classList.toggle('show-pinyin', showPinyin);
+    togglePinyinBtn.textContent = showPinyin ? "🔤 Pinyin: HIỆN" : "🔤 Pinyin: ẨN";
+});
 
-        btnLoadData.addEventListener('click', () => {
-            loadPhanScript(selectBai.value, inputPhan.value);
-        });
-
-        togglePinyinBtn.addEventListener('click', () => {
-            showPinyin = !showPinyin;
-            pageGrid.classList.toggle('show-pinyin', showPinyin);
-            togglePinyinBtn.textContent = showPinyin ? "🔤 Pinyin: HIỆN" : "🔤 Pinyin: ẨN";
-        });
-
-        window.addEventListener('DOMContentLoaded', () => {
-            loadPhanScript(1, 1);
-        });
+window.addEventListener('DOMContentLoaded', () => {
+    updatePhanDropdownList('01');
+    loadPhanScript(1, 1);
+});
     </script>
 </body>
 </html>
