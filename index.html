@@ -14,6 +14,8 @@
             --color-odd: #9e2a2b;  /* Đỏ / Nâu cho câu lẻ */
             --text-pinyin: #664422;
             --bg-hover: rgba(140, 45, 25, 0.12);
+            --top-bar-height: 52px;
+            --bottom-bar-height: 52px;
         }
 
         * {
@@ -29,28 +31,29 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            min-height: 100vh;
-            padding: 10px;
+            height: 100vh;
+            overflow: hidden; /* Dùng overflow hidden để tránh cuộn toàn trang */
             user-select: none;
         }
 
-        /* Top Bar Navigation */
-        .top-nav {
-            width: 100%;
-            max-width: 1100px;
-            background: #4a1f18;
-            color: #e6c594;
-            padding: 10px 15px;
-            border-radius: 6px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 12px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.5);
-            border: 1px solid #7a3528;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
+        /* Top Bar Navigation - Gắn cố định ở trên */
+      .top-nav {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: var(--top-bar-height);
+    background: #4a1f18;
+    color: #e6c594;
+    padding: 8px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    border-bottom: 1px solid #7a3528;
+    z-index: 100;
+    box-sizing: border-box;
+}
 
         .top-nav h1 {
             font-size: 18px;
@@ -62,7 +65,6 @@
             display: flex;
             gap: 8px;
             align-items: center;
-            flex-wrap: wrap;
         }
 
         button, select {
@@ -85,36 +87,46 @@
         .page-info {
             font-size: 14px;
             font-weight: bold;
-            color: #5c2419;
+            color: #e6c594;
             margin: 0 10px;
         }
 
-        /* Bottom Pagination Controls */
+        /* Bottom Pagination Controls - Gắn cố định ở dưới */
         .bottom-pagination {
-            margin-top: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            width: 100%;
-        }
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: var(--bottom-bar-height);
+    background: #4a1f18;
+    border-top: 1px solid #7a3528;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    z-index: 100;
+    box-shadow: 0 -4px 10px rgba(0,0,0,0.5);
+    box-sizing: border-box;
+}
 
-        /* Main Container */
+        /* Main Container - Chiều cao = 100vh - (top + bottom bar) */
         .book-wrapper {
             position: relative;
+            margin-top: var(--top-bar-height);
+            height: calc(100vh - var(--top-bar-height) - var(--bottom-bar-height));
             background-color: var(--paper-bg);
             background-image: radial-gradient(var(--paper-pattern) 1px, transparent 0);
             background-size: 20px 20px;
             border: 8px solid #5c2419;
             box-shadow: inset 0 0 20px rgba(0,0,0,0.3), 0 10px 25px rgba(0,0,0,0.8);
-            border-radius: 4px;
+            border-radius: 0;
             padding: 8px;
             display: flex;
             flex-direction: column;
             align-items: center;
+            justify-content: center;
             max-width: 100vw;
-            overflow-x: auto;
-            -webkit-overflow-scrolling: touch;
+            overflow: hidden;
         }
 
         .book-frame {
@@ -122,7 +134,8 @@
             padding: 4px;
             display: inline-block;
             background-color: rgba(255, 255, 255, 0.2);
-            max-height: 82vh;
+            height: 100%;
+            max-height: 100%;
             overflow-y: auto;
         }
 
@@ -293,7 +306,7 @@
             font-family: "Kaiti SC", "STKaiti", "KaiTi", "SimKai", "Noto Serif CJK SC", serif;
         }
 
-        /* Bảng hiển thị chi tiết từ file JS trong Popup */
+        /* Bảng hiển thị chi tiết 5 cột trong Popup (Bảng 2) */
         .custom-table-container {
             overflow-x: auto;
             margin-top: 15px;
@@ -323,9 +336,9 @@
             border: 1px solid #8c2d19;
             color: #8c2d19;
             border-radius: 50%;
-            width: 32px;
-            height: 32px;
-            font-size: 16px;
+            width: 30px;
+            height: 30px;
+            font-size: 15px;
             cursor: pointer;
             display: inline-flex;
             align-items: center;
@@ -343,18 +356,44 @@
         .btn-play-audio:active {
             transform: scale(0.95);
         }
+
+        #rendered-editor table {
+            border-collapse: collapse !important;
+            margin: 10px auto !important;
+            background-color: transparent !important;
+            border: none !important;
+            display: inline-table !important;
+        }
+
+        #rendered-editor td {
+            border: none !important;
+            white-space: nowrap !important;
+            text-align: center !important;
+            padding: 2px 6px !important;
+            vertical-align: bottom !important;
+        }
+
+        #rendered-editor tr:nth-child(1) td { font-size: 14px !important; }
+        #rendered-editor tr:nth-child(2) td { font-size: 13px !important; font-family: Arial, sans-serif !important; }
+        #rendered-editor tr:nth-child(3) td { 
+            font-family: "Kaiti SC", "STKaiti", "KaiTi", "SimKai", "DFKai-SB", serif !important;
+            font-weight: bold !important; 
+            font-size: 28px !important;
+            line-height: 1.2 !important;
+        }
+        #rendered-editor tr:nth-child(4) td { font-size: 14px !important; font-family: Arial, sans-serif !important; }
+        #rendered-editor tr:nth-child(5) td { font-size: 13px !important; font-family: Arial, sans-serif !important; }
     </style>
 
-    <!-- Nhúng file popup.js xử lý riêng Modal và TXT -->
     <script src="popup.js"></script>
 </head>
 <body>
 
-    <div class="top-nav">
+    <!-- Top Bar Navigation (Gắn cố định ở top) -->
+    <div class="top-nav" id="topNav">
         <h1>📖 古典閱覽</h1>
         
         <div class="controls">
-            <label><b></b></label>
             <select id="selectBai">
                 <option value="01">Bài 1</option>
                 <option value="02">Bài 2</option>
@@ -367,7 +406,6 @@
                 <option value="09">Bài 9</option>
             </select>
 
-            <label><b></b></label>
             <input type="number" id="inputPhan" value="1" min="1" max="99" style="width: 50px; padding: 5px; border-radius: 4px; border: 1px solid #8c4a27; font-weight: bold;">
 
             <button id="btnLoadData">🚀 Tải Phần Này</button>
@@ -375,20 +413,20 @@
         </div>
     </div>
 
-    <!-- Main Book Frame -->
-    <div class="book-wrapper">
+    <!-- Main Book Frame (Ở giữa, tự động tính chiều cao) -->
+    <div class="book-wrapper" id="bookWrapper">
         <div class="book-frame">
             <div id="pageGrid" class="page-grid grid-title-2">
                 <!-- Content generated dynamically -->
             </div>
         </div>
-        
-        <!-- Điều Hướng Trang (Đã chuyển xuống dưới) -->
-        <div class="bottom-pagination">
-            <button id="btnPrevPage">◀ Trang Trước</button>
-            <span class="page-info" id="pageDisplay">Trang 1 / 1</span>
-            <button id="btnNextPage">Trang Sau ▶</button>
-        </div>
+    </div>
+
+    <!-- Bottom Pagination Controls (Gắn cố định ở bottom) -->
+    <div class="bottom-pagination" id="bottomNav">
+        <button id="btnPrevPage">◀ Trang Trước</button>
+        <span class="page-info" id="pageDisplay">Trang 1 / 1</span>
+        <button id="btnNextPage">Trang Sau ▶</button>
     </div>
 
     <!-- Modal Popup -->
@@ -424,6 +462,21 @@
 
         const modalOverlay = document.getElementById('modalOverlay');
         const modalCloseBtn = document.getElementById('modalCloseBtn');
+
+        // Đồng bộ chiều rộng giữa Top Bar, Bottom Bar và Book Wrapper
+        function syncBarsWidth() {
+            const bookWrapper = document.getElementById('bookWrapper');
+            const topNav = document.getElementById('topNav');
+            const bottomNav = document.getElementById('bottomNav');
+
+            if (bookWrapper && topNav && bottomNav) {
+                const wrapperWidth = bookWrapper.offsetWidth + 'px';
+                topNav.style.width = wrapperWidth;
+                bottomNav.style.width = wrapperWidth;
+            }
+        }
+
+        window.addEventListener('resize', syncBarsWidth);
 
         function loadPhanScript(bai, phan) {
             const baiStr = String(bai).padStart(2, '0');
@@ -602,7 +655,6 @@
                     cell.appendChild(hanziDiv);
                     cell.appendChild(pinyinDiv);
 
-                    // Khi click ô chữ, gọi hàm openExplanation trong popup.js
                     cell.addEventListener('click', () => {
                         if (typeof openExplanation === 'function') {
                             openExplanation(cellData.sentence);
@@ -614,6 +666,7 @@
             });
 
             pageDisplay.textContent = `Trang ${pageIdx + 1} / ${generatedPages.length}`;
+            setTimeout(syncBarsWidth, 10);
         }
 
         btnPrevPage.addEventListener('click', () => {
