@@ -110,6 +110,7 @@
 }
 
        /* Main Container - Cho phép cuộn ngang nội dung */
+/* Main Container - Sửa lỗi khuất dòng chữ Hán (RTL) */
 .book-wrapper {
     position: relative;
     margin-top: var(--top-bar-height);
@@ -120,14 +121,15 @@
     border: 8px solid #5c2419;
     box-shadow: inset 0 0 20px rgba(0,0,0,0.3), 0 10px 25px rgba(0,0,0,0.8);
     border-radius: 0;
-    padding: 8px;
+    padding: 8px 16px; /* Bổ sung padding 16px hai bên để không bị sát lề */
     display: flex;
-    justify-content: center; /* Căn giữa khung khi màn hình to */
+    justify-content: flex-start; /* Không dùng center để tránh tràn lề RTL */
     align-items: center;
     width: 100vw;
-    overflow-x: auto; /* KÍCH HOẠT CUỘN NGANG */
-    overflow-y: hidden; /* Chống cuộn dọc thừa */
-    -webkit-overflow-scrolling: touch; /* Trôi mượt trên iOS/Safari */
+    overflow-x: auto; /* Bật cuộn ngang */
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    direction: rtl; /* Đảm bảo luồng cuộn tuân theo chiều từ phải sang trái */
 }
 
 .book-frame {
@@ -137,11 +139,11 @@
     background-color: rgba(255, 255, 255, 0.2);
     height: 100%;
     max-height: 100%;
-    overflow-y: auto; /* Giữ lại cuộn dọc cho các ô chữ nếu vượt chiều cao */
+    overflow-y: auto;
     max-width: none;
-    flex-shrink: 0; /* Không cho bị ép dẹp lại */
+    flex-shrink: 0;
+    margin: 0 auto; /* Căn giữa tự nhiên khi chiều rộng khung nhỏ hơn màn hình */
 }
-
         /* Classical Grid - Vertical Writing */
         .page-grid {
             display: grid;
@@ -594,82 +596,93 @@
         }
 
         function renderPage(pageIdx) {
-            if (generatedPages.length === 0) return;
+    if (generatedPages.length === 0) return;
 
-            pageGrid.innerHTML = '';
-            const pageData = generatedPages[pageIdx];
-            const meta = currentPhanData.meta || {};
+    pageGrid.innerHTML = '';
+    const pageData = generatedPages[pageIdx];
+    const meta = currentPhanData.meta || {};
 
-            const t1 = meta.tieude1 || '';
-            const t2 = meta.tieude2 || '';
+    const t1 = meta.tieude1 || '';
+    const t2 = meta.tieude2 || '';
 
-            if (pageIdx === 0) {
-                if (t1 && t2) {
-                    pageGrid.className = "page-grid grid-title-2";
-                } else if (t1) {
-                    pageGrid.className = "page-grid grid-title-1";
-                } else {
-                    pageGrid.className = "page-grid grid-normal";
-                }
+    if (pageIdx === 0) {
+        if (t1 && t2) {
+            pageGrid.className = "page-grid grid-title-2";
+        } else if (t1) {
+            pageGrid.className = "page-grid grid-title-1";
+        } else {
+            pageGrid.className = "page-grid grid-normal";
+        }
 
-                if (t1) {
-                    const titleCol1 = document.createElement('div');
-                    titleCol1.className = 'title-col title-col-1'; 
-                    titleCol1.textContent = t1;
-                    pageGrid.appendChild(titleCol1);
-                }
+        if (t1) {
+            const titleCol1 = document.createElement('div');
+            titleCol1.className = 'title-col title-col-1'; 
+            titleCol1.textContent = t1;
+            pageGrid.appendChild(titleCol1);
+        }
 
-                if (t2) {
-                    const titleCol2 = document.createElement('div');
-                    titleCol2.className = 'title-col title-col-2'; 
-                    titleCol2.textContent = t2;
-                    pageGrid.appendChild(titleCol2);
-                }
-            } else {
-                pageGrid.className = "page-grid grid-normal";
+        if (t2) {
+            const titleCol2 = document.createElement('div');
+            titleCol2.className = 'title-col title-col-2'; 
+            titleCol2.textContent = t2;
+            pageGrid.appendChild(titleCol2);
+        }
+    } else {
+        pageGrid.className = "page-grid grid-normal";
+    }
+
+    if (showPinyin) pageGrid.classList.add('show-pinyin');
+
+    pageData.forEach((cellData) => {
+        if (cellData.type === 'empty') {
+            const emptyCell = document.createElement('div');
+            emptyCell.className = 'empty-cell';
+            pageGrid.appendChild(emptyCell);
+        } else if (cellData.type === 'char') {
+            const cell = document.createElement('div');
+            const colorClass = (cellData.sentenceIdx % 2 === 0) ? 'cell-even' : 'cell-odd';
+            cell.className = `cell ${colorClass}`;
+
+            const isPunctuation = /^[，。、、，,.\s《》""''“”‘’]+$/.test(cellData.char);
+            if (isPunctuation) {
+                cell.classList.add('cell-punctuation');
             }
 
-            if (showPinyin) pageGrid.classList.add('show-pinyin');
+            const hanziDiv = document.createElement('div');
+            hanziDiv.className = 'cell-hanzi';
+            hanziDiv.textContent = cellData.char;
 
-            pageData.forEach((cellData) => {
-                if (cellData.type === 'empty') {
-                    const emptyCell = document.createElement('div');
-                    emptyCell.className = 'empty-cell';
-                    pageGrid.appendChild(emptyCell);
-                } else if (cellData.type === 'char') {
-                    const cell = document.createElement('div');
-                    const colorClass = (cellData.sentenceIdx % 2 === 0) ? 'cell-even' : 'cell-odd';
-                    cell.className = `cell ${colorClass}`;
+            const pinyinDiv = document.createElement('div');
+            pinyinDiv.className = 'cell-pinyin';
+            pinyinDiv.textContent = cellData.pinyin;
 
-                    const isPunctuation = /^[，。、、，,.\s《》""''“”‘’]+$/.test(cellData.char);
-                    if (isPunctuation) {
-                        cell.classList.add('cell-punctuation');
-                    }
+            cell.appendChild(hanziDiv);
+            cell.appendChild(pinyinDiv);
 
-                    const hanziDiv = document.createElement('div');
-                    hanziDiv.className = 'cell-hanzi';
-                    hanziDiv.textContent = cellData.char;
-
-                    const pinyinDiv = document.createElement('div');
-                    pinyinDiv.className = 'cell-pinyin';
-                    pinyinDiv.textContent = cellData.pinyin;
-
-                    cell.appendChild(hanziDiv);
-                    cell.appendChild(pinyinDiv);
-
-                    cell.addEventListener('click', () => {
-                        if (typeof openExplanation === 'function') {
-                            openExplanation(cellData.sentence);
-                        }
-                    });
-
-                    pageGrid.appendChild(cell);
+            cell.addEventListener('click', () => {
+                if (typeof openExplanation === 'function') {
+                    openExplanation(cellData.sentence);
                 }
             });
 
-            pageDisplay.textContent = `Trang ${pageIdx + 1} / ${generatedPages.length}`;
-            setTimeout(syncBarsWidth, 10);
+            pageGrid.appendChild(cell);
         }
+    });
+
+    pageDisplay.textContent = `Trang ${pageIdx + 1} / ${generatedPages.length}`;
+    
+    // TỰ ĐỘNG CUỘN VỀ SÁT MÉP BÊN PHẢI KHI MỞ / CHUYỂN TRANG
+    setTimeout(() => {
+        const bookWrapper = document.getElementById('bookWrapper');
+        if (bookWrapper) {
+            // Đặt vị trí cuộn về ngoài cùng bên phải
+            bookWrapper.scrollLeft = bookWrapper.scrollWidth;
+        }
+        if (typeof syncBarsWidth === 'function') {
+            syncBarsWidth();
+        }
+    }, 50);
+}
 
         btnPrevPage.addEventListener('click', () => {
             if (currentPageIdx > 0) {
