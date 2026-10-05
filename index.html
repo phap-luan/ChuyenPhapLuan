@@ -109,35 +109,38 @@
     box-sizing: border-box;
 }
 
-        /* Main Container - Chiều cao = 100vh - (top + bottom bar) */
-        .book-wrapper {
-            position: relative;
-            margin-top: var(--top-bar-height);
-            height: calc(100vh - var(--top-bar-height) - var(--bottom-bar-height));
-            background-color: var(--paper-bg);
-            background-image: radial-gradient(var(--paper-pattern) 1px, transparent 0);
-            background-size: 20px 20px;
-            border: 8px solid #5c2419;
-            box-shadow: inset 0 0 20px rgba(0,0,0,0.3), 0 10px 25px rgba(0,0,0,0.8);
-            border-radius: 0;
-            padding: 8px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            max-width: 100vw;
-            overflow: hidden;
-        }
+       /* Main Container - Cho phép cuộn ngang nội dung */
+.book-wrapper {
+    position: relative;
+    margin-top: var(--top-bar-height);
+    height: calc(100vh - var(--top-bar-height) - var(--bottom-bar-height));
+    background-color: var(--paper-bg);
+    background-image: radial-gradient(var(--paper-pattern) 1px, transparent 0);
+    background-size: 20px 20px;
+    border: 8px solid #5c2419;
+    box-shadow: inset 0 0 20px rgba(0,0,0,0.3), 0 10px 25px rgba(0,0,0,0.8);
+    border-radius: 0;
+    padding: 8px;
+    display: flex;
+    justify-content: center; /* Căn giữa khung khi màn hình to */
+    align-items: center;
+    width: 100vw;
+    overflow-x: auto; /* KÍCH HOẠT CUỘN NGANG */
+    overflow-y: hidden; /* Chống cuộn dọc thừa */
+    -webkit-overflow-scrolling: touch; /* Trôi mượt trên iOS/Safari */
+}
 
-        .book-frame {
-            border: 2px solid var(--border-color);
-            padding: 4px;
-            display: inline-block;
-            background-color: rgba(255, 255, 255, 0.2);
-            height: 100%;
-            max-height: 100%;
-            overflow-y: auto;
-        }
+.book-frame {
+    border: 2px solid var(--border-color);
+    padding: 4px;
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.2);
+    height: 100%;
+    max-height: 100%;
+    overflow-y: auto; /* Giữ lại cuộn dọc cho các ô chữ nếu vượt chiều cao */
+    max-width: none;
+    flex-shrink: 0; /* Không cho bị ép dẹp lại */
+}
 
         /* Classical Grid - Vertical Writing */
         .page-grid {
@@ -464,17 +467,16 @@
         const modalCloseBtn = document.getElementById('modalCloseBtn');
 
         // Đồng bộ chiều rộng giữa Top Bar, Bottom Bar và Book Wrapper
-        function syncBarsWidth() {
-            const bookWrapper = document.getElementById('bookWrapper');
-            const topNav = document.getElementById('topNav');
-            const bottomNav = document.getElementById('bottomNav');
+       function syncBarsWidth() {
+    const topNav = document.getElementById('topNav');
+    const bottomNav = document.getElementById('bottomNav');
 
-            if (bookWrapper && topNav && bottomNav) {
-                const wrapperWidth = bookWrapper.offsetWidth + 'px';
-                topNav.style.width = wrapperWidth;
-                bottomNav.style.width = wrapperWidth;
-            }
-        }
+    if (topNav && bottomNav) {
+        // Đặt cố định chiều rộng bằng 100% màn hình thiết bị
+        topNav.style.width = '100vw';
+        bottomNav.style.width = '100vw';
+    }
+}
 
         window.addEventListener('resize', syncBarsWidth);
 
