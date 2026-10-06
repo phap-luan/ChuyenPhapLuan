@@ -23,9 +23,14 @@
             margin: 0;
             padding: 0;
         }
-
+        @font-face {
+            font-family: 'CNLe2';
+            src: url('CNLe2.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+        }
         body {
-            font-family: "Kaiti SC", "STKaiti", "KaiTi", "SimKai", "DFKai-SB", "Noto Serif CJK SC", serif;
+            /*font-family: "Kaiti SC", "STKaiti", "KaiTi", "SimKai", "DFKai-SB", "Noto Serif CJK SC", serif;*/
             background-color: var(--bg-color);
             color: #333;
             display: flex;
@@ -36,7 +41,7 @@
             user-select: none;
         }
 
-        /* Top Bar Navigation - Gắn cố định ở trên & Căn giữa controls */
+        /* Top Bar Navigation */
         .top-nav {
             position: fixed;
             top: 0;
@@ -47,7 +52,7 @@
             color: #e6c594;
             padding: 0 15px;
             display: flex;
-            justify-content: center; /* Căn giữa controls */
+            justify-content: center;
             align-items: center;
             box-shadow: 0 4px 10px rgba(0,0,0,0.5);
             border-bottom: 1px solid #7a3528;
@@ -80,7 +85,7 @@
             box-shadow: 0 0 5px rgba(230, 197, 148, 0.5);
         }
 
-        /* Custom Dropdown Chois Phần */
+        /* Custom Dropdown Chọn Phần */
         .phan-dropdown-container {
             position: relative;
             display: inline-block;
@@ -101,7 +106,6 @@
             font-weight: bold;
         }
 
-        /* Menu danh sách các Phần xổ xuống */
         .phan-list-menu {
             display: none;
             position: absolute;
@@ -116,14 +120,13 @@
             border-radius: 6px;
             box-shadow: 0 8px 20px rgba(0,0,0,0.6);
             z-index: 2000;
-            direction: ltr; /* Hiển thị văn bản xuôi */
+            direction: ltr;
         }
 
         .phan-list-menu.show {
             display: block;
         }
 
-        /* Item 2 dòng */
         .phan-item {
             padding: 8px 12px;
             cursor: pointer;
@@ -134,20 +137,12 @@
             transition: background-color 0.2s;
         }
 
-        /* Khung lẻ màu trắng, khung chẵn màu xám nhạt */
-        .phan-item:nth-child(odd) {
-            background-color: #ffffff;
-        }
-        .phan-item:nth-child(even) {
-            background-color: #f2f2f2;
-        }
-
-        .phan-item:hover {
-            background-color: #e6c594 !important;
-        }
+        .phan-item:nth-child(odd) { background-color: #ffffff; }
+        .phan-item:nth-child(even) { background-color: #f2f2f2; }
+        .phan-item:hover { background-color: #e6c594 !important; }
 
         .phan-item-hanzi {
-            font-family: "Kaiti SC", "STKaiti", "KaiTi", "SimKai", serif;
+            /*font-family: "Kaiti SC", "STKaiti", "KaiTi", "SimKai", serif;*/
             font-size: 16px;
             font-weight: bold;
             color: #8c2d19;
@@ -166,7 +161,6 @@
             margin: 0 10px;
         }
 
-        /* Bottom Pagination Controls */
         .bottom-pagination {
             position: fixed;
             bottom: 0;
@@ -183,7 +177,6 @@
             box-shadow: 0 -4px 10px rgba(0,0,0,0.5);
         }
 
-        /* Main Container */
         .book-wrapper {
             position: relative;
             margin-top: var(--top-bar-height);
@@ -193,7 +186,6 @@
             background-size: 20px 20px;
             border: 8px solid #5c2419;
             box-shadow: inset 0 0 20px rgba(0,0,0,0.3), 0 10px 25px rgba(0,0,0,0.8);
-            border-radius: 0;
             padding: 8px 16px 16px 16px; 
             display: flex;
             justify-content: flex-start;
@@ -213,7 +205,6 @@
             height: 100%;
             max-height: 100%;
             overflow-y: auto; 
-            max-width: none;
             flex-shrink: 0;
             margin: 0 auto;
             box-sizing: border-box;
@@ -233,31 +224,65 @@
         .grid-title-1 { grid-template-columns: minmax(76px, max-content) repeat(11, minmax(38px, max-content)); }
         .grid-title-2 { grid-template-columns: minmax(76px, max-content) minmax(76px, max-content) repeat(9, minmax(38px, max-content)); }
 
-        .title-col {
+        .title-column-container {
             grid-row: 1 / -1;
-            writing-mode: vertical-rl;
-            text-orientation: upright;
+            display: grid;
+            grid-template-rows: repeat(43, auto);
+            grid-auto-flow: column;
             border-left: 1px solid var(--border-color);
             border-right: 1px solid var(--border-color);
             background-color: rgba(140, 45, 25, 0.05);
-            font-weight: bold;
+        }
+
+        .title-cell {
+            direction: ltr;
+            border-left: 1px solid rgba(140, 45, 25, 0.3);
+            border-bottom: 1px solid transparent;
+            display: flex;
+            flex-direction: column-reverse;
+            align-items: center;
+            justify-content: center;
+            padding: 0px 1px;
+            cursor: pointer;
+            position: relative;
+            min-height: calc(15px * 43 / 43); 
+            transition: background-color 0.15s;
+        }
+
+        .title-cell:hover {
+            background-color: var(--bg-hover);
+        }
+
+        .title-cell .cell-hanzi {
+            /*font-size: 38px;*/
+            font-family: 'CNLe2', "Kaiti SC", "STKaiti", "KaiTi", serif;
             color: #2b1e16;
-            display: block !important;
-            text-align: left !important;
-            padding-top: 15px !important;
-            box-sizing: border-box;
+        }
+/* Tùy chỉnh riêng cho Tiêu đề 1 (ví dụ: 《第一講》) */
+.title-cell-1 .cell-hanzi {
+    font-size: 50px; /* Chỉnh kích thước chữ Hán tiêu đề 1 theo ý muốn */
+line-height: 0.8;
+}
+
+/* Tùy chỉnh riêng cho Tiêu đề 2 (ví dụ: 真正往高層次上帶人) */
+.title-cell-2 .cell-hanzi {
+    font-size: 40px; /* Chỉnh kích thước chữ Hán tiêu đề 2 theo ý muốn */
+line-height: 0.8;
+}
+
+        .title-cell .cell-pinyin {
+            font-size: 11px;
+            font-family: Arial, sans-serif;
+            color: var(--text-pinyin);
+            line-height: 1;
+            display: none;
+            text-align: center;
+            margin-top: 1px;
+            white-space: nowrap;
         }
 
-        .title-col-1 {
-            font-size: 40px;
-            letter-spacing: 6px;
-            padding-right: 18px !important;
-        }
-
-        .title-col-2 {
-            font-size: 35px;
-            letter-spacing: 4px;
-            padding-right: 20px !important;
+        .show-pinyin .title-cell .cell-pinyin { 
+            display: block; 
         }
 
         .cell {
@@ -265,7 +290,7 @@
             border-left: 1px solid rgba(140, 45, 25, 0.3);
             border-bottom: 1px solid transparent;
             display: flex;
-            flex-direction: column;
+            flex-direction: column-reverse;
             align-items: center;
             justify-content: center;
             padding: 0px 1px;
@@ -283,8 +308,9 @@
         .cell-odd { color: var(--color-odd); }
 
         .cell-hanzi {
-            font-size: 35px;
-            line-height: 1.1;
+            font-size: 30px;
+            line-height: 0.8;
+            font-family: 'CNLe2', "Kaiti SC", "STKaiti", "KaiTi", serif;
         }
 
         .cell-punctuation .cell-hanzi {
@@ -317,7 +343,7 @@
             min-height: 28px;
         }
 
-        /* Modal Explanations & TXT Content */
+        /* Modal Explanations */
         .modal-overlay {
             position: fixed;
             top: 0; left: 0; right: 0; bottom: 0;
@@ -347,7 +373,7 @@
             display: flex;
             flex-direction: column;
             box-shadow: 0 10px 30px rgba(0,0,0,0.8);
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
         }
 
         .modal-header {
@@ -380,394 +406,479 @@
             line-height: 1.6;
             color: #222;
         }
-    </style>
+/* Nút bấm loa phát âm thanh trong bảng Popup */
+        .btn-play-audio {
+            background: #f4ecd8;
+            border: 1px solid #8c2d19;
+            color: #8c2d19;
+            border-radius: 50%;
+            width: 15px;
+            height: 15px;
+            font-size: 10px;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s ease;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
 
+        .btn-play-audio:hover {
+            background: #8c2d19;
+            color: #fff;
+            transform: scale(1.1);
+        }
+
+        .btn-play-audio:active {
+            transform: scale(0.95);
+        }
+ /* ========================================================= */
+        /* DINH DANG CSS CHO BANG MA TRAN 5 HANG TRONG POPUP (BANG 1) */
+        /* ========================================================= */
+        #rendered-editor table {
+            border-collapse: collapse !important;
+            margin: 2px auto !important;
+            background-color: transparent !important;
+            border: none !important;
+            display: inline-table !important;
+        }
+
+        #rendered-editor td {
+            border: none !important;
+            white-space: nowrap !important;
+            text-align: center !important; /* CĂN GIỮA TOÀN BỘ CHỮ VÀ NÚT LOA */
+            padding: 2px 2px !important;
+            vertical-align: bottom !important;
+        }
+
+        /* Dynamic Styling Từng Hàng cho Bảng 1 */
+        /* Hàng 1: Audio (Loa) */
+        #rendered-editor tr:nth-child(1) td { 
+            font-size: 10px !important; 
+        }
+
+        /* Hàng 2: Yueyin (Phiên âm/Âm đọc) */
+        #rendered-editor tr:nth-child(2) td { 
+            font-size: 13px !important; 
+            font-family: Arial, sans-serif !important;
+        }
+
+        /* Hàng 3: Hanzi (Chữ Hán - To nhất) */
+        #rendered-editor tr:nth-child(3) td { 
+            font-family: 'CNLe2', "Kaiti SC", "STKaiti", "KaiTi", "SimKai", "DFKai-SB", serif !important;
+            font-size: 35px !important; /* ĐIỀU CHỈNH CỠ CHỮ HANZI TẠI ĐÂY */
+            line-height: 1 !important;
+        }
+
+        /* Hàng 4: Pinyin */
+        #rendered-editor tr:nth-child(4) td { 
+            font-size: 14px !important; /* ĐIỀU CHỈNH CỠ CHỮ PINYIN TẠI ĐÂY */
+            font-family: Arial, sans-serif !important;
+        }
+
+        /* Hàng 5: Nghĩa */
+        #rendered-editor tr:nth-child(5) td { 
+            font-size: 13px !important; /* ĐIỀU CHỈNH CỠ CHỮ NGHĨA TẠI ĐÂY */
+            font-family: Arial, sans-serif !important;
+            font-weight: bold !important; 
+        }
+
+    </style>
     <script src="popup.js"></script>
 </head>
 <body>
 
-    <!-- Top Bar Navigation (Gắn cố định ở top & Căn giữa) -->
     <div class="top-nav" id="topNav">
         <div class="controls">
-            <!-- Chọn Bài -->
             <select id="selectBai">
                 <option value="01">第一講</option>
                 <option value="02">第二講</option>
                 <option value="03">第三講</option>
-                <option value="04">第四講</option>
-                <option value="05">第五講</option>
-                <option value="06">第六講</option>
-                <option value="07">第七講</option>
-                <option value="08">第八講</option>
-                <option value="09">第九講</option>
             </select>
 
-            <!-- Custom Select Box Chois Phần -->
             <div class="phan-dropdown-container">
                 <button type="button" class="btn-phan-select" id="btnPhanToggle">
                     <span id="currentPhanLabel">Phần 1</span> ▼
                 </button>
-                <div class="phan-list-menu" id="phanListMenu">
-                    <!-- Danh sách các phần sẽ được Render tự động ở đây -->
-                </div>
+                <div class="phan-list-menu" id="phanListMenu"></div>
             </div>
 
-            <!-- Nút Toggle Pinyin -->
             <button id="togglePinyinBtn">🔤 Pinyin: ẨN</button>
         </div>
     </div>
 
-    <!-- Main Book Frame -->
     <div class="book-wrapper" id="bookWrapper">
         <div class="book-frame">
-            <div id="pageGrid" class="page-grid grid-title-2">
-                <!-- Nội dung sách -->
-            </div>
+            <div id="pageGrid" class="page-grid grid-title-2"></div>
         </div>
     </div>
 
-    <!-- Bottom Pagination Controls -->
     <div class="bottom-pagination" id="bottomNav">
         <button id="btnPrevPage">◀ Trang Trước</button>
         <span class="page-info" id="pageDisplay">Trang 1 / 1</span>
         <button id="btnNextPage">Trang Sau ▶</button>
     </div>
 
-    <!-- Modal Popup -->
     <div class="modal-overlay" id="modalOverlay">
         <div class="modal-box">
             <div class="modal-header">
                 <div class="modal-title" id="modalTitle">Phân Tích Chi Tiết Câu</div>
                 <button class="modal-close" id="modalCloseBtn">✕ Đóng</button>
             </div>
-            <div class="modal-content" id="modalContent">
-                Đang tải dữ liệu...
-            </div>
+            <div class="modal-content" id="modalContent">Đang tải dữ liệu...</div>
         </div>
     </div>
 
     <script>
-        // CẤU TRÚC DANH SÁCH TÊN PHẦN THEO TỪNG BÀI (Chỉnh sửa danh sách ở đây)
-       // CẤU TRÚC DANH SÁCH TÊN PHẦN THEO TỪNG BÀI
-const DANH_SACH_PHAN = {
-    "01": [
-        { id: 1, hanzi: "真正往高層次上帶人", viet: "1.Chân Bổn Luận" },
-        { id: 2, hanzi: "不同層次有不同層次的法", viet: "2.Khí Công Và Thể Dục" },
-        { id: 3, hanzi: "真、善、忍是衡量好壞人的唯一標準", viet: "Phần 3: Khí Công Và Ý Niệm" },
-        { id: 4, hanzi: "氣功是史前文化", viet: "Phần 4: Thần Tiên Truyền" }
-    ],
-    "02": [
-        { id: 1, hanzi: "第一節：陰陽學說", viet: "Phần 1: Học Thuyết Âm Dương" },
-        { id: 2, hanzi: "第二節：五行生克", viet: "Phần 2: Ngũ Hành Sinh Khắc" },
-        { id: 3, hanzi: "第三節：臟腑經絡", viet: "Phần 3: Tạng Phủ Kinh Lạc" }
-    ],
-    "03": [
-        { id: 1, hanzi: "第一節：修心養性", viet: "Phần 1: Tu Tâm Dưỡng Tánh" },
-        { id: 2, hanzi: "第二節：天人合一", viet: "Phần 2: Thiên Nhân Hợp Nhất" }
-    ]
-    // Bạn cứ tiếp tục điền đủ 60 phần vào đây theo dạng "01", "02",... "09"
-};
+        const DANH_SACH_PHAN = {
+            "01": [
+                { id: 1, hanzi: "真正往高層次上帶人", viet: "1.Chân Bổn Luận" },
+                { id: 2, hanzi: "不同層次有不同層次的法", viet: "2.Khí Công Và Thể Dục" }
+            ],
+            "02": [
+                { id: 1, hanzi: "第一節：陰陽學說", viet: "Phần 1: Học Thuyết Âm Dương" }
+            ],
+            "03": [
+                { id: 1, hanzi: "第一節：修心養性", viet: "Phần 1: Tu Tâm Dưỡng Tánh" }
+            ]
+        };
 
-let currentPhanData = null;
-let generatedPages = [];
-let currentPageIdx = 0;
-let showPinyin = false;
-let selectedPhanId = 1;
+        let currentPhanData = null;
+        let generatedPages = [];
+        let currentPageIdx = 0;
+        let showPinyin = false;
+        let selectedPhanId = 1;
 
-const ROWS_PER_COL = 43;
+        const ROWS_PER_COL = 43;
+        const TITLE_ROWS = 21; // Mỗi cột tiêu đề có 21 ô
 
-const pageGrid = document.getElementById('pageGrid');
-const togglePinyinBtn = document.getElementById('togglePinyinBtn');
-const selectBai = document.getElementById('selectBai');
+        const pageGrid = document.getElementById('pageGrid');
+        const togglePinyinBtn = document.getElementById('togglePinyinBtn');
+        const selectBai = document.getElementById('selectBai');
+        const btnPhanToggle = document.getElementById('btnPhanToggle');
+        const currentPhanLabel = document.getElementById('currentPhanLabel');
+        const phanListMenu = document.getElementById('phanListMenu');
+        const btnPrevPage = document.getElementById('btnPrevPage');
+        const btnNextPage = document.getElementById('btnNextPage');
+        const pageDisplay = document.getElementById('pageDisplay');
 
-const btnPhanToggle = document.getElementById('btnPhanToggle');
-const currentPhanLabel = document.getElementById('currentPhanLabel');
-const phanListMenu = document.getElementById('phanListMenu');
+        function updatePhanDropdownList(baiValue) {
+            phanListMenu.innerHTML = '';
+            const list = DANH_SACH_PHAN[baiValue] || [{ id: 1, hanzi: "第一節", viet: "Phần 1" }];
 
-const btnPrevPage = document.getElementById('btnPrevPage');
-const btnNextPage = document.getElementById('btnNextPage');
-const pageDisplay = document.getElementById('pageDisplay');
+            list.forEach(item => {
+                const div = document.createElement('div');
+                div.className = 'phan-item';
+                div.innerHTML = `
+                    <div class="phan-item-hanzi">${item.hanzi}</div>
+                    <div class="phan-item-viet">${item.viet}</div>
+                `;
+                div.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    selectedPhanId = item.id;
+                    currentPhanLabel.textContent = item.hanzi;
+                    phanListMenu.classList.remove('show');
+                    loadPhanScript(selectBai.value, selectedPhanId);
+                });
+                phanListMenu.appendChild(div);
+            });
 
-// Hàm Cập nhật danh sách các Phần vào Menu xổ xuống
-function updatePhanDropdownList(baiValue) {
-    phanListMenu.innerHTML = '';
-    
-    // Lấy danh sách phần của bài hiện tại
-    const list = DANH_SACH_PHAN[baiValue] || [
-        { id: 1, hanzi: "第一節：內容", viet: "Phần 1: Nội dung" }
-    ];
+            if (list.length > 0) {
+                currentPhanLabel.textContent = list[0].hanzi;
+            }
+        }
 
-    list.forEach(item => {
-        const div = document.createElement('div');
-        div.className = 'phan-item';
-        div.innerHTML = `
-            <div class="phan-item-hanzi">${item.hanzi}</div>
-            <div class="phan-item-viet">${item.viet}</div>
-        `;
-        
-        // Sự kiện khi bấm chọn 1 phần
-        div.addEventListener('click', (e) => {
+        btnPhanToggle.addEventListener('click', (e) => {
             e.stopPropagation();
-            selectedPhanId = item.id;
-            
-            // HIỂN THỊ TÊN CHỮ HÁN LÊN NÚT BẤM KHI CHỌN
-            currentPhanLabel.textContent = item.hanzi;
-            
-            phanListMenu.classList.remove('show');
-            
-            // Tải dữ liệu phần được chọn ngay lập tức
-            loadPhanScript(selectBai.value, selectedPhanId);
+            phanListMenu.classList.toggle('show');
         });
 
-        phanListMenu.appendChild(div);
-    });
+        document.addEventListener('click', () => {
+            phanListMenu.classList.remove('show');
+        });
 
-    // Cập nhật nhãn nút bấm mặc định là chữ Hán của Phần 1 khi tải/đổi Bài
-    if (list.length > 0) {
-        currentPhanLabel.textContent = list[0].hanzi;
-    }
-}
+        selectBai.addEventListener('change', () => {
+            selectedPhanId = 1;
+            updatePhanDropdownList(selectBai.value);
+            loadPhanScript(selectBai.value, 1);
+        });
 
-// Bật/tắt menu xổ xuống
-btnPhanToggle.addEventListener('click', (e) => {
-    e.stopPropagation();
-    phanListMenu.classList.toggle('show');
-});
+        function loadPhanScript(bai, phan) {
+            const baiStr = String(bai).padStart(2, '0');
+            const phanStr = String(phan).padStart(2, '0');
+            const scriptPath = `data/bai_${baiStr}/phan_${phanStr}/data.js`;
 
-// Ẩn dropdown khi click bên ngoài
-document.addEventListener('click', () => {
-    phanListMenu.classList.remove('show');
-});
+            const oldScript = document.getElementById('dynamic-data-script');
+            if (oldScript) oldScript.remove();
 
-// Khi thay đổi Bài -> Cập nhật danh sách Phần và tự động tải Phần 1
-selectBai.addEventListener('change', () => {
-    selectedPhanId = 1;
-    updatePhanDropdownList(selectBai.value);
-    loadPhanScript(selectBai.value, 1);
-});
+            const script = document.createElement('script');
+            script.id = 'dynamic-data-script';
+            script.src = scriptPath;
 
-function loadPhanScript(bai, phan) {
-    const baiStr = String(bai).padStart(2, '0');
-    const phanStr = String(phan).padStart(2, '0');
-    const scriptPath = `data/bai_${baiStr}/phan_${phanStr}/data.js`;
+            script.onload = () => {
+                if (window.CURRENT_PHAN_DATA) {
+                    currentPhanData = window.CURRENT_PHAN_DATA;
+                    processBookPagination();
+                } else {
+                    alert(`Không tìm thấy dữ liệu hợp lệ trong file: ${scriptPath}`);
+                }
+            };
 
-    const oldScript = document.getElementById('dynamic-data-script');
-    if (oldScript) oldScript.remove();
+            script.onerror = () => {
+                alert(`Không thể tải: ${scriptPath}`);
+            };
 
-    const script = document.createElement('script');
-    script.id = 'dynamic-data-script';
-    script.src = scriptPath;
-
-    script.onload = () => {
-        if (window.CURRENT_PHAN_DATA) {
-            currentPhanData = window.CURRENT_PHAN_DATA;
-            processBookPagination();
-        } else {
-            alert(`Không tìm thấy dữ liệu hợp lệ trong file: ${scriptPath}`);
-        }
-    };
-
-    script.onerror = () => {
-        alert(`Không thể tải: ${scriptPath}\nVui lòng kiểm tra lại cấu trúc thư mục data/`);
-    };
-
-    document.head.appendChild(script);
-}
-
-function processBookPagination() {
-    if (!currentPhanData || !currentPhanData.doan_list) return;
-
-    generatedPages = [];
-    let currentPage = [];
-    let currentColCount = 0;
-    let currentCellInCol = 0;
-
-    const meta = currentPhanData.meta || {};
-    const t1 = meta.tieude1 || '';
-    const t2 = meta.tieude2 || '';
-
-    let maxColsPage1 = 13;
-    if (t1 && t2) maxColsPage1 = 9;
-    else if (t1) maxColsPage1 = 11;
-
-    let maxColsCurrentPage = maxColsPage1;
-
-    currentPhanData.doan_list.forEach((doan) => {
-        if (currentCellInCol > 0) {
-            while (currentCellInCol < ROWS_PER_COL) {
-                currentPage.push({ type: 'empty' });
-                currentCellInCol++;
-            }
-            currentCellInCol = 0;
-            currentColCount++;
+            document.head.appendChild(script);
         }
 
-        if (currentColCount >= maxColsCurrentPage) {
-            generatedPages.push(currentPage);
-            currentPage = [];
-            currentColCount = 0;
-            maxColsCurrentPage = 13;
-        }
+        function processBookPagination() {
+            if (!currentPhanData || !currentPhanData.doan_list) return;
 
-        if (doan.content && Array.isArray(doan.content)) {
-            doan.content.forEach((sentence, sIdx) => {
-                const hanziChars = sentence.hanzi ? sentence.hanzi.split('') : [];
-                const pinyinList = sentence.pinyin ? sentence.pinyin.trim().split(/\s+/) : [];
-                let pinyinIdx = 0;
+            generatedPages = [];
+            let currentPage = [];
+            let currentColCount = 0;
+            let currentCellInCol = 0;
 
-                hanziChars.forEach((char) => {
-                    let pinyinVal = '';
-                    if (/[\u4e00-\u9fa5]/.test(char) && pinyinIdx < pinyinList.length) {
-                        pinyinVal = pinyinList[pinyinIdx];
-                        pinyinIdx++;
+            const meta = currentPhanData.meta || {};
+            const t1 = meta.tieude1 || '';
+            const t2 = meta.tieude2 || '';
+
+            let maxColsPage1 = 13;
+            if (t1 && t2) maxColsPage1 = 9;
+            else if (t1) maxColsPage1 = 11;
+
+            let maxColsCurrentPage = maxColsPage1;
+
+            currentPhanData.doan_list.forEach((doan) => {
+                if (currentCellInCol > 0) {
+                    while (currentCellInCol < ROWS_PER_COL) {
+                        currentPage.push({ type: 'empty' });
+                        currentCellInCol++;
                     }
+                    currentCellInCol = 0;
+                    currentColCount++;
+                }
 
-                    currentPage.push({
-                        type: 'char',
-                        char: char,
-                        pinyin: pinyinVal,
-                        sentence: sentence,
-                        sentenceIdx: sIdx
+                if (currentColCount >= maxColsCurrentPage) {
+                    generatedPages.push(currentPage);
+                    currentPage = [];
+                    currentColCount = 0;
+                    maxColsCurrentPage = 13;
+                }
+
+                if (doan.content && Array.isArray(doan.content)) {
+                    doan.content.forEach((sentence, sIdx) => {
+                        const hanziChars = sentence.hanzi ? sentence.hanzi.split('') : [];
+                        const pinyinList = sentence.pinyin ? sentence.pinyin.trim().split(/\s+/) : [];
+                        let pinyinIdx = 0;
+
+                        hanziChars.forEach((char) => {
+                            let pinyinVal = '';
+                            if (/[\u4e00-\u9fa5]/.test(char) && pinyinIdx < pinyinList.length) {
+                                pinyinVal = pinyinList[pinyinIdx];
+                                pinyinIdx++;
+                            }
+
+                            currentPage.push({
+                                type: 'char',
+                                char: char,
+                                pinyin: pinyinVal,
+                                sentence: sentence,
+                                sentenceIdx: sIdx
+                            });
+
+                            currentCellInCol++;
+
+                            if (currentCellInCol >= ROWS_PER_COL) {
+                                currentCellInCol = 0;
+                                currentColCount++;
+
+                                if (currentColCount >= maxColsCurrentPage) {
+                                    generatedPages.push(currentPage);
+                                    currentPage = [];
+                                    currentColCount = 0;
+                                    maxColsCurrentPage = 13;
+                                }
+                            }
+                        });
                     });
-
-                    currentCellInCol++;
-
-                    if (currentCellInCol >= ROWS_PER_COL) {
-                        currentCellInCol = 0;
-                        currentColCount++;
-
-                        if (currentColCount >= maxColsCurrentPage) {
-                            generatedPages.push(currentPage);
-                            currentPage = [];
-                            currentColCount = 0;
-                            maxColsCurrentPage = 13;
-                        }
-                    }
-                });
-            });
-        }
-    });
-
-    if (currentPage.length > 0) {
-        while (currentPage.length % ROWS_PER_COL !== 0) {
-            currentPage.push({ type: 'empty' });
-        }
-        generatedPages.push(currentPage);
-    }
-
-    currentPageIdx = 0;
-    renderPage(currentPageIdx);
-}
-
-function renderPage(pageIdx) {
-    if (generatedPages.length === 0) return;
-
-    pageGrid.innerHTML = '';
-    const pageData = generatedPages[pageIdx];
-    const meta = currentPhanData.meta || {};
-
-    const t1 = meta.tieude1 || '';
-    const t2 = meta.tieude2 || '';
-
-    if (pageIdx === 0) {
-        if (t1 && t2) {
-            pageGrid.className = "page-grid grid-title-2";
-        } else if (t1) {
-            pageGrid.className = "page-grid grid-title-1";
-        } else {
-            pageGrid.className = "page-grid grid-normal";
-        }
-
-        if (t1) {
-            const titleCol1 = document.createElement('div');
-            titleCol1.className = 'title-col title-col-1'; 
-            titleCol1.textContent = t1;
-            pageGrid.appendChild(titleCol1);
-        }
-
-        if (t2) {
-            const titleCol2 = document.createElement('div');
-            titleCol2.className = 'title-col title-col-2'; 
-            titleCol2.textContent = t2;
-            pageGrid.appendChild(titleCol2);
-        }
-    } else {
-        pageGrid.className = "page-grid grid-normal";
-    }
-
-    if (showPinyin) pageGrid.classList.add('show-pinyin');
-
-    pageData.forEach((cellData) => {
-        if (cellData.type === 'empty') {
-            const emptyCell = document.createElement('div');
-            emptyCell.className = 'empty-cell';
-            pageGrid.appendChild(emptyCell);
-        } else if (cellData.type === 'char') {
-            const cell = document.createElement('div');
-            const colorClass = (cellData.sentenceIdx % 2 === 0) ? 'cell-even' : 'cell-odd';
-            cell.className = `cell ${colorClass}`;
-
-            const isPunctuation = /^[，。、、，,.\s《》""''“”‘’]+$/.test(cellData.char);
-            if (isPunctuation) {
-                cell.classList.add('cell-punctuation');
-            }
-
-            const hanziDiv = document.createElement('div');
-            hanziDiv.className = 'cell-hanzi';
-            hanziDiv.textContent = cellData.char;
-
-            const pinyinDiv = document.createElement('div');
-            pinyinDiv.className = 'cell-pinyin';
-            pinyinDiv.textContent = cellData.pinyin;
-
-            cell.appendChild(hanziDiv);
-            cell.appendChild(pinyinDiv);
-
-            cell.addEventListener('click', () => {
-                if (typeof openExplanation === 'function') {
-                    openExplanation(cellData.sentence);
                 }
             });
 
-            pageGrid.appendChild(cell);
-        }
-    });
+            if (currentPage.length > 0) {
+                while (currentPage.length % ROWS_PER_COL !== 0) {
+                    currentPage.push({ type: 'empty' });
+                }
+                generatedPages.push(currentPage);
+            }
 
-    pageDisplay.textContent = `Trang ${pageIdx + 1} / ${generatedPages.length}`;
-    
-    // Tự động cuộn về bên phải khi mở trang
-    setTimeout(() => {
-        const bookWrapper = document.getElementById('bookWrapper');
-        if (bookWrapper) {
-            bookWrapper.scrollLeft = bookWrapper.scrollWidth;
+            currentPageIdx = 0;
+            renderPage(currentPageIdx);
         }
-    }, 50);
+
+        // Thêm tham số colIndex vào hàm
+function createTitleColumnElement(titleText, titlePinyin, titleId, colIndex) {
+    const colDiv = document.createElement('div');
+    colDiv.className = 'title-column-container';
+
+    const chars = titleText ? titleText.split('') : [];
+    const pinyins = titlePinyin ? titlePinyin.trim().split(/\s+/) : [];
+    let pIdx = 0;
+
+    const titleSentenceObj = {
+        cau_id: titleId || 'title-id',
+        hanzi: titleText,
+        pinyin: titlePinyin,
+        nghia: titleText
+    };
+
+    for (let i = 0; i < TITLE_ROWS; i++) {
+        const cell = document.createElement('div');
+        // Phân biệt class riêng cho tiêu đề 1 và tiêu đề 2
+        cell.className = `title-cell title-cell-${colIndex}`;
+
+        if (i < chars.length) {
+            const char = chars[i];
+            const hanziDiv = document.createElement('div');
+            hanziDiv.className = 'cell-hanzi';
+            hanziDiv.textContent = char;
+            cell.appendChild(hanziDiv);
+
+            let pinVal = '';
+            if (/[\u4e00-\u9fa5]/.test(char) && pIdx < pinyins.length) {
+                pinVal = pinyins[pIdx];
+                pIdx++;
+            }
+            const pinyinDiv = document.createElement('div');
+            pinyinDiv.className = 'cell-pinyin';
+            pinyinDiv.textContent = pinVal;
+            cell.appendChild(pinyinDiv);
+        } else {
+            const emptyHanzi = document.createElement('div');
+            emptyHanzi.className = 'cell-hanzi';
+            emptyHanzi.textContent = '';
+            cell.appendChild(emptyHanzi);
+        }
+
+        cell.addEventListener('click', () => {
+            if (typeof openExplanation === 'function') {
+                openExplanation(titleSentenceObj);
+            }
+        });
+
+        colDiv.appendChild(cell);
+    }
+    return colDiv;
 }
 
-btnPrevPage.addEventListener('click', () => {
-    if (currentPageIdx > 0) {
-        currentPageIdx--;
-        renderPage(currentPageIdx);
-    }
-});
+        function renderPage(pageIdx) {
+            if (generatedPages.length === 0) return;
 
-btnNextPage.addEventListener('click', () => {
-    if (currentPageIdx < generatedPages.length - 1) {
-        currentPageIdx++;
-        renderPage(currentPageIdx);
-    }
-});
+            pageGrid.innerHTML = '';
+            const pageData = generatedPages[pageIdx];
+            const meta = currentPhanData.meta || {};
 
-togglePinyinBtn.addEventListener('click', () => {
-    showPinyin = !showPinyin;
-    pageGrid.classList.toggle('show-pinyin', showPinyin);
-    togglePinyinBtn.textContent = showPinyin ? "🔤 Pinyin: HIỆN" : "🔤 Pinyin: ẨN";
-});
+            const t1 = meta.tieude1 || '';
+            const t2 = meta.tieude2 || '';
+            const t1_py = meta.tieude1_pinyin || '';
+            const t2_py = meta.tieude2_pinyin || '';
+            const t1_id = meta.tieude1_id || '';
+            const t2_id = meta.tieude2_id || '';
 
-window.addEventListener('DOMContentLoaded', () => {
-    updatePhanDropdownList('01');
-    loadPhanScript(1, 1);
-});
+            if (pageIdx === 0) {
+                if (t1 && t2) {
+                    pageGrid.className = "page-grid grid-title-2";
+                } else if (t1) {
+                    pageGrid.className = "page-grid grid-title-1";
+                } else {
+                    pageGrid.className = "page-grid grid-normal";
+                }
+
+                if (t1) {
+    const titleCol1 = createTitleColumnElement(t1, t1_py, t1_id, 1); // Truyền số 1
+    pageGrid.appendChild(titleCol1);
+}
+
+if (t2) {
+    const titleCol2 = createTitleColumnElement(t2, t2_py, t2_id, 2); // Truyền số 2
+    pageGrid.appendChild(titleCol2);
+}
+            } else {
+                pageGrid.className = "page-grid grid-normal";
+            }
+
+            if (showPinyin) pageGrid.classList.add('show-pinyin');
+
+            pageData.forEach((cellData) => {
+                if (cellData.type === 'empty') {
+                    const emptyCell = document.createElement('div');
+                    emptyCell.className = 'empty-cell';
+                    pageGrid.appendChild(emptyCell);
+                } else if (cellData.type === 'char') {
+                    const cell = document.createElement('div');
+                    const colorClass = (cellData.sentenceIdx % 2 === 0) ? 'cell-even' : 'cell-odd';
+                    cell.className = `cell ${colorClass}`;
+
+                    const isPunctuation = /^[$,。、、，,.\s《》""''“”‘’]+$/.test(cellData.char);
+                    if (isPunctuation) {
+                        cell.classList.add('cell-punctuation');
+                    }
+
+                    const hanziDiv = document.createElement('div');
+                    hanziDiv.className = 'cell-hanzi';
+                    hanziDiv.textContent = cellData.char;
+
+                    const pinyinDiv = document.createElement('div');
+                    pinyinDiv.className = 'cell-pinyin';
+                    pinyinDiv.textContent = cellData.pinyin;
+  
+                    cell.appendChild(hanziDiv);
+                    cell.appendChild(pinyinDiv);
+
+                    cell.addEventListener('click', () => {
+                        if (typeof openExplanation === 'function') {
+                            openExplanation(cellData.sentence);
+                        }
+                    });
+
+                    pageGrid.appendChild(cell);
+                }
+            });
+
+            pageDisplay.textContent = `Trang ${pageIdx + 1} / ${generatedPages.length}`;
+            
+            setTimeout(() => {
+                const bookWrapper = document.getElementById('bookWrapper');
+                if (bookWrapper) {
+                    bookWrapper.scrollLeft = bookWrapper.scrollWidth;
+                }
+            }, 50);
+        }
+
+        btnPrevPage.addEventListener('click', () => {
+            if (currentPageIdx > 0) {
+                currentPageIdx--;
+                renderPage(currentPageIdx);
+            }
+        });
+
+        btnNextPage.addEventListener('click', () => {
+            if (currentPageIdx < generatedPages.length - 1) {
+                currentPageIdx++;
+                renderPage(currentPageIdx);
+            }
+        });
+
+        togglePinyinBtn.addEventListener('click', () => {
+            showPinyin = !showPinyin;
+            pageGrid.classList.toggle('show-pinyin', showPinyin);
+            togglePinyinBtn.textContent = showPinyin ? "🔤 Pinyin: HIỆN" : "🔤 Pinyin: ẨN";
+        });
+
+        window.addEventListener('DOMContentLoaded', () => {
+            updatePhanDropdownList('01');
+            loadPhanScript(1, 1);
+        });
     </script>
 </body>
 </html>
