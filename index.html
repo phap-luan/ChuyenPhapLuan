@@ -30,7 +30,6 @@
             font-style: normal;
         }
         body {
-            /*font-family: "Kaiti SC", "STKaiti", "KaiTi", "SimKai", "DFKai-SB", "Noto Serif CJK SC", serif;*/
             background-color: var(--bg-color);
             color: #333;
             display: flex;
@@ -142,7 +141,6 @@
         .phan-item:hover { background-color: #e6c594 !important; }
 
         .phan-item-hanzi {
-            /*font-family: "Kaiti SC", "STKaiti", "KaiTi", "SimKai", serif;*/
             font-size: 16px;
             font-weight: bold;
             color: #8c2d19;
@@ -209,6 +207,17 @@
             margin: 0 auto;
             box-sizing: border-box;
         }
+/* Khung chứa riêng cho Trang Bìa - Tách biệt hoàn toàn với .book-frame */
+        .cover-frame {
+            width: 500px;
+            max-width: 100%;
+            height: 100%;
+            margin: 0 auto;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
 
         /* Classical Grid - Vertical Writing */
         .page-grid {
@@ -254,21 +263,19 @@
         }
 
         .title-cell .cell-hanzi {
-            /*font-size: 38px;*/
             font-family: 'CNLe2', "Kaiti SC", "STKaiti", "KaiTi", serif;
             color: #2b1e16;
         }
-/* Tùy chỉnh riêng cho Tiêu đề 1 (ví dụ: 《第一講》) */
-.title-cell-1 .cell-hanzi {
-    font-size: 50px; /* Chỉnh kích thước chữ Hán tiêu đề 1 theo ý muốn */
-line-height: 0.8;
-}
 
-/* Tùy chỉnh riêng cho Tiêu đề 2 (ví dụ: 真正往高層次上帶人) */
-.title-cell-2 .cell-hanzi {
-    font-size: 40px; /* Chỉnh kích thước chữ Hán tiêu đề 2 theo ý muốn */
-line-height: 0.8;
-}
+        .title-cell-1 .cell-hanzi {
+            font-size: 50px;
+            line-height: 0.8;
+        }
+
+        .title-cell-2 .cell-hanzi {
+            font-size: 40px;
+            line-height: 0.8;
+        }
 
         .title-cell .cell-pinyin {
             font-size: 11px;
@@ -343,6 +350,110 @@ line-height: 0.8;
             min-height: 28px;
         }
 
+       /* --- CSS CHO TRANG BÌA (3 TRANG KHÔNG PHÂN CỘT) --- */
+.trang-bia-page {
+    width: 500px;           /* Cố định chiều ngang bằng trang nội dung */
+    max-width: 100%;
+    height: 100%;
+    max-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Bắt đầu từ đỉnh trang để không bị khuất phần trên */
+    align-items: center;
+    padding: 20px 25px;
+    text-align: center;
+    direction: ltr; 
+    box-sizing: border-box;
+    margin: 0 auto;
+    overflow-y: auto;            /* Cho phép cuộn dọc khi nội dung dài */
+}
+
+        /* Trang 1: Nền Vàng + Chữ trắng */
+        .trang-bia-1 {
+            background-color: #d4af37;
+            color: #FFF23B;
+            font-family: 'CNLe2', "Kaiti SC", "STKaiti", "KaiTi", serif !important;
+            justify-content: flex-start;
+            padding-top: 120px;
+        }
+        .trang-bia-1 h1 {
+            font-size: 70px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+            font-weight: normal;
+            letter-spacing: 2px;
+        }
+       .trang-bia-1 h2 {
+            font-size: 45px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+            font-weight: normal;
+            letter-spacing: 2px;
+        }
+
+        /* Trang 2: Nền giấy như các phần khác, Lời ngỏ */
+        .trang-bia-2 {
+            background-color: var(--paper-bg);
+            color: #3a1700;
+            align-items: flex-start;
+            text-align: left;
+        }
+        .trang-bia-2 h2 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 8px;
+            width: 100%;
+            color: #8c2d19;
+            text-align: center;
+        }
+        .trang-bia-2 p {
+            font-size: 16px;
+            line-height: 1.8;
+            margin-bottom: 10px;
+            width: 100%; /* Trải rộng bằng khung màn hình (đã cách lề nhờ padding của trang-bia-page) */
+            word-wrap: break-word;        /* Tự động xuống dòng khi hết khổ */
+            overflow-wrap: break-word;
+        }
+
+        /* Trang 3: Nền xanh dương + hình ở giữa nửa trên + chữ bên dưới */
+        .trang-bia-3 {
+            background-color:#000dc7;
+            color: #ffffff;
+            justify-content: flex-start;
+            padding-top: 50px;
+        }
+        /* Styling cho hình ảnh trang bìa 3 */
+.trang-bia-3 .trang-bia-img {
+    width: 220px;
+    height: auto;
+    max-width: 90%; 
+    /* BỎ hoàn toàn border-radius cũ nếu dùng ảnh tròn gốc */
+    border-radius: 50%;   
+    /* BỎ border viền cứng để không bị đè màu xanh */
+    border: none; 
+    margin-bottom: 25px;    
+    /* Dùng drop-shadow tỏa sáng trắng ôm sát theo viền tròn thực tế của file PNG */
+    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.8));
+      object-fit: contain;
+}
+        .trang-bia-3 h3 {
+            font-size: 45px;
+            font-weight: normal;
+            letter-spacing: 0px;
+            text-align: center;
+            font-family: 'CNLe2', "Kaiti SC", "STKaiti", "KaiTi", serif !important;
+        }
+
+        .trang-bia-3 .content-box {
+            width: 100%;          /* Trải đều theo chiều ngang màn hình (trong khoảng padding) */
+            max-width: 100%;      /* Cho phép rộng hết cỡ khung chứa */
+            font-size: 30px;
+            line-height: 1.2;
+            text-align: left;     /* Canh lề trái cho dễ đọc */
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            font-family: 'CNLe2', "Kaiti SC", "STKaiti", "KaiTi", serif !important;
+        }
+
         /* Modal Explanations */
         .modal-overlay {
             position: fixed;
@@ -406,7 +517,8 @@ line-height: 0.8;
             line-height: 1.6;
             color: #222;
         }
-/* Nút bấm loa phát âm thanh trong bảng Popup */
+
+        /* Nút bấm loa phát âm thanh trong bảng Popup */
         .btn-play-audio {
             background: #f4ecd8;
             border: 1px solid #8c2d19;
@@ -429,12 +541,6 @@ line-height: 0.8;
             transform: scale(1.1);
         }
 
-        .btn-play-audio:active {
-            transform: scale(0.95);
-        }
- /* ========================================================= */
-        /* DINH DANG CSS CHO BANG MA TRAN 5 HANG TRONG POPUP (BANG 1) */
-        /* ========================================================= */
         #rendered-editor table {
             border-collapse: collapse !important;
             margin: 2px auto !important;
@@ -446,43 +552,20 @@ line-height: 0.8;
         #rendered-editor td {
             border: none !important;
             white-space: nowrap !important;
-            text-align: center !important; /* CĂN GIỮA TOÀN BỘ CHỮ VÀ NÚT LOA */
+            text-align: center !important;
             padding: 2px 2px !important;
             vertical-align: bottom !important;
         }
 
-        /* Dynamic Styling Từng Hàng cho Bảng 1 */
-        /* Hàng 1: Audio (Loa) */
-        #rendered-editor tr:nth-child(1) td { 
-            font-size: 10px !important; 
-        }
-
-        /* Hàng 2: Yueyin (Phiên âm/Âm đọc) */
-        #rendered-editor tr:nth-child(2) td { 
-            font-size: 13px !important; 
-            font-family: Arial, sans-serif !important;
-        }
-
-        /* Hàng 3: Hanzi (Chữ Hán - To nhất) */
+        #rendered-editor tr:nth-child(1) td { font-size: 10px !important; }
+        #rendered-editor tr:nth-child(2) td { font-size: 13px !important; font-family: Arial, sans-serif !important; }
         #rendered-editor tr:nth-child(3) td { 
-            font-family: 'CNLe2', "Kaiti SC", "STKaiti", "KaiTi", "SimKai", "DFKai-SB", serif !important;
-            font-size: 35px !important; /* ĐIỀU CHỈNH CỠ CHỮ HANZI TẠI ĐÂY */
+            font-family: 'CNLe2', "Kaiti SC", "STKaiti", "KaiTi", serif !important;
+            font-size: 35px !important; 
             line-height: 1 !important;
         }
-
-        /* Hàng 4: Pinyin */
-        #rendered-editor tr:nth-child(4) td { 
-            font-size: 14px !important; /* ĐIỀU CHỈNH CỠ CHỮ PINYIN TẠI ĐÂY */
-            font-family: Arial, sans-serif !important;
-        }
-
-        /* Hàng 5: Nghĩa */
-        #rendered-editor tr:nth-child(5) td { 
-            font-size: 13px !important; /* ĐIỀU CHỈNH CỠ CHỮ NGHĨA TẠI ĐÂY */
-            font-family: Arial, sans-serif !important;
-            font-weight: bold !important; 
-        }
-
+        #rendered-editor tr:nth-child(4) td { font-size: 14px !important; font-family: Arial, sans-serif !important; }
+        #rendered-editor tr:nth-child(5) td { font-size: 13px !important; font-family: Arial, sans-serif !important; font-weight: bold !important; }
     </style>
     <script src="popup.js"></script>
 </head>
@@ -490,7 +573,9 @@ line-height: 0.8;
 
     <div class="top-nav" id="topNav">
         <div class="controls">
+            <!-- Đã thêm option value="00" cho Trang Bìa -->
             <select id="selectBai">
+                <option value="00">Trang Bìa</option>
                 <option value="01">第一講</option>
                 <option value="02">第二講</option>
                 <option value="03">第三講</option>
@@ -498,7 +583,7 @@ line-height: 0.8;
 
             <div class="phan-dropdown-container">
                 <button type="button" class="btn-phan-select" id="btnPhanToggle">
-                    <span id="currentPhanLabel">Phần 1</span> ▼
+                    <span id="currentPhanLabel">Phần 1</span>
                 </button>
                 <div class="phan-list-menu" id="phanListMenu"></div>
             </div>
@@ -508,14 +593,18 @@ line-height: 0.8;
     </div>
 
     <div class="book-wrapper" id="bookWrapper">
-        <div class="book-frame">
+        <!-- Khung riêng dành riêng cho các Trang Bìa -->
+        <div id="coverFrame" class="cover-frame" style="display: none;"></div>
+
+        <!-- Khung chuẩn dành cho Trang Thường (Giữ nguyên không sửa gì) -->
+        <div class="book-frame" id="bookFrame">
             <div id="pageGrid" class="page-grid grid-title-2"></div>
         </div>
     </div>
 
     <div class="bottom-pagination" id="bottomNav">
         <button id="btnPrevPage">◀ Trang Trước</button>
-        <span class="page-info" id="pageDisplay">Trang 1 / 1</span>
+        <span class="page-info" id="pageDisplay">1 / 1</span>
         <button id="btnNextPage">Trang Sau ▶</button>
     </div>
 
@@ -529,8 +618,13 @@ line-height: 0.8;
         </div>
     </div>
 
-    <script>
+   <script>
         const DANH_SACH_PHAN = {
+            "00": [
+                { id: 1, hanzi: "Trang Bìa 1", viet: "Tên sách" },
+                { id: 2, hanzi: "Trang Bìa 2", viet: "Lời ngỏ" },
+                { id: 3, hanzi: "Trang Bìa 3", viet: "Giới thiệu ứng dụng" }
+            ],
             "01": [
                 { id: 1, hanzi: "真正往高層次上帶人", viet: "1.Chân Bổn Luận" },
                 { id: 2, hanzi: "不同層次有不同層次的法", viet: "2.Khí Công Và Thể Dục" }
@@ -549,8 +643,19 @@ line-height: 0.8;
         let showPinyin = false;
         let selectedPhanId = 1;
 
+        // Mảng lưu toàn bộ thứ tự các mục đọc trong sách để duyệt liên tục
+        const globalBookFlow = [
+            { bai: "00", phan: 1 }, // Trang Bìa 1
+            { bai: "00", phan: 2 }, // Trang Bìa 2
+            { bai: "00", phan: 3 }, // Trang Bìa 3
+            { bai: "01", phan: 1 }, // Bài 01 - Phần 1
+            { bai: "01", phan: 2 }, // Bài 01 - Phần 2
+            { bai: "02", phan: 1 }, // Bài 02 - Phần 1
+            { bai: "03", phan: 1 }  // Bài 03 - Phần 1
+        ];
+
         const ROWS_PER_COL = 43;
-        const TITLE_ROWS = 21; // Mỗi cột tiêu đề có 21 ô
+        const TITLE_ROWS = 21;
 
         const pageGrid = document.getElementById('pageGrid');
         const togglePinyinBtn = document.getElementById('togglePinyinBtn');
@@ -578,7 +683,7 @@ line-height: 0.8;
                     selectedPhanId = item.id;
                     currentPhanLabel.textContent = item.hanzi;
                     phanListMenu.classList.remove('show');
-                    loadPhanScript(selectBai.value, selectedPhanId);
+                    loadCurrentSelection();
                 });
                 phanListMenu.appendChild(div);
             });
@@ -600,7 +705,107 @@ line-height: 0.8;
         selectBai.addEventListener('change', () => {
             selectedPhanId = 1;
             updatePhanDropdownList(selectBai.value);
-            loadPhanScript(selectBai.value, 1);
+            loadCurrentSelection();
+        });
+
+        function loadCurrentSelection() {
+            const baiVal = selectBai.value;
+            if (baiVal === "00") {
+                renderCoverPages(selectedPhanId - 1);
+            } else {
+                loadPhanScript(baiVal, selectedPhanId);
+            }
+        }
+
+        // Tìm vị trí hiện tại trong luồng sách tổng thể (globalBookFlow)
+        function getCurrentGlobalIndex() {
+            const baiVal = selectBai.value;
+            return globalBookFlow.findIndex(item => item.bai === baiVal && item.phan === selectedPhanId);
+        }
+
+        // Xử lý riêng cho 3 trang bìa
+        function renderCoverPages(targetPageIdx = 0) {
+            generatedPages = [
+                { type: 'cover', coverType: 1 },
+                { type: 'cover', coverType: 2 },
+                { type: 'cover', coverType: 3 }
+            ];
+            currentPageIdx = targetPageIdx;
+            selectedPhanId = currentPageIdx + 1; // Đồng bộ phần id (1, 2, 3) với trang hiện tại
+            
+            // Cập nhật lại nhãn tên trên dropdown cho đúng với trang bìa hiện tại
+            const list = DANH_SACH_PHAN["00"];
+            const foundPhan = list.find(p => p.id === selectedPhanId);
+            if (foundPhan) currentPhanLabel.textContent = foundPhan.hanzi;
+
+            renderPage(currentPageIdx);
+        }
+
+        // Logic điều hướng liên trang giữa các phần/bài
+        btnPrevPage.addEventListener('click', () => {
+            if (currentPageIdx > 0) {
+                // Vẫn còn trang trước trong cùng phần hiện tại
+                currentPageIdx--;
+                if (selectBai.value === "00") {
+                    selectedPhanId = currentPageIdx + 1;
+                    const list = DANH_SACH_PHAN["00"];
+                    const foundPhan = list.find(p => p.id === selectedPhanId);
+                    if (foundPhan) currentPhanLabel.textContent = foundPhan.hanzi;
+                }
+                renderPage(currentPageIdx);
+            } else {
+                // Đang ở trang đầu tiên của phần hiện tại -> Lùi về phần trước đó
+                const currentIdx = getCurrentGlobalIndex();
+                if (currentIdx > 0) {
+                    const prevItem = globalBookFlow[currentIdx - 1];
+                    selectBai.value = prevItem.bai;
+                    selectedPhanId = prevItem.phan;
+                    updatePhanDropdownList(prevItem.bai);
+                    
+                    const list = DANH_SACH_PHAN[prevItem.bai];
+                    const foundPhan = list.find(p => p.id === prevItem.phan);
+                    if (foundPhan) currentPhanLabel.textContent = foundPhan.hanzi;
+
+                    if (prevItem.bai === "00") {
+                        renderCoverPages(2); // Trang bìa có 3 trang, trang cuối là index 2 (Trang Bìa 3)
+                    } else {
+                        loadPhanScriptForPrev(prevItem.bai, prevItem.phan);
+                    }
+                }
+            }
+        });
+
+        btnNextPage.addEventListener('click', () => {
+            if (currentPageIdx < generatedPages.length - 1) {
+                // Vẫn còn trang sau trong cùng phần hiện tại
+                currentPageIdx++;
+                if (selectBai.value === "00") {
+                    selectedPhanId = currentPageIdx + 1;
+                    const list = DANH_SACH_PHAN["00"];
+                    const foundPhan = list.find(p => p.id === selectedPhanId);
+                    if (foundPhan) currentPhanLabel.textContent = foundPhan.hanzi;
+                }
+                renderPage(currentPageIdx);
+            } else {
+                // Đang ở trang cuối cùng của phần hiện tại -> Tiến tới phần tiếp theo
+                const currentIdx = getCurrentGlobalIndex();
+                if (currentIdx !== -1 && currentIdx < globalBookFlow.length - 1) {
+                    const nextItem = globalBookFlow[currentIdx + 1];
+                    selectBai.value = nextItem.bai;
+                    selectedPhanId = nextItem.phan;
+                    updatePhanDropdownList(nextItem.bai);
+
+                    const list = DANH_SACH_PHAN[nextItem.bai];
+                    const foundPhan = list.find(p => p.id === nextItem.phan);
+                    if (foundPhan) currentPhanLabel.textContent = foundPhan.hanzi;
+
+                    if (nextItem.bai === "00") {
+                        renderCoverPages(0); // Mở trang 1 (index 0) của Trang Bìa
+                    } else {
+                        loadPhanScript(nextItem.bai, nextItem.phan); // Mở trang 1 của bài tiếp theo
+                    }
+                }
+            }
         });
 
         function loadPhanScript(bai, phan) {
@@ -628,6 +833,29 @@ line-height: 0.8;
                 alert(`Không thể tải: ${scriptPath}`);
             };
 
+            document.head.appendChild(script);
+        }
+
+        function loadPhanScriptForPrev(bai, phan) {
+            const baiStr = String(bai).padStart(2, '0');
+            const phanStr = String(phan).padStart(2, '0');
+            const scriptPath = `data/bai_${baiStr}/phan_${phanStr}/data.js`;
+
+            const oldScript = document.getElementById('dynamic-data-script');
+            if (oldScript) oldScript.remove();
+
+            const script = document.createElement('script');
+            script.id = 'dynamic-data-script';
+            script.src = scriptPath;
+
+            script.onload = () => {
+                if (window.CURRENT_PHAN_DATA) {
+                    currentPhanData = window.CURRENT_PHAN_DATA;
+                    processBookPagination();
+                    currentPageIdx = generatedPages.length - 1;
+                    renderPage(currentPageIdx);
+                }
+            };
             document.head.appendChild(script);
         }
 
@@ -716,66 +944,145 @@ line-height: 0.8;
             renderPage(currentPageIdx);
         }
 
-        // Thêm tham số colIndex vào hàm
-function createTitleColumnElement(titleText, titlePinyin, titleId, colIndex) {
-    const colDiv = document.createElement('div');
-    colDiv.className = 'title-column-container';
+        function createTitleColumnElement(titleText, titlePinyin, titleId, colIndex) {
+            const colDiv = document.createElement('div');
+            colDiv.className = 'title-column-container';
 
-    const chars = titleText ? titleText.split('') : [];
-    const pinyins = titlePinyin ? titlePinyin.trim().split(/\s+/) : [];
-    let pIdx = 0;
+            const chars = titleText ? titleText.split('') : [];
+            const pinyins = titlePinyin ? titlePinyin.trim().split(/\s+/) : [];
+            let pIdx = 0;
 
-    const titleSentenceObj = {
-        cau_id: titleId || 'title-id',
-        hanzi: titleText,
-        pinyin: titlePinyin,
-        nghia: titleText
-    };
+            const titleSentenceObj = {
+                cau_id: titleId || 'title-id',
+                hanzi: titleText,
+                pinyin: titlePinyin,
+                nghia: titleText
+            };
 
-    for (let i = 0; i < TITLE_ROWS; i++) {
-        const cell = document.createElement('div');
-        // Phân biệt class riêng cho tiêu đề 1 và tiêu đề 2
-        cell.className = `title-cell title-cell-${colIndex}`;
+            for (let i = 0; i < TITLE_ROWS; i++) {
+                const cell = document.createElement('div');
+                cell.className = `title-cell title-cell-${colIndex}`;
 
-        if (i < chars.length) {
-            const char = chars[i];
-            const hanziDiv = document.createElement('div');
-            hanziDiv.className = 'cell-hanzi';
-            hanziDiv.textContent = char;
-            cell.appendChild(hanziDiv);
+                if (i < chars.length) {
+                    const char = chars[i];
+                    const hanziDiv = document.createElement('div');
+                    hanziDiv.className = 'cell-hanzi';
+                    hanziDiv.textContent = char;
+                    cell.appendChild(hanziDiv);
 
-            let pinVal = '';
-            if (/[\u4e00-\u9fa5]/.test(char) && pIdx < pinyins.length) {
-                pinVal = pinyins[pIdx];
-                pIdx++;
+                    let pinVal = '';
+                    if (/[\u4e00-\u9fa5]/.test(char) && pIdx < pinyins.length) {
+                        pinVal = pinyins[pIdx];
+                        pIdx++;
+                    }
+                    const pinyinDiv = document.createElement('div');
+                    pinyinDiv.className = 'cell-pinyin';
+                    pinyinDiv.textContent = pinVal;
+                    cell.appendChild(pinyinDiv);
+                } else {
+                    const emptyHanzi = document.createElement('div');
+                    emptyHanzi.className = 'cell-hanzi';
+                    emptyHanzi.textContent = '';
+                    cell.appendChild(emptyHanzi);
+                }
+
+                cell.addEventListener('click', () => {
+                    if (typeof openExplanation === 'function') {
+                        openExplanation(titleSentenceObj);
+                    }
+                });
+
+                colDiv.appendChild(cell);
             }
-            const pinyinDiv = document.createElement('div');
-            pinyinDiv.className = 'cell-pinyin';
-            pinyinDiv.textContent = pinVal;
-            cell.appendChild(pinyinDiv);
-        } else {
-            const emptyHanzi = document.createElement('div');
-            emptyHanzi.className = 'cell-hanzi';
-            emptyHanzi.textContent = '';
-            cell.appendChild(emptyHanzi);
+            return colDiv;
         }
-
-        cell.addEventListener('click', () => {
-            if (typeof openExplanation === 'function') {
-                openExplanation(titleSentenceObj);
-            }
-        });
-
-        colDiv.appendChild(cell);
-    }
-    return colDiv;
-}
 
         function renderPage(pageIdx) {
             if (generatedPages.length === 0) return;
 
-            pageGrid.innerHTML = '';
+            const coverFrame = document.getElementById('coverFrame');
+            const bookFrame = document.getElementById('bookFrame');
             const pageData = generatedPages[pageIdx];
+
+            // -------------------------------------------------------------
+            // TRƯỜNG HỢP: HIỂN THỊ TRANG BÌA
+            // -------------------------------------------------------------
+            if (pageData && pageData.type === 'cover') {
+                // Hiện khung bìa, ẩn khung trang thường
+                coverFrame.style.display = "flex";
+                bookFrame.style.display = "none";
+
+                if (pageData.coverType === 1) {
+                    coverFrame.innerHTML = `
+                        <div class="trang-bia-page trang-bia-1">
+                            <h2>自學</h2>
+                            <h1>轉法輪</h1>
+                        </div>
+                    `;
+                } else if (pageData.coverType === 2) {
+                    coverFrame.innerHTML = `
+                        <div class="trang-bia-page trang-bia-2">
+                            <h2>Lời Nói Đầu</h2>
+                            <p style="text-align: justify; font-weight: bold; font-size: 18px; color: #8c2d19;">Xin chào các đồng tu.</p>
+                            <p style="text-align: justify; font-size: 18px; color: #8c2d19;">
+                                Chào mừng đến với trang web <strong>Tự Học Chuyển Pháp Luân Tiếng Trung</strong>
+                            </p>
+                            <p style="text-align: justify; font-size: 18px;">Trang web này được lập ra với tâm nguyện tạo một không gian thuận tiện, hỗ trợ các đồng tu và những ai hữu duyên có thể tự học, tra cứu và nâng cao hiểu biết khi đọc cuốn sách trân quý <strong>Chuyển Pháp Luân</strong> bản <strong>Tiếng Trung</strong>.</p>
+                            <p style="text-align: justify; font-size: 18px;">Trong quá trình học Pháp, việc thấu hiểu sâu sắc ý nghĩa nguyên gốc luôn là mong mỏi của nhiều học viên. Về vấn đề <strong>học tiếng Trung</strong> để đọc bản gốc, <strong>Sư phụ</strong> đã từng từ bi giảng giải cho chúng ta:</p>
+                            <p style="text-align: justify; font-style: italic; font-size: 15px; color: #1d5c2b;">
+                            (Trích: Giảng Pháp tại Pháp hội Châu Âu - Frankfurt, Germany, ngày 30-31 tháng 5 năm 1998)
+                            </p>
+                            <p style="text-align: justify; font-style: italic; font-size: 16px; color: #000dc2;">
+                            "<strong>Đệ tử:</strong> Con là học viên người Thụy Điển, con biết rằng đọc lại <strong>“Chuyển Pháp Luân” tiếng Trung</strong> sẽ có lý giải sâu hơn, nhưng bỏ ra rất nhiều thời gian tu luyện để <strong>học tiếng Trung</strong>, có đáng hay không?
+                            </p>
+                            <p style="text-align: justify; font-size: 16px; color: #000dc2;">
+                            <strong>Sư phụ:</strong> Được, tôi sẽ giảng chút cho mọi người về vấn đề này. Dùng <strong>“Chuyển Pháp Luân” để học tiếng Trung</strong>, chẳng phải vừa <strong>học tiếng Trung vừa học Pháp</strong> sao? <strong>Tiếng Trung</strong> hết sức xác thực có thể phản ánh xuất lai một cách bất động nguyên vẹn lời giảng của tôi, điểm này là khẳng định, bởi vì tôi chính là <strong>dùng tiếng Trung khi giảng Pháp</strong>. Vì sao tôi lựa chọn phải sinh ra ở <strong>Trung Quốc</strong>, ở nơi <strong>Trung Quốc</strong> này mà <strong>truyền Pháp</strong>? Là bởi vì trong lịch sử đã an bài việc này rồi. Ngôn ngữ của con người ở địa khu này <strong>nội hàm lớn</strong>, hết thảy phát triển trong lịch sử của nó đều là vì tương lai truyền <strong>Đại Pháp</strong>, rất nhiều rất nhiều an bài đều là vì sự việc này, cho nên đây là an bài từ trước rất rất sớm. Là trước khi người da trắng của thời kỳ hiện nay còn chưa tiến nhập văn minh thì đã an bài rồi, cho nên dân tộc ấy là tương đối cổ xưa, ngôn ngữ là phong phú nhất trên thế giới, nội hàm lớn nhất, tương đối có thể biểu đạt ra khái niệm vũ trụ rộng lớn như thế......
+                            </p>
+                            <p style="text-align: justify; font-size: 16px; color: #000dc2;">
+                            Tôi biết rằng có rất nhiều học viên mong muốn đọc <strong>tiếng Trung</strong>, muốn đọc hiểu lời nguyên gốc, nghĩa nguyên gốc của tôi, đương nhiên đó là tốt nhất, tốt hơn. Nếu như không đạt được điểm này, chư vị yên tâm, ngôn ngữ của dân tộc chư vị chỉ cần phiên dịch thành [công] <strong>“Chuyển Pháp Luân”</strong>, đằng sau sẽ có vô số Phật, Đạo, Thần, cũng có thể khiến chư vị minh bạch lý trong cảnh giới đó như nhau. Điểm này trên bề mặt văn tự thì không có, viết cũng viết không ra được, <strong>tiếng Trung</strong> cũng viết không ra được, cho nên là sẽ không ảnh hưởng tu luyện. Nhưng mà cũng có một số người <strong>học tiếng Trung</strong> đã xuất hiện rất nhiều <strong>kỳ tích</strong>. Pháp rốt cuộc vẫn là Pháp, thực sự đã xuất hiện một số kỳ tích, chỗ này tôi sẽ không đưa ví dụ nữa. Để tránh việc những người khác trong chúng ta bắt chước theo một cách không chính xác lại sản sinh một chấp trước [khác]."
+                            </p>
+                            <p style="text-align: justify; font-style: italic; font-size: 15px; color: #1d5c2b;">
+                            (Trích: Giảng Pháp tại Pháp hội Houston - Ngày 12 tháng 10 năm 1996)
+                            </p>
+                            <p style="text-align: justify; font-size: 16px; color: #000dc2;">
+                            ".....Không biết <strong>tiếng Trung</strong> cũng có thể tu luyện như nhau, nhưng có một điểm, tiếng Anh chỉ có thể phiên dịch ra <strong>ý tứ bề mặt</strong> mà tôi giảng, phiên dịch một cách thật chuẩn xác <strong>ý tứ tầng bề mặt</strong> là không làm được, nhưng mà không ảnh hưởng nội hàm cao tầng. Người tương lai <strong>học Pháp</strong>, thì những thứ ở tầng bề mặt con người này rất chủ yếu. Do vậy người tương lai không hiểu <strong>tiếng Trung</strong> thì rất khó."
+                            </p>
+                            <p style="text-align: justify; font-size: 18px;">Thông qua những lời giảng trên của Sư phụ, chúng ta càng hiểu thêm về giá trị của ngôn ngữ gốc cũng như sự từ bi phổ độ của Sư Phụ, dù ở bất kỳ ngôn ngữ nào thì Đại Pháp vẫn luôn bảo hộ và khai sáng cho người tu luyện.</p>
+                            <p style="text-align: justify; font-size: 18px;">Vì năng lực và thời gian có hạn, trang web chắc chắn không tránh khỏi những thiếu sót trong quá trình xây dựng và vận hành. Mọi thắc mắc, góp ý hoặc phát hiện lỗi sai xin vui lòng liên hệ với tôi qua:</p>
+                            <p style="text-align: center; font-weight: bold; font-size: 25px; color: #8c2d19;">Zalo: 0326.714.961</p>
+                            <p style="text-align: center; font-size: 18px;">Cám ơn Sư Phụ. Cám ơn các đồng tu.</p>
+                            <p style="text-align: center; font-weight: bold; font-size: 20px; color: #8c2d19;">Pháp Luân Đại Pháp Hảo!</p>
+                            <p style="text-align: center; font-weight: bold; font-size: 20px; color: #8c2d19;">Chân - Thiện - Nhẫn Hảo!</p>
+                        </div>
+                    `;
+                } else if (pageData.coverType === 3) {
+    coverFrame.innerHTML = `
+        <div class="trang-bia-page trang-bia-3">
+            <img src="falun.png" alt="Chuyển Pháp Luân" class="trang-bia-img">
+            <div class="content-box">
+                <h3>旋法至極</h3>
+                <h3>法輪常轉</h3>
+                <h3>佛法無邊</h3>
+<br>
+                <p>這個法輪圖形是宇宙的縮影，他在其它各個空間也有他存在的形式、演化過程，所以我說是一個世界。</p>
+            </div>
+        </div>
+    `;
+}
+
+                pageDisplay.textContent = `Trang Bìa ${pageIdx + 1} / ${generatedPages.length}`;
+                return;
+            }
+
+            // -------------------------------------------------------------
+            // TRƯỜNG HỢP: HIỂN THỊ TRANG THƯỜNG
+            // -------------------------------------------------------------
+            // Ẩn khung bìa, hiện khung trang thường (.book-frame)
+            coverFrame.style.display = "none";
+            bookFrame.style.display = "inline-block";
+
+            pageGrid.innerHTML = '';
+            pageGrid.style.display = ""; 
             const meta = currentPhanData.meta || {};
 
             const t1 = meta.tieude1 || '';
@@ -795,14 +1102,14 @@ function createTitleColumnElement(titleText, titlePinyin, titleId, colIndex) {
                 }
 
                 if (t1) {
-    const titleCol1 = createTitleColumnElement(t1, t1_py, t1_id, 1); // Truyền số 1
-    pageGrid.appendChild(titleCol1);
-}
+                    const titleCol1 = createTitleColumnElement(t1, t1_py, t1_id, 1);
+                    pageGrid.appendChild(titleCol1);
+                }
 
-if (t2) {
-    const titleCol2 = createTitleColumnElement(t2, t2_py, t2_id, 2); // Truyền số 2
-    pageGrid.appendChild(titleCol2);
-}
+                if (t2) {
+                    const titleCol2 = createTitleColumnElement(t2, t2_py, t2_id, 2);
+                    pageGrid.appendChild(titleCol2);
+                }
             } else {
                 pageGrid.className = "page-grid grid-normal";
             }
@@ -855,20 +1162,6 @@ if (t2) {
             }, 50);
         }
 
-        btnPrevPage.addEventListener('click', () => {
-            if (currentPageIdx > 0) {
-                currentPageIdx--;
-                renderPage(currentPageIdx);
-            }
-        });
-
-        btnNextPage.addEventListener('click', () => {
-            if (currentPageIdx < generatedPages.length - 1) {
-                currentPageIdx++;
-                renderPage(currentPageIdx);
-            }
-        });
-
         togglePinyinBtn.addEventListener('click', () => {
             showPinyin = !showPinyin;
             pageGrid.classList.toggle('show-pinyin', showPinyin);
@@ -876,8 +1169,8 @@ if (t2) {
         });
 
         window.addEventListener('DOMContentLoaded', () => {
-            updatePhanDropdownList('01');
-            loadPhanScript(1, 1);
+            updatePhanDropdownList('00');
+            renderCoverPages(0);
         });
     </script>
 </body>
