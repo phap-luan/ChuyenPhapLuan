@@ -68,7 +68,7 @@ window.CURRENT_PHAN_DATA = {
           "cau_id": "b10p01-d01-008",
           "hanzi": "不同大小的粒子組成了不同大小的生命",
           "pinyin": "bù tóng dà xiǎo de lì zǐ zǔ chéng le bù tóng dà xiǎo de shēng mìng",
-          "yueyin": "(pu`) (thúng) (ta`) (xi:ảo) (tơ) (li`) (zử) (zủ) (tr'ấng) (lơ) (pu`) (thúng) (ta`) (xi:ảo) (tơ) (shâng-) (ming)",
+          "yueyin": "(pu`) (thúng) (ta`) (xi:ảo) (tơ) (li`) (zử) (zủ) (tr'ấng) (lơ) (pu`) (thúng) (ta`) (xi:ảo) (tơ) (shâng-) (ming`)",
           "nghia": "các lạp tử lớn nhỏ khác nhau tổ [hợp] thành các sinh mệnh lớn nhỏ khác nhau"
         },
         {
@@ -82,7 +82,7 @@ window.CURRENT_PHAN_DATA = {
           "cau_id": "b10p01-d01-010",
           "hanzi": "對不同層次粒子本體上的生命來說，",
           "pinyin": "duì bù tóng céng cì lì zǐ běn tǐ shàng de shēng mìng lái shuō",
-          "yueyin": "(tuây`) (pu`) (thúng) (s'ấng) (s'ư`) (li`) (zử) (pẩn) (thỉ) (shang`) (tơ) (shâng-) (ming) (lái) (shua-)",
+          "yueyin": "(tuây`) (pu`) (thúng) (s'ấng) (s'ư`) (li`) (zử) (pẩn) (thỉ) (shang`) (tơ) (shâng-) (ming`) (lái) (shua-)",
           "nghia": "Đối với các sinh mệnh ở trên bản thể các lạp tử ở tầng thứ khác nhau mà nói,"
         },
         {
