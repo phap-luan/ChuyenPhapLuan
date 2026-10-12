@@ -21,7 +21,7 @@ function playAudioSequence(audioList) {
 
         // Nếu có thông tin bài/phần thì thêm đường dẫn thứ 3
         if (currentPathInfo) {
-            paths.push(`data/bai_${currentPathInfo.bai}/phan_${currentPathInfo.phan}/${soundName}.mp3`);
+            paths.push(`data/bai_${currentPathInfo.bai}/phan_${currentPathInfo.phan}/audio/${soundName}.mp3`);
         }
 
         let pathIndex = 0;
