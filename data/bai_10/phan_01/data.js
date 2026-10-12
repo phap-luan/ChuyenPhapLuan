@@ -18,35 +18,35 @@ window.CURRENT_PHAN_DATA = {
         {
           "cau_id": "b10p01-d01-001",
           "hanzi": "  大法是創世主的智慧。",
-          "pinyin": "dà fǎ shì chuàng shì zhǔ de zhì huì.",
+          "pinyin": "dà fǎ shì chuàng shì zhǔ de zhì huì",
           "yueyin": "(ta`) (fả) (shi*`) (tr'oang`) (shi*`) (trủ) (tơ) (tri*`) (huây`)",
           "nghia": "Đại Pháp là trí huệ của Sáng Thế Chủ."
         },
         {
           "cau_id": "b10p01-d01-002",
           "hanzi": "他是開天闢地、造化宇宙的根本，",
-          "pinyin": "tā shì kāi tiān pì dì, zào huà yǔ zhòu de gēn běn,",
+          "pinyin": "tā shì kāi tiān pì dì zào huà yǔ zhòu de gēn běn",
           "yueyin": "(tha-) (shi*`) (khai-) (thi:en-) (p'i`) (ti`), (zao`) (hoa`) (ủy) (trâu`) (tơ) (cân-) (pẩn),",
           "nghia": "Ông là căn bản của khai thiên tịch địa, của tạo hoá vũ trụ,"
         },
         {
           "cau_id": "b10p01-d01-003",
           "hanzi": "內涵洪微至極，",
-          "pinyin": "nèi hán hóng wēi zhì jí,",
+          "pinyin": "nèi hán hóng wēi zhì jí",
           "yueyin": "(nây`) (hán) (húng) (guây-) (tri*`) (chí),",
           "nghia": "nội hàm từ cực nhỏ đến cực lớn, "
         },
         {
           "cau_id": "b10p01-d01-004",
           "hanzi": "在不同的天體層次中有不同的展現。",
-          "pinyin": "zài bù tóng de tiān tǐ céng cì zhōng yǒu bù tóng de zhǎn xiàn.",
+          "pinyin": "zài bù tóng de tiān tǐ céng cì zhōng yǒu bù tóng de zhǎn xiàn",
           "yueyin": "(zai`) (pu`) (thúng) (tơ) (thi:en-) (thỉ) (s'ấng) (s'ư`) (trung-) (yẩu) (pu`) (thúng) (tơ) (trản) (xi:en`).",
           "nghia": "có triển hiện khác nhau tại các tầng thứ thiên thể khác nhau."
         },
         {
           "cau_id": "b10p01-d01-005",
           "hanzi": "從天體最微觀到出現最微觀粒子，",
-          "pinyin": "cóng tiān tǐ zuì wēi guān dào chū xiàn zuì wēi guān lì zǐ,",
+          "pinyin": "cóng tiān tǐ zuì wēi guān dào chū xiàn zuì wēi guān lì zǐ",
           "yueyin": "(s'úng) (thi:en-) (thỉ) (zuây`) (guây-) (coan-) (tao`) (tr'u-) (xi:en`) (zuây`) (guây-) (coan-) (li`) (zử),",
           "nghia": "Từ vi quan nhất của thiên thể đến lạp tử vi quan nhất xuất hiện,"
         },
@@ -88,35 +88,35 @@ window.CURRENT_PHAN_DATA = {
         {
           "cau_id": "b10p01-d01-011",
           "hanzi": "大於這一層的粒子就是他們天空中的星球，層層如此。",
-          "pinyin": "dà yú zhè yī céng de lì zǐ jiù shì tā men tiān kōng zhōng de xīng qiú, céng céng rú cǐ.\n",
+          "pinyin": "dà yú zhè yī céng de lì zǐ jiù shì tā men tiān kōng zhōng de xīng qiú céng céng rú cǐ\n",
           "yueyin": "(ta`) (úy) (trưa`) (y-) (s'ấng) (tơ) (li`) (zử) (chi:âu`) (shi*`) (tha-) (mân) (thi:en-) (khung-) (trung-) (tơ) (xing-) (ch'i:ấu) (s'ấng) (s'ấng) (rú) (s'ử)",
           "nghia": "thì lạp tử của tầng lớn hơn một mức chính là các vì sao trên bầu trời của họ, tầng tầng đều như thế."
         },
         {
           "cau_id": "b10p01-d01-012",
           "hanzi": "對宇宙各層生命來說無窮無盡。",
-          "pinyin": "duì yǔ zhòu gè céng shēng mìng lái shuō wú qióng wú jìn.\n",
+          "pinyin": "duì yǔ zhòu gè céng shēng mìng lái shuō wú qióng wú jìn\n",
           "yueyin": "(tuây`) (ủy) (trâu`) (cưa`) (s'ấng) (shâng-) (ming`) (lái) (shua-) (ú) (ch'i:úng) (ú) (chin`)",
           "nghia": "Đối với sinh mệnh các tầng vũ trụ mà nói thì là vô cùng vô tận."
         },
         {
           "cau_id": "b10p01-d01-013",
           "hanzi": "大法還造就了時間、空間、眾多的生命種類",
-          "pinyin": "dà fǎ hái zào jiù le shí jiān, kōng jiān, zhòng duō de shēng mìng zhǒng lèi\n",
+          "pinyin": "dà fǎ hái zào jiù le shí jiān kōng jiān zhòng duō de shēng mìng zhǒng lèi\n",
           "yueyin": "(ta`) (fả) (hái) (zao`) (chi:âu`) (lơ) (shí*) (chi:en-) (khung-) (chi:en-) (trung`) (tua-) (tơ) (shâng-) (ming`) (trủng) (lây`)",
           "nghia": "Đại Pháp còn tạo ra thời gian, không gian, đa dạng chủng loại sinh mệnh "
         },
         {
           "cau_id": "b10p01-d01-014",
           "hanzi": "及萬事萬物，無所不包，無所遺漏。",
-          "pinyin": "jí wàn shì wàn wù, wú suǒ bù bāo, wú suǒ yí lòu.\n",
+          "pinyin": "jí wàn shì wàn wù wú suǒ bù bāo wú suǒ yí lòu\n",
           "yueyin": "(chí) (goan`) (shi*`) (goan`) (u`) (ú) (sủa) (pu`) (pao-) (ú) (sủa) (ý) (lâu`)",
           "nghia": "cũng như vạn sự vạn vật, không gì không bao hàm, không gì bị bỏ sót."
         },
         {
           "cau_id": "b10p01-d01-015",
           "hanzi": "這是大法真、善、忍特性在不同層次中的具體體現。",
-          "pinyin": "zhè shì dà fǎ zhēn, shàn, rěn, tè xìng zài bù tóng céng cì zhōng de jù tǐ tǐ xiàn.\n",
+          "pinyin": "zhè shì dà fǎ zhēn shàn rěn tè xìng zài bù tóng céng cì zhōng de jù tǐ tǐ xiàn\n",
           "yueyin": "(trưa`) (shi*`) (ta`) (fả) (trân-) (shan`) (rẩn) (thưa`) (xing`) (zai`) (pu`) (thúng) (s'ấng) (s'ư`) (trung-) (tơ) (chuy`) (thỉ) (thỉ) (xi:en`)",
           "nghia": "Đây là thể hiện cụ thể tại các tầng thứ khác nhau của đặc tính Chân-Thiện-Nhẫn của Đại Pháp."
         }
@@ -127,10 +127,73 @@ window.CURRENT_PHAN_DATA = {
       "content": [
         {
           "cau_id": "b10p01-d02-001",
-          "hanzi": "",
-          "pinyin": "",
-          "yueyin": "",
-          "nghia": ""
+          "hanzi": "人類的探索宇宙、生命方式再發達，",
+          "pinyin": "rén lèi de tàn suǒ yǔ zhòu shēng mìng fāng shì zài fā dá\n",
+          "yueyin": "(rấn) (lây`) (tơ) (than`) (sủa) (ủy) (trâu`) (shâng-) (ming`) (fang-) (shi*`) (zai`) (fa-) (tá)",
+          "nghia": "Phương thức mà nhân loại tìm hiểu vũ trụ và sinh mệnh dù phát triển đến đâu,"
+        },
+        {
+          "cau_id": "b10p01-d02-002",
+          "hanzi": "也只是在洞見低層宇宙中人類所存在的空間局部。",
+          "pinyin": "yě zhǐ shì zài dòng jiàn dī céng yǔ zhòu zhōng rén lèi suǒ cún zài de kōng jiān jú bù",
+          "yueyin": "(yể) (trỉ*) (shi*`) (zai`) (tung`) (chi:en`) (ti-) (s'ấng) (ủy) (trâu`) (trung-) (rấn) (lây`) (sủa) (s'uấn) (zai`) (tơ) (khung-) (chi:en-) (chúy) (pu`)",
+          "nghia": "cũng chỉ thấy được một phần không gian nơi nhân loại tồn tại trong vũ trụ tầng thấp."
+        },
+        {
+          "cau_id": "b10p01-d02-003",
+          "hanzi": "史前人類出現的多次文明中都探索過其它星球，",
+          "pinyin": "shǐ qián rén lèi chū xiàn de duō cì wén míng zhōng dōu tàn suǒ guò qí tā xīng qiú",
+          "yueyin": "(shỉ*) (ch'i:én) (rấn) (lây`) (tr'u-) (xi:en`) (tơ) (tua-) (s'ư`) (guấn) (míng) (trung-) (tâu-) (than`) (sủa) (cua`) (ch'í) (tha-) (xing-) (ch'i:ấu)",
+          "nghia": "Trong nhiều lần xuất hiện văn minh của nhân loại tiền sử đã từng thám hiểm tới cả những tinh cầu khác,"
+        },
+        {
+          "cau_id": "b10p01-d02-004",
+          "hanzi": "可是飛的再高再遠，也沒離開人類所存在的空間。",
+          "pinyin": "kě shì fēi de zài gāo zài yuǎn yě méi lí kāi rén lèi suǒ cún zài de kōng jiān",
+          "yueyin": "(khửa) (shi*`) (fây-) (tơ) (zai`) (cao-) (zai`) (doản) (yể) (mấy) (lí) (khai-) (rấn) (lây`) (sủa) (s'uấn) (zai`) (tơ) (khung-) (chi:en-)",
+          "nghia": "nhưng dù bay cao bay xa tới đâu, cũng không rời khỏi không gian nơi nhân loại tồn tại."
+        },
+        {
+          "cau_id": "b10p01-d02-005",
+          "hanzi": "人類永遠也不可能真正認識宇宙的真實展現。",
+          "pinyin": "rén lèi yǒng yuǎn yě bù kě néng zhēn zhèng rèn shí yǔ zhòu de zhēn shí zhǎn xiàn",
+          "yueyin": "(rấn) (lây`) (yủng) (doản) (yể) (pu`) (khửa) (nấng) (trân-) (trâng`) (rân`) (shí*) (ủy) (trâu`) (tơ) (trân-) (shí*) (trản) (xi:en`)",
+          "nghia": "Nhân loại vĩnh viễn không thể thật sự nhận thức được triển hiện chân thực của vũ trụ."
+        },
+        {
+          "cau_id": "b10p01-d02-006",
+          "hanzi": "人類要想了解宇宙、時空、人體之迷，",
+          "pinyin": "rén lèi yào xiǎng liǎo jiě yǔ zhòu shí kōng rén tǐ zhī mí",
+          "yueyin": "(rấn) (lây`) (yao`) (xi:ảng) (li:ảo) (chi:ể) (ủy) (trâu`) (shí*) (khung-) (rấn) (thỉ) (tri*-) (mí)",
+          "nghia": "Nhân loại nếu muốn liễu giải được bí ẩn của vũ trụ, thời không, và thân thể người,"
+        },
+        {
+          "cau_id": "b10p01-d02-007",
+          "hanzi": "唯有在正法中修煉，得正覺、提高生命層次。",
+          "pinyin": "wéi yǒu zài zhèng fǎ zhōng xiū liàn dé zhèng jué tí gāo shēng mìng céng cì",
+          "yueyin": "(guấy) (yẩu) (zai`) (trâng`) (fả) (trung-) (xi:âu-) (li:en`) (tứa) (trâng`) (chuế) (thí) (cao-) (shâng-) (ming`) (s'ấng) (s'ư`)",
+          "nghia": "thì chỉ có tu luyện trong chính Pháp, đắc chính giác, đề cao tầng thứ của sinh mệnh."
+        },
+        {
+          "cau_id": "b10p01-d02-008",
+          "hanzi": "修煉中也會使道德品質提高，",
+          "pinyin": "xiū liàn zhōng yě huì  shǐ dào dé pǐn zhì tí gāo",
+          "yueyin": "(xi:âu-) (li:en`) (trung-) (yể) (huây`) (shỉ*) (tao`) (tứa) (p'ỉn) (tri*`) (thí) (cao-)",
+          "nghia": "Trong tu luyện cũng khiến phẩm chất đạo đức được đề cao; "
+        },
+        {
+          "cau_id": "b10p01-d02-009",
+          "hanzi": "在分辨出真正的善與惡、好與壞、走出人類層次的同時，",
+          "pinyin": "zài fēn biàn chū zhēn zhèng de shàn yǔ è hǎo yǔ huài zǒu chū rén lèi céng cì de tóng shí",
+          "yueyin": "(zai`) (fân-) (pi:en`) (tr'u-) (trân-) (trâng`) (tơ) (shan`) (ủy) (ưa`) (hảo) (ủy) (hoai`) (zẩu) (tr'u-) (rấn) (lây`) (s'ấng) (s'ư`) (tơ) (thúng) (shí*)",
+          "nghia": "khi phân biệt được thật sự thiện và ác, tốt và xấu, đồng thời vượt khỏi tầng thứ nhân loại,"
+        },
+        {
+          "cau_id": "b10p01-d02-010",
+          "hanzi": "才會看到、才會接觸到真實的宇宙及不同層次不同空間的生命。",
+          "pinyin": "cái huì kàn dào cái huì jiē chù dào zhēn shí de yǔ zhòu jí bù tóng céng cì bù tóng kōng jiān de shēng mìng",
+          "yueyin": "(s'ái) (huây`) (khan`) (tao`) (s'ái) (huây`) (chi:ê-) (tr'u`) (tao`) (trân-) (shí*) (tơ) (ủy) (trâu`) (chí) (pu`) (thúng) (s'ấng) (s'ư`) (pu`) (thúng) (khung-) (chi:en-) (tơ) (shâng-) (ming`)",
+          "nghia": "thì mới nhìn thấy được, mới tiếp xúc được vũ trụ chân thực và các sinh mệnh tại các tầng thứ khác nhau các không gian khác nhau."
         }
       ]
     }
