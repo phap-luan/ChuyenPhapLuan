@@ -1,0 +1,32 @@
+/* Exported Rich Text & Table Data */
+(function() {
+  window.RENDER_PAYLOAD = {
+    cau_id: "b10p01-d01-003",
+    editorHtml: "<div style=\"margin-bottom: 12px; line-height: 1.5\">\n        <p>\n          <span style=\"font-size: 10px; font-weight: bold; color: #64748b;\"> Nguyên Văn:</span> [(b10p01-d01-003)]<br>\n          <span id=\"matrixTableWrapper\"></span></p><table class=\"matrix-table\"><tbody><tr class=\"row-audio\"><td id=\"m_audio_0\" style=\"color: rgb(239, 68, 68);\">[(nei4)(han2)]</td><td id=\"m_audio_1\">[(hong2)(wei1)]</td><td id=\"m_audio_2\" style=\"color: rgb(168, 85, 247);\">[(zhi4)(ji2)]</td><td id=\"m_audio_3\"></td></tr><tr class=\"row-yueyin\"><td id=\"m_yueyin_0\" style=\"color: rgb(239, 68, 68);\">(nây` hán)</td><td id=\"m_yueyin_1\"><font color=\"#3b82f6\">(húng)(guây-)</font></td><td id=\"m_yueyin_2\" style=\"color: rgb(168, 85, 247);\">(tri*` chí)</td><td id=\"m_yueyin_3\"></td></tr><tr class=\"row-hanzi\"><td id=\"m_hanzi_0\" style=\"color: rgb(239, 68, 68);\">內涵</td><td id=\"m_hanzi_1\"><font color=\"#3b82f6\">洪微</font></td><td id=\"m_hanzi_2\" style=\"color: rgb(168, 85, 247);\">至極</td><td id=\"m_hanzi_3\">,</td></tr><tr class=\"row-pinyin\"><td id=\"m_pinyin_0\" style=\"color: rgb(239, 68, 68);\">nèihán</td><td id=\"m_pinyin_1\"><font color=\"#3b82f6\">hóng&nbsp;wēi</font></td><td id=\"m_pinyin_2\" style=\"color: rgb(168, 85, 247);\">zhìjí</td><td id=\"m_pinyin_3\"></td></tr><tr class=\"row-nghia\"><td id=\"m_nghia_0\" style=\"color: rgb(239, 68, 68);\">Nội hàm</td><td id=\"m_nghia_1\"><font color=\"#3b82f6\">Hồng Vi</font></td><td id=\"m_nghia_2\" style=\"color: rgb(168, 85, 247);\">Chí cực</td><td id=\"m_nghia_3\"></td></tr></tbody></table><br><span style=\"color: rgb(100, 116, 139); font-size: 10px; font-weight: bold;\">Tạm Dịch:</span><br><p style=\"margin-top: 0px;\">\n          <span style=\"font-size: 16px; font-weight: bold;\"><font color=\"#ef4444\">nội hàm</font></span><span style=\"font-size: 16px; font-weight: bold; color: #000000;\">&nbsp;</span><span style=\"font-size: 16px; font-weight: bold;\"><font color=\"#3b82f6\">Hồng Vi</font></span><span style=\"font-size: 16px; font-weight: bold; color: #000000;\">&nbsp;</span><span style=\"font-size: 16px; font-weight: bold;\"><font color=\"#a855f7\">chí cực,</font></span></p><p style=\"margin-top: 5px;\">\n          <span style=\"font-size: 10px; font-weight: bold; color: #64748b;\"> Bản dịch trong sách:</span><br>\n          <span style=\"font-size: 16px; font-weight: bold; color: #000000;\">nội hàm từ cực nhỏ đến cực lớn,</span></p>\n      </div>",
+    tableData: [{"hanzi":"內涵","audio":"[(nei4)(han2)]","pinyin":"nèihán","yueyin":"(nây` hán)","nghia":"Nội hàm: ý nghĩa/nội dung ẩn chứa bên trong","color":"rgb(239, 68, 68)"},{"hanzi":"洪微","audio":"[(hong2)(wei1)]","pinyin":"hóng wēi","yueyin":"(húng)(guây-)","nghia":"Hồng Vi: cực lớn, cực nhỏ"},{"hanzi":"至極","audio":"[(zhi4)(ji2)]","pinyin":"zhìjí","yueyin":"(tri*` chí)","nghia":"Chí cực: Đến cực điểm, tận cùng, vô tận, hết mức","color":"rgb(168, 85, 247)"}]
+  };
+
+  window.renderContent = function(targetEditorId, targetTableId) {
+    if (targetEditorId) {
+      var editorEl = document.getElementById(targetEditorId);
+      if (editorEl) editorEl.innerHTML = window.RENDER_PAYLOAD.editorHtml;
+    }
+    
+    if (targetTableId) {
+      var tableEl = document.getElementById(targetTableId);
+      if (tableEl) {
+        var html = '<table border="1" style="border-collapse: collapse; width: 100%;">';
+        html += '<thead><tr><th>Hanzi</th><th>Audio</th><th>Pinyin</th><th>Yueyin</th><th>Nghĩa</th></tr></thead><tbody>';
+        window.RENDER_PAYLOAD.tableData.forEach(function(item) {
+          html += '<tr><td>' + item.hanzi + '</td><td>' + item.audio + '</td><td>' + item.pinyin + '</td><td>' + item.yueyin + '</td><td>' + item.nghia + '</td></tr>';
+        });
+        html += '</tbody></table>';
+        tableEl.innerHTML = html;
+      }
+    }
+  };
+
+  document.addEventListener("DOMContentLoaded", function() {
+    window.renderContent("rendered-editor", "rendered-table");
+  });
+})();
