@@ -1,0 +1,32 @@
+/* Exported Rich Text & Table Data */
+(function() {
+  window.RENDER_PAYLOAD = {
+    cau_id: "b10p01-d04-010",
+    editorHtml: "<div style=\"margin-bottom: 12px; line-height: 1.5\">\n        <p>\n          <span style=\"font-size: 10px; font-weight: bold; color: #64748b;\"> Nguyên Văn:</span> [(b10p01-d04-010)]<br>\n          <span id=\"matrixTableWrapper\"><table class=\"matrix-table\"><tbody><tr class=\"row-audio\"><td id=\"m_audio_0\"><font color=\"#000000\">[(shi4)(ren2)]</font></td><td id=\"m_audio_1\"><font color=\"#000000\">[(neng2)(gou4)]</font></td><td id=\"m_audio_2\"><font color=\"#000000\">[(fu2)(he2)]</font></td><td id=\"m_audio_3\"><font color=\"#000000\">[(ta1)]</font></td><td id=\"m_audio_4\"><font color=\"#000000\">[(jiu4)(shi4)]</font></td><td id=\"m_audio_5\" style=\"\"><font color=\"#000000\">[(zhen1)(zheng4)]</font></td><td id=\"m_audio_6\"><font color=\"#000000\">[(de)]</font></td><td id=\"m_audio_7\" style=\"\"><font color=\"#000000\">[(hao3)(ren2)]</font></td><td id=\"m_audio_8\"></td></tr><tr class=\"row-yueyin\"><td id=\"m_yueyin_0\"><font color=\"#000000\">(shi*` rấn)</font></td><td id=\"m_yueyin_1\"><font color=\"#000000\">(nấng câu`)</font></td><td id=\"m_yueyin_2\"><font color=\"#000000\">(fú hứa)</font></td><td id=\"m_yueyin_3\"><font color=\"#000000\">(tha-)</font></td><td id=\"m_yueyin_4\"><font color=\"#000000\">(chi:âu`)(shi*`)</font></td><td id=\"m_yueyin_5\" style=\"\"><font color=\"#000000\">(trân- trâng`)</font></td><td id=\"m_yueyin_6\"><font color=\"#000000\">(tơ)</font></td><td id=\"m_yueyin_7\" style=\"\"><font color=\"#000000\">(hảo rấn)</font></td><td id=\"m_yueyin_8\"></td></tr><tr class=\"row-hanzi\"><td id=\"m_hanzi_0\">世人</td><td id=\"m_hanzi_1\">能夠</td><td id=\"m_hanzi_2\">符合</td><td id=\"m_hanzi_3\">他</td><td id=\"m_hanzi_4\">就是</td><td id=\"m_hanzi_5\" style=\"color: rgb(168, 85, 247);\"><font color=\"#a855f7\">真正</font></td><td id=\"m_hanzi_6\">的</td><td id=\"m_hanzi_7\" style=\"color: rgb(249, 115, 22);\"><font color=\"#f97316\">好人</font></td><td id=\"m_hanzi_8\">,</td></tr><tr class=\"row-pinyin\"><td id=\"m_pinyin_0\"><font color=\"#000000\">shìrén</font></td><td id=\"m_pinyin_1\"><font color=\"#000000\">nénggòu</font></td><td id=\"m_pinyin_2\"><font color=\"#000000\">fúhé</font></td><td id=\"m_pinyin_3\"><font color=\"#000000\">tā</font></td><td id=\"m_pinyin_4\"><font color=\"#000000\">jiù shì</font></td><td id=\"m_pinyin_5\" style=\"\"><font color=\"#000000\">zhēnzhèng</font></td><td id=\"m_pinyin_6\"><font color=\"#000000\">de</font></td><td id=\"m_pinyin_7\" style=\"\"><font color=\"#000000\">hǎorén</font></td><td id=\"m_pinyin_8\"></td></tr><tr class=\"row-nghia\"><td id=\"m_nghia_0\"><font color=\"#000000\">Thế nhân</font></td><td id=\"m_nghia_1\"><font color=\"#000000\">Có thể đủ</font></td><td id=\"m_nghia_2\"><font color=\"#000000\">Phù hợp</font></td><td id=\"m_nghia_3\"><font color=\"#000000\">Ông</font></td><td id=\"m_nghia_4\"><font color=\"#000000\">Chính là</font></td><td id=\"m_nghia_5\" style=\"\"><font color=\"#000000\">Chân chính</font></td><td id=\"m_nghia_6\"><font color=\"#000000\">Đích</font></td><td id=\"m_nghia_7\" style=\"\"><font color=\"#000000\">Người tốt</font></td><td id=\"m_nghia_8\"></td></tr></tbody></table><br></span><span style=\"color: rgb(100, 116, 139); font-size: 10px; font-weight: bold;\">Tạm Dịch:</span></p><p style=\"margin-top: 0px;\"><b style=\"\"><font color=\"#000000\">Thế nhân - Có thể đủ - Phù hợp - Ông - Chính là -[</font><font color=\"#a855f7\">Chân chính</font><font color=\"#000000\"> - Về - </font><font color=\"#f97316\">Người tốt</font><font color=\"#000000\">],</font></b></p>\n        <p style=\"margin-top: 5px;\">\n          <span style=\"font-size: 10px; font-weight: bold; color: #64748b;\"> Bản dịch trong sách:</span><br>\n          <span style=\"font-size: 16px; font-weight: bold; color: #000000;\">người thế gian nào có thể phù hợp với Ông thì đúng là người tốt,</span></p>\n      </div>",
+    tableData: [{"hanzi":"世人","audio":"[(shi4)(ren2)]","pinyin":"shìrén","yueyin":"(shi*` rấn)","nghia":"Thế nhân, con người thế gian"},{"hanzi":"能夠","audio":"[(neng2)(gou4)]","pinyin":"nénggòu","yueyin":"(nấng câu`)","nghia":"Có thể đủ, đủ khả năng"},{"hanzi":"符合","audio":"[(fu2)(he2)]","pinyin":"fúhé","yueyin":"(fú hứa)","nghia":"Phù hợp, đạt tiêu chuẩn"},{"hanzi":"他","audio":"[(ta1)]","pinyin":"tā","yueyin":"(tha-)","nghia":"Ông / Ngài"},{"hanzi":"就是","audio":"[(jiu4)(shi4)]","pinyin":"jiù shì","yueyin":"(chi:âu`)(shi*`)","nghia":"Chính là"},{"hanzi":"真正","audio":"[(zhen1)(zheng4)]","pinyin":"zhēnzhèng","yueyin":"(trân- trâng`)","nghia":"Chân chính, thực sự","color":"rgb(168, 85, 247)"},{"hanzi":"的","audio":"[(de)]","pinyin":"de","yueyin":"(tơ)","nghia":"Đích: Trợ từ kết nối định ngữ"},{"hanzi":"好人","audio":"[(hao3)(ren2)]","pinyin":"hǎorén","yueyin":"(hảo rấn)","nghia":"Người tốt","color":"rgb(249, 115, 22)"}]
+  };
+
+  window.renderContent = function(targetEditorId, targetTableId) {
+    if (targetEditorId) {
+      var editorEl = document.getElementById(targetEditorId);
+      if (editorEl) editorEl.innerHTML = window.RENDER_PAYLOAD.editorHtml;
+    }
+    
+    if (targetTableId) {
+      var tableEl = document.getElementById(targetTableId);
+      if (tableEl) {
+        var html = '<table border="1" style="border-collapse: collapse; width: 100%;">';
+        html += '<thead><tr><th>Hanzi</th><th>Audio</th><th>Pinyin</th><th>Yueyin</th><th>Nghĩa</th></tr></thead><tbody>';
+        window.RENDER_PAYLOAD.tableData.forEach(function(item) {
+          html += '<tr><td>' + item.hanzi + '</td><td>' + item.audio + '</td><td>' + item.pinyin + '</td><td>' + item.yueyin + '</td><td>' + item.nghia + '</td></tr>';
+        });
+        html += '</tbody></table>';
+        tableEl.innerHTML = html;
+      }
+    }
+  };
+
+  document.addEventListener("DOMContentLoaded", function() {
+    window.renderContent("rendered-editor", "rendered-table");
+  });
+})();

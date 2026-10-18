@@ -1,0 +1,32 @@
+/* Exported Rich Text & Table Data */
+(function() {
+  window.RENDER_PAYLOAD = {
+    cau_id: "b10p01-d04-012",
+    editorHtml: "<div style=\"margin-bottom: 12px; line-height: 1.5\">\n        <p>\n          <span style=\"font-size: 10px; font-weight: bold; color: #64748b;\"> Nguyên Văn:</span> [(b10p01-d04-012)]<br>\n          <span id=\"matrixTableWrapper\"><table class=\"matrix-table\"><tbody><tr class=\"row-audio\"><td id=\"m_audio_0\"><font color=\"#000000\">[(zuo4)(wei2)]</font></td><td id=\"m_audio_1\"><font color=\"#000000\">[(xiu1)(lian4)(ren2)]</font></td><td id=\"m_audio_2\"></td><td id=\"m_audio_3\"><font color=\"#000000\">[(tong2)(hua4)]</font></td><td id=\"m_audio_4\"><font color=\"#000000\">[(ta1)]</font></td><td id=\"m_audio_5\"><font color=\"#000000\">[(ni3)]</font></td><td id=\"m_audio_6\"><font color=\"#000000\">[(jiu4)(shi4)]</font></td><td id=\"m_audio_7\"><font color=\"#000000\">[(ge4)]</font></td><td id=\"m_audio_8\"><font color=\"#000000\">[(de2)(dao4)(zhe3)]</font></td><td id=\"m_audio_9\"></td><td id=\"m_audio_10\"><font color=\"#000000\">[(shen2)]</font></td><td id=\"m_audio_11\"></td></tr><tr class=\"row-yueyin\"><td id=\"m_yueyin_0\"><font color=\"#000000\">(zua` guấy)</font></td><td id=\"m_yueyin_1\"><font color=\"#000000\">(xi:âu- li:en`)(rấn)</font></td><td id=\"m_yueyin_2\"></td><td id=\"m_yueyin_3\"><font color=\"#000000\">(thúng hoa`)</font></td><td id=\"m_yueyin_4\"><font color=\"#000000\">(tha-)</font></td><td id=\"m_yueyin_5\"><font color=\"#000000\">(nỉ)</font></td><td id=\"m_yueyin_6\"><font color=\"#000000\">(chi:âu`)(shi*`)</font></td><td id=\"m_yueyin_7\"><font color=\"#000000\">(cưa`)</font></td><td id=\"m_yueyin_8\"><font color=\"#000000\">(tứa tao` trửa)</font></td><td id=\"m_yueyin_9\"></td><td id=\"m_yueyin_10\"><font color=\"#000000\">(shấn)</font></td><td id=\"m_yueyin_11\"></td></tr><tr class=\"row-hanzi\"><td id=\"m_hanzi_0\">作為</td><td id=\"m_hanzi_1\">修煉人</td><td id=\"m_hanzi_2\">,</td><td id=\"m_hanzi_3\">同化</td><td id=\"m_hanzi_4\">他</td><td id=\"m_hanzi_5\">你</td><td id=\"m_hanzi_6\">就是</td><td id=\"m_hanzi_7\">個</td><td id=\"m_hanzi_8\">得道者</td><td id=\"m_hanzi_9\">──</td><td id=\"m_hanzi_10\">神</td><td id=\"m_hanzi_11\">。</td></tr><tr class=\"row-pinyin\"><td id=\"m_pinyin_0\"><font color=\"#000000\">zuòwéi</font></td><td id=\"m_pinyin_1\"><font color=\"#000000\">xiūliàn rén</font></td><td id=\"m_pinyin_2\"></td><td id=\"m_pinyin_3\"><font color=\"#000000\">tónghuà</font></td><td id=\"m_pinyin_4\"><font color=\"#000000\">tā</font></td><td id=\"m_pinyin_5\"><font color=\"#000000\">nǐ</font></td><td id=\"m_pinyin_6\"><font color=\"#000000\">jiù shì</font></td><td id=\"m_pinyin_7\"><font color=\"#000000\">gè</font></td><td id=\"m_pinyin_8\"><font color=\"#000000\">dédàozhě</font></td><td id=\"m_pinyin_9\"></td><td id=\"m_pinyin_10\"><font color=\"#000000\">shén</font></td><td id=\"m_pinyin_11\"></td></tr><tr class=\"row-nghia\"><td id=\"m_nghia_0\"><font color=\"#000000\">Làm</font></td><td id=\"m_nghia_1\"><font color=\"#000000\">Người tu luyện</font></td><td id=\"m_nghia_2\"></td><td id=\"m_nghia_3\"><font color=\"#000000\">Đồng hóa</font></td><td id=\"m_nghia_4\"><font color=\"#000000\">Ông</font></td><td id=\"m_nghia_5\"><font color=\"#000000\">Bạn</font></td><td id=\"m_nghia_6\"><font color=\"#000000\">Chính là</font></td><td id=\"m_nghia_7\"><font color=\"#000000\">Một</font></td><td id=\"m_nghia_8\"><font color=\"#000000\">Đắc Đạo Giả</font></td><td id=\"m_nghia_9\"></td><td id=\"m_nghia_10\"><font color=\"#000000\">Thần</font></td><td id=\"m_nghia_11\"></td></tr></tbody></table><br></span><span style=\"color: rgb(100, 116, 139); font-size: 10px; font-weight: bold;\">Tạm Dịch:</span></p><p style=\"margin-top: 0px;\"><font color=\"#000000\"><b>Làm - Người tu luyện,- Đồng hóa - Ông - Bạn - Chính là - Một - Đắc Đạo Giả ----- Thần.</b></font></p>\n        <p style=\"margin-top: 5px;\">\n          <span style=\"font-size: 10px; font-weight: bold; color: #64748b;\"> Bản dịch trong sách:</span><br>\n          <span style=\"font-size: 16px; font-weight: bold; color: #000000;\">làm người tu luyện, mà đồng hoá với Ông thì chư vị chính là bậc đắc Đạo: Thần.</span></p>\n      </div>",
+    tableData: [{"hanzi":"作為","audio":"[(zuo4)(wei2)]","pinyin":"zuòwéi","yueyin":"(zua` guấy)","nghia":"Với tư cách là, làm, là"},{"hanzi":"修煉人","audio":"[(xiu1)(lian4)(ren2)]","pinyin":"xiūliàn rén","yueyin":"(xi:âu- li:en`)(rấn)","nghia":"Người tu luyện"},{"hanzi":"同化","audio":"[(tong2)(hua4)]","pinyin":"tónghuà","yueyin":"(thúng hoa`)","nghia":"Đồng hóa, hòa hợp thành một"},{"hanzi":"他","audio":"[(ta1)]","pinyin":"tā","yueyin":"(tha-)","nghia":"Ngài / Ông (chỉ Đại Pháp)"},{"hanzi":"你","audio":"[(ni3)]","pinyin":"nǐ","yueyin":"(nỉ)","nghia":"Bạn (chỉ người đọc/người nghe)"},{"hanzi":"就是","audio":"[(jiu4)(shi4)]","pinyin":"jiù shì","yueyin":"(chi:âu`)(shi*`)","nghia":"Chính là"},{"hanzi":"個","audio":"[(ge4)]","pinyin":"gè","yueyin":"(cưa`)","nghia":"Một bậc/người.... (lượng từ dùng chung)"},{"hanzi":"得道者","audio":"[(de2)(dao4)(zhe3)]","pinyin":"dédàozhě","yueyin":"(tứa tao` trửa)","nghia":"Đắc Đạo Giả: Người đắc Đạo"},{"hanzi":"神","audio":"[(shen2)]","pinyin":"shén","yueyin":"(shấn)","nghia":"Thần, vị Thần"}]
+  };
+
+  window.renderContent = function(targetEditorId, targetTableId) {
+    if (targetEditorId) {
+      var editorEl = document.getElementById(targetEditorId);
+      if (editorEl) editorEl.innerHTML = window.RENDER_PAYLOAD.editorHtml;
+    }
+    
+    if (targetTableId) {
+      var tableEl = document.getElementById(targetTableId);
+      if (tableEl) {
+        var html = '<table border="1" style="border-collapse: collapse; width: 100%;">';
+        html += '<thead><tr><th>Hanzi</th><th>Audio</th><th>Pinyin</th><th>Yueyin</th><th>Nghĩa</th></tr></thead><tbody>';
+        window.RENDER_PAYLOAD.tableData.forEach(function(item) {
+          html += '<tr><td>' + item.hanzi + '</td><td>' + item.audio + '</td><td>' + item.pinyin + '</td><td>' + item.yueyin + '</td><td>' + item.nghia + '</td></tr>';
+        });
+        html += '</tbody></table>';
+        tableEl.innerHTML = html;
+      }
+    }
+  };
+
+  document.addEventListener("DOMContentLoaded", function() {
+    window.renderContent("rendered-editor", "rendered-table");
+  });
+})();
