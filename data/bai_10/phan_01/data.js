@@ -127,7 +127,7 @@ window.CURRENT_PHAN_DATA = {
       "content": [
         {
           "cau_id": "b10p01-d02-001",
-          "hanzi": "人類的探索宇宙、生命方式再發達，",
+          "hanzi": "  人類的探索宇宙、生命方式再發達，",
           "pinyin": "rén lèi de tàn suǒ yǔ zhòu shēng mìng fāng shì zài fā dá\n",
           "yueyin": "(rấn) (lây`) (tơ) (than`) (sủa) (ủy) (trâu`) (shâng-) (ming`) (fang-) (shi*`) (zai`) (fa-) (tá)",
           "nghia": "Phương thức mà nhân loại tìm hiểu vũ trụ và sinh mệnh dù phát triển đến đâu,"
@@ -202,7 +202,7 @@ window.CURRENT_PHAN_DATA = {
       "content": [
         {
           "cau_id": "b10p01-d03-001",
-          "hanzi": "人類的探索是為了技術競爭，借口是改變生存條件，",
+          "hanzi": "  人類的探索是為了技術競爭，借口是改變生存條件，",
           "pinyin": "rén lèi de tàn suǒ shì wèi le jì shù jìng zhēng jiè kǒu shì gǎi biàn shēng cún tiáo jiàn",
           "yueyin": "(rấn) (lây`) (tơ) (than`) (sủa) (shi*`) (guây`) (lơ) (chi`) (shu`) (ching`) (trâng-) (chi:ê`) (khẩu) (shi*`) (cải) (pi:en`) (shâng-) (s'uấn) (thi:áo) (chi:en`)",
           "nghia": "Những tìm tòi của nhân loại là vì để cạnh tranh kỹ thuật, mượn cớ là để cải biến điều kiện sinh tồn,"
@@ -270,7 +270,7 @@ window.CURRENT_PHAN_DATA = {
       "content": [
         {
           "cau_id": "b10p01-d04-001",
-          "hanzi": "如果人類能以道德為基礎提升人的品行、觀念，",
+          "hanzi": "  如果人類能以道德為基礎提升人的品行、觀念，",
           "pinyin": "rú guǒ rén lèi néng yǐ dào dé wéi jī chǔ tí shēng rén de pǐn xíng guān niàn",
           "yueyin": "(rú) (của) (rấn) (lây`) (nấng) (ỷ) (tao`) (tứa) (guấy) (chi-) (tr'ủ) (thí) (shâng-) (rấn) (tơ) (p'ỉn) (xíng) (coan-) (ni:en`)",
           "nghia": "Nếu nhân loại có thể lấy đạo đức làm cơ sở để đề cao phẩm hạnh và quan niệm của con người,"
