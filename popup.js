@@ -2,65 +2,98 @@
 
 // Lưu thông tin đường dẫn bài/phần hiện tại để phát audio fallback
 let currentPathInfo = null;
+// Biến toàn cục lưu trữ trình phát âm thanh duy nhất & mã lượt phát hiện tại
+let currentAudioPlayer = null;
+let currentPlaySessionId = 0;
 
 /**
- * Hàm hỗ trợ phát lần lượt danh sách file âm thanh MP3 (Thử qua 3 thư mục)
+ * Hàm hỗ trợ phát lần lượt danh sách file âm thanh MP3 (Tự động ngắt phát cũ khi bấm phát mới)
  */
 function playAudioSequence(audioList) {
     if (!audioList || audioList.length === 0) return;
 
+    // 1. Dừng ngay lập tức audio đang phát cũ (nếu có)
+    if (currentAudioPlayer) {
+        currentAudioPlayer.pause();
+        currentAudioPlayer.currentTime = 0;
+        currentAudioPlayer.src = ""; // Xóa nguồn phát để ngắt triệt để
+        currentAudioPlayer.onended = null; // Hủy sự kiện kết thúc của phát cũ
+    }
+
+    // 2. Tạo mới đối tượng Audio và tăng ID phiên phát âm
+    currentAudioPlayer = new Audio();
+    const localAudioPlayer = currentAudioPlayer;
+    
+    // Mỗi lần bấm phát mới sẽ sinh ra 1 Session ID riêng biệt
+    currentPlaySessionId++;
+    const thisSessionId = currentPlaySessionId;
+
     let currentIndex = 0;
-    const audioPlayer = new Audio();
+
+    let prefix = "";
+    if (window.location.pathname.includes('/data/bai_')) {
+        prefix = "../../../";
+    }
 
     function playSound(soundName) {
-        // Danh sách 3 thư mục tìm kiếm audio theo thứ tự ưu tiên
+        // Nếu đã có lượt bấm mới thì dừng toàn bộ quy trình phát cũ ngay
+        if (thisSessionId !== currentPlaySessionId) return;
+
+        // Danh sách các thư mục tìm kiếm theo thứ tự ưu tiên
         const paths = [
-            `audiopinyin/${soundName}.mp3`,
-            `audiopinyin/audio2/${soundName}.mp3`
+            `${prefix}audiopinyin/${soundName}.mp3`,
+            `${prefix}audiopinyin/audio2/${soundName}.mp3`
         ];
 
-        // Nếu có thông tin bài/phần thì thêm đường dẫn thứ 3
         if (currentPathInfo) {
-            paths.push(`data/bai_${currentPathInfo.bai}/phan_${currentPathInfo.phan}/audio/${soundName}.mp3`);
+            paths.push(`${prefix}data/bai_${currentPathInfo.bai}/phan_${currentPathInfo.phan}/audio/${soundName}.mp3`);
         }
 
         let pathIndex = 0;
 
-        function tryNextPath() {
-            if (pathIndex < paths.length) {
-                audioPlayer.src = paths[pathIndex];
-                
-                audioPlayer.onended = function() {
-                    currentIndex++;
-                    if (currentIndex < audioList.length) {
-                        playSound(audioList[currentIndex]);
-                    }
-                };
+        function tryPlay() {
+            // Kiểm tra xem phiên phát này còn hợp lệ không
+            if (thisSessionId !== currentPlaySessionId) return;
 
-                audioPlayer.onerror = function() {
-                    pathIndex++;
-                    tryNextPath(); // Thử đường dẫn tiếp theo nếu lỗi
-                };
+            // Nếu đã thử hết các đường dẫn mà không thành công
+            if (pathIndex >= paths.length) {
+                console.warn(`Không tìm thấy file âm thanh: ${soundName} ở các thư mục.`);
+                currentIndex++;
+                if (currentIndex < audioList.length && thisSessionId === currentPlaySessionId) {
+                    playSound(audioList[currentIndex]);
+                }
+                return;
+            }
 
-                audioPlayer.play().catch(err => {
-                    pathIndex++;
-                    tryNextPath();
-                });
-            } else {
-                console.warn(`Không tìm thấy file âm thanh: ${soundName} ở cả 3 thư mục.`);
+            localAudioPlayer.src = paths[pathIndex];
+            localAudioPlayer.load();
+
+            // Sự kiện khi phát xong 1 file âm thanh
+            localAudioPlayer.onended = function() {
+                if (thisSessionId !== currentPlaySessionId) return;
                 currentIndex++;
                 if (currentIndex < audioList.length) {
                     playSound(audioList[currentIndex]);
                 }
-            }
+            };
+
+            // Thử phát audio
+            localAudioPlayer.play().then(() => {
+                // Phát thành công
+            }).catch(err => {
+                // Lỗi không có file hoặc bị dừng giữa chừng
+                if (thisSessionId === currentPlaySessionId) {
+                    pathIndex++;
+                    tryPlay();
+                }
+            });
         }
 
-        tryNextPath();
+        tryPlay();
     }
 
     playSound(audioList[0]);
 }
-
 /**
  * Chuyển đổi văn bản dạng [(sound1)(sound2)] thành nút Loa HTML
  */
