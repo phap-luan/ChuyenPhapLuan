@@ -94,6 +94,7 @@ function playAudioSequence(audioList) {
 
     playSound(audioList[0]);
 }
+
 /**
  * Chuyển đổi văn bản dạng [(sound1)(sound2)] thành nút Loa HTML
  */
@@ -143,11 +144,6 @@ function openExplanation(sentenceObj) {
         modalTitle.textContent = `Chi Tiết Câu: ${cauId || ''}`;
     }
 
-    modalContent.innerHTML = `
-        <div style="text-align: center; padding: 15px; color: #666;">
-            ⏳ Đang tải nội dung <b>${cauId}.js</b>...
-        </div>
-    `;
     modalOverlay.classList.add('active');
 
     if (!cauId) {
@@ -161,12 +157,15 @@ function openExplanation(sentenceObj) {
         return;
     }
 
-    const jsPath = `data/bai_${currentPathInfo.bai}/phan_${currentPathInfo.phan}/${cauId}.js`;
-
+    // Bọc toàn bộ nội dung trong một khối wrapper có min-width: fit-content
     modalContent.innerHTML = `
-        <div id="rendered-editor" style="margin-bottom: 15px;"></div>
-        <div id="rendered-table" class="custom-table-container"></div>
+        <div id="popup-inner-wrapper" style="display: inline-block; min-width: 100%; width: max-content; width: -webkit-max-content;">
+            <div id="rendered-editor" style="margin-bottom: 15px; width: 100%;"></div>
+            <div id="rendered-table" class="custom-table-container" style="width: 100%;"></div>
+        </div>
     `;
+
+    const jsPath = `data/bai_${currentPathInfo.bai}/phan_${currentPathInfo.phan}/${cauId}.js`;
 
     const oldScript = document.getElementById('dynamic-popup-content-script');
     if (oldScript) oldScript.remove();
@@ -203,7 +202,7 @@ function openExplanation(sentenceObj) {
 function renderContentWithAudio(targetEditorId, targetTableId) {
     if (!window.RENDER_PAYLOAD) return;
 
-    // 1. Render Bảng Ma trận (Bảng 1)
+    // 1. Render Bảng Ma trận (Bảng 1 - Chữ Hán / Pinyin phía trên)
     if (targetEditorId) {
         const editorEl = document.getElementById(targetEditorId);
         if (editorEl) {
@@ -235,14 +234,14 @@ function renderContentWithAudio(targetEditorId, targetTableId) {
         }
     }
 
-   // 2. Render Bảng Chi Tiết 3 Cột
+    // 2. Render Bảng Chi Tiết 3 Cột (Bảng phía dưới)
     if (targetTableId) {
         const tableEl = document.getElementById(targetTableId);
         if (tableEl && window.RENDER_PAYLOAD.tableData) {
             
             // --- THÔNG SỐ ĐIỀU CHỈNH KÍCH THƯỚC & KHOẢNG CÁCH ---
             const STYLES = {
-                cellPadding: "3px 6px",       // Đệm ô (trên/dưới - trái/phải)
+                cellPadding: "3px 6px",       // Đệm ô
                 hanziSize: "30px",            // Cỡ chữ Hanzi
                 pinyinSize: "13px",           // Cỡ chữ Pinyin
                 yueyinSize: "11px",           // Cỡ chữ Yueyin
@@ -251,9 +250,8 @@ function renderContentWithAudio(targetEditorId, targetTableId) {
                 thFontSize: "13px"            // Cỡ chữ tiêu đề
             };
 
-            let html = `<table border="1" style="border-collapse: collapse; width: 100%; text-align: center; table-layout: auto;">`;
+            let html = `<table border="1" style="border-collapse: collapse; width: 100%; min-width: 100%; text-align: center; table-layout: auto;">`;
             
-            // Cột 1 & 2 dùng width: 1% + white-space: nowrap để tự co vừa khít chữ. Cột 3 width: auto để chiếm hết phần dư.
             html += `<thead><tr style="background-color: rgba(140, 45, 25, 0.15); font-weight: bold; color: #5c2419; font-size: ${STYLES.thFontSize};">` +
                     `<th style="padding: ${STYLES.thPadding}; width: 1%; white-space: nowrap;">Hanzi</th>` +
                     `<th style="padding: ${STYLES.thPadding}; width: 1%; white-space: nowrap;">Pinyin</th>` +
@@ -265,7 +263,7 @@ function renderContentWithAudio(targetEditorId, targetTableId) {
                 const hanziColor = item.color ? `color: ${item.color};` : 'color: inherit;';
 
                 html += `<tr>
-                    <!-- Cột 1: Hanzi + Audio (Co vừa ký tự, không xuống dòng) -->
+                    <!-- Cột 1: Hanzi + Audio -->
                     <td style="padding: ${STYLES.cellPadding}; vertical-align: middle; white-space: nowrap;">
                         <div style="font-family: 'Kaiti SC', 'STKaiti', 'KaiTi', 'SimKai', serif; font-size: ${STYLES.hanziSize}; font-weight: bold; line-height: 1.1; ${hanziColor}">
                             ${item.hanzi || ''}
@@ -273,7 +271,7 @@ function renderContentWithAudio(targetEditorId, targetTableId) {
                         ${audioBtnHtml ? `<div style="margin-top: 1px; line-height: 1;">${audioBtnHtml}</div>` : ''}
                     </td>
 
-                    <!-- Cột 2: Pinyin + Yueyin (Co vừa ký tự, không xuống dòng) -->
+                    <!-- Cột 2: Pinyin + Yueyin -->
                     <td style="padding: ${STYLES.cellPadding}; vertical-align: middle; white-space: nowrap;">
                         <div style="font-size: ${STYLES.pinyinSize}; font-weight: bold; color: #0369a1; line-height: 1.2;">
                             ${item.pinyin || ''}
@@ -284,7 +282,7 @@ function renderContentWithAudio(targetEditorId, targetTableId) {
                         </div>` : ''}
                     </td>
 
-                    <!-- Cột 3: Nghĩa (Tự dãn phần còn lại + Được phép xuống dòng) -->
+                    <!-- Cột 3: Nghĩa -->
                     <td style="padding: ${STYLES.cellPadding}; text-align: left; vertical-align: middle; font-size: ${STYLES.nghiaSize}; line-height: 1.1; word-break: break-word;">
                         ${item.nghia || ''}
                     </td>
@@ -295,6 +293,19 @@ function renderContentWithAudio(targetEditorId, targetTableId) {
             tableEl.innerHTML = html;
         }
     }
+
+    // 3. Tự động đo độ rộng của bảng chữ Hán phía trên và ép bảng dưới mở rộng tương ứng
+    setTimeout(() => {
+        const topTable = document.querySelector('#rendered-editor table');
+        const bottomTable = document.querySelector('#rendered-table table');
+        
+        if (topTable && bottomTable) {
+            const topWidth = topTable.getBoundingClientRect().width;
+            if (topWidth > 0) {
+                bottomTable.style.minWidth = topWidth + 'px';
+            }
+        }
+    }, 50);
 }
 
 // Xử lý đóng Modal
