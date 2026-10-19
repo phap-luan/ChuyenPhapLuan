@@ -236,9 +236,9 @@
             border-bottom: 2px solid var(--border-color);
         }
 
-        .grid-normal  { grid-template-columns: repeat(13, minmax(38px, max-content)); }
-        .grid-title-1 { grid-template-columns: minmax(76px, max-content) repeat(11, minmax(38px, max-content)); }
-        .grid-title-2 { grid-template-columns: minmax(76px, max-content) minmax(76px, max-content) repeat(9, minmax(38px, max-content)); }
+        .grid-normal  { grid-template-columns: repeat(13, minmax(42px, max-content)); }
+        .grid-title-1 { grid-template-columns: minmax(76px, max-content) repeat(11, minmax(42px, max-content)); }
+        .grid-title-2 { grid-template-columns: minmax(76px, max-content) minmax(76px, max-content) repeat(9, minmax(42px, max-content)); }
 
         .title-column-container {
             grid-row: 1 / -1;
@@ -332,7 +332,7 @@
             align-items: center !important;
             width: 100%;
             height: 100%;
-            transform: translateX(10px) translateY(-16px) !important;
+            transform: translateX(10px) translateY(-10px) !important; /*Vị trí dấu câu*/
         }
 
         .cell-pinyin, .cell-yueyin {
@@ -353,6 +353,25 @@
             border-left: 1px solid rgba(140, 45, 25, 0.3);
             border-bottom: 0px solid transparent;
             min-height: 28px;
+        }
+
+        /* CSS Nút loa nhỏ ở góc trên bên phải ô đầu tiên của câu */
+        .speaker-btn {
+            position: absolute;
+            top: 1px;
+            right: 1px;
+            font-size: 9px;
+            line-height: 1;
+            cursor: pointer;
+            z-index: 10;
+            opacity: 0.7;
+            user-select: none;
+            transition: transform 0.1s, opacity 0.1s;
+        }
+
+        .speaker-btn:hover {
+            opacity: 1;
+            transform: scale(1.3);
         }
 
         /* --- CSS CHO TRANG BÌA --- */
@@ -475,7 +494,7 @@
             max-width: 650px;
             max-height: 80vh;
             border-radius: 8px;
-            padding: 20px;
+            padding: 5px;
             display: flex;
             flex-direction: column;
             box-shadow: 0 10px 30px rgba(0,0,0,0.8);
@@ -633,6 +652,7 @@
         let showPinyin = false;
         let showYueyin = false;
         let selectedPhanId = 1;
+        let currentAudio = null;
 
         const globalBookFlow = [
             { bai: "00", phan: 1 },
@@ -658,6 +678,29 @@
         const btnPrevPage = document.getElementById('btnPrevPage');
         const btnNextPage = document.getElementById('btnNextPage');
         const pageDisplay = document.getElementById('pageDisplay');
+
+        // Hàm phát âm thanh theo id câu
+        function playSentenceAudio(cauId) {
+            if (!cauId) return;
+
+            // Phân tích cau_id (ví dụ: b10p01-d04-009) -> bài: 10, phần: 01
+            const match = cauId.match(/^b(\d+)p(\d+)/i);
+            if (!match) return;
+
+            const baiNum = match[1];
+            const phanNum = match[2];
+            const audioPath = `data/bai_${baiNum}/phan_${phanNum}/audio/${cauId}.mp3`;
+
+            if (currentAudio) {
+                currentAudio.pause();
+                currentAudio.currentTime = 0;
+            }
+
+            currentAudio = new Audio(audioPath);
+            currentAudio.play().catch(err => {
+                console.warn("Không thể phát âm thanh:", audioPath, err);
+            });
+        }
 
         function updatePhanDropdownList(baiValue) {
             phanListMenu.innerHTML = '';
@@ -887,7 +930,7 @@
                         let pinyinIdx = 0;
                         let yueyinIdx = 0;
 
-                        hanziChars.forEach((char) => {
+                        hanziChars.forEach((char, cIdx) => {
                             let pinyinVal = '';
                             if (/[\u4e00-\u9fa5]/.test(char) && pinyinIdx < pinyinList.length) {
                                 pinyinVal = pinyinList[pinyinIdx];
@@ -906,7 +949,8 @@
                                 pinyin: pinyinVal,
                                 yueyin: yueyinVal,
                                 sentence: sentence,
-                                sentenceIdx: sIdx
+                                sentenceIdx: sIdx,
+                                isFirstCharOfSentence: (cIdx === 0)
                             });
 
                             currentCellInCol++;
@@ -949,7 +993,7 @@
             let yIdx = 0;
 
             const titleSentenceObj = {
-                cau_id: titleId || 'title-id',
+                cau_id: titleId || '',
                 hanzi: titleText,
                 pinyin: titlePinyin,
                 yueyin: titleYueyin,
@@ -959,6 +1003,18 @@
             for (let i = 0; i < TITLE_ROWS; i++) {
                 const cell = document.createElement('div');
                 cell.className = `title-cell title-cell-${colIndex}`;
+
+                if (i === 0 && titleId) {
+                    const speakerBtn = document.createElement('span');
+                    speakerBtn.className = 'speaker-btn';
+                    speakerBtn.textContent = '🔊';
+                    speakerBtn.title = 'Phát âm thanh';
+                    speakerBtn.addEventListener('click', (e) => {
+                        e.stopPropagation();
+                        playSentenceAudio(titleId);
+                    });
+                    cell.appendChild(speakerBtn);
+                }
 
                 if (i < chars.length) {
                     const char = chars[i];
@@ -1128,9 +1184,22 @@
                     const colorClass = (cellData.sentenceIdx % 2 === 0) ? 'cell-even' : 'cell-odd';
                     cell.className = `cell ${colorClass}`;
 
-                    const isPunctuation = /^[$,。、、，,.\s《》""''“”‘’]+$/.test(cellData.char);
+                    const isPunctuation = /^[$；,。、、，,.\s《》""''“”‘’]+$/.test(cellData.char);
                     if (isPunctuation) {
                         cell.classList.add('cell-punctuation');
+                    }
+
+                    // Nếu là ô đầu tiên của câu, thêm cái loa nhỏ ở góc trên bên phải
+                    if (cellData.isFirstCharOfSentence && cellData.sentence && cellData.sentence.cau_id) {
+                        const speakerBtn = document.createElement('span');
+                        speakerBtn.className = 'speaker-btn';
+                        speakerBtn.textContent = '🔊';
+                        speakerBtn.title = 'Phát âm thanh';
+                        speakerBtn.addEventListener('click', (e) => {
+                            e.stopPropagation(); // Tránh kích hoạt popup openExplanation
+                            playSentenceAudio(cellData.sentence.cau_id);
+                        });
+                        cell.appendChild(speakerBtn);
                     }
 
                     const hanziDiv = document.createElement('div');

@@ -3,7 +3,7 @@ window.CURRENT_PHAN_DATA = {
     "bai": 10,
     "phan": 1,
     "tieude1": "  論語",
-    "tieude1_id": "",
+    "tieude1_id": "b10p01-td00",
     "tieude1_pinyin": "lún yǔ",
     "tieude1_yueyin": "(luấn) (ủy)",
     "tieude2": "",
@@ -17,7 +17,7 @@ window.CURRENT_PHAN_DATA = {
       "content": [
         {
           "cau_id": "b10p01-d01-001",
-          "hanzi": "  大法是創世主的智慧。",
+          "hanzi": " 大法是創世主的智慧。",
           "pinyin": "dà fǎ shì chuàng shì zhǔ de zhì huì",
           "yueyin": "(ta`) (fả) (shi*`) (tr'oang`) (shi*`) (trủ) (tơ) (tri*`) (huây`)",
           "nghia": "Đại Pháp là trí huệ của Sáng Thế Chủ."
@@ -127,7 +127,7 @@ window.CURRENT_PHAN_DATA = {
       "content": [
         {
           "cau_id": "b10p01-d02-001",
-          "hanzi": "  人類的探索宇宙、生命方式再發達，",
+          "hanzi": " 人類的探索宇宙、生命方式再發達，",
           "pinyin": "rén lèi de tàn suǒ yǔ zhòu shēng mìng fāng shì zài fā dá\n",
           "yueyin": "(rấn) (lây`) (tơ) (than`) (sủa) (ủy) (trâu`) (shâng-) (ming`) (fang-) (shi*`) (zai`) (fa-) (tá)",
           "nghia": "Phương thức mà nhân loại tìm hiểu vũ trụ và sinh mệnh dù phát triển đến đâu,"
@@ -202,7 +202,7 @@ window.CURRENT_PHAN_DATA = {
       "content": [
         {
           "cau_id": "b10p01-d03-001",
-          "hanzi": "  人類的探索是為了技術競爭，借口是改變生存條件，",
+          "hanzi": " 人類的探索是為了技術競爭，借口是改變生存條件，",
           "pinyin": "rén lèi de tàn suǒ shì wèi le jì shù jìng zhēng jiè kǒu shì gǎi biàn shēng cún tiáo jiàn",
           "yueyin": "(rấn) (lây`) (tơ) (than`) (sủa) (shi*`) (guây`) (lơ) (chi`) (shu`) (ching`) (trâng-) (chi:ê`) (khẩu) (shi*`) (cải) (pi:en`) (shâng-) (s'uấn) (thi:áo) (chi:en`)",
           "nghia": "Những tìm tòi của nhân loại là vì để cạnh tranh kỹ thuật, mượn cớ là để cải biến điều kiện sinh tồn,"
@@ -225,7 +225,7 @@ window.CURRENT_PHAN_DATA = {
           "cau_id": "b10p01-d03-004",
           "hanzi": "探索中也只能侷限在物質世界之內，",
           "pinyin": "tàn suǒ zhōng yě zhǐ néng jú xiàn zài wù zhì shì jiè zhī nèi",
-          "yueyin": "(than`)(sủa)(trung-)(yể)(trỉ*)(nấng)(chúy)(xi:en`)(zai`)(u`)(tri*`)(shi*`)(chi:ê`)(tri*-)(nây`)",
+          "yueyin": "(than`) (sủa) (trung-) (yể) (trỉ*) (nấng) (chúy) (xi:en`) (zai`) (u`) (tri*`) (shi*`) (chi:ê`) (tri*-) (nây`)",
           "nghia": "Khi tìm hiểu cũng chỉ có thể giới hạn trong thế giới vật chất,"
         },
         {
@@ -270,7 +270,7 @@ window.CURRENT_PHAN_DATA = {
       "content": [
         {
           "cau_id": "b10p01-d04-001",
-          "hanzi": "  如果人類能以道德為基礎提升人的品行、觀念，",
+          "hanzi": " 如果人類能以道德為基礎提升人的品行、觀念，",
           "pinyin": "rú guǒ rén lèi néng yǐ dào dé wéi jī chǔ tí shēng rén de pǐn xíng guān niàn",
           "yueyin": "(rú) (của) (rấn) (lây`) (nấng) (ỷ) (tao`) (tứa) (guấy) (chi-) (tr'ủ) (thí) (shâng-) (rấn) (tơ) (p'ỉn) (xíng) (coan-) (ni:en`)",
           "nghia": "Nếu nhân loại có thể lấy đạo đức làm cơ sở để đề cao phẩm hạnh và quan niệm của con người,"
@@ -312,7 +312,7 @@ window.CURRENT_PHAN_DATA = {
         },
         {
           "cau_id": "b10p01-d04-007",
-          "hanzi": "\t\n那會給人、給民族或國家帶來幸福或榮耀。",
+          "hanzi": "那會給人、給民族或國家帶來幸福或榮耀。",
           "pinyin": "nà huì gěi rén gěi mín zú huò guó jiā dài lái xìng fú huò róng yào",
           "yueyin": "(na`) (huây`) (cẩy) (rấn) (cẩy) (mín) (zú) (hua`) (cúa) (chi:a-) (tai`) (lái) (xing`) (fú) (hua`) (rúng) (yao`)",
           "nghia": "thì sẽ mang đến hạnh phúc hay vinh diệu cho người, dân tộc hoặc quốc gia."
@@ -347,7 +347,7 @@ window.CURRENT_PHAN_DATA = {
         },
         {
           "cau_id": "b10p01-d04-012",
-          "hanzi": "作為修煉人，同化他你就是個得道者──神。",
+          "hanzi": "作為修煉人，同化他你就是個得道者||神。",
           "pinyin": "zuò wéi xiū liàn rén tóng huà tā nǐ jiù shì gè dé dào zhě shén",
           "yueyin": "(zua`) (guấy) (xi:âu-) (li:en`) (rấn) (thúng) (hoa`) (tha-) (nỉ) (chi:âu`) (shi*`) (cưa`) (tứa) (tao`) (trửa) (shấn)",
           "nghia": "làm người tu luyện, mà đồng hoá với Ông thì chư vị chính là bậc đắc Đạo: Thần."
