@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Công cụ Pinyin & Yueyin Tự động</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        h2 { color: #2c3e50; }
+        .section {
+            background: #fff;
+            padding: 15px 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        label { font-weight: bold; display: block; margin-top: 10px; }
+        textarea, input[type="text"], input[type="file"] {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        textarea { height: 120px; font-family: monospace; }
+        button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        button:hover { background-color: #2980b9; }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            background: #fff;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+        th { background-color: #f2f2f2; }
+        td input {
+            width: 90%;
+            padding: 5px;
+            text-align: center;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+        .success { color: green; font-weight: bold; margin-top: 5px; }
+    </style>
+</head>
+<body>
+
+    <h2>Công cụ Chuyển đổi Pinyin sang Yueyin & Link Download Audio</h2>
+
+    <!-- Bước 1: Load file JSON -->
+    <div class="section">
+        <h3>1. Chọn file JSON hiện có</h3>
+        <label for="jsonFile">Tải lên file JSON của bạn:</label>
+        <input type="file" id="jsonFile" accept=".json" onchange="loadJSONFile(event)">
+        <p id="fileStatus" style="font-size: 13px; color: #666; margin-top: 5px;">Chưa chọn file nào (sẽ khởi tạo JSON trống nếu không tải file).</p>
+    </div>
+
+    <!-- Bước 2: Danh sách Pinyin -->
+    <div class="section">
+        <h3>2. Nhập danh sách Pinyin cần chuyển đổi</h3>
+        <label for="pinyinListInput">Dán danh sách âm (mỗi dòng 1 âm):</label>
+        <textarea id="pinyinListInput">ma
+mai
+man
+mang
+mao
+me
+mei
+men
+meng
+mi
+mian
+miao
+mie
+min
+ming
+miu
+mo
+mou
+mu</textarea>
+        <button onclick="generateTable()">Tự động tách & Tạo bảng Yueyin</button>
+    </div>
+
+    <!-- Bước 3: Bảng nhập liệu Yueyin -->
+    <div class="section" id="tableSection" style="display:none;">
+        <h3>3. Kiểm tra và Điều chỉnh Yueyin</h3>
+        <p style="font-size: 13px; color: #666;">Thanh 0, 2, 3 giữ nguyên; Thanh 1 thêm `-`; Thanh 4 thêm `` ` `` vào cuối.</p>
+        <div style="overflow-x:auto;">
+            <table id="yueyinTable">
+                <thead>
+                    <tr>
+                        <th>Pinyin gốc</th>
+                        <th>Thanh 0</th>
+                        <th>Thanh 1</th>
+                        <th>Thanh 2</th>
+                        <th>Thanh 3</th>
+                        <th>Thanh 4</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                    <!-- Dynamic rows -->
+                </tbody>
+            </table>
+        </div>
+        <button onclick="exportJSON()" style="background-color: #2ecc71;">Cập nhật & Lưu file JSON</button>
+    </div>
+
+    <!-- Bước 4: Kết quả JSON dạng 1 dòng -->
+    <div class="section">
+        <h3>4. Kết quả JSON sau khi cập nhật (Compact 1 dòng mỗi key)</h3>
+        <textarea id="jsonOutput" readonly></textarea>
+        <button onclick="downloadJSON()">Tải xuống file JSON mới</button>
+        <div id="copyStatus" class="success"></div>
+    </div>
+
+    <!-- Bước 5: Danh sách link download MP3 -->
+    <div class="section" id="downloadSection" style="display:none;">
+        <h3>5. Danh sách Link Download MP3 (Thanh 1, 2, 3, 4)</h3>
+        <p style="font-size: 13px; color: #666;">Các link này chỉ dùng để tải về, không lưu vào JSON.</p>
+        <button onclick="copyAllLinks()" style="background-color: #e67e22;">Sao chép tất cả Link</button>
+        <div style="overflow-x:auto; max-height: 300px; margin-top: 10px;">
+            <table id="downloadTable">
+                <thead>
+                    <tr>
+                        <th>STT</th>
+                        <th>Tên file</th>
+                        <th>Đường dẫn tải về (URL)</th>
+                    </tr>
+                </thead>
+                <tbody id="downloadTableBody">
+                    <!-- Dynamic download rows -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+<script>
+let currentJsonData = {};
+
+function loadJSONFile(event) {
+    const file = event.target.files[0];
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = function(e) {
+        try {
+            currentJsonData = JSON.parse(e.target.result);
+            document.getElementById('fileStatus').innerText = `Đã tải thành công file: ${file.name} (${Object.keys(currentJsonData).length} mục)`;
+        } catch (err) {
+            alert('File JSON không hợp lệ!');
+        }
+    };
+    reader.readAsText(file);
+}
+
+const initialMap = {
+    "zh": "tr", "ch": "tr'", "sh": "sh", 
+    "b": "p", "p": "p'", "m": "m", "f": "f", 
+    "d": "t", "t": "th", "n": "n", "l": "l", 
+    "g": "c", "k": "kh", "h": "h", 
+    "j": "ch", "q": "ch'", "x": "x", 
+    "r": "r", "s": "s", "c": "s'", "z": "z"
+};
+
+const finalMap = {
+
+"uang": { 0: "oang", 1: "oang-", 2: "oáng", 3: "oảng", 4: "oang`" },
+"iang": { 0: "iang", 1: "iang-", 2: "iáng", 3: "iảng", 4: "iang`" },
+"iao": { 0: "i:ao", 1: "i:ao-", 2: "i:áo", 3: "i:ảo", 4: "i:ao`" },
+"iong": { 0: "i:ung", 1: "i:ung-", 2: "i:úng", 3: "i:ủng", 4: "i:ung`" },
+"uai": { 0: "oai", 1: "oai-", 2: "oái", 3: "oải", 4: "oai`" },
+"uan": { 0: "oan", 1: "oan-", 2: "oán", 3: "oản", 4: "oan`" },
+"ueng": { 0: "uâng", 1: "uâng-", 2: "uấng", 3: "uẩng", 4: "uâng`" },
+"üan": { 0: "oan", 1: "oan-", 2: "oán", 3: "oản", 4: "oan`" },
+"ang": { 0: "ang", 1: "ang-", 2: "áng", 3: "ảng", 4: "ang`" },
+"eng": { 0: "âng", 1: "âng-", 2: "ấng", 3: "ẩng", 4: "âng`" },
+"ong": { 0: "ung", 1: "ung-", 2: "úng", 3: "ủng", 4: "ung`" },
+"ian": { 0: "i:en", 1: "i:en-", 2: "i:én", 3: "i:ẻn", 4: "i:en`" },
+"ao": { 0: "ao", 1: "ao-", 2: "áo", 3: "ảo", 4: "ao`" },
+"ai": { 0: "ai", 1: "ai-", 2: "ái", 3: "ải", 4: "ai`" },
+"an": { 0: "an", 1: "an-", 2: "án", 3: "ản", 4: "an`" },
+"er": { 0: "ơ", 1: "ơ-", 2: "ớ", 3: "ở", 4: "ơ`" },
+"ei": { 0: "ây", 1: "ây-", 2: "ấy", 3: "ẩy", 4: "ây`" },
+"en": { 0: "ân", 1: "ân-", 2: "ấn", 3: "ẩn", 4: "ân`" },
+"ou": { 0: "âu", 1: "âu-", 2: "ấu", 3: "ẩu", 4: "âu`" },
+"in": { 0: "in", 1: "in-", 2: "ín", 3: "ỉn", 4: "in`" },
+"ing": { 0: "ing", 1: "ing-", 2: "íng", 3: "ỉng", 4: "ing`" },
+"ie": { 0: "i:ê", 1: "i:ê-", 2: "i:ế", 3: "i:ể", 4: "i:ê`" },
+"ia": { 0: "i:a", 1: "i:a-", 2: "i:á", 3: "i:ả", 4: "i:a`" },
+"iu": { 0: "i:âu", 1: "i:âu-", 2: "i:ấu", 3: "i:ẩu", 4: "i:âu`" },
+"ua": { 0: "oa", 1: "oa-", 2: "óa", 3: "ỏa", 4: "oa`" },
+"uo": { 0: "ua", 1: "ua-", 2: "úa", 3: "ủa", 4: "ua`" },
+"ui": { 0: "uây", 1: "uây-", 2: "uấy", 3: "uẩy", 4: "uây`" },
+"un": { 0: "uân", 1: "uân-", 2: "uấn", 3: "uẩn", 4: "uân`" },
+"üe": { 0: "uê", 1: "uê-", 2: "uế", 3: "uể", 4: "uê`" },
+"ün": { 0: "uyn", 1: "uyn-", 2: "uýn", 3: "uỷn", 4: "uyn`" },
+"a": { 0: "a", 1: "a-", 2: "á", 3: "ả", 4: "a`" },
+"e": { 0: "ưa", 1: "ưa-", 2: "ứa", 3: "ửa", 4: "ưa`" },
+"o": { 0: "ua", 1: "ua-", 2: "úa", 3: "ủa", 4: "ua`" },
+"i": { 0: "i", 1: "i-", 2: "í", 3: "ỉ", 4: "i`" },
+"u": { 0: "u", 1: "u-", 2: "ú", 3: "ủ", 4: "u`" },
+"ü": { 0: "uy", 1: "uy-", 2: "úy", 3: "ủy", 4: "uy`" },
+};
+
+const sortedInitials = Object.keys(initialMap).sort((a, b) => b.length - a.length);
+
+function parseAndMapPinyin(fullPinyin, toneNum = 0) {
+    let initial = "";
+    let finalPart = fullPinyin;
+    for (let init of sortedInitials) {
+        if (fullPinyin.startsWith(init)) {
+            initial = init;
+            finalPart = fullPinyin.substring(init.length);
+            break;
+        }
+    }
+    let mappedInit = initialMap[initial] !== undefined ? initialMap[initial] : initial;
+    
+    let mappedFinal = finalPart;
+    let finalEntry = finalMap[finalPart];
+
+    if (finalEntry !== undefined) {
+        if (typeof finalEntry === 'object') {
+            // Nếu định nghĩa dạng object cho từng thanh
+            mappedFinal = finalEntry[toneNum] !== undefined ? finalEntry[toneNum] : finalEntry[0];
+        } else {
+            // Nếu là dạng chuỗi cũ, áp dụng quy tắc thêm hậu tố mặc định
+            mappedFinal = finalEntry;
+            if (toneNum === 1) mappedFinal += "-";
+            else if (toneNum === 4) mappedFinal += "`";
+        }
+    }
+
+    return mappedInit + mappedFinal;
+}
+
+function addTone(pinyin, toneNum) {
+    if (toneNum === 0) return pinyin;
+    const toneMap = {
+        'a': ['ā', 'á', 'ǎ', 'à'],
+        'o': ['ō', 'ó', 'ǒ', 'ò'],
+        'e': ['ē', 'é', 'ě', 'è'],
+        'i': ['ī', 'í', 'ǐ', 'ì'],
+        'u': ['ū', 'ú', 'ǔ', 'ù'],
+        'ü': ['ǖ', 'ǘ', 'ǚ', 'ǜ'],
+        'v': ['ǖ', 'ǘ', 'ǚ', 'ǜ']
+    };
+    
+    let lower = pinyin.toLowerCase();
+    let targetVowel = '';
+
+    if (lower.includes('a')) {
+        targetVowel = 'a';
+    } else if (lower.includes('o')) {
+        targetVowel = 'o';
+    } else if (lower.includes('e')) {
+        targetVowel = 'e';
+    } else if (lower.includes('iu')) {
+        targetVowel = 'u';
+    } else if (lower.includes('ui')) {
+        targetVowel = 'i';
+    } else {
+        const vowels = ['i', 'u', 'ü', 'v', 'o', 'e', 'a'];
+        for (let i = 0; i < lower.length; i++) {
+            if (vowels.includes(lower[i])) {
+                targetVowel = lower[i];
+                break;
+            }
+        }
+    }
+
+    if (!targetVowel || !toneMap[targetVowel]) return pinyin;
+    let tonedChar = toneMap[targetVowel][toneNum - 1];
+    
+    let idx = -1;
+    if (targetVowel === 'u' && lower.includes('iu')) {
+        idx = lower.lastIndexOf('u');
+    } else if (targetVowel === 'i' && lower.includes('ui')) {
+        idx = lower.lastIndexOf('i');
+    } else {
+        idx = lower.indexOf(targetVowel);
+    }
+
+    if (idx === -1) return pinyin;
+    return pinyin.substring(0, idx) + tonedChar + pinyin.substring(idx + 1);
+}
+
+function generateTable() {
+    const rawList = document.getElementById('pinyinListInput').value.split('\n');
+    const tbody = document.getElementById('tableBody');
+    tbody.innerHTML = '';
+
+    rawList.forEach(item => {
+        let fullPinyin = item.trim();
+        if (!fullPinyin) return;
+
+        // Lấy giá trị tương ứng cho từng thanh dựa vào finalMap đã cập nhật
+        let y0 = parseAndMapPinyin(fullPinyin, 0);
+        let y1 = parseAndMapPinyin(fullPinyin, 1);
+        let y2 = parseAndMapPinyin(fullPinyin, 2);
+        let y3 = parseAndMapPinyin(fullPinyin, 3);
+        let y4 = parseAndMapPinyin(fullPinyin, 4);
+
+        let tr = document.createElement('tr');
+        tr.innerHTML = `
+            <td><strong>${fullPinyin}</strong></td>
+            <td><input type="text" class="y-input" data-base="${fullPinyin}" data-tone="0" value="${y0}"></td>
+            <td><input type="text" class="y-input" data-base="${fullPinyin}" data-tone="1" value="${y1}"></td>
+            <td><input type="text" class="y-input" data-base="${fullPinyin}" data-tone="2" value="${y2}"></td>
+            <td><input type="text" class="y-input" data-base="${fullPinyin}" data-tone="3" value="${y3}"></td>
+            <td><input type="text" class="y-input" data-base="${fullPinyin}" data-tone="4" value="${y4}"></td>
+        `;
+        tbody.appendChild(tr);
+    });
+
+    document.getElementById('tableSection').style.display = 'block';
+}
+
+function exportJSON() {
+    const rows = document.querySelectorAll('#tableBody tr');
+    const downloadBody = document.getElementById('downloadTableBody');
+    downloadBody.innerHTML = '';
+    
+    let downloadLinks = [];
+    let stt = 1;
+
+    rows.forEach(row => {
+        const inputs = row.querySelectorAll('.y-input');
+        inputs.forEach(input => {
+            let basePinyin = input.getAttribute('data-base');
+            let toneNum = parseInt(input.getAttribute('data-tone'));
+            
+            let pinyinKey = addTone(basePinyin, toneNum);
+            let yueyinVal = input.value.trim() === '' ? null : input.value.trim();
+            
+            // Thanh 0 link_audio = null, còn lại là tên file bình thường
+           // Thay thế chữ "ü" thành "v" cho tên file âm thanh
+let formattedBaseAudio = basePinyin.replace(/ü/g, 'v');
+let audioFileName = (toneNum === 0) ? null : (formattedBaseAudio + toneNum + ".mp3");
+
+            currentJsonData[pinyinKey] = {
+                "yueyin": yueyinVal,
+                "link_audio": audioFileName
+            };
+
+            // Nếu không phải null thì thêm vào bảng download danh sách phụ
+            if (audioFileName !== null) {
+                let fullUrl = "https://cdn.yoyochinese.com/audio/pychart/" + audioFileName;
+                downloadLinks.push(fullUrl);
+
+                let trD = document.createElement('tr');
+                trD.innerHTML = `
+                    <td>${stt++}</td>
+                    <td><code>${audioFileName}</code></td>
+                    <td><a href="${fullUrl}" target="_blank">${fullUrl}</a></td>
+                `;
+                downloadBody.appendChild(trD);
+            }
+        });
+    });
+
+    let lines = [];
+    for (let key in currentJsonData) {
+        let val = currentJsonData[key];
+        let yueyinStr = val.yueyin === null ? "null" : `"${val.yueyin}"`;
+        let audioStr = val.link_audio === null ? "null" : `"${val.link_audio}"`;
+        lines.push(`  "${key}": { "yueyin": ${yueyinStr}, "link_audio": ${audioStr} }`);
+    }
+    let compactJSON = "{\n" + lines.join(",\n") + "\n}";
+
+    document.getElementById('jsonOutput').value = compactJSON;
+    document.getElementById('downloadSection').style.display = 'block';
+    document.getElementById('copyStatus').innerText = 'Đã cập nhật thành công vào dữ liệu JSON và tạo danh sách tải về!';
+    setTimeout(() => { document.getElementById('copyStatus').innerText = ''; }, 3000);
+}
+
+function copyAllLinks() {
+    const rows = document.querySelectorAll('#downloadTableBody tr');
+    let links = [];
+    rows.forEach(r => {
+        let linkText = r.querySelector('a').innerText;
+        links.push(linkText);
+    });
+    navigator.clipboard.writeText(links.join('\n')).then(() => {
+        alert('Đã sao chép toàn bộ link download vào clipboard!');
+    });
+}
+
+function downloadJSON() {
+    let content = document.getElementById('jsonOutput').value;
+    if (!content) {
+        alert('Chưa có dữ liệu JSON để tải!');
+        return;
+    }
+    let blob = new Blob([content], { type: "application/json;charset=utf-8" });
+    let url = URL.createObjectURL(blob);
+    let a = document.createElement('a');
+    a.href = url;
+    a.download = "pinyin_yueyin_updated.json";
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+}
+</script>
+
+</body>
+</html>

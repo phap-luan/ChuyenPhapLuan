@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rich Text Editor & Multi-Matrix Data Loader</title>
+  <style>
+    :root {
+      --bg-color: #f1f5f9;
+      --card-bg: #ffffff;
+      --primary: #2563eb;
+      --primary-hover: #1d4ed8;
+      --border: #cbd5e1;
+      --text: #0f172a;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+
+    body {
+      background-color: var(--bg-color);
+      color: var(--text);
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 950px;
+      background: var(--card-bg);
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      margin-bottom: 15px;
+      font-size: 1.25rem;
+      color: #1e293b;
+    }
+
+    .data-loader-panel {
+      background: #eff6ff;
+      border: 1px dashed #93c5fd;
+      padding: 15px;
+      border-radius: 8px;
+      margin-bottom: 15px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .data-loader-panel input[type="file"] {
+      display: none;
+    }
+
+    .btn {
+      padding: 8px 14px;
+      border-radius: 6px;
+      border: 1px solid var(--border);
+      background: #fff;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 500;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s;
+    }
+
+    .btn:hover {
+      background: #f8fafc;
+      border-color: #94a3b8;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: #fff;
+      border: none;
+    }
+
+    .btn-primary:hover {
+      background: var(--primary-hover);
+    }
+
+    .btn-edit {
+      background: #10b981;
+      color: #fff;
+      border: none;
+    }
+
+    .btn-edit:hover {
+      background: #059669;
+    }
+
+    .btn-danger {
+      background: #ef4444;
+      color: #fff;
+      border: none;
+      padding: 4px 8px;
+      font-size: 12px;
+    }
+
+    .btn-danger:hover {
+      background: #dc2626;
+    }
+
+    .select-box {
+      padding: 7px 10px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      font-size: 14px;
+      outline: none;
+    }
+
+    .bracket-editor-panel {
+      background: #f8fafc;
+      border: 1px solid var(--border);
+      padding: 12px 15px;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+
+    .bracket-textarea {
+      width: 100%;
+      min-height: 80px;
+      padding: 8px 12px;
+      font-size: 16px;
+      font-weight: 500;
+      color: #1d4ed8;
+      border: 1px solid #93c5fd;
+      border-radius: 6px;
+      margin-top: 6px;
+      background: #fff;
+      resize: vertical;
+      line-height: 1.5;
+    }
+
+    .bracket-textarea:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+      outline: none;
+    }
+
+    /* Style Bảng Ma trận 5 Hàng (Bảng 1) */
+    .matrix-table {
+      border-collapse: collapse;
+      margin: 8px 0;
+      display: inline-block;
+      overflow-x: auto;
+      max-width: 100%;
+      vertical-align: middle;
+      background-color: transparent;
+      border: none;
+    }
+
+    .matrix-table td {
+      border: none !important;
+      white-space: nowrap;
+      width: auto;
+      text-align: center;
+      padding: 0px 2px;
+    }
+
+    /* Tùy chỉnh 5 Hàng: Audio -> Yueyin -> Hanzi -> Pinyin -> Nghia */
+    .matrix-table tr:nth-child(1) td { background: transparent; font-size: 12px; color: #b45309; }
+    .matrix-table tr:nth-child(2) td { background: transparent; font-size: 13px; color: #6b21a8; }
+    .matrix-table tr:nth-child(3) td { background: transparent; font-weight: bold; font-size: 22px; color: #0f172a; }
+    .matrix-table tr:nth-child(4) td { background: transparent; font-size: 13px; color: #0369a1; }
+    .matrix-table tr:nth-child(5) td { background: transparent; font-size: 12px; color: #059669; }
+
+    /* Toolbar Styling */
+    .toolbar-container {
+      background: #f8fafc;
+      border: 1px solid var(--border);
+      border-bottom: none;
+      border-radius: 8px 8px 0 0;
+      padding: 10px;
+    }
+
+    .toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      align-items: center;
+    }
+
+    .toolbar select, .toolbar input[type="color"] {
+      padding: 4px 8px;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      background: #fff;
+      cursor: pointer;
+    }
+
+    .toolbar input[type="color"] {
+      padding: 0;
+      width: 32px;
+      height: 32px;
+    }
+
+    .quick-colors {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 8px;
+      padding-top: 8px;
+      border-top: 1px dashed var(--border);
+    }
+
+    .quick-colors span {
+      font-size: 13px;
+      color: #64748b;
+      font-weight: 500;
+    }
+
+    .color-swatch {
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      border: 2px solid #fff;
+      box-shadow: 0 0 0 1px #cbd5e1;
+      cursor: pointer;
+      transition: transform 0.1s;
+    }
+
+    .color-swatch:hover {
+      transform: scale(1.2);
+    }
+
+    .editor {
+      min-height: 300px;
+      padding: 15px;
+      border: 1px solid var(--border);
+      border-radius: 0 0 8px 8px;
+      outline: none;
+      line-height: 1.6;
+      font-size: 16px;
+      background: #fff;
+    }
+
+    .editor:focus {
+      border-color: var(--primary);
+    }
+
+    /* Table Section Styling */
+    .table-section {
+      margin-top: 25px;
+    }
+
+    .table-header-panel {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+    }
+
+    .data-table th, .data-table td {
+      border: 1px solid var(--border);
+      padding: 8px 10px;
+      text-align: left;
+    }
+
+    .data-table th {
+      background-color: #f1f5f9;
+      font-weight: 600;
+      color: #334155;
+    }
+
+    .data-table td div {
+      outline: none;
+      min-height: 24px;
+    }
+
+    .data-table tr:hover {
+      background-color: #f8fafc;
+    }
+
+    .action-panel {
+      margin-top: 20px;
+      display: flex;
+      justify-content: flex-end;
+      gap: 10px;
+    }
+
+    .status-badge {
+      font-size: 13px;
+      color: #166534;
+      background: #dcfce7;
+      padding: 4px 8px;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h2>Rich Text Editor & Multi-Matrix Data Exporter</h2>
+
+  <!-- Panel Nạp Dữ Liệu -->
+  <div class="data-loader-panel">
+    <label class="btn">
+      📁 Tải file Data.js Gốc
+      <input type="file" id="fileInput" accept=".js,.json" onchange="loadDataFile(event)">
+    </label>
+
+    <label class="btn btn-edit">
+      📂 Tải file JS Đã Tạo (Để sửa)
+      <input type="file" id="editFileInput" accept=".js" onchange="loadExportedJS(event)">
+    </label>
+    
+    <span id="loadStatus" style="font-size: 13px; color: #64748b;">Chưa nạp file</span>
+
+    <div style="margin-left: auto; display: flex; gap: 8px; align-items: center;">
+      <label for="cauSelect" style="font-size: 14px;">Chọn Câu ID:</label>
+      <select id="cauSelect" class="select-box" disabled onchange="onSelectCau()">
+        <option value="">-- Vui lòng nạp data.js --</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- Panel Chỉnh Sửa Ngoặc Hanzi -->
+  <div class="bracket-editor-panel" id="bracketPanel" style="display: none;">
+    <label style="font-size: 14px; font-weight: bold; color: #1e40af;">
+      📌 Dòng Hanzi dạng ngoặc (Xuống dòng để tạo nhiều bảng bên dưới 原文):
+    </label>
+    <textarea id="bracketHanziInput" class="bracket-textarea" oninput="onBracketInputChanged()" placeholder="Ví dụ:&#10;[我][在][整][個][傳][法][、]&#10;[傳][功][過][程][中]"></textarea>
+  </div>
+
+  <!-- Thanh công cụ Định dạng Editor -->
+  <div class="toolbar-container">
+    <div class="toolbar">
+      <button class="btn" onclick="execCmd('bold')" title="In đậm"><b>B</b></button>
+      <button class="btn" onclick="execCmd('italic')" title="In nghiêng"><i>I</i></button>
+      <button class="btn" onclick="execCmd('underline')" title="Gạch chân"><u>U</u></button>
+      
+      <span style="color: #cbd5e1;">|</span>
+
+      <select id="fontSelect" onchange="applyStyleToSelection('fontFamily', this.value); this.value='';">
+        <option value="">-- Chọn Font --</option>
+        <option value="Arial, sans-serif">Arial</option>
+        <option value="'Times New Roman', Times, serif">Times New Roman</option>
+        <option value="'Courier New', Courier, monospace">Courier New</option>
+        <option value="Georgia, serif">Georgia</option>
+        <option value="Tahoma, sans-serif">Tahoma</option>
+        <option value="Verdana, sans-serif">Verdana</option>
+        <option value="'Microsoft YaHei', 'PingFang SC', sans-serif">Tiếng Trung (YaHei)</option>
+        <option value="SimSun, 'Songti SC', serif">Tiếng Trung (SimSun)</option>
+        <option value="KaiTi, 'Kaiti SC', serif">Tiếng Trung (KaiTi)</option>
+      </select>
+
+      <select id="sizeSelect" onchange="applyStyleToSelection('fontSize', this.value); this.value='';">
+        <option value="">-- Cỡ chữ (px) --</option>
+        <option value="12px">12px</option>
+        <option value="14px">14px</option>
+        <option value="16px">16px (Chuẩn)</option>
+        <option value="18px">18px</option>
+        <option value="20px">20px (Tiêu đề nhỏ)</option>
+        <option value="22px">22px (Tiêu đề vừa)</option>
+        <option value="26px">26px (Tiêu đề lớn)</option>
+        <option value="32px">32px</option>
+        <option value="36px">36px</option>
+      </select>
+
+      <label style="font-size: 13px; display: flex; align-items: center; gap: 4px;">
+        Màu tùy chọn:
+        <input type="color" onchange="execCmd('foreColor', this.value)" value="#000000">
+      </label>
+
+      <span style="color: #cbd5e1;">|</span>
+
+      <button class="btn" onclick="execCmd('justifyLeft')">⬅ Trái</button>
+      <button class="btn" onclick="execCmd('justifyCenter')">↔ Giữa</button>
+      <button class="btn" onclick="execCmd('justifyRight')">➡ Phải</button>
+      <button class="btn" onclick="execCmd('removeFormat')">🧹 Xóa định dạng</button>
+    </div>
+
+    <div class="quick-colors">
+      <span>Màu nhanh:</span>
+      <div class="color-swatch" style="background: #ef4444;" onmousedown="applyColor(event, '#ef4444')" title="Đỏ"></div>
+      <div class="color-swatch" style="background: #f97316;" onmousedown="applyColor(event, '#f97316')" title="Cam"></div>
+      <div class="color-swatch" style="background: #eab308;" onmousedown="applyColor(event, '#eab308')" title="Vàng"></div>
+      <div class="color-swatch" style="background: #22c55e;" onmousedown="applyColor(event, '#22c55e')" title="Xanh lá"></div>
+      <div class="color-swatch" style="background: #06b6d4;" onmousedown="applyColor(event, '#06b6d4')" title="Xanh lam"></div>
+      <div class="color-swatch" style="background: #3b82f6;" onmousedown="applyColor(event, '#3b82f6')" title="Xanh dương"></div>
+      <div class="color-swatch" style="background: #a855f7;" onmousedown="applyColor(event, '#a855f7')" title="Tím"></div>
+      <div class="color-swatch" style="background: #ec4899;" onmousedown="applyColor(event, '#ec4899')" title="Hồng"></div>
+      <div class="color-swatch" style="background: #000000;" onmousedown="applyColor(event, '#000000')" title="Đen"></div>
+      <div class="color-swatch" style="background: #64748b;" onmousedown="applyColor(event, '#64748b')" title="Xám"></div>
+    </div>
+  </div>
+
+  <!-- Editor Soạn Thảo Rich Text -->
+  <div id="editor" class="editor" contenteditable="true">
+    <p style="color: #94a3b8;">Nội dung soạn thảo hiển thị ở đây...</p>
+  </div>
+
+  <!-- Bảng Dữ Liệu Chi Tiết 5 Cột -->
+  <div class="table-section">
+    <div class="table-header-panel">
+      <h3 style="font-size: 1rem; color: #334155;">📋 Bảng Chi Tiết (Dán được từ Excel/Sheets)</h3>
+      <button class="btn" onclick="addRow()">➕ Thêm hàng</button>
+    </div>
+    
+    <table class="data-table" id="dataTable">
+      <thead>
+        <tr>
+          <th style="width: 20%;">Hanzi</th>
+          <th style="width: 18%;">Audio</th>
+          <th style="width: 18%;">Pinyin</th>
+          <th style="width: 18%;">Yueyin</th>
+          <th style="width: 18%;">Nghĩa</th>
+          <th style="width: 8%; text-align: center;">Xóa</th>
+        </tr>
+      </thead>
+      <tbody id="tableBody">
+      </tbody>
+    </table>
+  </div>
+
+  <div class="action-panel">
+    <button class="btn btn-primary" onclick="exportToJS()">💾 Xuất File .JS Thành Phẩm</button>
+  </div>
+</div>
+
+<script>
+  let loadedData = null;
+  let cauMap = new Map();
+  let currentLoadedCauId = 'content';
+
+  function execCmd(command, value = null) {
+    document.execCommand(command, false, value);
+  }
+
+  function applyStyleToSelection(cssProperty, value) {
+    if (!value) return;
+    const sel = window.getSelection();
+    if (!sel.rangeCount || sel.isCollapsed) return;
+
+    const range = sel.getRangeAt(0);
+    const selectedContent = range.extractContents();
+
+    const elements = selectedContent.querySelectorAll('*');
+    elements.forEach(el => {
+      el.style[cssProperty] = '';
+      if (!el.getAttribute('style')) el.removeAttribute('style');
+    });
+
+    const wrapper = document.createElement('span');
+    wrapper.style[cssProperty] = value;
+    wrapper.appendChild(selectedContent);
+
+    range.insertNode(wrapper);
+    sel.removeAllRanges();
+  }
+
+  function applyColor(e, color) {
+    e.preventDefault();
+    document.execCommand('foreColor', false, color);
+  }
+
+  function loadDataFile(event) {
+    const file = event.target.files[0];
+    if (!file) return;
+
+    const reader = new FileReader();
+    reader.onload = function(e) {
+      try {
+        const text = e.target.result;
+        const jsonMatch = text.match(/window\.CURRENT_PHAN_DATA\s*=\s*(\{[\s\S]*\});?/);
+        let rawData;
+        if (jsonMatch) {
+          rawData = new Function(`return ${jsonMatch[1]};`)();
+        } else {
+          rawData = JSON.parse(text);
+        }
+
+        loadedData = rawData;
+        processData(rawData);
+        document.getElementById('loadStatus').innerHTML = `<span class="status-badge">✓ Đã nạp ${cauMap.size} câu (Gốc)</span>`;
+      } catch (err) {
+        alert('Không thể đọc file data.js!');
+      }
+    };
+    reader.readAsText(file);
+  }
+
+  function loadExportedJS(event) {
+    const file = event.target.files[0];
+    if (!file) return;
+
+    const reader = new FileReader();
+    reader.onload = function(e) {
+      try {
+        const text = e.target.result;
+        const match = text.match(/window\.RENDER_PAYLOAD\s*=\s*(\{[\s\S]*?\});/);
+        if (!match) {
+          alert('File JS không đúng định dạng!');
+          return;
+        }
+
+        const payload = new Function(`return ${match[1]};`)();
+        currentLoadedCauId = payload.cau_id || 'content';
+        
+        const cauSelect = document.getElementById('cauSelect');
+        if ([...cauSelect.options].some(opt => opt.value === currentLoadedCauId)) {
+          cauSelect.value = currentLoadedCauId;
+        } else {
+          const opt = document.createElement('option');
+          opt.value = currentLoadedCauId;
+          opt.textContent = `File đã nạp: ${currentLoadedCauId}`;
+          cauSelect.appendChild(opt);
+          cauSelect.value = currentLoadedCauId;
+          cauSelect.disabled = false;
+        }
+
+        if (payload.editorHtml !== undefined) {
+          document.getElementById('editor').innerHTML = payload.editorHtml;
+        }
+
+        if (Array.isArray(payload.tableData)) {
+          const tbody = document.getElementById('tableBody');
+          tbody.innerHTML = '';
+          
+          payload.tableData.forEach(item => {
+            const cleanHanzi = (item.hanzi || '').replace(/[\[\]]/g, '');
+            const colorStyle = item.color ? `color: ${item.color};` : '';
+            const tr = document.createElement('tr');
+            tr.innerHTML = `
+              <td><div contenteditable="true" class="input-hanzi" style="${colorStyle}">${cleanHanzi}</div></td>
+              <td><div contenteditable="true" class="input-audio">${item.audio || ''}</div></td>
+              <td><div contenteditable="true" class="input-pinyin">${item.pinyin || ''}</div></td>
+              <td><div contenteditable="true" class="input-yueyin">${item.yueyin || ''}</div></td>
+              <td><div contenteditable="true" class="input-nghia">${item.nghia || ''}</div></td>
+              <td style="text-align: center;"><button class="btn btn-danger" onclick="deleteRow(this)">❌</button></td>
+            `;
+            tbody.appendChild(tr);
+          });
+        }
+
+        document.getElementById('loadStatus').innerHTML = `<span class="status-badge" style="background:#dbeafe; color:#1e40af;">✓ Đã nạp file chỉnh sửa (${currentLoadedCauId})</span>`;
+
+      } catch (err) {
+        alert('Lỗi khi đọc file JS: ' + err.message);
+      }
+    };
+    reader.readAsText(file);
+  }
+
+  function processData(data) {
+    cauMap.clear();
+    const cauSelect = document.getElementById('cauSelect');
+    cauSelect.innerHTML = '<option value="">-- Chọn câu để nạp --</option>';
+
+    if (data && data.doan_list) {
+      data.doan_list.forEach(doan => {
+        if (doan.content) {
+          doan.content.forEach(item => {
+            if (item.cau_id) {
+              cauMap.set(item.cau_id, item);
+              const cleanHanzi = (item.hanzi || '').replace(/[\[\]]/g, '');
+              const opt = document.createElement('option');
+              opt.value = item.cau_id;
+              opt.textContent = `${item.cau_id} - ${cleanHanzi.substring(0, 15)}...`;
+              cauSelect.appendChild(opt);
+            }
+          });
+        }
+      });
+    }
+    cauSelect.disabled = false;
+  }
+
+  function onSelectCau() {
+    const cauId = document.getElementById('cauSelect').value;
+    if (!cauId) return;
+
+    currentLoadedCauId = cauId;
+    if (!cauMap.has(cauId)) return;
+    const item = cauMap.get(cauId);
+
+    const rawHanzi = item.hanzi || '';
+    const cleanHanzi = rawHanzi.replace(/[\[\]]/g, '');
+
+    const defaultBracketed = Array.from(cleanHanzi).map(c => `[${c}]`).join('');
+    
+    document.getElementById('bracketPanel').style.display = 'block';
+    const bracketInput = document.getElementById('bracketHanziInput');
+    bracketInput.value = defaultBracketed;
+
+    initEditorTemplate(item);
+    updateTablesFromBracketInput();
+  }
+
+  function initEditorTemplate(item) {
+    const htmlTemplate = `
+      <div style="margin-bottom: 12px; line-height: 1.5">
+        <p>
+          <span style="font-size: 10px; font-weight: bold; color: #64748b;"> Nguyên Văn:</span> [(.mp3)]<br>
+          <span id="matrixTableWrapper"></span>
+          <span style="font-size: 14px; color: #2563eb; cursor: pointer; margin-left: 5px;"></span>
+        </p>
+        <p style="margin-top: 0px;">
+          <span style="font-size: 10px; font-weight: bold; color: #64748b;"> Tạm Dịch:</span><br>
+          <span style="font-size: 16px; font-weight: bold; color: #000000;">${item ? (item.nghia || '') : ''}</span>
+          <span></span>
+        </p>
+        <p style="margin-top: 5px;">
+          <span style="font-size: 10px; font-weight: bold; color: #64748b;"> Bản dịch trong sách:</span><br>
+          <span style="font-size: 16px; font-weight: bold; color: #000000;">${item ? (item.nghia || '') : ''}</span>
+        </p>
+        <hr style="margin: 10px 0; border: none; border-top: 1px dashed #cbd5e1;">
+        <p>
+          ➡️ <span style="font-size: 16px; font-weight: bold; color: #ef4444;">Lưu ý:</span><br>
+          <span style="font-size: 16px; color: #000000;">Ngữ Pháp Tiếng Trung ngược với Tiếng Việt:</span>
+          <span style="font-size: 18px; font-weight: bold; color: #000000;">[Bổ Ngữ] + [Ý Chính]</span>
+          <span style="font-size: 16px; color: #000000;">mọi người đọc nhiều dần dần sẽ quen</span>
+<br>
+        </p>
+      </div>
+    `.trim();
+
+    document.getElementById('editor').innerHTML = htmlTemplate;
+  }
+
+  function onBracketInputChanged() {
+    updateTablesFromBracketInput();
+  }
+
+  function updateTablesFromBracketInput() {
+    const rawText = document.getElementById('bracketHanziInput').value;
+    const lines = rawText.split('\n').filter(line => line.trim() !== '');
+
+    let allMatrixHtml = '';
+    const isHanziRegex = /[\u4e00-\u9fa5\u3400-\u4dbf\u20000-\u2a6df]/;
+    const validTokensForDetail = [];
+
+    let globalIndex = 0;
+
+    lines.forEach(line => {
+      let tokens = [];
+      const matches = line.match(/\[(.*?)\]/g);
+      
+      if (matches) {
+        tokens = matches.map(m => m.replace(/^\[\vert{}\]$/g, '').replace(/[\[\]]/g, ''));
+      } else if (line.trim()) {
+        tokens = Array.from(line.trim());
+      }
+
+      if (tokens.length === 0) return;
+
+      let matrixHtml = `<table class="matrix-table"><tr class="row-audio">`;
+      tokens.forEach((_, idx) => {
+        matrixHtml += `<td id="m_audio_${globalIndex + idx}"></td>`;
+      });
+      matrixHtml += `</tr><tr class="row-yueyin">`;
+      tokens.forEach((_, idx) => {
+        matrixHtml += `<td id="m_yueyin_${globalIndex + idx}"></td>`;
+      });
+      matrixHtml += `</tr><tr class="row-hanzi">`;
+      tokens.forEach((token, idx) => {
+        const cleanToken = token.replace(/[\[\]]/g, '');
+        matrixHtml += `<td id="m_hanzi_${globalIndex + idx}">${cleanToken}</td>`;
+      });
+      matrixHtml += `</tr><tr class="row-pinyin">`;
+      tokens.forEach((_, idx) => {
+        matrixHtml += `<td id="m_pinyin_${globalIndex + idx}"></td>`;
+      });
+      matrixHtml += `</tr><tr class="row-nghia">`;
+      tokens.forEach((_, idx) => {
+        matrixHtml += `<td id="m_nghia_${globalIndex + idx}"></td>`;
+      });
+      matrixHtml += `</tr></table><br>`;
+
+      allMatrixHtml += matrixHtml;
+
+      tokens.forEach((token, idx) => {
+        const cleanToken = token.replace(/[\[\]]/g, '');
+        if (isHanziRegex.test(cleanToken)) {
+          validTokensForDetail.push({ token: cleanToken, rawIndex: globalIndex + idx });
+        }
+      });
+
+      globalIndex += tokens.length;
+    });
+
+    const wrapper = document.getElementById('matrixTableWrapper');
+    if (wrapper) {
+      wrapper.innerHTML = allMatrixHtml;
+    }
+
+    const tbody = document.getElementById('tableBody');
+    tbody.innerHTML = '';
+
+    validTokensForDetail.forEach(obj => {
+      const tr = document.createElement('tr');
+      tr.setAttribute('data-raw-index', obj.rawIndex);
+      tr.innerHTML = `
+        <td><div contenteditable="true" class="input-hanzi">${obj.token}</div></td>
+        <td><div contenteditable="true" class="input-audio"></div></td>
+        <td><div contenteditable="true" class="input-pinyin"></div></td>
+        <td><div contenteditable="true" class="input-yueyin"></div></td>
+        <td><div contenteditable="true" class="input-nghia"></div></td>
+        <td style="text-align: center;"><button class="btn btn-danger" onclick="deleteRow(this)">❌</button></td>
+      `;
+      tbody.appendChild(tr);
+    });
+  }
+
+  document.getElementById('dataTable').addEventListener('input', function(e) {
+    syncDataAndColor(e.target);
+  });
+
+  document.addEventListener('selectionchange', function() {
+    const activeEl = document.activeElement;
+    if (activeEl && activeEl.closest('#dataTable') && activeEl.classList.contains('input-hanzi')) {
+      syncDataAndColor(activeEl);
+    }
+  });
+
+  function syncDataAndColor(target) {
+    const tr = target.closest('tr');
+    if (!tr) return;
+
+    const rawIdx = tr.getAttribute('data-raw-index');
+
+    if (target.classList.contains('input-hanzi')) {
+      const hanziCell = tr.querySelector('.input-hanzi');
+      
+      let appliedColor = '';
+      const colorSpan = hanziCell.querySelector('span[style*="color"], font[color]');
+      if (colorSpan) {
+        appliedColor = colorSpan.style.color || colorSpan.getAttribute('color');
+      } else if (hanziCell.style.color) {
+        appliedColor = hanziCell.style.color;
+      }
+
+      hanziCell.style.color = appliedColor || '';
+
+      if (rawIdx !== null && rawIdx !== undefined) {
+        ['audio', 'yueyin', 'hanzi', 'pinyin', 'nghia'].forEach(type => {
+          const matrixCell = document.getElementById(`m_${type}_${rawIdx}`);
+          if (matrixCell) matrixCell.style.color = appliedColor || '';
+        });
+      }
+    }
+
+    if (rawIdx !== null && rawIdx !== undefined) {
+      if (target.classList.contains('input-audio')) {
+        const cell = document.getElementById(`m_audio_${rawIdx}`);
+        if (cell) cell.innerText = target.innerText;
+      } else if (target.classList.contains('input-yueyin')) {
+        const cell = document.getElementById(`m_yueyin_${rawIdx}`);
+        if (cell) cell.innerText = target.innerText;
+      } else if (target.classList.contains('input-pinyin')) {
+        const cell = document.getElementById(`m_pinyin_${rawIdx}`);
+        if (cell) cell.innerText = target.innerText;
+      } else if (target.classList.contains('input-nghia')) {
+        const cell = document.getElementById(`m_nghia_${rawIdx}`);
+        if (cell) cell.innerText = target.innerText;
+      }
+    }
+  }
+
+  function addRow() {
+    const tbody = document.getElementById('tableBody');
+    const tr = document.createElement('tr');
+    tr.innerHTML = `
+      <td><div contenteditable="true" class="input-hanzi"></div></td>
+      <td><div contenteditable="true" class="input-audio"></div></td>
+      <td><div contenteditable="true" class="input-pinyin"></div></td>
+      <td><div contenteditable="true" class="input-yueyin"></div></td>
+      <td><div contenteditable="true" class="input-nghia"></div></td>
+      <td style="text-align: center;"><button class="btn btn-danger" onclick="deleteRow(this)">❌</button></td>
+    `;
+    tbody.appendChild(tr);
+  }
+
+  function deleteRow(btn) {
+    const tr = btn.closest('tr');
+    if (tr) {
+      tr.remove();
+    }
+  }
+
+  document.getElementById('dataTable').addEventListener('paste', function(e) {
+    const activeEl = document.activeElement;
+    if (!activeEl || !activeEl.isContentEditable) return;
+
+    const clipboardData = e.clipboardData || window.clipboardData;
+    const pastedData = clipboardData.getData('text');
+
+    if (pastedData.includes('\t') || pastedData.includes('\n')) {
+      e.preventDefault();
+
+      const startTd = activeEl.closest('td');
+      const startTr = startTd.parentElement;
+      const tbody = document.getElementById('tableBody');
+
+      const rows = pastedData.trim().split(/\r\n|\n|\r/);
+      let startRowIdx = Array.from(tbody.children).indexOf(startTr);
+      let startColIdx = Array.from(startTr.children).indexOf(startTd);
+
+      rows.forEach((rowText, rIdx) => {
+        const cols = rowText.split('\t');
+        let targetTr = tbody.children[startRowIdx + rIdx];
+
+        if (!targetTr) {
+          addRow();
+          targetTr = tbody.children[startRowIdx + rIdx];
+        }
+
+        cols.forEach((cellText, cIdx) => {
+          const targetTd = targetTr.children[startColIdx + cIdx];
+          if (targetTd) {
+            const div = targetTd.querySelector('div[contenteditable="true"]');
+            if (div) {
+              let val = cellText.trim();
+              // Chỉ tự động xóa dấu [ ] nếu đây là cột Hanzi
+              if (div.classList.contains('input-hanzi')) {
+                val = val.replace(/[\[\]]/g, '');
+              }
+              div.innerText = val;
+              div.dispatchEvent(new Event('input', { bubbles: true }));
+            }
+          }
+        });
+      });
+    }
+  });
+
+  // TỰ ĐỘNG LƯU MÀU CHỮ CỦA HANZI VÀO CHUỖI EXPORT
+  function exportToJS() {
+    const editorHtml = document.getElementById('editor').innerHTML;
+    const selectedId = document.getElementById('cauSelect').value || currentLoadedCauId || 'content';
+
+    const tableData = [];
+    const rows = document.querySelectorAll('#tableBody tr');
+    rows.forEach(row => {
+      const cells = row.querySelectorAll('div[contenteditable="true"]');
+      if (cells.length >= 5) {
+        const hanziDiv = cells[0];
+        const hanzi = hanziDiv.innerText.trim().replace(/[\[\]]/g, '');
+        
+        let color = hanziDiv.style.color || '';
+        if (!color) {
+          const colorSpan = hanziDiv.querySelector('span[style*="color"], font[color]');
+          if (colorSpan) {
+            color = colorSpan.style.color || colorSpan.getAttribute('color') || '';
+          }
+        }
+
+        const audio = cells[1].innerText.trim();
+        const pinyin = cells[2].innerText.trim();
+        const yueyin = cells[3].innerText.trim();
+        const nghia = cells[4].innerText.trim();
+
+        if (hanzi || audio || pinyin || yueyin || nghia) {
+          const rowObj = { hanzi, audio, pinyin, yueyin, nghia };
+          if (color) {
+            rowObj.color = color;
+          }
+          tableData.push(rowObj);
+        }
+      }
+    });
+
+    const jsContent = `/* Exported Rich Text & Table Data */
+(function() {
+  window.RENDER_PAYLOAD = {
+    cau_id: ${JSON.stringify(selectedId)},
+    editorHtml: ${JSON.stringify(editorHtml)},
+    tableData: ${JSON.stringify(tableData)}
+  };
+
+  window.renderContent = function(targetEditorId, targetTableId) {
+    if (targetEditorId) {
+      var editorEl = document.getElementById(targetEditorId);
+      if (editorEl) editorEl.innerHTML = window.RENDER_PAYLOAD.editorHtml;
+    }
+    
+    if (targetTableId) {
+      var tableEl = document.getElementById(targetTableId);
+      if (tableEl) {
+        var html = '<table border="1" style="border-collapse: collapse; width: 100%;">';
+        html += '<thead><tr><th>Hanzi</th><th>Audio</th><th>Pinyin</th><th>Yueyin</th><th>Nghĩa</th></tr></thead><tbody>';
+        window.RENDER_PAYLOAD.tableData.forEach(function(item) {
+          html += '<tr><td>' + item.hanzi + '</td><td>' + item.audio + '</td><td>' + item.pinyin + '</td><td>' + item.yueyin + '</td><td>' + item.nghia + '</td></tr>';
+        });
+        html += '</tbody></table>';
+        tableEl.innerHTML = html;
+      }
+    }
+  };
+
+  document.addEventListener("DOMContentLoaded", function() {
+    window.renderContent("rendered-editor", "rendered-table");
+  });
+})();`;
+
+    const blob = new Blob([jsContent], { type: 'application/javascript;charset=utf-8' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `render_${selectedId}.js`;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pinyin & Audio Link Converter</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background-color: #f5f5f5;
+      color: #333;
+    }
+    h2 {
+      color: #2c3e50;
+    }
+    .status-box {
+      padding: 10px;
+      margin-bottom: 15px;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+    .status-success {
+      background-color: #d4edda;
+      color: #155724;
+      border: 1px solid #c3e6cb;
+    }
+    .status-warning {
+      background-color: #fff3cd;
+      color: #856404;
+      border: 1px solid #ffeeba;
+    }
+    textarea {
+      width: 100%;
+      height: 120px;
+      padding: 10px;
+      box-sizing: border-box;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      margin-bottom: 10px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+      background-color: white;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 12px;
+      text-align: left;
+    }
+    th {
+      background-color: #f2f2f2;
+    }
+    tr:nth-child(even) {
+      background-color: #fafafa;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Chuyển Đổi Pinyin sang Yueyin & Link Audio</h2>
+
+  <!-- Khối trạng thái JSON -->
+  <div id="statusBox" class="status-box status-warning">
+    Đang kiểm tra / tải dữ liệu từ pinyin_info.json...
+  </div>
+
+  <!-- Nút chọn file dự phòng khi mở qua file:// -->
+  <div id="filePickerBox" style="display: none; margin-bottom: 15px;">
+    <label for="jsonFileInput"><b>Nếu trình duyệt chặn tự đọc file local, hãy chọn file pinyin_info.json ở đây: </b></label>
+    <input type="file" id="jsonFileInput" accept=".json">
+  </div>
+
+  <label for="inputText"><b>Dán các câu Pinyin vào đây (mỗi câu một dòng):</b></label><br>
+  <textarea id="inputText" placeholder="Ví dụ:&#10;zhěnggè chuán fǎ chuán gōng guòchéng"></textarea>
+
+  <button onclick="processPinyin()">Chuyển Đổi</button>
+
+  <table id="resultTable" style="display: none;">
+    <thead>
+      <tr>
+        <th style="width: 50%;">Yueyin</th>
+        <th style="width: 50%;">Link Audio</th>
+      </tr>
+    </thead>
+    <tbody id="resultBody">
+    </tbody>
+  </table>
+
+  <script>
+    let pinyinData = null;
+
+    // Tự động load JSON khi trang web được mở
+    window.addEventListener('DOMContentLoaded', () => {
+      fetch('./pinyin_info.json')
+        .then(response => {
+          if (!response.ok) throw new Error("Không thể tải file bằng fetch");
+          return response.json();
+        })
+        .then(data => {
+          pinyinData = data;
+          showStatus("Đã tự động tải thành công pinyin_info.json!", true);
+        })
+        .catch(err => {
+          showStatus("Không thể tự động đọc pinyin_info.json (do cơ chế bảo mật file:// của trình duyệt). Vui lòng chọn file thủ công bên dưới:", false);
+          document.getElementById('filePickerBox').style.display = 'block';
+        });
+    });
+
+    // Lắng nghe sự kiện chọn file thủ công
+    document.getElementById('jsonFileInput').addEventListener('change', function(e) {
+      const file = e.target.files[0];
+      if (!file) return;
+
+      const reader = new FileReader();
+      reader.onload = function(evt) {
+        try {
+          pinyinData = JSON.parse(evt.target.result);
+          showStatus("Đã tải dữ liệu thành công từ file được chọn!", true);
+        } catch (err) {
+          alert("File JSON không hợp lệ!");
+        }
+      };
+      reader.readAsText(file);
+    });
+
+    function showStatus(message, isSuccess) {
+      const statusBox = document.getElementById('statusBox');
+      statusBox.textContent = message;
+      statusBox.className = 'status-box ' + (isSuccess ? 'status-success' : 'status-warning');
+      if (isSuccess) {
+        document.getElementById('filePickerBox').style.display = 'none';
+      }
+    }
+
+    const PINYIN_TONE_REGEX = /[āáǎàēéěèīíǐìōóǒòūúǔùǖǘǚǜ]/i;
+
+    /**
+     * Phân tách từ ghép pinyin dính liền (ví dụ: zhěnggè => ["zhěng", "gè"])
+     */
+    function splitCompoundPinyin(token) {
+      if (pinyinData && pinyinData[token]) {
+        return [token];
+      }
+
+      const result = [];
+      let current = token;
+
+      while (current.length > 0) {
+        if (pinyinData && pinyinData[current]) {
+          result.push(current);
+          break;
+        }
+
+        let matched = false;
+        for (let len = current.length - 1; len >= 1; len--) {
+          const sub = current.substring(0, len);
+          const rest = current.substring(len);
+
+          if (pinyinData && pinyinData[sub]) {
+            if (pinyinData[rest] || PINYIN_TONE_REGEX.test(rest) || rest.length <= 4) {
+              result.push(sub);
+              current = rest;
+              matched = true;
+              break;
+            }
+          }
+        }
+
+        if (!matched) {
+          result.push(current);
+          break;
+        }
+      }
+
+      return result;
+    }
+
+    function processPinyin() {
+      if (!pinyinData) {
+        alert("Dữ liệu JSON chưa sẵn sàng! Vui lòng kiểm tra lại file pinyin_info.json.");
+        return;
+      }
+
+      const input = document.getElementById('inputText').value.trim();
+      if (!input) {
+        alert("Vui lòng nhập câu Pinyin!");
+        return;
+      }
+
+      const lines = input.split('\n');
+      const tbody = document.getElementById('resultBody');
+      tbody.innerHTML = '';
+
+      lines.forEach(line => {
+        const trimmedLine = line.trim();
+        if (!trimmedLine) return;
+
+        // Tách các từ/từ ghép được phân cách bởi khoảng trắng
+        const rawTokens = trimmedLine.split(/\s+/);
+
+        let yueyinBlocks = [];
+        let allAudioItems = [];
+
+        rawTokens.forEach(token => {
+          // Phân tách từ ghép dính liền (vd: guòchéng => ["guò", "chéng"])
+          const subPinyins = splitCompoundPinyin(token);
+
+          let subYueyins = [];
+
+          subPinyins.forEach(word => {
+            if (pinyinData[word]) {
+              // Lấy Yueyin
+              const yue = pinyinData[word].yueyin !== null ? pinyinData[word].yueyin : word;
+              subYueyins.push(yue);
+
+              // Lấy Audio
+              let audio = pinyinData[word].link_audio;
+              if (audio) {
+                audio = audio.replace(/\.mp3$/i, '');
+                allAudioItems.push(`(${audio})`);
+              } else {
+                allAudioItems.push(`(${word})`);
+              }
+            } else {
+              subYueyins.push(word);
+              allAudioItems.push(`(${word})`);
+            }
+          });
+
+          // Bọc toàn bộ các từ trong 1 token vào 1 cặp ngoặc (), phân cách bằng dấu cách
+          yueyinBlocks.push(`(${subYueyins.join(' ')})`);
+        });
+
+        // Tạo dòng kết quả trong bảng
+        const tr = document.createElement('tr');
+        
+        const tdYueyin = document.createElement('td');
+        tdYueyin.textContent = yueyinBlocks.join('');
+
+        const tdAudio = document.createElement('td');
+        tdAudio.textContent = `[${allAudioItems.join('')}]`;
+
+        tr.appendChild(tdYueyin);
+        tr.appendChild(tdAudio);
+        tbody.appendChild(tr);
+      });
+
+      document.getElementById('resultTable').style.display = 'table';
+    }
+  </script>
+</body>
+</html>

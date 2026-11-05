@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trình Quản Lý & Chỉnh Sửa Data JS (Dạng Bảng)</title>
+  <style>
+    * { box-sizing: border-box; font-family: Arial, sans-serif; }
+    body { background-color: #f4f6f9; margin: 0; padding: 20px; color: #333; }
+    h1, h2, h3 { color: #1a365d; margin-top: 0; }
+    .container { max-width: 1400px; margin: 0 auto; background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+    
+    /* Panel Top */
+    .top-bar { display: flex; gap: 10px; align-items: center; justify-content: space-between; background: #edf2f7; padding: 15px; border-radius: 6px; margin-bottom: 20px; flex-wrap: wrap; }
+    .file-input-group { display: flex; gap: 10px; align-items: center; }
+    
+    /* Form Styles */
+    .section { border: 1px solid #e2e8f0; border-radius: 6px; padding: 15px; margin-bottom: 20px; background: #fafafa; }
+    .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; }
+    .grid-4 { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 10px; }
+    
+    .form-group { margin-bottom: 10px; }
+    .form-group label { display: block; font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #4a5568; }
+    .form-group input { width: 100%; padding: 8px; border: 1px solid #cbd5e0; border-radius: 4px; font-size: 14px; }
+    .form-group input:focus { outline: none; border-color: #3182ce; }
+
+    /* Table & Paragraph Styles */
+    .doan-card { border: 1px solid #cbd5e0; border-left: 4px solid #3182ce; background: #fff; border-radius: 6px; margin-bottom: 25px; padding: 15px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+    .doan-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; border-bottom: 1px solid #edf2f7; padding-bottom: 8px; }
+    
+    /* Table styling */
+    .table-responsive { overflow-x: auto; }
+    .data-table { width: 100%; border-collapse: collapse; margin-top: 5px; }
+    .data-table th, .data-table td { border: 1px solid #cbd5e0; padding: 6px; text-align: left; vertical-align: top; }
+    .data-table th { background-color: #ebf8ff; color: #2c5282; font-size: 13px; text-transform: uppercase; letter-spacing: 0.5px; }
+    
+    /* Table Input Fields (Textarea for easy multi-line/Excel paste) */
+    .data-table textarea { 
+      width: 100%; 
+      border: 1px solid transparent; 
+      background: transparent; 
+      resize: vertical; 
+      min-height: 38px; 
+      font-size: 14px; 
+      padding: 4px; 
+      font-family: inherit; 
+    }
+    .data-table textarea:focus { 
+      outline: none; 
+      border-color: #3182ce; 
+      background: #fff; 
+      border-radius: 3px; 
+      box-shadow: 0 0 0 2px rgba(49,130,206,0.2); 
+    }
+    .col-action { width: 45px; text-align: center; }
+    .col-id { width: 140px; }
+    .col-hanzi { width: 22%; }
+    .col-pinyin { width: 22%; }
+    .col-yueyin { width: 22%; }
+    .col-nghia { width: 22%; }
+
+    /* Buttons */
+    button { cursor: pointer; padding: 8px 16px; border: none; border-radius: 4px; font-weight: bold; transition: 0.2s; }
+    .btn-primary { background: #3182ce; color: white; }
+    .btn-primary:hover { background: #2b6cb0; }
+    .btn-success { background: #38a169; color: white; }
+    .btn-success:hover { background: #2f855a; }
+    .btn-danger { background: #e53e3e; color: white; padding: 4px 8px; font-size: 12px; }
+    .btn-danger:hover { background: #c53030; }
+    .btn-add { background: #4299e1; color: white; padding: 6px 12px; font-size: 13px; }
+    .btn-add:hover { background: #3182ce; }
+
+    /* Modal paste JSON */
+    .modal { display: none; position: fixed; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.5); justify-content: center; align-items: center; z-index: 1000; }
+    .modal-content { background: #fff; padding: 20px; border-radius: 8px; width: 600px; max-width: 90%; }
+    .modal textarea { width: 100%; height: 200px; margin-bottom: 10px; border: 1px solid #cbd5e0; border-radius: 4px; padding: 8px; font-family: monospace; }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h1>Trình Quản Lý & Chỉnh Sửa Data JS</h1>
+
+  <!-- Top Controls -->
+  <div class="top-bar">
+    <div class="file-input-group">
+      <input type="file" id="fileInput" accept=".js" style="display: none;" onchange="handleFileUpload(event)">
+      <button class="btn-primary" onclick="document.getElementById('fileInput').click()">📁 Tải file data.js cũ</button>
+      <button class="btn-primary" style="background:#805ad5;" onclick="openPasteModal()">📋 Dán mã JS/JSON</button>
+    </div>
+    <div>
+      <button class="btn-success" onclick="exportJSFile()">💾 Xuất File data.js</button>
+    </div>
+  </div>
+
+  <!-- Meta Information -->
+  <div class="section">
+    <h2>Thông tin Meta</h2>
+    <div class="grid-4">
+      <div class="form-group">
+        <label>Bài (bai)</label>
+        <input type="number" id="meta_bai" value="1" onchange="updateMeta()">
+      </div>
+      <div class="form-group">
+        <label>Phần (phan)</label>
+        <input type="number" id="meta_phan" value="1" onchange="updateMeta()">
+      </div>
+      <div class="form-group">
+        <label>Tiêu đề 1 ID</label>
+        <input type="text" id="meta_tieude1_id" value="b01p01-td00" onchange="updateMeta()">
+      </div>
+      <div class="form-group">
+        <label>Tiêu đề 2 ID</label>
+        <input type="text" id="meta_tieude2_id" value="b01p01-td01" onchange="updateMeta()">
+      </div>
+    </div>
+    <div class="grid-3">
+      <div class="form-group">
+        <label>Tiêu đề 1 (Hán tự)</label>
+        <input type="text" id="meta_tieude1" onchange="updateMeta()">
+      </div>
+      <div class="form-group">
+        <label>Tiêu đề 1 Pinyin</label>
+        <input type="text" id="meta_tieude1_pinyin" onchange="updateMeta()">
+      </div>
+      <div class="form-group">
+        <label>Tiêu đề 1 Yueyin</label>
+        <input type="text" id="meta_tieude1_yueyin" onchange="updateMeta()">
+      </div>
+    </div>
+    <div class="grid-3">
+      <div class="form-group">
+        <label>Tiêu đề 2 (Hán tự)</label>
+        <input type="text" id="meta_tieude2" onchange="updateMeta()">
+      </div>
+      <div class="form-group">
+        <label>Tiêu đề 2 Pinyin</label>
+        <input type="text" id="meta_tieude2_pinyin" onchange="updateMeta()">
+      </div>
+      <div class="form-group">
+        <label>Tiêu đề 2 Yueyin</label>
+        <input type="text" id="meta_tieude2_yueyin" onchange="updateMeta()">
+      </div>
+    </div>
+  </div>
+
+  <!-- Doan List Container -->
+  <div class="section">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+      <h2>Danh sách Đoạn & Câu (Dạng Bảng)</h2>
+      <button class="btn-add" onclick="addDoan()">+ Thêm đoạn mới</button>
+    </div>
+    <div id="doanContainer"></div>
+  </div>
+</div>
+
+<!-- Modal Paste Code -->
+<div id="pasteModal" class="modal">
+  <div class="modal-content">
+    <h3>Dán nội dung file JS vào đây</h3>
+    <textarea id="pasteTextarea" placeholder="window.CURRENT_PHAN_DATA = { ... };"></textarea>
+    <div style="display: flex; justify-content: flex-end; gap: 10px;">
+      <button onclick="closePasteModal()">Hủy</button>
+      <button class="btn-primary" onclick="processPastedCode()">Nhập dữ liệu</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  let currentData = {
+    "meta": {
+      "bai": 1,
+      "phan": 1,
+      "tieude1": "第一講",
+      "tieude1_id": "b01p01-td00",
+      "tieude1_pinyin": "dì yī jiǎng",
+      "tieude1_yueyin": "(ti`) (y-) (chi:ảng)",
+      "tieude2": "真正往高層次上帶人",
+      "tieude2_id": "b01p01-td01",
+      "tieude2_pinyin": "zhēn zhèng wǎng gāo céng cì shàng dài rén",
+      "tieude2_yueyin": "(trân-) (trâng`) (goảng) (cao-) (s'ấng) (s'ư`) (shang`) (tai`) (rấn)"
+    },
+    "doan_list": []
+  };
+
+  window.onload = function() {
+    renderApp();
+  };
+
+  function renderApp() {
+    const meta = currentData.meta || {};
+    document.getElementById('meta_bai').value = meta.bai || 1;
+    document.getElementById('meta_phan').value = meta.phan || 1;
+    document.getElementById('meta_tieude1').value = meta.tieude1 || '';
+    document.getElementById('meta_tieude1_id').value = meta.tieude1_id || '';
+    document.getElementById('meta_tieude1_pinyin').value = meta.tieude1_pinyin || '';
+    document.getElementById('meta_tieude1_yueyin').value = meta.tieude1_yueyin || '';
+    document.getElementById('meta_tieude2').value = meta.tieude2 || '';
+    document.getElementById('meta_tieude2_id').value = meta.tieude2_id || '';
+    document.getElementById('meta_tieude2_pinyin').value = meta.tieude2_pinyin || '';
+    document.getElementById('meta_tieude2_yueyin').value = meta.tieude2_yueyin || '';
+
+    renderDoanList();
+  }
+
+  function updateMeta() {
+    currentData.meta = {
+      bai: parseInt(document.getElementById('meta_bai').value) || 1,
+      phan: parseInt(document.getElementById('meta_phan').value) || 1,
+      tieude1: document.getElementById('meta_tieude1').value,
+      tieude1_id: document.getElementById('meta_tieude1_id').value,
+      tieude1_pinyin: document.getElementById('meta_tieude1_pinyin').value,
+      tieude1_yueyin: document.getElementById('meta_tieude1_yueyin').value,
+      tieude2: document.getElementById('meta_tieude2').value,
+      tieude2_id: document.getElementById('meta_tieude2_id').value,
+      tieude2_pinyin: document.getElementById('meta_tieude2_pinyin').value,
+      tieude2_yueyin: document.getElementById('meta_tieude2_yueyin').value,
+    };
+  }
+
+  function renderDoanList() {
+    const container = document.getElementById('doanContainer');
+    container.innerHTML = '';
+
+    if (!currentData.doan_list) currentData.doan_list = [];
+
+    currentData.doan_list.forEach((doan, doanIdx) => {
+      const doanCard = document.createElement('div');
+      doanCard.className = 'doan-card';
+
+      let html = `
+        <div class="doan-header">
+          <strong style="font-size: 16px; color: #2b6cb0;">Đoạn ${doan.doan_so}</strong>
+          <div>
+            <button class="btn-add" onclick="addCau(${doanIdx})">+ Thêm câu</button>
+            <button class="btn-danger" onclick="deleteDoan(${doanIdx})">Xóa đoạn</button>
+          </div>
+        </div>
+        <div class="table-responsive">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th class="col-id">ID</th>
+                <th class="col-hanzi">Hanzi</th>
+                <th class="col-pinyin">Pinyin</th>
+                <th class="col-yueyin">Yueyin</th>
+                <th class="col-nghia">Nghĩa</th>
+                <th class="col-action">Xóa</th>
+              </tr>
+            </thead>
+            <tbody>
+      `;
+
+      doan.content.forEach((cau, cauIdx) => {
+        html += `
+          <tr>
+            <td>
+              <textarea onchange="updateCau(${doanIdx}, ${cauIdx}, 'cau_id', this.value)">${escapeHtml(cau.cau_id || '')}</textarea>
+            </td>
+            <td>
+              <textarea onchange="updateCau(${doanIdx}, ${cauIdx}, 'hanzi', this.value)">${escapeHtml(cau.hanzi || '')}</textarea>
+            </td>
+            <td>
+              <textarea onchange="updateCau(${doanIdx}, ${cauIdx}, 'pinyin', this.value)">${escapeHtml(cau.pinyin || '')}</textarea>
+            </td>
+            <td>
+              <textarea onchange="updateCau(${doanIdx}, ${cauIdx}, 'yueyin', this.value)">${escapeHtml(cau.yueyin || '')}</textarea>
+            </td>
+            <td>
+              <textarea onchange="updateCau(${doanIdx}, ${cauIdx}, 'nghia', this.value)">${escapeHtml(cau.nghia || '')}</textarea>
+            </td>
+            <td style="text-align: center; vertical-align: middle;">
+              <button class="btn-danger" onclick="deleteCau(${doanIdx}, ${cauIdx})">✕</button>
+            </td>
+          </tr>
+        `;
+      });
+
+      html += `
+            </tbody>
+          </table>
+        </div>
+      `;
+      doanCard.innerHTML = html;
+      container.appendChild(doanCard);
+    });
+  }
+
+  function updateCau(doanIdx, cauIdx, key, value) {
+    currentData.doan_list[doanIdx].content[cauIdx][key] = value;
+  }
+
+  function addDoan() {
+    const nextDoanSo = currentData.doan_list.length + 1;
+    currentData.doan_list.push({
+      doan_so: nextDoanSo,
+      content: []
+    });
+    renderDoanList();
+  }
+
+  function deleteDoan(doanIdx) {
+    if (confirm('Bạn có chắc chắn muốn xóa đoạn này?')) {
+      currentData.doan_list.splice(doanIdx, 1);
+      currentData.doan_list.forEach((d, idx) => d.doan_so = idx + 1);
+      renderDoanList();
+    }
+  }
+
+  function addCau(doanIdx) {
+    const baiStr = String(currentData.meta.bai).padStart(2, '0');
+    const phanStr = String(currentData.meta.phan).padStart(2, '0');
+    const doanStr = String(doanIdx + 1).padStart(2, '0');
+    const cauNum = String(currentData.doan_list[doanIdx].content.length + 1).padStart(3, '0');
+    
+    const autoId = `b${baiStr}p${phanStr}-d${doanStr}-${cauNum}`;
+
+    currentData.doan_list[doanIdx].content.push({
+      cau_id: autoId,
+      hanzi: "",
+      pinyin: "",
+      yueyin: "",
+      nghia: ""
+    });
+    renderDoanList();
+  }
+
+  function deleteCau(doanIdx, cauIdx) {
+    currentData.doan_list[doanIdx].content.splice(cauIdx, 1);
+    renderDoanList();
+  }
+
+  function handleFileUpload(event) {
+    const file = event.target.files[0];
+    if (!file) return;
+
+    const reader = new FileReader();
+    reader.onload = function(e) {
+      parseAndLoadJS(e.target.result);
+    };
+    reader.readAsText(file);
+  }
+
+  function parseAndLoadJS(jsContent) {
+    try {
+      let cleaned = jsContent.replace(/window\.CURRENT_PHAN_DATA\s*=\s*/, '');
+      cleaned = cleaned.trim().replace(/;$/, '');
+      
+      const data = new Function(`return ${cleaned}`)();
+      if (data && data.meta) {
+        currentData = data;
+        renderApp();
+        alert('Tải file dữ liệu thành công!');
+      } else {
+        alert('Cấu trúc file không đúng định dạng!');
+      }
+    } catch (err) {
+      alert('Lỗi khi đọc file: ' + err.message);
+    }
+  }
+
+  function openPasteModal() { document.getElementById('pasteModal').style.display = 'flex'; }
+  function closePasteModal() { document.getElementById('pasteModal').style.display = 'none'; }
+  function processPastedCode() {
+    const text = document.getElementById('pasteTextarea').value;
+    if (text) {
+      parseAndLoadJS(text);
+      closePasteModal();
+    }
+  }
+
+  function exportJSFile() {
+    updateMeta();
+    const jsonStr = JSON.stringify(currentData, null, 2);
+    const fileContent = `window.CURRENT_PHAN_DATA = ${jsonStr};`;
+
+    const blob = new Blob([fileContent], { type: 'text/javascript;charset=utf-8;' });
+    const link = document.createElement('a');
+    link.href = URL.createObjectURL(blob);
+    link.download = 'data.js';
+    link.click();
+  }
+
+  function escapeHtml(str) {
+    return String(str)
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;");
+  }
+</script>
+
+</body>
+</html>
