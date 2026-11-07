@@ -156,11 +156,7 @@ window.CURRENT_PHAN_DATA = {
           "nghia": "đã làm thân thể của mình loạn lung tung hỏng cả; "
         },
         {
-<<<<<<< HEAD
-          "cau_id": "b01p01-d01-019",
-=======
           "cau_id": "b01p01-d01-021",
->>>>>>> 37589ac130f776e55ce93dab2f97b2331772d4cb
           "hanzi": "他註定就修不上去了。",
           "pinyin": "tā zhù dìng jiù xiū bù shàng qù le",
           "yueyin": "(tha-) (tru`) (ting`) (chi:âu`) (xi:âu-) (pu`) (shang`) (ch'uy`) (lơ)",
