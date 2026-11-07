@@ -194,7 +194,120 @@ window.CURRENT_PHAN_DATA = {
     },
     {
       "doan_so": 2,
-      "content": []
+      "content": [
+        {
+          "cau_id": "b01p01-d02-001",
+          "hanzi": "  這些事情我們都要給理順,",
+          "pinyin": "zhè xiē shì qing wǒ men dōu yào gěi lǐ shùn",
+          "yueyin": "(trưa`) (xi:ê-) (shi*`) (ch'ing) (gủa) (mân) (tâu-) (yao`) (cẩy) (lỉ) (shuân`)",
+          "nghia": "Những sự tình ấy chúng tôi đều phải giải quyết,"
+        },
+        {
+          "cau_id": "b01p01-d02-002",
+          "hanzi": "好的留下,壞的去掉,",
+          "pinyin": "hǎo de liú xià huài de qù diào",
+          "yueyin": "(hảo) (tơ) (li:ấu) (xi:a`) (hoai`) (tơ) (ch'uy`) (ti:ao`)",
+          "nghia": "cái tốt lưu lại, cái xấu bỏ đi;"
+        },
+        {
+          "cau_id": "b01p01-d02-003",
+          "hanzi": "保證你在今後能夠修煉,",
+          "pinyin": "bǎo zhèng nǐ zài jīn hòu néng gòu xiū liàn",
+          "yueyin": "(pảo) (trâng`) (nỉ) (zai`) (chin-) (hâu`) (nấng) (câu`) (xi:âu-) (li:en`)",
+          "nghia": "đảm bảo từ nay trở đi chư vị có thể tu luyện;"
+        },
+        {
+          "cau_id": "b01p01-d02-004",
+          "hanzi": "但必須是真正來學大法的。",
+          "pinyin": "dàn bì xū shì zhēn zhèng lái xué dà fǎ de",
+          "yueyin": "(tan`) (pi`) (xuy-) (shi*`) (trân-) (trâng`) (lái) (xuế) (ta`) (fả) (tơ)",
+          "nghia": "nhưng [chư vị] phải đến học Đại Pháp một cách chân chính."
+        },
+        {
+          "cau_id": "b01p01-d02-005",
+          "hanzi": "如果你抱著各種執著心,",
+          "pinyin": "rú guǒ nǐ bào zhe gè zhǒng zhí zhuó xīn",
+          "yueyin": "(rú) (của) (nỉ) (pao`) (trơ) (cưa`) (trủng) (trí*) (trúa) (xin-)",
+          "nghia": "Nếu chư vị ôm giữ các chủng tâm chấp trước,"
+        },
+        {
+          "cau_id": "b01p01-d02-006",
+          "hanzi": "抱著來求功能,來治病,",
+          "pinyin": "bào zhe lái qiú gōng néng lái zhì bìng",
+          "yueyin": "(pao`) (trơ) (lái) (ch'i:ấu) (cung-) (nấng) (lái) (tri*`) (ping`)",
+          "nghia": "đến cầu công năng, đến trị bệnh, "
+        },
+        {
+          "cau_id": "b01p01-d02-007",
+          "hanzi": "來聽一聽理論,",
+          "pinyin": "lái tīng yi tīng lǐ lùn",
+          "yueyin": "(lái) (thing-) (y) (thing-) (lỉ) (luân`)",
+          "nghia": "đến nghe ngóng lý luận,"
+        },
+        {
+          "cau_id": "b01p01-d02-008",
+          "hanzi": "或者是抱著甚麼不好的目地,這都不行。",
+          "pinyin": "huò zhě shì bào zhe shén me bù hǎo de mù dì zhè dōu bù xíng.",
+          "yueyin": "(hua`) (trửa) (shi*`) (pao`) (trơ) (shấn) (mơ) (pu`) (hảo) (tơ) (mu`) (ti`) (trưa`) (tâu-) (pu`) (xíng .)",
+          "nghia": "hoặc giả ôm giữ mục đích bất hảo nào đó; như thế đều không được."
+        },
+        {
+          "cau_id": "b01p01-d02-009",
+          "hanzi": "因為我講了,這件事情只有我一個人在做。",
+          "pinyin": "yīn wèi wǒ jiǎng le zhè jiàn shì qing zhǐ yǒu wǒ yí gè rén zài zuò.",
+          "yueyin": "(yin-) (guây`) (gủa) (chi:ảng) (lơ) (trưa`) (chi:en`) (shi*`) (ch'ing) (trỉ*) (yẩu) (gủa) (ý) (cưa`) (rấn) (zai`) (zua` .)",
+          "nghia": "Bởi vì như tôi đã nói, việc này hiện nay chỉ có mình cá nhân tôi đang làm. "
+        },
+        {
+          "cau_id": "b01p01-d02-010",
+          "hanzi": "這樣的事情,機會不多,",
+          "pinyin": "zhè yàng de shì qing jī huì bù duō",
+          "yueyin": "(trưa`) (yang`) (tơ) (shi*`) (ch'ing) (chi-) (huây`) (pu`) (tua-)",
+          "nghia": "Sự việc như thế này, cơ hội không nhiều,"
+        },
+        {
+          "cau_id": "b01p01-d02-011",
+          "hanzi": "我也不會老這樣傳下去。",
+          "pinyin": "wǒ yě bú huì lǎo zhè yàng chuán xià qù",
+          "yueyin": "(gủa) (yể) (pú) (huây`) (lảo) (trưa`) (yang`) (tr'oán) (xi:a`) (ch'uy`)",
+          "nghia": "và tôi cũng không truyền [giảng] lâu theo cách này."
+        },
+        {
+          "cau_id": "b01p01-d02-012",
+          "hanzi": "我覺的能夠直接聽到我傳功講法的人,",
+          "pinyin": "wǒ jué de néng gòu zhí jiē tīng dào wǒ chuán gōng jiǎng fǎ de rén",
+          "yueyin": "(gủa) (chuế) (tơ) (nấng) (câu`) (trí*) (chi:ê-) (thing-) (tao`) (gủa) (tr'oán) (cung-) (chi:ảng) (fả) (tơ) (rấn)",
+          "nghia": "Tôi thấy rằng những người trực tiếp nghe tôi truyền công giảng Pháp,"
+        },
+        {
+          "cau_id": "b01p01-d02-013",
+          "hanzi": "我說真是……將來你會知道,",
+          "pinyin": "wǒ shuō zhēn shì jiāng lái nǐ huì zhī dào",
+          "yueyin": "(gủa) (shua-) (trân-) (shi*`) (jiāng) (lái) (nỉ) (huây`) (tri*-) (tao`)",
+          "nghia": "tôi nói thật rằng…… sau này chư vị sẽ hiểu ra;"
+        },
+        {
+          "cau_id": "b01p01-d02-014",
+          "hanzi": "你會覺的這段時間是非常可喜的。",
+          "pinyin": "nǐ huì jué de zhè duàn shí jiān shì fēi cháng kě xǐ de",
+          "yueyin": "(nỉ) (huây`) (chuế) (tơ) (trưa`) (toan`) (shí*) (chi:en-) (shi*`) (fây-) (tr'áng) (khửa) (xỉ) (tơ)",
+          "nghia": "chư vị sẽ thấy rằng khoảng thời gian này thật đáng mừng phi thường."
+        },
+        {
+          "cau_id": "b01p01-d02-015",
+          "hanzi": "當然我們講緣份,",
+          "pinyin": "dāng rán wǒ men jiǎng yuán fèn",
+          "yueyin": "(tang-) (rán) (gủa) (mân) (chi:ảng) (doán) (fân`)",
+          "nghia": "Tất nhiên chúng tôi nói về duyên phận;"
+        },
+        {
+          "cau_id": "b01p01-d02-016",
+          "hanzi": "大家坐在這裏都是緣份。",
+          "pinyin": "dà jiā zuò zài zhè lǐ dōu shì yuán fèn",
+          "yueyin": "(ta`) (chi:a-) (zua`) (zai`) (trưa`) (lỉ) (tâu-) (shi*`) (doán) (fân`)",
+          "nghia": "mọi người ngồi tại đây đều là duyên phận."
+        }
+      ]
     }
   ]
 };
