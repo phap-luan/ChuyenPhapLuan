@@ -69,6 +69,11 @@
     tr:nth-child(even) {
       background-color: #fafafa;
     }
+    /* Class tô màu đỏ cho ô Link Audio chứa từ 2 số 3 trở lên */
+    .highlight-red {
+      color: #d9534f;
+      font-weight: bold;
+    }
   </style>
 </head>
 <body>
@@ -253,8 +258,15 @@
         const tdYueyin = document.createElement('td');
         tdYueyin.textContent = yueyinBlocks.join('');
 
+        const audioText = `[${allAudioItems.join('')}]`;
         const tdAudio = document.createElement('td');
-        tdAudio.textContent = `[${allAudioItems.join('')}]`;
+        tdAudio.textContent = audioText;
+
+        // Đếm số lần xuất hiện của số 3 trong chuỗi audioText
+        const countThree = (audioText.match(/3/g) || []).length;
+        if (countThree >= 2) {
+          tdAudio.classList.add('highlight-red');
+        }
 
         tr.appendChild(tdYueyin);
         tr.appendChild(tdAudio);
