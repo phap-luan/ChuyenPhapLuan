@@ -122,55 +122,73 @@ window.CURRENT_PHAN_DATA = {
         },
         {
           "cau_id": "b01p01-d01-016",
+          "hanzi": "它也不是一般人能傳的了的，",
+          "pinyin": "tā yě bú shì yī bān rén néng chuán de liǎo de ",
+          "yueyin": "(tha-) (yể) (pú) (shi*`) (y-) (pan-) (rấn) (nấng) (tr'oán) (tơ) (li:ảo) (tơ)",
+          "nghia": "Nó không phải là [điều] mà người bình thường có thể truyền được, "
+        },
+        {
+          "cau_id": "b01p01-d01-017",
+          "hanzi": "因為它牽扯到要動許多功派的東西。",
+          "pinyin": "yīn wèi tā qiān chě dào yào dòng xǔ duō gōng pài de dōng xi",
+          "yueyin": "(yin-) (guây`) (tha-) (ch'i:en-) (tr'ửa) (tao`) (yao`) (tung`) (xủy) (tua-) (cung-) (p'ai`) (tơ) (tung-) (xi)",
+          "nghia": "bởi vì nó phải động đến những điều của rất nhiều công phái."
+        },
+        {
+          "cau_id": "b01p01-d01-018",
           "hanzi": "特別是我們有許多練功人，",
           "pinyin": "tè bié shì wǒ men yǒu xǔ duō liàn gōng rén",
           "yueyin": "(thưa`) (pi:ế) (shi*`) (gủa) (mân) (yẩu) (xủy) (tua-) (li:en`) (cung-) (rấn)",
           "nghia": "Đặc biệt là chúng ta có rất nhiều người luyện công,"
         },
         {
-          "cau_id": "b01p01-d01-017",
+          "cau_id": "b01p01-d01-019",
           "hanzi": "他今天學這個功，明天學那個功，",
           "pinyin": "tā jīn tiān xué zhè ge gōng míng tiān xué nà ge gōng ",
           "yueyin": "(tha-) (chin-) (thi:en-) (xuế) (trưa`) (cưa) (cung-) (míng) (thi:en-) (xuế) (na`) (cưa) (cung-)",
           "nghia": "họ nay học công này, mai học công khác, "
         },
         {
-          "cau_id": "b01p01-d01-018",
+          "cau_id": "b01p01-d01-020",
           "hanzi": "把自己的身體搞的亂七八糟，",
           "pinyin": "bǎ zì jǐ de shēn tǐ gǎo de luàn qī bā zāo",
           "yueyin": "(pả) (zư`*) (chỉ) (tơ) (shân-) (thỉ) (cảo) (tơ) (loan`) (ch'i-) (pa-) (zao-)",
           "nghia": "đã làm thân thể của mình loạn lung tung hỏng cả; "
         },
         {
+<<<<<<< HEAD
           "cau_id": "b01p01-d01-019",
+=======
+          "cau_id": "b01p01-d01-021",
+>>>>>>> 37589ac130f776e55ce93dab2f97b2331772d4cb
           "hanzi": "他註定就修不上去了。",
           "pinyin": "tā zhù dìng jiù xiū bù shàng qù le",
           "yueyin": "(tha-) (tru`) (ting`) (chi:âu`) (xi:âu-) (pu`) (shang`) (ch'uy`) (lơ)",
           "nghia": "họ nhất định rồi sẽ không thể tu lên được nữa."
         },
         {
-          "cau_id": "b01p01-d01-020",
+          "cau_id": "b01p01-d01-022",
           "hanzi": "人家一條大道往上修，他都是些岔道，",
           "pinyin": "rén jiā yī tiáo dà dào wǎng shàng xiū tā dōu shì xiē chà dào ",
           "yueyin": "(rấn) (chi:a-) (y-) (thi:áo) (ta`) (tao`) (goảng) (shang`) (xi:âu-) (tha-) (tâu-) (shi*`) (xi:ê-) (tr'a`) (tao`)",
           "nghia": "Người ta theo một con đường lớn [đại đạo] mà tu lên, [còn] họ [theo] các đường nhánh;"
         },
         {
-          "cau_id": "b01p01-d01-021",
+          "cau_id": "b01p01-d01-023",
           "hanzi": "他修這個，那個干擾；",
           "pinyin": "tā xiū zhè ge nà ge gān rǎo ",
           "yueyin": "(tha-) (xi:âu-) (trưa`) (cưa) (na`) (cưa) (can-) (rảo)",
           "nghia": "họ tu cái này, cái kia can nhiễu;"
         },
         {
-          "cau_id": "b01p01-d01-022",
+          "cau_id": "b01p01-d01-024",
           "hanzi": "修那個，這個干擾，都在干擾他，",
           "pinyin": "xiū nà ge zhè ge gān rǎo dōu zài gān rǎo tā",
           "yueyin": "(xi:âu-) (na`) (cưa) (trưa`) (cưa) (can-) (rảo) (tâu-) (zai`) (can-) (rảo) (tha-)",
           "nghia": "tu cái kia, cái này can nhiễu; đều can nhiễu đến họ,"
         },
         {
-          "cau_id": "b01p01-d01-023",
+          "cau_id": "b01p01-d01-025",
           "hanzi": "他已經修不了了。",
           "pinyin": "tā yǐ jīng xiū bù liǎo le",
           "yueyin": "(tha-) (ỷ) (ching-) (xi:âu-) (pu`) (li:ảo) (lơ)",
