@@ -171,7 +171,7 @@ window.CURRENT_PHAN_DATA = {
           "hanzi": "人家一條大道往上修，他都是些岔道，",
           "pinyin": "rén jiā yī tiáo dà dào wǎng shàng xiū tā dōu shì xiē chà dào ",
           "yueyin": "(rấn) (chi:a-) (y-) (thi:áo) (ta`) (tao`) (goảng) (shang`) (xi:âu-) (tha-) (tâu-) (shi*`) (xi:ê-) (tr'a`) (tao`)",
-          "nghia": "Người ta theo một con đường lớn [đại đạo] mà tu lên, [còn] họ [theo] các đường nhánh;"
+          "nghia": "Người ta theo một con đường lớn [đại đạo] mà tu lên, [còn] họ [theo] các đường nhánh,"
         },
         {
           "cau_id": "b01p01-d01-023",
