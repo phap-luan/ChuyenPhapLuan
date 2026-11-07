@@ -17,7 +17,7 @@ window.CURRENT_PHAN_DATA = {
       "content": [
         {
           "cau_id": "b01p01-d01-001",
-          "hanzi": "我在整個傳法、傳功過程中，",
+          "hanzi": "  我在整個傳法、傳功過程中，",
           "pinyin": "wǒ zài zhěng gè chuán fǎ chuán gōng guò chéng zhōng",
           "yueyin": "(gủa) (zai`) (trẩng) (cưa`) (tr'oán) (fả) (tr'oán) (cung-) (cua`) (tr'ấng) (trung-)",
           "nghia": "Trong toàn bộ quá trình truyền Pháp, truyền công"
@@ -143,7 +143,7 @@ window.CURRENT_PHAN_DATA = {
         },
         {
           "cau_id": "b01p01-d01-019",
-          "hanzi": "他註定就修不上去了",
+          "hanzi": "他註定就修不上去了。",
           "pinyin": "tā zhù dìng jiù xiū bù shàng qù le",
           "yueyin": "(tha-) (tru`) (ting`) (chi:âu`) (xi:âu-) (pu`) (shang`) (ch'uy`) (lơ)",
           "nghia": "họ nhất định rồi sẽ không thể tu lên được nữa."
