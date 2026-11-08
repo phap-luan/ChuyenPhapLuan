@@ -1052,12 +1052,38 @@
             return colDiv;
         }
 
+        // Ghi nhớ trang đã render gần nhất để biết khi nào là "sang trang mới"
+        let lastRenderedPages = null;
+        let lastRenderedIdx = -1;
+
+        // Đưa khung đọc về đầu trang: trên cùng + mép phải (nơi bắt đầu đọc chữ dọc)
+        function scrollToPageStart() {
+            const bookWrapper = document.getElementById('bookWrapper');
+            const bookFrame = document.getElementById('bookFrame');
+            const coverFrame = document.getElementById('coverFrame');
+            if (bookFrame) bookFrame.scrollTop = 0;
+            if (coverFrame) {
+                coverFrame.scrollTop = 0;
+                const coverPage = coverFrame.querySelector('.trang-bia-page');
+                if (coverPage) coverPage.scrollTop = 0;
+            }
+            if (bookWrapper) {
+                bookWrapper.scrollTop = 0;
+                bookWrapper.scrollLeft = bookWrapper.scrollWidth; // direction: rtl -> mép phải
+            }
+        }
+
         function renderPage(pageIdx) {
             if (generatedPages.length === 0) return;
 
             const coverFrame = document.getElementById('coverFrame');
             const bookFrame = document.getElementById('bookFrame');
             const pageData = generatedPages[pageIdx];
+
+            // Chỉ reset cuộn khi thật sự đổi trang (không reset khi bật/tắt 拼 / 越)
+            const isNewPage = (lastRenderedPages !== generatedPages || lastRenderedIdx !== pageIdx);
+            lastRenderedPages = generatedPages;
+            lastRenderedIdx = pageIdx;
 
             if (pageData && pageData.type === 'cover') {
                 coverFrame.style.display = "flex";
@@ -1119,6 +1145,10 @@
                 }
 
                 pageDisplay.textContent = `${pageIdx + 1} / ${generatedPages.length}`;
+                if (isNewPage) {
+                    scrollToPageStart();
+                    requestAnimationFrame(scrollToPageStart);
+                }
                 return;
             }
 
@@ -1222,12 +1252,17 @@
 
             pageDisplay.textContent = `${pageIdx + 1} / ${generatedPages.length}`;
             
-            setTimeout(() => {
-                const bookWrapper = document.getElementById('bookWrapper');
-                if (bookWrapper) {
-                    bookWrapper.scrollLeft = bookWrapper.scrollWidth;
-                }
-            }, 50);
+            if (isNewPage) {
+                // Reset ngay + sau khi trình duyệt layout xong (tránh bị ghi đè)
+                scrollToPageStart();
+                requestAnimationFrame(scrollToPageStart);
+                setTimeout(scrollToPageStart, 50);
+            } else {
+                setTimeout(() => {
+                    const bookWrapper = document.getElementById('bookWrapper');
+                    if (bookWrapper) bookWrapper.scrollLeft = bookWrapper.scrollWidth;
+                }, 50);
+            }
         }
 
         // Logic xử lý nút 拼
