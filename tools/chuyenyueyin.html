@@ -264,7 +264,11 @@
 
         // Đếm số lần xuất hiện của số 3 trong chuỗi audioText
         const countThree = (audioText.match(/3/g) || []).length;
-        if (countThree >= 2) {
+        // Tô đỏ nếu ký tự cuối cùng của link audio không phải là số
+        // Ví dụ: [(wo3)(men)] => đỏ ; [(wo3)(men1)] => giữ nguyên
+        const endsWithDigit = /\d\)\]$/.test(audioText);
+
+        if (countThree >= 2 || !endsWithDigit) {
           tdAudio.classList.add('highlight-red');
         }
 
