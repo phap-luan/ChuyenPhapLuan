@@ -611,7 +611,7 @@
     const htmlTemplate = `
       <div style="margin-bottom: 12px; line-height: 1.5">
         <p>
-          <span style="font-size: 10px; font-weight: bold; color: #64748b;"> Nguyên Văn:</span> [(.mp3)]<br>
+          <span style="font-size: 10px; font-weight: bold; color: #64748b;"> Nguyên Văn:</span> [()]<br>
           <span id="matrixTableWrapper"></span>
           <span style="font-size: 14px; color: #2563eb; cursor: pointer; margin-left: 5px;"></span>
         </p>
@@ -623,14 +623,6 @@
         <p style="margin-top: 5px;">
           <span style="font-size: 10px; font-weight: bold; color: #64748b;"> Bản dịch trong sách:</span><br>
           <span style="font-size: 16px; font-weight: bold; color: #000000;">${item ? (item.nghia || '') : ''}</span>
-        </p>
-        <hr style="margin: 10px 0; border: none; border-top: 1px dashed #cbd5e1;">
-        <p>
-          ➡️ <span style="font-size: 16px; font-weight: bold; color: #ef4444;">Lưu ý:</span><br>
-          <span style="font-size: 16px; color: #000000;">Ngữ Pháp Tiếng Trung ngược với Tiếng Việt:</span>
-          <span style="font-size: 18px; font-weight: bold; color: #000000;">[Bổ Ngữ] + [Ý Chính]</span>
-          <span style="font-size: 16px; color: #000000;">mọi người đọc nhiều dần dần sẽ quen</span>
-<br>
         </p>
       </div>
     `.trim();
