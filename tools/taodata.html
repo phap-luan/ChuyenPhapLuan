@@ -248,26 +248,26 @@
                 <th class="col-action">Xóa</th>
               </tr>
             </thead>
-            <tbody>
+            <tbody id="tbody-${doanIdx}">
       `;
 
       doan.content.forEach((cau, cauIdx) => {
         html += `
-          <tr>
+          <tr data-cau-idx="${cauIdx}">
             <td>
-              <textarea onchange="updateCau(${doanIdx}, ${cauIdx}, 'cau_id', this.value)">${escapeHtml(cau.cau_id || '')}</textarea>
+              <textarea onchange="updateCau(${doanIdx}, ${cauIdx}, 'cau_id', this.value)" onpaste="handleTablePaste(event, ${doanIdx}, ${cauIdx}, 0)">${escapeHtml(cau.cau_id || '')}</textarea>
             </td>
             <td>
-              <textarea onchange="updateCau(${doanIdx}, ${cauIdx}, 'hanzi', this.value)">${escapeHtml(cau.hanzi || '')}</textarea>
+              <textarea onchange="updateCau(${doanIdx}, ${cauIdx}, 'hanzi', this.value)" onpaste="handleTablePaste(event, ${doanIdx}, ${cauIdx}, 1)">${escapeHtml(cau.hanzi || '')}</textarea>
             </td>
             <td>
-              <textarea onchange="updateCau(${doanIdx}, ${cauIdx}, 'pinyin', this.value)">${escapeHtml(cau.pinyin || '')}</textarea>
+              <textarea onchange="updateCau(${doanIdx}, ${cauIdx}, 'pinyin', this.value)" onpaste="handleTablePaste(event, ${doanIdx}, ${cauIdx}, 2)">${escapeHtml(cau.pinyin || '')}</textarea>
             </td>
             <td>
-              <textarea onchange="updateCau(${doanIdx}, ${cauIdx}, 'yueyin', this.value)">${escapeHtml(cau.yueyin || '')}</textarea>
+              <textarea onchange="updateCau(${doanIdx}, ${cauIdx}, 'yueyin', this.value)" onpaste="handleTablePaste(event, ${doanIdx}, ${cauIdx}, 3)">${escapeHtml(cau.yueyin || '')}</textarea>
             </td>
             <td>
-              <textarea onchange="updateCau(${doanIdx}, ${cauIdx}, 'nghia', this.value)">${escapeHtml(cau.nghia || '')}</textarea>
+              <textarea onchange="updateCau(${doanIdx}, ${cauIdx}, 'nghia', this.value)" onpaste="handleTablePaste(event, ${doanIdx}, ${cauIdx}, 4)">${escapeHtml(cau.nghia || '')}</textarea>
             </td>
             <td style="text-align: center; vertical-align: middle;">
               <button class="btn-danger" onclick="deleteCau(${doanIdx}, ${cauIdx})">✕</button>
@@ -284,6 +284,60 @@
       doanCard.innerHTML = html;
       container.appendChild(doanCard);
     });
+  }
+
+  /**
+   * Tính năng thông minh xử lý paste từ Excel vào bảng
+   */
+  function handleTablePaste(event, doanIdx, startCauIdx, startColIdx) {
+    const clipboardData = event.clipboardData || window.clipboardData;
+    if (!clipboardData) return;
+    
+    const pastedText = clipboardData.getData('text');
+    // Kiểm tra xem dữ liệu paste có phải dạng bảng (có chứa xuống dòng \n hoặc tab \t) không
+    if (!pastedText.includes('\t') && !pastedText.includes('\n')) {
+      return; // Dữ liệu đơn bình thường, để trình duyệt tự xử lý
+    }
+
+    event.preventDefault(); // Chặn hành vi dán mặc định (chỉ vào 1 ô)
+
+    // Tách các dòng và các cột từ dữ liệu Excel
+    const rows = pastedText.split(/\r\n|\n|\r/).filter(r => r !== '');
+    const matrix = rows.map(r => r.split('\t'));
+
+    const fields = ['cau_id', 'hanzi', 'pinyin', 'yueyin', 'nghia'];
+    const contentList = currentData.doan_list[doanIdx].content;
+
+    matrix.forEach((rowCols, rIdx) => {
+      const targetCauIdx = startCauIdx + rIdx;
+
+      // Nếu dán quá số dòng hiện có, tự động tạo thêm dòng mới
+      if (targetCauIdx >= contentList.length) {
+        const baiStr = String(currentData.meta.bai).padStart(2, '0');
+        const phanStr = String(currentData.meta.phan).padStart(2, '0');
+        const doanStr = String(doanIdx + 1).padStart(2, '0');
+        const cauNum = String(contentList.length + 1).padStart(3, '0');
+        const autoId = `b${baiStr}p${phanStr}-d${doanStr}-${cauNum}`;
+
+        contentList.push({
+          cau_id: autoId,
+          hanzi: "",
+          pinyin: "",
+          yueyin: "",
+          nghia: ""
+        });
+      }
+
+      rowCols.forEach((val, cIdx) => {
+        const targetColIdx = startColIdx + cIdx;
+        if (targetColIdx < fields.length) {
+          const fieldName = fields[targetColIdx];
+          contentList[targetCauIdx][fieldName] = val.trim();
+        }
+      });
+    });
+
+    renderDoanList();
   }
 
   function updateCau(doanIdx, cauIdx, key, value) {

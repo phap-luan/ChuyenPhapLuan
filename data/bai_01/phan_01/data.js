@@ -308,6 +308,144 @@ window.CURRENT_PHAN_DATA = {
           "nghia": "mọi người ngồi tại đây đều là duyên phận."
         }
       ]
+    },
+    {
+      "doan_so": 3,
+      "content": [
+        {
+          "cau_id": "b01p01-d03-001",
+          "hanzi": "往高層次上傳功,",
+          "pinyin": "wǎng gāo céng cì shàng chuán gōng",
+          "yueyin": "(goảng) (cao-) (s'ấng) (s'ư`) (shang`) (tr'oán) (cung-)",
+          "nghia": "Truyền công lên cao tầng,"
+        },
+        {
+          "cau_id": "b01p01-d03-002",
+          "hanzi": "大家想一想,是甚麼問題?",
+          "pinyin": "dà jiā xiǎng yi xiǎng shì shén me wèn tí",
+          "yueyin": "(ta`) (chi:a-) (xi:ảng) (y) (xi:ảng) (shi*`) (shấn) (mơ) (guân`) (thí)",
+          "nghia": "mọi người nghĩ xem, [đó] là vấn đề gì?"
+        },
+        {
+          "cau_id": "b01p01-d03-003",
+          "hanzi": "那不就是度人嗎?",
+          "pinyin": "nà bú jiù shì dù rén ma",
+          "yueyin": "(na`) (pú) (chi:âu`) (shi*`) (tu`) (rấn) (ma)",
+          "nghia": "Đó chẳng phải độ nhân sao?"
+        },
+        {
+          "cau_id": "b01p01-d03-004",
+          "hanzi": "度人哪,你就是真正的修煉了,",
+          "pinyin": "dù rén na nǐ jiù shì zhēn zhèng de xiū liàn le",
+          "yueyin": "(tu`) (rấn) (na) (nỉ) (chi:âu`) (shi*`) (trân-) (trâng`) (tơ) (xi:âu-) (li:en`) (lơ)",
+          "nghia": "Độ nhân ấy, chư vị đúng là tu luyện chân chính,"
+        },
+        {
+          "cau_id": "b01p01-d03-005",
+          "hanzi": "就不只是祛病健身了。",
+          "pinyin": "jiù bù zhǐ shì qū bìng jiàn shēn le",
+          "yueyin": "(chi:âu`) (pu`) (trỉ*) (shi*`) (ch'uy-) (ping`) (chi:en`) (shân-) (lơ)",
+          "nghia": "chứ không chỉ là chữa bệnh khoẻ người."
+        },
+        {
+          "cau_id": "b01p01-d03-006",
+          "hanzi": "那麼真正修煉,",
+          "pinyin": "nà me zhēn zhèng xiū liàn",
+          "yueyin": "(na`) (mơ) (trân-) (trâng`) (xi:âu-) (li:en`)",
+          "nghia": "Là tu luyện chân chính,"
+        },
+        {
+          "cau_id": "b01p01-d03-007",
+          "hanzi": "對學員的心性要求也就要高了。",
+          "pinyin": "duì xué yuán de xīn xìng yāo qiú yě jiù yào gāo le",
+          "yueyin": "(tuây`) (xuế) (doán) (tơ) (xin-) (xing`) (yao-) (ch'i:ấu) (yể) (chi:âu`) (yao`) (cao-) (lơ)",
+          "nghia": "đối với tâm tính của học viên thì yêu cầu cũng nhất định phải cao."
+        },
+        {
+          "cau_id": "b01p01-d03-008",
+          "hanzi": "我們坐在這裏的人,是來學大法的,",
+          "pinyin": "wǒ men zuò zài zhè lǐ de rén shì lái xué dà fǎ de",
+          "yueyin": "(gủa) (mân) (zua`) (zai`) (trưa`) (lỉ) (tơ) (rấn) (shi*`) (lái) (xuế) (ta`) (fả) (tơ)",
+          "nghia": "Chúng ta là những người ngồi tại nơi này, đến để học Đại Pháp,"
+        },
+        {
+          "cau_id": "b01p01-d03-009",
+          "hanzi": "那麼你就得把自己當作一個真正的煉功人坐在這裏,",
+          "pinyin": "nà me nǐ jiù děi bǎ zì jǐ dàng zuò yí gè zhēn zhèng de liàn gōng rén zuò zài zhè lǐ",
+          "yueyin": "(na`) (mơ) (nỉ) (chi:âu`) (tẩy) (pả) (zư`*) (chỉ) (tang`) (zua`) (ý) (cưa`) (trân-) (trâng`) (tơ) (li:en`) (cung-) (rấn) (zua`) (zai`) (trưa`) (lỉ)",
+          "nghia": "chư vị phải coi mình đúng là những người luyện công chân chính đang ngồi tại đây,"
+        },
+        {
+          "cau_id": "b01p01-d03-010",
+          "hanzi": "你就得放棄執著心。",
+          "pinyin": "nǐ jiù děi fàng qì zhí zhuó xīn",
+          "yueyin": "(nỉ) (chi:âu`) (tẩy) (fang`) (ch'i`) (trí*) (trúa) (xin-)",
+          "nghia": "chư vị phải vứt bỏ các tâm chấp trước."
+        },
+        {
+          "cau_id": "b01p01-d03-011",
+          "hanzi": "你抱著各種有求的目地來學功、學大法,",
+          "pinyin": "nǐ bào zhe gè zhǒng yǒu qiú de mù dì lái xué gōng xué dà fǎ",
+          "yueyin": "(nỉ) (pao`) (trơ) (cưa`) (trủng) (yẩu) (ch'i:ấu) (tơ) (mu`) (ti`) (lái) (xuế) (cung-) (xuế) (ta`) (fả)",
+          "nghia": "[Khi] chư vị ôm giữ các loại mục đích hữu cầu mà đến học công, học Đại Pháp,"
+        },
+        {
+          "cau_id": "b01p01-d03-012",
+          "hanzi": "那你甚麼都學不到的。",
+          "pinyin": "nà nǐ shén me dōu xué bu dào de",
+          "yueyin": "(na`) (nỉ) (shấn) (mơ) (tâu-) (xuế) (pu) (tao`) (tơ)",
+          "nghia": "[thì] chư vị sẽ không học được gì hết."
+        },
+        {
+          "cau_id": "b01p01-d03-013",
+          "hanzi": "告訴你一個真理:",
+          "pinyin": "gào su nǐ yí gè zhēn lǐ",
+          "yueyin": "(cao`) (su) (nỉ) (ý) (cưa`) (trân-) (lỉ)",
+          "nghia": "[Tôi] nói rõ cho chư vị một chân lý:"
+        },
+        {
+          "cau_id": "b01p01-d03-014",
+          "hanzi": "整個人的修煉過程就是不斷的去人的執著心的過程。",
+          "pinyin": "zhěng gè rén de xiū liàn guò chéng jiù shì bú duàn de qù rén de zhí zhuó xīn de guò chéng",
+          "yueyin": "(trẩng) (cưa`) (rấn) (tơ) (xi:âu-) (li:en`) (cua`) (tr'ấng) (chi:âu`) (shi*`) (pú) (toan`) (tơ) (ch'uy`) (rấn) (tơ) (trí*) (trúa) (xin-) (tơ) (cua`) (tr'ấng)",
+          "nghia": "toàn bộ quá trình tu luyện của người ta chính là quá trình liên tục tống khứ tâm chấp trước của con người."
+        },
+        {
+          "cau_id": "b01p01-d03-015",
+          "hanzi": "人在常人社會中,你爭我奪,爾虞我詐,",
+          "pinyin": "rén zài cháng rén shè huì zhōng nǐ zhēng wǒ duó ěr yú wǒ zhà",
+          "yueyin": "(rấn) (zai`) (tr'áng) (rấn) (shưa`) (huây`) (trung-) (nỉ) (trâng-) (gủa) (túa) (ở) (úy) (gủa) (tra`)",
+          "nghia": "Con người trong xã hội người thường, kẻ tranh người đoạt, kẻ lừa người dối,"
+        },
+        {
+          "cau_id": "b01p01-d03-016",
+          "hanzi": "為了個人的這點利益,去傷害別人,",
+          "pinyin": "wèi le gè rén de zhè diǎn lì yì qù shāng hài bié rén",
+          "yueyin": "(guây`) (lơ) (cưa`) (rấn) (tơ) (trưa`) (ti:ẻn) (li`) (y`) (ch'uy`) (shang-) (hai`) (pi:ế) (rấn)",
+          "nghia": "chỉ vì chút đỉnh lợi ích cá nhân mà làm hại người khác;"
+        },
+        {
+          "cau_id": "b01p01-d03-017",
+          "hanzi": "這些心都得放下。",
+          "pinyin": "zhè xiē xīn dōu děi fàng xià",
+          "yueyin": "(trưa`) (xi:ê-) (xin-) (tâu-) (tẩy) (fang`) (xi:a`)",
+          "nghia": "các tâm ấy đều phải vứt bỏ."
+        },
+        {
+          "cau_id": "b01p01-d03-018",
+          "hanzi": "尤其我們今天在學功的人,",
+          "pinyin": "yóu qí wǒ men jīn tiān zài xué gōng de rén",
+          "yueyin": "(yấu) (ch'í) (gủa) (mân) (chin-) (thi:en-) (zai`) (xuế) (cung-) (tơ) (rấn)",
+          "nghia": "Nhất là với những người học công tại đây hôm nay,"
+        },
+        {
+          "cau_id": "b01p01-d03-019",
+          "hanzi": "這些心更得放下。",
+          "pinyin": "zhè xiē xīn gèng děi fàng xià",
+          "yueyin": "(trưa`) (xi:ê-) (xin-) (câng`) (tẩy) (fang`) (xi:a`)",
+          "nghia": "những tâm ấy lại càng phải vứt bỏ hơn nữa."
+        }
+      ]
     }
   ]
 };

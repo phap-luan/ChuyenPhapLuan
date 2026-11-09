@@ -74,6 +74,22 @@
       color: #d9534f;
       font-weight: bold;
     }
+    /* Khu vực chứa nút copy nằm dưới bảng */
+    .copy-container {
+      display: flex;
+      gap: 20px;
+      margin-top: 15px;
+    }
+    .copy-box {
+      flex: 1;
+    }
+    .btn-copy {
+      width: 100%;
+      background-color: #28a745;
+    }
+    .btn-copy:hover {
+      background-color: #218838;
+    }
   </style>
 </head>
 <body>
@@ -96,6 +112,7 @@
 
   <button onclick="processPinyin()">Chuyển Đổi</button>
 
+  <!-- Bảng kết quả -->
   <table id="resultTable" style="display: none;">
     <thead>
       <tr>
@@ -106,6 +123,16 @@
     <tbody id="resultBody">
     </tbody>
   </table>
+
+  <!-- Hai nút copy đặt bên dưới mỗi cột kết quả -->
+  <div id="copyContainer" class="copy-container" style="display: none;">
+    <div class="copy-box">
+      <button class="btn-copy" onclick="copyColumn(0)">Copy Cột Yueyin</button>
+    </div>
+    <div class="copy-box">
+      <button class="btn-copy" onclick="copyColumn(1)">Copy Cột Link Audio</button>
+    </div>
+  </div>
 
   <script>
     let pinyinData = null;
@@ -265,7 +292,6 @@
         // Đếm số lần xuất hiện của số 3 trong chuỗi audioText
         const countThree = (audioText.match(/3/g) || []).length;
         // Tô đỏ nếu ký tự cuối cùng của link audio không phải là số
-        // Ví dụ: [(wo3)(men)] => đỏ ; [(wo3)(men1)] => giữ nguyên
         const endsWithDigit = /\d\)\]$/.test(audioText);
 
         if (countThree >= 2 || !endsWithDigit) {
@@ -277,7 +303,39 @@
         tbody.appendChild(tr);
       });
 
+      // Hiển thị bảng kết quả và vùng chứa nút copy
       document.getElementById('resultTable').style.display = 'table';
+      document.getElementById('copyContainer').style.display = 'flex';
+    }
+
+    /**
+     * Hàm hỗ trợ copy toàn bộ nội dung của một cột cụ thể
+     * columnIndex: 0 cho Yueyin, 1 cho Link Audio
+     */
+    function copyColumn(columnIndex) {
+      const rows = document.querySelectorAll('#resultBody tr');
+      if (rows.length === 0) return;
+
+      let texts = [];
+      rows.forEach(tr => {
+        const cell = tr.children[columnIndex];
+        if (cell) {
+          texts.push(cell.textContent);
+        }
+      });
+
+      const fullText = texts.join('\n');
+      navigator.clipboard.writeText(fullText).then(() => {
+        const btn = event.target;
+        const originalText = btn.textContent;
+        btn.textContent = "Đã copy thành công!";
+        btn.style.backgroundColor = "#138496";
+        setTimeout(() => {
+          btn.textContent = originalText;
+          btn.style.backgroundColor = "#28a745";
+        }, 1500);
+      }).catch(err => {
+      });
     }
   </script>
 </body>
