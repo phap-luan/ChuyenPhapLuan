@@ -314,7 +314,7 @@ window.CURRENT_PHAN_DATA = {
       "content": [
         {
           "cau_id": "b01p01-d03-001",
-          "hanzi": "往高層次上傳功,",
+          "hanzi": "  往高層次上傳功,",
           "pinyin": "wǎng gāo céng cì shàng chuán gōng",
           "yueyin": "(goảng) (cao-) (s'ấng) (s'ư`) (shang`) (tr'oán) (cung-)",
           "nghia": "Truyền công lên cao tầng,"
@@ -444,6 +444,102 @@ window.CURRENT_PHAN_DATA = {
           "pinyin": "zhè xiē xīn gèng děi fàng xià",
           "yueyin": "(trưa`) (xi:ê-) (xin-) (câng`) (tẩy) (fang`) (xi:a`)",
           "nghia": "những tâm ấy lại càng phải vứt bỏ hơn nữa."
+        }
+      ]
+    },
+    {
+      "doan_so": 4,
+      "content": [
+        {
+          "cau_id": "b01p01-d04-001",
+          "hanzi": "  我這裏不講治病，我們也不治病。",
+          "pinyin": "wǒ zhè lǐ bù jiǎng zhì bìng wǒ men yě bù zhì bìng",
+          "yueyin": "(gủa) (trưa`) (lỉ) (pu`) (chi:ảng) (tri*`) (ping`) (gủa) (mân) (yể) (pu`) (tri*`) (ping`)",
+          "nghia": "Ở đây tôi không giảng trị bệnh; chúng tôi cũng không trị bệnh."
+        },
+        {
+          "cau_id": "b01p01-d04-002",
+          "hanzi": "但是真正修煉的人，你帶著有病的身體，你是修煉不了的。",
+          "pinyin": "dàn shì zhēn zhèng xiū liàn de rén nǐ dài zhe yǒu bìng de shēn tǐ nǐ shì xiū liàn bù liǎo de",
+          "yueyin": "(tan`) (shi*`) (trân-) (trâng`) (xi:âu-) (li:en`) (tơ) (rấn) (nỉ) (tai`) (trơ) (yẩu) (ping`) (tơ) (shân-) (thỉ) (nỉ) (shi*`) (xi:âu-) (li:en`) (pu`) (li:ảo) (tơ)",
+          "nghia": "Nhưng là người tu luyện chân chính, chư vị mang theo thân thể có bệnh, [thì] chư vị tu luyện không được."
+        },
+        {
+          "cau_id": "b01p01-d04-003",
+          "hanzi": "我要給你淨化身體。",
+          "pinyin": "wǒ yào gěi nǐ jìng huà shēn tǐ",
+          "yueyin": "(gủa) (yao`) (cẩy) (nỉ) (ching`) (hoa`) (shân-) (thỉ)",
+          "nghia": "Tôi phải giúp chư vị tịnh hoá thân thể."
+        },
+        {
+          "cau_id": "b01p01-d04-004",
+          "hanzi": "淨化身體只侷限在真正來學功的人，真正來學法的人。",
+          "pinyin": "jìng huà shēn tǐ zhǐ jú xiàn zài zhēn zhèng lái xué gōng de rén zhēn zhèng lái xué fǎ de rén",
+          "yueyin": "(ching`) (hoa`) (shân-) (thỉ) (trỉ*) (chúy) (xi:en`) (zai`) (trân-) (trâng`) (lái) (xuế) (cung-) (tơ) (rấn) (trân-) (trâng`) (lái) (xuế) (fả) (tơ) (rấn)",
+          "nghia": "Tịnh hoá thân thể chỉ hạn cuộc cho những ai đến học công chân chính, những ai đến học Pháp chân chính."
+        },
+        {
+          "cau_id": "b01p01-d04-005",
+          "hanzi": "我們強調一點：你放不下那個心，你放不下那個病，",
+          "pinyin": "wǒ men qiáng diào yì diǎn nǐ fàng bu xià nà ge xīn nǐ fàng bu xià nà ge bìng",
+          "yueyin": "(gủa) (mân) (ch'i:áng) (ti:ao`) (y`) (ti:ẻn) (nỉ) (fang`) (pu) (xi:a`) (na`) (cưa) (xin-) (nỉ) (fang`) (pu) (xi:a`) (na`) (cưa) (ping`)",
+          "nghia": "Chúng tôi nhấn mạnh một điểm: [nếu] chư vị không bỏ được cái tâm ấy, không bỏ được cái [suy nghĩ về] bệnh ấy,"
+        },
+        {
+          "cau_id": "b01p01-d04-006",
+          "hanzi": "我們甚麼都做不了，對你無能為力。",
+          "pinyin": "wǒ men shén me dōu zuò bu liǎo duì nǐ wú néng wéi lì",
+          "yueyin": "(gủa) (mân) (shấn) (mơ) (tâu-) (zua`) (pu) (li:ảo) (tuây`) (nỉ) (ú) (nấng) (guấy) (li`)",
+          "nghia": "[thì] chúng tôi chẳng thể làm gì, đối với chư vị chẳng thể giúp được."
+        },
+        {
+          "cau_id": "b01p01-d04-007",
+          "hanzi": "為甚麼呢？因為這個宇宙中有這樣一個理，",
+          "pinyin": "wèi shén me ne? yīn wèi zhè ge yǔ zhòu zhōng yǒu zhè yàng yí gè lǐ",
+          "yueyin": "(guây`) (shấn) (mơ) (nưa ?) (yin-) (guây`) (trưa`) (cưa) (ủy) (trâu`) (trung-) (yẩu) (trưa`) (yang`) (ý) (cưa`) (lỉ)",
+          "nghia": "Tại sao? Bởi vì trong vũ trụ này có một [Pháp] lý:"
+        },
+        {
+          "cau_id": "b01p01-d04-008",
+          "hanzi": "常人中的事情，按照佛家講，都是有因緣關係的，",
+          "pinyin": "cháng rén zhōng de shì qing àn zhào fó jiā jiǎng dōu shì yǒu yīn yuán guān xì de",
+          "yueyin": "(tr'áng) (rấn) (trung-) (tơ) (shi*`) (ch'ing) (an`) (trao`) (fúa) (chi:a-) (chi:ảng) (tâu-) (shi*`) (yẩu) (yin-) (doán) (coan-) (xi`) (tơ)",
+          "nghia": "những sự việc nơi người thường, chiểu theo Phật gia [tuyên] giảng, đều có quan hệ nhân duyên;"
+        },
+        {
+          "cau_id": "b01p01-d04-009",
+          "hanzi": "生老病死，在常人就是這樣存在的。",
+          "pinyin": "shēng lǎo bìng sǐ zài cháng rén jiù shì zhè yàng cún zài de",
+          "yueyin": "(shâng-) (lảo) (ping`) (sử) (zai`) (tr'áng) (rấn) (chi:âu`) (shi*`) (trưa`) (yang`) (s'uấn) (zai`) (tơ)",
+          "nghia": "sinh lão bệnh tử, [chúng] tồn tại đúng như vậy ở [cõi] người thường."
+        },
+        {
+          "cau_id": "b01p01-d04-010",
+          "hanzi": "因為人在以前做過壞事而產生的業力才造成有病或者魔難。",
+          "pinyin": "yīn wèi rén zài yǐ qián zuò guo huài shì ér chǎn shēng de yè lì cái zào chéng yǒu bìng huò zhě mó nàn",
+          "yueyin": "(yin-) (guây`) (rấn) (zai`) (ỷ) (ch'i:én) (zua`) (cua) (hoai`) (shi*`) (ớ) (tr'ản) (shâng-) (tơ) (yê`) (li`) (s'ái) (zao`) (tr'ấng) (yẩu) (ping`) (hua`) (trửa) (múa) (nan`)",
+          "nghia": "Bởi vì con người trước đây đã làm điều xấu [nên] nghiệp lực sinh ra mới tạo thành có bệnh hoặc ma nạn."
+        },
+        {
+          "cau_id": "b01p01-d04-011",
+          "hanzi": "遭罪就是在還業債，所以，誰也不能夠隨便改動它，",
+          "pinyin": "zāo zuì jiù shì zài huán yè zhài suǒ yǐ shéi yě bù néng gòu suí biàn gǎi dòng tā",
+          "yueyin": "(zao-) (zuây`) (chi:âu`) (shi*`) (zai`) (hoán) (yê`) (trai`) (sủa) (ỷ) (shấy) (yể) (pu`) (nấng) (câu`) (suấy) (pi:en`) (cải) (tung`) (tha-)",
+          "nghia": "Chịu tội [khổ] chính là hoàn trả nợ nghiệp; vậy nên, không ai có thể tuỳ tiện thay đổi nó;"
+        },
+        {
+          "cau_id": "b01p01-d04-012",
+          "hanzi": "改動了就等於欠債可以不還；",
+          "pinyin": "gǎi dòng le jiù děng yú qiàn zhài kě yǐ bù huán",
+          "yueyin": "(cải) (tung`) (lơ) (chi:âu`) (tẩng) (úy) (ch'i:en`) (trai`) (khửa) (ỷ) (pu`) (hoán)",
+          "nghia": "thay đổi [nó] cũng tương đương với mắc nợ không phải trả;"
+        },
+        {
+          "cau_id": "b01p01-d04-013",
+          "hanzi": "也不能夠隨便任意去做，否則，就等於在做壞事。",
+          "pinyin": "yě bù néng gòu suí biàn rèn yì qù zuò fǒu zé jiù děng yú zài zuò huài shì",
+          "yueyin": "(yể) (pu`) (nấng) (câu`) (suấy) (pi:en`) (rân`) (y`) (ch'uy`) (zua`) (fẩu) (zứa) (chi:âu`) (tẩng) (úy) (zai`) (zua`) (hoai`) (shi*`)",
+          "nghia": "cũng không được tuỳ ý mà làm thế, nếu không thì cũng tương đương với làm điều xấu."
         }
       ]
     }
