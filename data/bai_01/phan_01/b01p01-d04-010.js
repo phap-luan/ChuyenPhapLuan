@@ -1,0 +1,32 @@
+/* Exported Rich Text & Table Data */
+(function() {
+  window.RENDER_PAYLOAD = {
+    cau_id: "b01p01-d04-010",
+    editorHtml: "<div style=\"margin-bottom: 12px; line-height: 1.5\">\n        <p>\n          <span style=\"font-size: 10px; font-weight: bold; color: #64748b;\"> Nguyên Văn:</span> [(b01p01-d04-010)]<br>\n          <span id=\"matrixTableWrapper\"><table class=\"matrix-table\"><tbody><tr class=\"row-audio\"><td id=\"m_audio_0\">[(yin1)(wei4)]</td><td id=\"m_audio_1\">[(ren2)]</td><td id=\"m_audio_2\">[(zai4)]</td><td id=\"m_audio_3\">[(yi3)(qian2)]</td><td id=\"m_audio_4\">[(zuo4)(guo4)]</td><td id=\"m_audio_5\">[(huai4)(shi4)]</td><td id=\"m_audio_6\">[(er2)]</td><td id=\"m_audio_7\">[(chan3)(sheng1)]</td><td id=\"m_audio_8\">[(de)]</td><td id=\"m_audio_9\">[(ye4)(li4)]</td><td id=\"m_audio_10\">[(cai2)]</td><td id=\"m_audio_11\">[(zao4)(cheng2)]</td><td id=\"m_audio_12\">[(you3)(bing4)]</td><td id=\"m_audio_13\">[(huo4)(zhe3)]</td><td id=\"m_audio_14\">[(mo2)(nan4)]</td><td id=\"m_audio_15\"></td></tr><tr class=\"row-yueyin\"><td id=\"m_yueyin_0\">(yin- guây`)</td><td id=\"m_yueyin_1\">(rấn)</td><td id=\"m_yueyin_2\">(zai`)</td><td id=\"m_yueyin_3\">(ỷ ch'i:én)</td><td id=\"m_yueyin_4\">(zua`)(cua`)</td><td id=\"m_yueyin_5\">(hoai` shi*`)</td><td id=\"m_yueyin_6\">(ớ)</td><td id=\"m_yueyin_7\">(tr'ản shâng-)</td><td id=\"m_yueyin_8\">(tơ)</td><td id=\"m_yueyin_9\">(yê` li`)</td><td id=\"m_yueyin_10\">(s'ái)</td><td id=\"m_yueyin_11\">(zao` tr'ấng)</td><td id=\"m_yueyin_12\">(yẩu)(ping`)</td><td id=\"m_yueyin_13\">(hua` trửa)</td><td id=\"m_yueyin_14\">(múa nan`)</td><td id=\"m_yueyin_15\"></td></tr><tr class=\"row-hanzi\"><td id=\"m_hanzi_0\">因為</td><td id=\"m_hanzi_1\">人</td><td id=\"m_hanzi_2\">在</td><td id=\"m_hanzi_3\">以前</td><td id=\"m_hanzi_4\">做過</td><td id=\"m_hanzi_5\">壞事</td><td id=\"m_hanzi_6\">而</td><td id=\"m_hanzi_7\">產生</td><td id=\"m_hanzi_8\">的</td><td id=\"m_hanzi_9\">業力</td><td id=\"m_hanzi_10\">才</td><td id=\"m_hanzi_11\">造成</td><td id=\"m_hanzi_12\">有病</td><td id=\"m_hanzi_13\">或者</td><td id=\"m_hanzi_14\">魔難</td><td id=\"m_hanzi_15\">。</td></tr><tr class=\"row-pinyin\"><td id=\"m_pinyin_0\">yīnwèi</td><td id=\"m_pinyin_1\">rén</td><td id=\"m_pinyin_2\">zài</td><td id=\"m_pinyin_3\">yǐqián</td><td id=\"m_pinyin_4\">zuò guò</td><td id=\"m_pinyin_5\">huàishì</td><td id=\"m_pinyin_6\">ér</td><td id=\"m_pinyin_7\">chǎnshēng</td><td id=\"m_pinyin_8\">de</td><td id=\"m_pinyin_9\">yèlì</td><td id=\"m_pinyin_10\">cái</td><td id=\"m_pinyin_11\">zàochéng</td><td id=\"m_pinyin_12\">yǒu bìng</td><td id=\"m_pinyin_13\">huòzhě</td><td id=\"m_pinyin_14\">mónàn</td><td id=\"m_pinyin_15\"></td></tr><tr class=\"row-nghia\"><td id=\"m_nghia_0\">bởi vì</td><td id=\"m_nghia_1\">con người</td><td id=\"m_nghia_2\">ở</td><td id=\"m_nghia_3\">trước đây</td><td id=\"m_nghia_4\">làm qua</td><td id=\"m_nghia_5\">việc xấu</td><td id=\"m_nghia_6\">mà</td><td id=\"m_nghia_7\">sản sinh</td><td id=\"m_nghia_8\">về</td><td id=\"m_nghia_9\">nghiệp lực</td><td id=\"m_nghia_10\">mới</td><td id=\"m_nghia_11\">tạo thành</td><td id=\"m_nghia_12\">có bệnh</td><td id=\"m_nghia_13\">hoặc giả</td><td id=\"m_nghia_14\">ma nạn</td><td id=\"m_nghia_15\"></td></tr></tbody></table><br></span><span style=\"color: rgb(100, 116, 139); font-size: 10px; font-weight: bold;\">Tạm Dịch:</span></p><p style=\"margin-top: 0px;\"><font color=\"#000000\"><b>bởi vì con người ở trước đây làm qua việc xấu mà sản sinh về nghiệp lực mới tạo thành có bệnh hoặc giả ma nạn.</b></font></p>\n        <p style=\"margin-top: 5px;\">\n          <span style=\"font-size: 10px; font-weight: bold; color: #64748b;\"> Bản dịch trong sách:</span><br>\n          <span style=\"font-size: 16px; font-weight: bold; color: #000000;\">Bởi vì con người trước đây đã làm điều xấu [nên] nghiệp lực sinh ra mới tạo thành có bệnh hoặc ma nạn.</span>\n        </p>\n      </div>",
+    tableData: [{"hanzi":"因為","audio":"[(yin1)(wei4)]","pinyin":"yīnwèi","yueyin":"(yin- guây`)","nghia":"bởi vì"},{"hanzi":"人","audio":"[(ren2)]","pinyin":"rén","yueyin":"(rấn)","nghia":"con người"},{"hanzi":"在","audio":"[(zai4)]","pinyin":"zài","yueyin":"(zai`)","nghia":"vào, ở (thời điểm)"},{"hanzi":"以前","audio":"[(yi3)(qian2)]","pinyin":"yǐqián","yueyin":"(ỷ ch'i:én)","nghia":"trước đây"},{"hanzi":"做過","audio":"[(zuo4)(guo4)]","pinyin":"zuò guò","yueyin":"(zua`)(cua`)","nghia":"làm qua, đã làm"},{"hanzi":"壞事","audio":"[(huai4)(shi4)]","pinyin":"huàishì","yueyin":"(hoai` shi*`)","nghia":"việc xấu"},{"hanzi":"而","audio":"[(er2)]","pinyin":"ér","yueyin":"(ớ)","nghia":"mà (nối nguyên nhân với kết quả)"},{"hanzi":"產生","audio":"[(chan3)(sheng1)]","pinyin":"chǎnshēng","yueyin":"(tr'ản shâng-)","nghia":"sản sinh, sinh ra, phát sinh"},{"hanzi":"的","audio":"[(de)]","pinyin":"de","yueyin":"(tơ)","nghia":"trợ từ định ngữ"},{"hanzi":"業力","audio":"[(ye4)(li4)]","pinyin":"yèlì","yueyin":"(yê` li`)","nghia":"nghiệp lực"},{"hanzi":"才","audio":"[(cai2)]","pinyin":"cái","yueyin":"(s'ái)","nghia":"mới (nhấn mạnh điều kiện/nguyên nhân)"},{"hanzi":"造成","audio":"[(zao4)(cheng2)]","pinyin":"zàochéng","yueyin":"(zao` tr'ấng)","nghia":"gây ra, tạo thành"},{"hanzi":"有病","audio":"[(you3)(bing4)]","pinyin":"yǒu bìng","yueyin":"(yẩu)(ping`)","nghia":"có bệnh"},{"hanzi":"或者","audio":"[(huo4)(zhe3)]","pinyin":"huòzhě","yueyin":"(hua` trửa)","nghia":"hoặc giả, hoặc là"},{"hanzi":"魔難","audio":"[(mo2)(nan4)]","pinyin":"mónàn","yueyin":"(múa nan`)","nghia":"ma nạn, tai ương (thuật ngữ tu luyện)"}]
+  };
+
+  window.renderContent = function(targetEditorId, targetTableId) {
+    if (targetEditorId) {
+      var editorEl = document.getElementById(targetEditorId);
+      if (editorEl) editorEl.innerHTML = window.RENDER_PAYLOAD.editorHtml;
+    }
+    
+    if (targetTableId) {
+      var tableEl = document.getElementById(targetTableId);
+      if (tableEl) {
+        var html = '<table border="1" style="border-collapse: collapse; width: 100%;">';
+        html += '<thead><tr><th>Hanzi</th><th>Audio</th><th>Pinyin</th><th>Yueyin</th><th>Nghĩa</th></tr></thead><tbody>';
+        window.RENDER_PAYLOAD.tableData.forEach(function(item) {
+          html += '<tr><td>' + item.hanzi + '</td><td>' + item.audio + '</td><td>' + item.pinyin + '</td><td>' + item.yueyin + '</td><td>' + item.nghia + '</td></tr>';
+        });
+        html += '</tbody></table>';
+        tableEl.innerHTML = html;
+      }
+    }
+  };
+
+  document.addEventListener("DOMContentLoaded", function() {
+    window.renderContent("rendered-editor", "rendered-table");
+  });
+})();
