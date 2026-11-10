@@ -45,11 +45,14 @@
             position: fixed;
             top: 0;
             left: 0;
-            width: 100vw;
+            width: 100%;
+            max-width: 100vw;
+            box-sizing: border-box;
+            overflow: hidden;
             height: var(--top-bar-height);
             background: #4a1f18;
             color: #e6c594;
-            padding: 0 15px;
+            padding: 0 6px;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -60,10 +63,36 @@
 
         .controls {
             display: flex;
-            gap: 10px;
+            gap: 6px;
             align-items: center;
             justify-content: center;
             position: relative;
+            width: 100%;
+            max-width: 100%;
+            min-width: 0;
+        }
+
+        /* Hai ô tên bài: co giãn theo chiều ngang, nội dung dài thì bị khuất */
+        .controls #selectBai {
+            flex: 1 1 0;
+            min-width: 0;
+            width: 0;
+            padding: 6px 4px 6px 8px;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+
+        .controls .phan-dropdown-container {
+            flex: 1.3 1 0;
+            min-width: 0;
+            position: static; /* để menu xổ xuống không bị tràn ra ngoài màn hình */
+        }
+
+        .controls #togglePinyinBtn,
+        .controls #toggleYueyinBtn {
+            flex: 0 0 auto;
+            padding: 6px 8px;
         }
 
         button, select {
@@ -102,7 +131,10 @@
             align-items: center;
             justify-content: space-between;
             gap: 6px;
-            min-width: 140px;
+            width: 100%;
+            min-width: 0;
+            box-sizing: border-box;
+            overflow: hidden;
             background: #e6c594;
             border: 1px solid #8c4a27;
             color: #3a1700;
@@ -112,6 +144,14 @@
             font-weight: bold;
         }
 
+        #currentPhanLabel {
+            display: block;
+            min-width: 0;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: clip;
+        }
+
         .phan-list-menu {
             display: none;
             position: absolute;
@@ -119,6 +159,7 @@
             left: 0;
             margin-top: 5px;
             width: 260px;
+            max-width: calc(100vw - 12px);
             max-height: 350px;
             overflow-y: auto;
             background: #ffffff;
