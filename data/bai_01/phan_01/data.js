@@ -542,6 +542,116 @@ window.CURRENT_PHAN_DATA = {
           "nghia": "cũng không được tuỳ ý mà làm thế, nếu không thì cũng tương đương với làm điều xấu."
         }
       ]
+    },
+    {
+      "doan_so": 5,
+      "content": [
+        {
+          "cau_id": "b01p01-d05-001",
+          "hanzi": "  有的人以為給人治病，祛病健身是做好事。",
+          "pinyin": "yǒu de rén yǐ wéi gěi rén zhì bìng qū bìng jiàn shēn shì zuò hǎo shì",
+          "yueyin": "(yẩu) (tơ) (rấn) (ỷ) (guấy) (cẩy) (rấn) (tri*`) (ping`) (ch'uy-) (ping`) (chi:en`) (shân-) (shi*`) (zua`) (hảo) (shi*`)",
+          "nghia": "Có người tưởng rằng trị bệnh cho người khác, chữa bệnh khoẻ người là việc tốt."
+        },
+        {
+          "cau_id": "b01p01-d05-002",
+          "hanzi": "依我看，都沒有真正的把病治好，",
+          "pinyin": "yī wǒ kàn dōu méi yǒu zhēn zhèng de bǎ bìng zhì hǎo",
+          "yueyin": "(y-) (gủa) (khan`) (tâu-) (mấy) (yẩu) (trân-) (trâng`) (tơ) (pả) (ping`) (tri*`) (hảo)",
+          "nghia": "Theo tôi thấy, [họ] đều không thật sự trị khỏi bệnh;"
+        },
+        {
+          "cau_id": "b01p01-d05-003",
+          "hanzi": "都是把病推移了，或者轉化了，並沒有給它拿下去。",
+          "pinyin": "dōu shì bǎ bìng tuī yí le huò zhě zhuǎn huà le bìng méi yǒu gěi tā ná xià qù",
+          "yueyin": "(tâu-) (shi*`) (pả) (ping`) (thuây-) (ý) (lơ) (hua`) (trửa) (troản) (hoa`) (lơ) (ping`) (mấy) (yẩu) (cẩy) (tha-) (ná) (xi:a`) (ch'uy`)",
+          "nghia": "đều chỉ là trì hoãn bệnh, hoặc là chuyển hoá [bệnh], chứ không đúng là trị bỏ nó đi."
+        },
+        {
+          "cau_id": "b01p01-d05-004",
+          "hanzi": "真正除去這一難，就得消除業力。",
+          "pinyin": "zhēn zhèng chú qù zhè yí nàn jiù děi xiāo chú yè lì",
+          "yueyin": "(trân-) (trâng`) (tr'ú) (ch'uy`) (trưa`) (ý) (nan`) (chi:âu`) (tẩy) (xi:ao-) (tr'ú) (yê`) (li`)",
+          "nghia": "[Để] thật sự trừ dứt nạn ấy, thì phải tiêu trừ nghiệp lực."
+        },
+        {
+          "cau_id": "b01p01-d05-005",
+          "hanzi": "要是真正能夠把這個病治好，徹底清除這些業力，",
+          "pinyin": "yào shi zhēn zhèng néng gòu bǎ zhè ge bìng zhì hǎo chè dǐ qīng chú zhè xiē yè lì",
+          "yueyin": "(yao`) (shi*) (trân-) (trâng`) (nấng) (câu`) (pả) (trưa`) (cưa) (ping`) (tri*`) (hảo) (tr'ưa`) (tỉ) (ch'ing-) (tr'ú) (trưa`) (xi:ê-) (yê`) (li`)",
+          "nghia": "Nếu thật sự có khả năng trị hết bệnh ấy, thanh trừ triệt để nghiệp lực ấy,"
+        },
+        {
+          "cau_id": "b01p01-d05-006",
+          "hanzi": "真正能達到這一點，這個人層次也不低了。",
+          "pinyin": "zhēn zhèng néng dá dào zhè yì diǎn zhè ge rén céng cì yě bù dī le",
+          "yueyin": "(trân-) (trâng`) (nấng) (tá) (tao`) (trưa`) (y`) (ti:ẻn) (trưa`) (cưa) (rấn) (s'ấng) (s'ư`) (yể) (pu`) (ti-) (lơ)",
+          "nghia": "thật sự đạt đến điểm ấy, [thì] tầng của cá nhân đó cũng không thấp lắm."
+        },
+        {
+          "cau_id": "b01p01-d05-007",
+          "hanzi": "他已經看到了一個理,也就是常人中的理是不能隨意破壞的。",
+          "pinyin": "tā yǐ jīng kàn dào le yí gè lǐ yě jiù shì cháng rén zhōng de lǐ shì bù néng suí yì pò huài de",
+          "yueyin": "(tha-) (ỷ) (ching-) (khan`) (tao`) (lơ) (ý) (cưa`) (lỉ) (yể) (chi:âu`) (shi*`) (tr'áng) (rấn) (trung-) (tơ) (lỉ) (shi*`) (pu`) (nấng) (suấy) (y`) (p'ua`) (hoai`) (tơ)",
+          "nghia": "Họ đã thấy rõ một [Pháp] lý, chính là không được tuỳ ý phá hoại [Pháp] lý trong [cõi] người thường."
+        },
+        {
+          "cau_id": "b01p01-d05-008",
+          "hanzi": "在修煉過程中，修煉者出於慈悲心，",
+          "pinyin": "zài xiū liàn guò chéng zhōng xiū liàn zhě chū yú cí bēi xīn",
+          "yueyin": "(zai`) (xi:âu-) (li:en`) (cua`) (tr'ấng) (trung-) (xi:âu-) (li:en`) (trửa) (tr'u-) (úy) (s'ứ) (pây-) (xin-)",
+          "nghia": "Trong quá trình tu luyện, người tu luyện xuất phát từ tâm từ bi"
+        },
+        {
+          "cau_id": "b01p01-d05-009",
+          "hanzi": "去做一些好事，幫人治病，祛病健身，這是允許的，",
+          "pinyin": "qù zuò yì xiē hǎo shì bāng rén zhì bìng qū bìng jiàn shēn zhè shì yǔn xǔ de",
+          "yueyin": "(ch'uy`) (zua`) (y`) (xi:ê-) (hảo) (shi*`) (pang-) (rấn) (tri*`) (ping`) (ch'uy-) (ping`) (chi:en`) (shân-) (trưa`) (shi*`) (duỷn) (xủy) (tơ)",
+          "nghia": "mà làm một vài việc tốt, giúp người trị bệnh, chữa bệnh khoẻ người; điều ấy được phép;"
+        },
+        {
+          "cau_id": "b01p01-d05-010",
+          "hanzi": "但是也不能夠完全給人治好。",
+          "pinyin": "dàn shì yě bù néng gòu wán quán gěi rén zhì hǎo",
+          "yueyin": "(tan`) (shi*`) (yể) (pu`) (nấng) (câu`) (goán) (ch'oán) (cẩy) (rấn) (tri*`) (hảo)",
+          "nghia": "nhưng cũng không thể hoàn toàn trị hết [bệnh] cho người ta được."
+        },
+        {
+          "cau_id": "b01p01-d05-011",
+          "hanzi": "如果能夠真正把一個常人的病根除了，",
+          "pinyin": "rú guǒ néng gòu zhēn zhèng bǎ yí gè cháng rén de bìng gēn chú le",
+          "yueyin": "(rú) (của) (nấng) (câu`) (trân-) (trâng`) (pả) (ý) (cưa`) (tr'áng) (rấn) (tơ) (ping`) (cân-) (tr'ú) (lơ)",
+          "nghia": "Nếu như có thể thật sự trị tận gốc bệnh cho một người thường,"
+        },
+        {
+          "cau_id": "b01p01-d05-012",
+          "hanzi": "一個不修煉的常人從這裏走出去，甚麼病都沒有了，",
+          "pinyin": "yí gè bù xiū liàn de cháng rén cóng zhè lǐ zǒu chū qù shén me bìng dōu méi yǒu le",
+          "yueyin": "(ý) (cưa`) (pu`) (xi:âu-) (li:en`) (tơ) (tr'áng) (rấn) (s'úng) (trưa`) (lỉ) (zẩu) (tr'u-) (ch'uy`) (shấn) (mơ) (ping`) (tâu-) (mấy) (yẩu) (lơ)",
+          "nghia": "thì người thường không có tu luyện ấy có thể ra khỏi đây, chẳng còn chút bệnh nào hết; ra khỏi cửa vẫn là một người thường,"
+        },
+        {
+          "cau_id": "b01p01-d05-013",
+          "hanzi": "出門還是一個常人，在個人利益上還和常人一樣爭奪，",
+          "pinyin": "chū mén hái shi yí gè cháng rén zài gè rén lì yì shàng hái hé cháng rén yí yàng zhēng duó",
+          "yueyin": "(tr'u-) (mấn) (hái) (shi*) (ý) (cưa`) (tr'áng) (rấn) (zai`) (cưa`) (rấn) (li`) (y`) (shang`) (hái) (hứa) (tr'áng) (rấn) (ý) (yang`) (trâng-) (túa)",
+          "nghia": "và xuất phát từ lợi ích cá nhân người ấy vẫn tranh đoạt như những người thường;"
+        },
+        {
+          "cau_id": "b01p01-d05-014",
+          "hanzi": "怎麼能隨意消除他的業力？",
+          "pinyin": "zěn me néng suí yì xiāo chú tā de yè lì",
+          "yueyin": "(zẩn) (mơ) (nấng) (suấy) (y`) (xi:ao-) (tr'ú) (tha-) (tơ) (yê`) (li`)",
+          "nghia": "vậy làm sao có thể tuỳ ý tiêu trừ nghiệp lực cho họ được?"
+        },
+        {
+          "cau_id": "b01p01-d05-015",
+          "hanzi": "這是絕對不允許的。",
+          "pinyin": "zhè shì jué duì bù yǔn xǔ de",
+          "yueyin": "(trưa`) (shi*`) (chuế) (tuây`) (pu`) (duỷn) (xủy) (tơ)",
+          "nghia": "Điều ấy tuyệt đối không được phép."
+        }
+      ]
     }
   ]
 };

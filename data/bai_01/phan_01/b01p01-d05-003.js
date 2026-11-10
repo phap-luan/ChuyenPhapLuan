@@ -1,0 +1,32 @@
+/* Exported Rich Text & Table Data */
+(function() {
+  window.RENDER_PAYLOAD = {
+    cau_id: "b01p01-d05-003",
+    editorHtml: "<div style=\"margin-bottom: 12px; line-height: 1.5\">\n        <p>\n          <span style=\"font-size: 10px; font-weight: bold; color: #64748b;\"> Nguyên Văn:</span> [(b01p01-d05-003)]<br>\n          <span id=\"matrixTableWrapper\"><table class=\"matrix-table\"><tbody><tr class=\"row-audio\"><td id=\"m_audio_0\">[(dou1)]</td><td id=\"m_audio_1\">[(shi4)]</td><td id=\"m_audio_2\">[(ba3)]</td><td id=\"m_audio_3\">[(bing4)]</td><td id=\"m_audio_4\">[(tui1)(yi2)]</td><td id=\"m_audio_5\">[(le)]</td><td id=\"m_audio_6\"></td><td id=\"m_audio_7\">[(huo4)(zhe3)]</td><td id=\"m_audio_8\">[(zhuan3)(hua4)]</td><td id=\"m_audio_9\">[(le)]</td><td id=\"m_audio_10\"></td><td id=\"m_audio_11\">[(bing4)]</td><td id=\"m_audio_12\">[(mei2)(you3)]</td><td id=\"m_audio_13\">[(gei3)]</td><td id=\"m_audio_14\">[(ta1)]</td><td id=\"m_audio_15\">[(na2)(xia4)(qu4)]</td><td id=\"m_audio_16\"></td></tr><tr class=\"row-yueyin\"><td id=\"m_yueyin_0\">(tâu-)</td><td id=\"m_yueyin_1\">(shi*`)</td><td id=\"m_yueyin_2\">(pả)</td><td id=\"m_yueyin_3\">(ping`)</td><td id=\"m_yueyin_4\">(thuây- ý)</td><td id=\"m_yueyin_5\">(lơ)</td><td id=\"m_yueyin_6\"></td><td id=\"m_yueyin_7\">(hua` trửa)</td><td id=\"m_yueyin_8\">(troản hoa`)</td><td id=\"m_yueyin_9\">(lơ)</td><td id=\"m_yueyin_10\"></td><td id=\"m_yueyin_11\">(ping`)</td><td id=\"m_yueyin_12\">(mấy yẩu)</td><td id=\"m_yueyin_13\">(cẩy)</td><td id=\"m_yueyin_14\">(tha-)</td><td id=\"m_yueyin_15\">(ná)(xi:a` ch'uy`)</td><td id=\"m_yueyin_16\"></td></tr><tr class=\"row-hanzi\"><td id=\"m_hanzi_0\">都</td><td id=\"m_hanzi_1\">是</td><td id=\"m_hanzi_2\">把</td><td id=\"m_hanzi_3\">病</td><td id=\"m_hanzi_4\">推移</td><td id=\"m_hanzi_5\"><font color=\"#3b82f6\">了</font></td><td id=\"m_hanzi_6\">,</td><td id=\"m_hanzi_7\">或者</td><td id=\"m_hanzi_8\">轉化</td><td id=\"m_hanzi_9\"><font color=\"#3b82f6\">了</font></td><td id=\"m_hanzi_10\">,</td><td id=\"m_hanzi_11\">並</td><td id=\"m_hanzi_12\">沒有</td><td id=\"m_hanzi_13\">給</td><td id=\"m_hanzi_14\">它</td><td id=\"m_hanzi_15\">拿下去</td><td id=\"m_hanzi_16\">。</td></tr><tr class=\"row-pinyin\"><td id=\"m_pinyin_0\">dōu</td><td id=\"m_pinyin_1\">shì</td><td id=\"m_pinyin_2\">bǎ</td><td id=\"m_pinyin_3\">bìng</td><td id=\"m_pinyin_4\">tuīyí</td><td id=\"m_pinyin_5\">le</td><td id=\"m_pinyin_6\"></td><td id=\"m_pinyin_7\">huòzhě</td><td id=\"m_pinyin_8\">zhuǎnhuà</td><td id=\"m_pinyin_9\">le</td><td id=\"m_pinyin_10\"></td><td id=\"m_pinyin_11\">bìng</td><td id=\"m_pinyin_12\">méiyǒu</td><td id=\"m_pinyin_13\">gěi</td><td id=\"m_pinyin_14\">tā</td><td id=\"m_pinyin_15\">ná xiàqù</td><td id=\"m_pinyin_16\"></td></tr><tr class=\"row-nghia\"><td id=\"m_nghia_0\">đều</td><td id=\"m_nghia_1\">là</td><td id=\"m_nghia_2\">đem</td><td id=\"m_nghia_3\">bệnh</td><td id=\"m_nghia_4\">đẩy đi</td><td id=\"m_nghia_5\">thôi</td><td id=\"m_nghia_6\"></td><td id=\"m_nghia_7\">hoặc giả</td><td id=\"m_nghia_8\">chuyển hóa</td><td id=\"m_nghia_9\">thôi</td><td id=\"m_nghia_10\"><br></td><td id=\"m_nghia_11\">chứ</td><td id=\"m_nghia_12\">không có</td><td id=\"m_nghia_13\">cho</td><td id=\"m_nghia_14\">nó</td><td id=\"m_nghia_15\">gỡ bỏ đi</td><td id=\"m_nghia_16\"></td></tr></tbody></table><br></span><span style=\"color: rgb(100, 116, 139); font-size: 10px; font-weight: bold;\">Tạm Dịch:</span></p><p style=\"margin-top: 0px;\"><b style=\"\"><font color=\"#000000\">đều là đem bệnh đẩy đi </font><font color=\"#3b82f6\">thôi</font><font color=\"#000000\">, hoặc giả chuyển hóa </font><font color=\"#3b82f6\">thôi</font><font color=\"#000000\">, chứ không có cho nó gỡ bỏ đi.</font></b></p>\n        <p style=\"margin-top: 5px;\">\n          <span style=\"font-size: 10px; font-weight: bold; color: #64748b;\"> Bản dịch trong sách:</span><br>\n          <span style=\"font-size: 16px; font-weight: bold; color: #000000;\">đều chỉ là trì hoãn bệnh, hoặc là chuyển hoá [bệnh], chứ không đúng là trị bỏ nó đi.</span>\n        </p>\n      </div>",
+    tableData: [{"hanzi":"都","audio":"[(dou1)]","pinyin":"dōu","yueyin":"(tâu-)","nghia":"đều"},{"hanzi":"是","audio":"[(shi4)]","pinyin":"shì","yueyin":"(shi*`)","nghia":"là"},{"hanzi":"把","audio":"[(ba3)]","pinyin":"bǎ","yueyin":"(pả)","nghia":"mang, đem"},{"hanzi":"病","audio":"[(bing4)]","pinyin":"bìng","yueyin":"(ping`)","nghia":"bệnh"},{"hanzi":"推移","audio":"[(tui1)(yi2)]","pinyin":"tuīyí","yueyin":"(thuây- ý)","nghia":"đẩy đi, dịch chuyển, dời chỗ"},{"hanzi":"了","audio":"[(le)]","pinyin":"le","yueyin":"(lơ)","nghia":"trợ từ hoàn thành"},{"hanzi":"或者","audio":"[(huo4)(zhe3)]","pinyin":"huòzhě","yueyin":"(hua` trửa)","nghia":"hoặc giả, hoặc là"},{"hanzi":"轉化","audio":"[(zhuan3)(hua4)]","pinyin":"zhuǎnhuà","yueyin":"(troản hoa`)","nghia":"chuyển hóa"},{"hanzi":"了","audio":"[(le)]","pinyin":"le","yueyin":"(lơ)","nghia":"trợ từ hoàn thành"},{"hanzi":"並","audio":"[(bing4)]","pinyin":"bìng","yueyin":"(ping`)","nghia":"chứ, chẳng (nhấn mạnh phủ định)"},{"hanzi":"沒有","audio":"[(mei2)(you3)]","pinyin":"méiyǒu","yueyin":"(mấy yẩu)","nghia":"không, chưa"},{"hanzi":"給","audio":"[(gei3)]","pinyin":"gěi","yueyin":"(cẩy)","nghia":"cho, giúp"},{"hanzi":"它","audio":"[(ta1)]","pinyin":"tā","yueyin":"(tha-)","nghia":"nó (chỉ cái bệnh)"},{"hanzi":"拿下去","audio":"[(na2)(xia4)(qu4)]","pinyin":"ná xiàqù","yueyin":"(ná)(xi:a` ch'uy`)","nghia":"lấy bỏ đi, gỡ bỏ đi"}]
+  };
+
+  window.renderContent = function(targetEditorId, targetTableId) {
+    if (targetEditorId) {
+      var editorEl = document.getElementById(targetEditorId);
+      if (editorEl) editorEl.innerHTML = window.RENDER_PAYLOAD.editorHtml;
+    }
+    
+    if (targetTableId) {
+      var tableEl = document.getElementById(targetTableId);
+      if (tableEl) {
+        var html = '<table border="1" style="border-collapse: collapse; width: 100%;">';
+        html += '<thead><tr><th>Hanzi</th><th>Audio</th><th>Pinyin</th><th>Yueyin</th><th>Nghĩa</th></tr></thead><tbody>';
+        window.RENDER_PAYLOAD.tableData.forEach(function(item) {
+          html += '<tr><td>' + item.hanzi + '</td><td>' + item.audio + '</td><td>' + item.pinyin + '</td><td>' + item.yueyin + '</td><td>' + item.nghia + '</td></tr>';
+        });
+        html += '</tbody></table>';
+        tableEl.innerHTML = html;
+      }
+    }
+  };
+
+  document.addEventListener("DOMContentLoaded", function() {
+    window.renderContent("rendered-editor", "rendered-table");
+  });
+})();
