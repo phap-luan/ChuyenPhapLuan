@@ -652,6 +652,144 @@ window.CURRENT_PHAN_DATA = {
           "nghia": "Điều ấy tuyệt đối không được phép."
         }
       ]
+    },
+    {
+      "doan_so": 6,
+      "content": [
+        {
+          "cau_id": "b01p01-d06-001",
+          "hanzi": "  那麼為甚麼就可以給修煉的人做呢？",
+          "pinyin": "nà me wèi shén me jiù kě yǐ gěi xiū liàn de rén zuò ne",
+          "yueyin": "(na`) (mơ) (guây`) (shấn) (mơ) (chi:âu`) (khửa) (ỷ) (cẩy) (xi:âu-) (li:en`) (tơ) (rấn) (zua`) (nưa)",
+          "nghia": "Vậy vì sao lại có thể giúp người tu luyện [trị bệnh] được?"
+        },
+        {
+          "cau_id": "b01p01-d06-002",
+          "hanzi": "因為修煉的人是最珍貴的，他想修煉，",
+          "pinyin": "yīn wèi xiū liàn de rén shì zuì zhēn guì de tā xiǎng xiū liàn",
+          "yueyin": "(yin-) (guây`) (xi:âu-) (li:en`) (tơ) (rấn) (shi*`) (zuây`) (trân-) (cuây`) (tơ) (tha-) (xi:ảng) (xi:âu-) (li:en`)",
+          "nghia": "Bởi vì người tu luyện là trân quý nhất, [vì] người ấy muốn tu luyện;"
+        },
+        {
+          "cau_id": "b01p01-d06-003",
+          "hanzi": "所以，發出的這一念是最珍貴的。",
+          "pinyin": "suǒ yǐ fā chū de zhè yí niàn shì zuì zhēn guì de",
+          "yueyin": "(sủa) (ỷ) (fa-) (tr'u-) (tơ) (trưa`) (ý) (ni:en`) (shi*`) (zuây`) (trân-) (cuây`) (tơ)",
+          "nghia": "vậy nên, một niệm [muốn tu luyện] xuất phát ra là trân quý nhất."
+        },
+        {
+          "cau_id": "b01p01-d06-004",
+          "hanzi": "佛教中講佛性，佛性一出，覺者們就可以幫他。",
+          "pinyin": "fó jiào zhōng jiǎng fó xìng fó xìng yì chū jué zhě men jiù kě yǐ bāng tā",
+          "yueyin": "(fúa) (chi:ao`) (trung-) (chi:ảng) (fúa) (xing`) (fúa) (xing`) (y`) (tr'u-) (chuế) (trửa) (mân) (chi:âu`) (khửa) (ỷ) (pang-) (tha-)",
+          "nghia": "Trong Phật giáo có giảng Phật tính; một khi Phật tính xuất hiện, các Giác Giả có thể giúp người ấy."
+        },
+        {
+          "cau_id": "b01p01-d06-005",
+          "hanzi": "甚麼意思呢？要叫我講，因為我在高層次上傳功，",
+          "pinyin": "shén me yì si neyào jiào wǒ jiǎng yīn wèi wǒ zài gāo céng cì shàng chuán gōng",
+          "yueyin": "(shấn) (mơ) (y`) (sư) (nưa yao`) (chi:ao`) (gủa) (chi:ảng) (yin-) (guây`) (gủa) (zai`) (cao-) (s'ấng) (s'ư`) (shang`) (tr'oán) (cung-)",
+          "nghia": "Ý nghĩa ấy là gì? Nếu hỏi tôi giảng, bởi vì tôi đang truyền công tại cao tầng,"
+        },
+        {
+          "cau_id": "b01p01-d06-006",
+          "hanzi": "涉及到高層次中的理，涉及的問題很大。",
+          "pinyin": "shè jí dào gāo céng cì zhōng de lǐ shè jí de wèn tí hěn dà",
+          "yueyin": "(shưa`) (chí) (tao`) (cao-) (s'ấng) (s'ư`) (trung-) (tơ) (lỉ) (shưa`) (chí) (tơ) (guân`) (thí) (hẩn) (ta`)",
+          "nghia": "liên quan đến [Pháp] lý tại cao tầng, liên quan đến những vấn đề rất lớn."
+        },
+        {
+          "cau_id": "b01p01-d06-007",
+          "hanzi": "在這個宇宙中，我們看人的生命，不是在常人社會中產生的。",
+          "pinyin": "zài zhè ge yǔ zhòu zhōng wǒ men kàn rén de shēng mìng bú shì zài cháng rén shè huì zhōng chǎn shēng de",
+          "yueyin": "(zai`) (trưa`) (cưa) (ủy) (trâu`) (trung-) (gủa) (mân) (khan`) (rấn) (tơ) (shâng-) (ming`) (pú) (shi*`) (zai`) (tr'áng) (rấn) (shưa`) (huây`) (trung-) (tr'ản) (shâng-) (tơ)",
+          "nghia": "Nơi vũ trụ này, chúng tôi thấy rằng sinh mệnh con người không phải sinh ra tại xã hội người thường."
+        },
+        {
+          "cau_id": "b01p01-d06-008",
+          "hanzi": "人的真正生命的產生，是在宇宙空間中產生的。",
+          "pinyin": "rén de zhēn zhèng shēng mìng de chǎn shēng shì zài yǔ zhòu kōng jiān zhōng chǎn shēng de",
+          "yueyin": "(rấn) (tơ) (trân-) (trâng`) (shâng-) (ming`) (tơ) (tr'ản) (shâng-) (shi*`) (zai`) (ủy) (trâu`) (khung-) (chi:en-) (trung-) (tr'ản) (shâng-) (tơ)",
+          "nghia": "Sự sản sinh ra sinh mệnh chân chính của con người chính là sinh ra trong không gian vũ trụ."
+        },
+        {
+          "cau_id": "b01p01-d06-009",
+          "hanzi": "因為這宇宙中有許許多多製造生命的各種物質，",
+          "pinyin": "yīn wèi zhè yǔ zhòu zhōng yǒu xǔ xǔ duō duō zhì zào shēng mìng de gè zhǒng wù zhì",
+          "yueyin": "(yin-) (guây`) (trưa`) (ủy) (trâu`) (trung-) (yẩu) (xủy) (xủy) (tua-) (tua-) (tri*`) (zao`) (shâng-) (ming`) (tơ) (cưa`) (trủng) (u`) (tri*`)",
+          "nghia": "Bởi vì trong vũ trụ này có rất nhiều các loại vật chất chế tạo sinh mệnh;"
+        },
+        {
+          "cau_id": "b01p01-d06-010",
+          "hanzi": "這些物質在相互運動下可以產生生命，",
+          "pinyin": "zhè xiē wù zhì zài xiāng hù yùn dòng xià kě yǐ chǎn shēng shēng mìng",
+          "yueyin": "(trưa`) (xi:ê-) (u`) (tri*`) (zai`) (xi:ang-) (hu`) (duyn`) (tung`) (xi:a`) (khửa) (ỷ) (tr'ản) (shâng-) (shâng-) (ming`)",
+          "nghia": "với sự vận động tương hỗ, những vật chất ấy có thể sản sinh ra sinh mệnh;"
+        },
+        {
+          "cau_id": "b01p01-d06-011",
+          "hanzi": "也就是說，人的最早生命是來源於宇宙中的。",
+          "pinyin": "yě jiù shì shuō rén de zuì zǎo shēng mìng shì lái yuán yú yǔ zhòu zhōng de",
+          "yueyin": "(yể) (chi:âu`) (shi*`) (shua-) (rấn) (tơ) (zuây`) (zảo) (shâng-) (ming`) (shi*`) (lái) (doán) (úy) (ủy) (trâu`) (trung-) (tơ)",
+          "nghia": "nên cũng nói, sinh mệnh tối nguyên sơ của con người đến từ vũ trụ."
+        },
+        {
+          "cau_id": "b01p01-d06-012",
+          "hanzi": "宇宙空間本來就是善良的，就是具有真、善、忍這種特性的，",
+          "pinyin": "yǔ zhòu kōng jiān běn lái jiù shì shàn liáng de jiù shì jù yǒu zhēn shàn rěn zhè zhǒng tè xìng de",
+          "yueyin": "(ủy) (trâu`) (khung-) (chi:en-) (pẩn) (lái) (chi:âu`) (shi*`) (shan`) (li:áng) (tơ) (chi:âu`) (shi*`) (chuy`) (yẩu) (trân-) (shan`) (rẩn) (trưa`) (trủng) (thưa`) (xing`) (tơ)",
+          "nghia": "Bản lai của không gian vũ trụ là lương thiện, là mang đầy đủ chủng đặc tính Chân-Thiện-Nhẫn;"
+        },
+        {
+          "cau_id": "b01p01-d06-013",
+          "hanzi": "人生出來和宇宙是同性的。",
+          "pinyin": "rén shēng chū lái hé yǔ zhòu shì tóng xìng de",
+          "yueyin": "(rấn) (shâng-) (tr'u-) (lái) (hứa) (ủy) (trâu`) (shi*`) (thúng) (xing`) (tơ)",
+          "nghia": "con người sinh ra cùng với vũ trụ là đồng tính."
+        },
+        {
+          "cau_id": "b01p01-d06-014",
+          "hanzi": "但是生命體產生多了，也就發生了一種群體的社會關係。",
+          "pinyin": "dàn shì shēng mìng tǐ chǎn shēng duō le yě jiù fā shēng le yì zhǒng qún tǐ de shè huì guān xì",
+          "yueyin": "(tan`) (shi*`) (shâng-) (ming`) (thỉ) (tr'ản) (shâng-) (tua-) (lơ) (yể) (chi:âu`) (fa-) (shâng-) (lơ) (y`) (trủng) (ch'uýn) (thỉ) (tơ) (shưa`) (huây`) (coan-) (xi`)",
+          "nghia": "Nhưng sản sinh ra nhiều thể sinh mệnh rồi; thì cũng phát sinh quan hệ xã hội [trong] quần thể."
+        },
+        {
+          "cau_id": "b01p01-d06-015",
+          "hanzi": "從中有些人，可能增加了私心，慢慢的就降低了他們的層次，",
+          "pinyin": "cóng zhōng yǒu xiē rén kě néng zēng jiā le sī xīn màn màn de jiù jiàng dī le tā men de céng cì",
+          "yueyin": "(s'úng) (trung-) (yẩu) (xi:ê-) (rấn) (khửa) (nấng) (zâng-) (chi:a-) (lơ) (sư-) (xin-) (man`) (man`) (tơ) (chi:âu`) (chi:ang`) (ti-) (lơ) (tha-) (mân) (tơ) (s'ấng) (s'ư`)",
+          "nghia": "Trong đó có một số người có thể tăng thêm tư tâm; tầng của họ dần dần rất chậm hạ thấp xuống;"
+        },
+        {
+          "cau_id": "b01p01-d06-016",
+          "hanzi": "就不能在這一層次中呆了，他們就得往下掉。",
+          "pinyin": "jiù bù néng zài zhè yì céng cì zhōng dāi le tā men jiù děi wǎng xià diào",
+          "yueyin": "(chi:âu`) (pu`) (nấng) (zai`) (trưa`) (y`) (s'ấng) (s'ư`) (trung-) (tai-) (lơ) (tha-) (mân) (chi:âu`) (tẩy) (goảng) (xi:a`) (ti:ao`)",
+          "nghia": "[khi] không thể ở tại tầng ấy nữa, thì họ phải rớt xuống dưới."
+        },
+        {
+          "cau_id": "b01p01-d06-017",
+          "hanzi": "可是在另一層次中，又變的不太好了，",
+          "pinyin": "kě shì zài lìng yì céng cì zhōng yòu biàn de bú tài hǎo le",
+          "yueyin": "(khửa) (shi*`) (zai`) (ling`) (y`) (s'ấng) (s'ư`) (trung-) (yâu`) (pi:en`) (tơ) (pú) (thai`) (hảo) (lơ)",
+          "nghia": "Tuy nhiên tại tầng kia [họ] lại biến đổi không còn tốt nữa,"
+        },
+        {
+          "cau_id": "b01p01-d06-018",
+          "hanzi": "他們還呆不了，就繼續往下掉，",
+          "pinyin": "tā men hái dāi bu liǎo jiù jì xù wǎng xià diào",
+          "yueyin": "(tha-) (mân) (hái) (tai-) (pu) (li:ảo) (chi:âu`) (chi`) (xuy`) (goảng) (xi:a`) (ti:ao`)",
+          "nghia": "họ không thể ở lại, và tiếp tục rớt xuống dưới;"
+        },
+        {
+          "cau_id": "b01p01-d06-019",
+          "hanzi": "最後就掉到人類這一層次中來了。",
+          "pinyin": "zuì hòu jiù diào dào rén lèi zhè yì céng cì zhōng lái le",
+          "yueyin": "(zuây`) (hâu`) (chi:âu`) (ti:ao`) (tao`) (rấn) (lây`) (trưa`) (y`) (s'ấng) (s'ư`) (trung-) (lái) (lơ)",
+          "nghia": "cuối cùng rớt xuống đến tầng của nhân loại."
+        }
+      ]
     }
   ]
 };
