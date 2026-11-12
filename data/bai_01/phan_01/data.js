@@ -314,7 +314,7 @@ window.CURRENT_PHAN_DATA = {
       "content": [
         {
           "cau_id": "b01p01-d03-001",
-          "hanzi": " 往高層次上傳功,",
+          "hanzi": "  往高層次上傳功,",
           "pinyin": "wǎng gāo céng cì shàng chuán gōng",
           "yueyin": "(goảng) (cao-) (s'ấng) (s'ư`) (shang`) (tr'oán) (cung-)",
           "nghia": "Truyền công lên cao tầng,"
