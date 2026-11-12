@@ -1,0 +1,32 @@
+/* Exported Rich Text & Table Data */
+(function() {
+  window.RENDER_PAYLOAD = {
+    cau_id: "b01p01-d07-008",
+    editorHtml: "<div style=\"margin-bottom: 12px; line-height: 1.5\">\n        <p>\n          <span style=\"font-size: 10px; font-weight: bold; color: #64748b;\"> Nguyên Văn:</span> [(b01p01-d07-008)]<br>\n          <span id=\"matrixTableWrapper\"><table class=\"matrix-table\"><tbody><tr class=\"row-audio\"><td id=\"m_audio_0\">[(zhe4)(yi2)(nian4)]</td><td id=\"m_audio_1\">[(jiu4)]</td><td id=\"m_audio_2\">[(zui4)(zhen1)(gui4)]</td><td id=\"m_audio_3\"></td><td id=\"m_audio_4\">[(yin1)(wei4)]</td><td id=\"m_audio_5\">[(ta1)]</td><td id=\"m_audio_6\">[(xiang3)]</td><td id=\"m_audio_7\">[(fan3)(ben3)(gui1)(zhen1)]</td><td id=\"m_audio_8\"></td><td id=\"m_audio_9\">[(xiang3)]</td><td id=\"m_audio_10\">[(cong2)]</td><td id=\"m_audio_11\">[(chang2)(ren2)]</td><td id=\"m_audio_12\">[(zhe4)(ge)(ceng2)(ci4)(zhong1)]</td><td id=\"m_audio_13\">[(tiao4)(chu1)(qu4)]</td><td id=\"m_audio_14\"></td></tr><tr class=\"row-yueyin\"><td id=\"m_yueyin_0\">(trưa`)(ý)(ni:en`)</td><td id=\"m_yueyin_1\">(chi:âu`)</td><td id=\"m_yueyin_2\">(zuây`)(trân-)(cuây`)</td><td id=\"m_yueyin_3\"></td><td id=\"m_yueyin_4\">(yin- guây`)</td><td id=\"m_yueyin_5\">(tha-)</td><td id=\"m_yueyin_6\">(xi:ảng)</td><td id=\"m_yueyin_7\">(fán pẩn)(cuây- trân-)</td><td id=\"m_yueyin_8\"></td><td id=\"m_yueyin_9\">(xi:ảng)</td><td id=\"m_yueyin_10\">(s'úng)</td><td id=\"m_yueyin_11\">(tr'áng rấn)</td><td id=\"m_yueyin_12\">(trưa` cưa)(s'ấng s'ư`)(trung-)</td><td id=\"m_yueyin_13\">(thi:ao`)(tr'u- ch'uy`)</td><td id=\"m_yueyin_14\"></td></tr><tr class=\"row-hanzi\"><td id=\"m_hanzi_0\">這一念</td><td id=\"m_hanzi_1\">就</td><td id=\"m_hanzi_2\">最珍貴</td><td id=\"m_hanzi_3\">,</td><td id=\"m_hanzi_4\">因為</td><td id=\"m_hanzi_5\">他</td><td id=\"m_hanzi_6\">想</td><td id=\"m_hanzi_7\">返本歸真</td><td id=\"m_hanzi_8\">,</td><td id=\"m_hanzi_9\">想</td><td id=\"m_hanzi_10\">從</td><td id=\"m_hanzi_11\">常人</td><td id=\"m_hanzi_12\">這個層次中</td><td id=\"m_hanzi_13\">跳出去</td><td id=\"m_hanzi_14\">。</td></tr><tr class=\"row-pinyin\"><td id=\"m_pinyin_0\">zhè yí niàn</td><td id=\"m_pinyin_1\">jiù</td><td id=\"m_pinyin_2\">zuì zhēnguì</td><td id=\"m_pinyin_3\"></td><td id=\"m_pinyin_4\">yīnwèi</td><td id=\"m_pinyin_5\">tā</td><td id=\"m_pinyin_6\">xiǎng</td><td id=\"m_pinyin_7\">fǎnběn guīzhēn</td><td id=\"m_pinyin_8\"></td><td id=\"m_pinyin_9\">xiǎng</td><td id=\"m_pinyin_10\">cóng</td><td id=\"m_pinyin_11\">chángrén</td><td id=\"m_pinyin_12\">zhège céngcì zhōng</td><td id=\"m_pinyin_13\">tiào chūqù</td><td id=\"m_pinyin_14\"></td></tr><tr class=\"row-nghia\"><td id=\"m_nghia_0\">một niệm này</td><td id=\"m_nghia_1\">sẽ</td><td id=\"m_nghia_2\">chân quý nhất</td><td id=\"m_nghia_3\"></td><td id=\"m_nghia_4\">bởi vì</td><td id=\"m_nghia_5\">anh ta</td><td id=\"m_nghia_6\">muốn</td><td id=\"m_nghia_7\">phản bổn quy chân</td><td id=\"m_nghia_8\"></td><td id=\"m_nghia_9\">muốn</td><td id=\"m_nghia_10\">từ</td><td id=\"m_nghia_11\">người thường</td><td id=\"m_nghia_12\">trong tầng thứ này</td><td id=\"m_nghia_13\">nhảy ra ngoài</td><td id=\"m_nghia_14\"></td></tr></tbody></table><br></span><span style=\"color: rgb(100, 116, 139); font-size: 10px; font-weight: bold;\">Tạm Dịch:</span></p><p style=\"margin-top: 0px;\"><font color=\"#000000\"><b>một niệm này sẽ chân quý nhất, bởi vì anh ta muốn phản bổn quy chân, muốn từ người thường trong tầng thứ này nhảy ra ngoài.</b></font></p>\n        <p style=\"margin-top: 5px;\">\n          <span style=\"font-size: 10px; font-weight: bold; color: #64748b;\"> Bản dịch trong sách:</span><br>\n          <span style=\"font-size: 16px; font-weight: bold; color: #000000;\">Niệm ấy trân quý nhất, vì vị ấy muốn phản bổn quy chân, muốn từ tầng của người thường mà nhảy ra.</span>\n        </p>\n      </div>",
+    tableData: [{"hanzi":"這一念","audio":"[(zhe4)(yi2)(nian4)]","pinyin":"zhè yí niàn","yueyin":"(trưa`)(ý)(ni:en`)","nghia":"một niệm này"},{"hanzi":"就","audio":"[(jiu4)]","pinyin":"jiù","yueyin":"(chi:âu`)","nghia":"sẽ, liền, thì"},{"hanzi":"最珍貴","audio":"[(zui4)(zhen1)(gui4)]","pinyin":"zuì zhēnguì","yueyin":"(zuây`)(trân-)(cuây`)","nghia":"chân quý nhất"},{"hanzi":"因為","audio":"[(yin1)(wei4)]","pinyin":"yīnwèi","yueyin":"(yin- guây`)","nghia":"bởi vì"},{"hanzi":"他","audio":"[(ta1)]","pinyin":"tā","yueyin":"(tha-)","nghia":"anh ta"},{"hanzi":"想","audio":"[(xiang3)]","pinyin":"xiǎng","yueyin":"(xi:ảng)","nghia":"muốn"},{"hanzi":"返本歸真","audio":"[(fan3)(ben3)(gui1)(zhen1)]","pinyin":"fǎnběn guīzhēn","yueyin":"(fán pẩn)(cuây- trân-)","nghia":"phản bổn quy chân"},{"hanzi":"想","audio":"[(xiang3)]","pinyin":"xiǎng","yueyin":"(xi:ảng)","nghia":"muốn"},{"hanzi":"從","audio":"[(cong2)]","pinyin":"cóng","yueyin":"(s'úng)","nghia":"từ"},{"hanzi":"常人","audio":"[(chang2)(ren2)]","pinyin":"chángrén","yueyin":"(tr'áng rấn)","nghia":"người thường"},{"hanzi":"這個層次中","audio":"[(zhe4)(ge)(ceng2)(ci4)(zhong1)]","pinyin":"zhège céngcì zhōng","yueyin":"(trưa` cưa)(s'ấng s'ư`)(trung-)","nghia":"trong tầng thứ này"},{"hanzi":"跳出去","audio":"[(tiao4)(chu1)(qu4)]","pinyin":"tiào chūqù","yueyin":"(thi:ao`)(tr'u- ch'uy`)","nghia":"nhảy ra ngoài, thoát ra"}]
+  };
+
+  window.renderContent = function(targetEditorId, targetTableId) {
+    if (targetEditorId) {
+      var editorEl = document.getElementById(targetEditorId);
+      if (editorEl) editorEl.innerHTML = window.RENDER_PAYLOAD.editorHtml;
+    }
+    
+    if (targetTableId) {
+      var tableEl = document.getElementById(targetTableId);
+      if (tableEl) {
+        var html = '<table border="1" style="border-collapse: collapse; width: 100%;">';
+        html += '<thead><tr><th>Hanzi</th><th>Audio</th><th>Pinyin</th><th>Yueyin</th><th>Nghĩa</th></tr></thead><tbody>';
+        window.RENDER_PAYLOAD.tableData.forEach(function(item) {
+          html += '<tr><td>' + item.hanzi + '</td><td>' + item.audio + '</td><td>' + item.pinyin + '</td><td>' + item.yueyin + '</td><td>' + item.nghia + '</td></tr>';
+        });
+        html += '</tbody></table>';
+        tableEl.innerHTML = html;
+      }
+    }
+  };
+
+  document.addEventListener("DOMContentLoaded", function() {
+    window.renderContent("rendered-editor", "rendered-table");
+  });
+})();
