@@ -851,6 +851,67 @@ window.CURRENT_PHAN_DATA = {
           "nghia": "Niệm ấy trân quý nhất, vì vị ấy muốn phản bổn quy chân, muốn từ tầng của người thường mà nhảy ra."
         }
       ]
+    },
+    {
+      "doan_so": 8,
+      "content": [
+        {
+          "cau_id": "b01p01-d08-001",
+          "hanzi": "可能大家聽到佛教中有這樣一句話：佛性一出，震動十方世界。",
+          "pinyin": "kě néng dà jiā tīng dào fó jiào zhōng yǒu zhè yàng yí jù huà fó xìng yì chū zhèn dòng shí fāng shì jiè",
+          "yueyin": "(khửa) (nấng) (ta`) (chi:a-) (thing-) (tao`) (fúa) (chi:ao`) (trung-) (yẩu) (trưa`) (yang`) (ý) (chuy`) (hoa`) (fúa) (xing`) (y`) (tr'u-) (trân`) (tung`) (shí*) (fang-) (shi*`) (chi:ê`)",
+          "nghia": "Có thể mọi người đã từng nghe câu này trong Phật giáo: ‘Phật tính nhất xuất, chấn động thập phương thế giới’."
+        },
+        {
+          "cau_id": "b01p01-d08-002",
+          "hanzi": "誰看見了，都要幫他，無條件的幫他。",
+          "pinyin": "shéi kàn jiàn le dōu yào bāng tā wú tiáo jiàn de bāng tā",
+          "yueyin": "(shấy) (khan`) (chi:en`) (lơ) (tâu-) (yao`) (pang-) (tha-) (ú) (thi:áo) (chi:en`) (tơ) (pang-) (tha-)",
+          "nghia": "Ai mà nhìn thấy, [thì] đều [muốn] giúp người kia, giúp một cách vô điều kiện."
+        },
+        {
+          "cau_id": "b01p01-d08-003",
+          "hanzi": "佛家度人是不講條件的，沒有代價的，可以無條件的幫他，所以我們就可以為學員做很多事情。",
+          "pinyin": "fó jiā dù rén shì bù jiǎng tiáo jiàn de méi yǒu dài jià de kě yǐ wú tiáo jiàn de bāng tā suǒ yǐ wǒ men jiù kě yǐ wèi xué yuán zuò hěn duō shì qing",
+          "yueyin": "(fúa) (chi:a-) (tu`) (rấn) (shi*`) (pu`) (chi:ảng) (thi:áo) (chi:en`) (tơ) (mấy) (yẩu) (tai`) (chi:a`) (tơ) (khửa) (ỷ) (ú) (thi:áo) (chi:en`) (tơ) (pang-) (tha-) (sủa) (ỷ) (gủa) (mân) (chi:âu`) (khửa) (ỷ) (guây`) (xuế) (doán) (zua`) (hẩn) (tua-) (shi*`) (ch'ing)",
+          "nghia": "Phật gia độ nhân không nói điều kiện, [cũng] không có giá cả; có thể giúp đỡ người kia một cách vô điều kiện; vậy nên chúng tôi có thể làm cho học viên rất nhiều sự việc."
+        },
+        {
+          "cau_id": "b01p01-d08-004",
+          "hanzi": "而作為一個常人，只想做常人的人，他想病好，就不行。",
+          "pinyin": "ér zuò wéi yí gè cháng rén zhǐ xiǎng zuò cháng rén de rén tā xiǎng bìng hǎo jiù bù xíng",
+          "yueyin": "(ớ) (zua`) (guấy) (ý) (cưa`) (tr'áng) (rấn) (trỉ*) (xi:ảng) (zua`) (tr'áng) (rấn) (tơ) (rấn) (tha-) (xi:ảng) (ping`) (hảo) (chi:âu`) (pu`) (xíng)",
+          "nghia": "Nhưng [đối với] một người thường, chỉ muốn làm người nơi người thường, họ [chỉ] muốn hết bệnh, thì không thể được."
+        },
+        {
+          "cau_id": "b01p01-d08-005",
+          "hanzi": "有的人想：我病好了，我就修煉。",
+          "pinyin": "yǒu de rén xiǎng wǒ bìng hǎo le wǒ jiù xiū liàn",
+          "yueyin": "(yẩu) (tơ) (rấn) (xi:ảng) (gủa) (ping`) (hảo) (lơ) (gủa) (chi:âu`) (xi:âu-) (li:en`)",
+          "nghia": "Có người nghĩ: ‘Mình hết bệnh thì mình sẽ tu luyện’."
+        },
+        {
+          "cau_id": "b01p01-d08-006",
+          "hanzi": "修煉是沒有任何條件的，要想修煉，那麼就修煉。",
+          "pinyin": "xiū liàn shì méi yǒu rèn hé tiáo jiàn de yào xiǎng xiū liàn nà me jiù xiū liàn",
+          "yueyin": "(xi:âu-) (li:en`) (shi*`) (mấy) (yẩu) (rân`) (hứa) (thi:áo) (chi:en`) (tơ) (yao`) (xi:ảng) (xi:âu-) (li:en`) (na`) (mơ) (chi:âu`) (xi:âu-) (li:en`)",
+          "nghia": "Tu luyện không có điều kiện nào hết; muốn tu luyện, thì tu luyện thôi."
+        },
+        {
+          "cau_id": "b01p01-d08-007",
+          "hanzi": "但是帶著一個有病的身體，或有些人身上信息還很亂，",
+          "pinyin": "dàn shì dài zhe yí gè yǒu bìng de shēn tǐ huò yǒu xiē rén shēn shàng xìn xī hái hěn luàn",
+          "yueyin": "(tan`) (shi*`) (tai`) (trơ) (ý) (cưa`) (yẩu) (ping`) (tơ) (shân-) (thỉ) (hua`) (yẩu) (xi:ê-) (rấn) (shân-) (shang`) (xin`) (xi-) (hái) (hẩn) (loan`)",
+          "nghia": "Nhưng mang một thân thể có bệnh, hoặc có người mang trên thân những tín tức còn rất loạn;"
+        },
+        {
+          "cau_id": "b01p01-d08-008",
+          "hanzi": "有的人根本沒有練過功，也有的人練了幾十年功，還在氣中徘徊著，也沒有修上去。",
+          "pinyin": "yǒu de rén gēn běn méi yǒu liàn guò gōng yě yǒu de rén liàn le jǐ shí nián gōng hái zài qì zhōng pái huái zhe yě méi yǒu xiū shàng qù",
+          "yueyin": "(yẩu) (tơ) (rấn) (cân-) (pẩn) (mấy) (yẩu) (li:en`) (cua`) (cung-) (yể) (yẩu) (tơ) (rấn) (li:en`) (lơ) (chỉ) (shí*) (ni:én) (cung-) (hái) (zai`) (ch'i`) (trung-) (p'ái) (hoái) (trơ) (yể) (mấy) (yẩu) (xi:âu-) (shang`) (ch'uy`)",
+          "nghia": "có người chưa từng luyện công; cũng có người đã luyện công hàng chục năm, nhưng vẫn loanh quanh ở [tầng luyện] khí, cũng chưa tu được lên trên."
+        }
+      ]
     }
   ]
 };
