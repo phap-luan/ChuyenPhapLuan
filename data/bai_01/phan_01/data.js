@@ -796,7 +796,7 @@ window.CURRENT_PHAN_DATA = {
       "content": [
         {
           "cau_id": "b01p01-d07-001",
-          "hanzi": "整個的人類社會，都是在一個層次當中。",
+          "hanzi": "  整個的人類社會，都是在一個層次當中。",
           "pinyin": "zhěng gè de rén lèi shè huì dōu shì zài yí gè céng cì dāng zhōng",
           "yueyin": "(trẩng)(cưa`)(tơ)(rấn)(lây`)(shưa`)(huây`)(tâu-)(shi*`)(zai`)(ý)(cưa`)(s'ấng)(s'ư`)(tang-)(trung-)",
           "nghia": "Toàn thể xã hội nhân loại đều cùng trong một tầng này."
