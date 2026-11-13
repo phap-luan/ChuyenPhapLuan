@@ -798,56 +798,56 @@ window.CURRENT_PHAN_DATA = {
           "cau_id": "b01p01-d07-001",
           "hanzi": "  整個的人類社會，都是在一個層次當中。",
           "pinyin": "zhěng gè de rén lèi shè huì dōu shì zài yí gè céng cì dāng zhōng",
-          "yueyin": "(trẩng)(cưa`)(tơ)(rấn)(lây`)(shưa`)(huây`)(tâu-)(shi*`)(zai`)(ý)(cưa`)(s'ấng)(s'ư`)(tang-)(trung-)",
+          "yueyin": "(trẩng) (cưa`) (tơ) (rấn) (lây`) (shưa`) (huây`) (tâu-) (shi*`) (zai`) (ý) (cưa`) (s'ấng) (s'ư`) (tang-) (trung-)",
           "nghia": "Toàn thể xã hội nhân loại đều cùng trong một tầng này."
         },
         {
           "cau_id": "b01p01-d07-002",
           "hanzi": "掉到這一步上來，站在功能角度上看，或者站在大覺者角度上看，本來這些生命體是應該銷毀的。",
           "pinyin": "diào dào zhè yí bù shàng lái zhàn zài gōng néng jiǎo dù shàng kàn huò zhě zhàn zài dà jué zhě jiǎo dù shàng kàn běn lái zhè xiē shēng mìng tǐ shì yīng gāi xiāo huǐ de",
-          "yueyin": "(ti:ao`)(tao`)(trưa`)(ý)(pu`)(shang`)(lái)(tran`)(zai`)(cung-)(nấng)(chi:ảo)(tu`)(shang`)(khan`)(hua`)(trửa)(tran`)(zai`)(ta`)(chuế)(trửa)(chi:ảo)(tu`)(shang`)(khan`)(pẩn)(lái)(trưa`)(xi:ê-)(shâng-)(ming`)(thỉ)(shi*`)(ying-)(cai-)(xi:ao-)(huẩy)(tơ)",
+          "yueyin": "(ti:ao`) (tao`) (trưa`) (ý) (pu`) (shang`) (lái) (tran`) (zai`) (cung-) (nấng) (chi:ảo) (tu`) (shang`) (khan`) (hua`) (trửa) (tran`) (zai`) (ta`) (chuế) (trửa) (chi:ảo) (tu`) (shang`) (khan`) (pẩn) (lái) (trưa`) (xi:ê-) (shâng-) (ming`) (thỉ) (shi*`) (ying-) (cai-) (xi:ao-) (huẩy) (tơ)",
           "nghia": "Đã rớt đến bước này, đứng tại góc độ công năng mà xét, hoặc đứng tại góc độ các Đại Giác Giả mà xét, [thì] những thể sinh mệnh kia cần phải bị tiêu huỷ."
         },
         {
           "cau_id": "b01p01-d07-003",
           "hanzi": "可是大覺者們出於慈悲心，再給他們一次機會，就構成了這樣一個特殊的環境、特殊的空間。",
           "pinyin": "Kě shì dà jué zhě men chū yú cí bēi xīn zài gěi tā men yí cì jī huì jiù gòu chéng le zhè yàng yí gè tè shū de huán jìng tè shū de kōng jiān",
-          "yueyin": "(Kě)(shi*`)(ta`)(chuế)(trửa)(mân)(tr'u-)(úy)(s'ứ)(pây-)(xin-)(zai`)(cẩy)(tha-)(mân)(ý)(s'ư`)(chi-)(huây`)(chi:âu`)(câu`)(tr'ấng)(lơ)(trưa`)(yang`)(ý)(cưa`)(thưa`)(shu-)(tơ)(hoán)(ching`)(thưa`)(shu-)(tơ)(khung-)(chi:en-)",
+          "yueyin": "(Kě) (shi*`) (ta`) (chuế) (trửa) (mân) (tr'u-) (úy) (s'ứ) (pây-) (xin-) (zai`) (cẩy) (tha-) (mân) (ý) (s'ư`) (chi-) (huây`) (chi:âu`) (câu`) (tr'ấng) (lơ) (trưa`) (yang`) (ý) (cưa`) (thưa`) (shu-) (tơ) (hoán) (ching`) (thưa`) (shu-) (tơ) (khung-) (chi:en-)",
           "nghia": "Tuy nhiên các Đại Giác Giả đã xuất phát từ tâm từ bi mà cấp cho họ một cơ hội nữa; [các Đại Giác Giả] tạo nên một hoàn cảnh đặc thù, một không gian đặc thù như thế này."
         },
         {
           "cau_id": "b01p01-d07-004",
           "hanzi": "而這個空間的生命體和宇宙中所有空間的生命體都不一樣。",
           "pinyin": "ér zhè ge kōng jiān de shēng mìng tǐ hé yǔ zhòu zhōng suǒ yǒu kōng jiān de shēng mìng tǐ dōu bù yí yàng",
-          "yueyin": "(ớ)(trưa`)(cưa)(khung-)(chi:en-)(tơ)(shâng-)(ming`)(thỉ)(hứa)(ủy)(trâu`)(trung-)(sủa)(yẩu)(khung-)(chi:en-)(tơ)(shâng-)(ming`)(thỉ)(tâu-)(pu`)(ý)(yang`)",
+          "yueyin": "(ớ) (trưa`) (cưa) (khung-) (chi:en-) (tơ) (shâng-) (ming`) (thỉ) (hứa) (ủy) (trâu`) (trung-) (sủa) (yẩu) (khung-) (chi:en-) (tơ) (shâng-) (ming`) (thỉ) (tâu-) (pu`) (ý) (yang`)",
           "nghia": "Tuy vậy các thể sinh mệnh tại không gian này khác xa các thể sinh mệnh tại tất cả không gian khác trong vũ trụ."
         },
         {
           "cau_id": "b01p01-d07-005",
           "hanzi": "這個空間的生命體，看不到另外空間的生命體，看不到宇宙的真相，所以這些人等於是掉在迷中來了。",
           "pinyin": "zhè ge kōng jiān de shēng mìng tǐ kàn bu dào lìng wài kōng jiān de shēng mìng tǐ kàn bu dào yǔ zhòu de zhēn xiàng suǒ yǐ zhè xiē rén děng yú shì diào zài mí zhōng lái le",
-          "yueyin": "(trưa`)(cưa)(khung-)(chi:en-)(tơ)(shâng-)(ming`)(thỉ)(khan`)(pu)(tao`)(ling`)(goai`)(khung-)(chi:en-)(tơ)(shâng-)(ming`)(thỉ)(khan`)(pu)(tao`)(ủy)(trâu`)(tơ)(trân-)(xi:ang`)(sủa)(ỷ)(trưa`)(xi:ê-)(rấn)(tẩng)(úy)(shi*`)(ti:ao`)(zai`)(mí)(trung-)(lái)(lơ)",
+          "yueyin": "(trưa`) (cưa) (khung-) (chi:en-) (tơ) (shâng-) (ming`) (thỉ) (khan`) (pu) (tao`) (ling`) (goai`) (khung-) (chi:en-) (tơ) (shâng-) (ming`) (thỉ) (khan`) (pu) (tao`) (ủy) (trâu`) (tơ) (trân-) (xi:ang`) (sủa) (ỷ) (trưa`) (xi:ê-) (rấn) (tẩng) (úy) (shi*`) (ti:ao`) (zai`) (mí) (trung-) (lái) (lơ)",
           "nghia": "Những thể sinh mệnh tại không gian này không thể nhìn thấy các thể sinh mệnh tại các không gian khác, và không thể nhìn thấy chân tướng của vũ trụ; bởi vậy ai [rớt xuống đây] đều tương đương với rơi vào [cõi] mê."
         },
         {
           "cau_id": "b01p01-d07-006",
           "hanzi": "要想好病、祛難、消業，這些人必須得修煉，返本歸真，這是在各種修煉中都是這樣看的。",
           "pinyin": "yào xiǎng hǎo bìng qū nàn xiāo yè zhè xiē rén bì xū děi xiū liàn fǎn běn guī zhēn zhè shì zài gè zhǒng xiū liàn zhōng dōu shì zhè yàng kàn de",
-          "yueyin": "(yao`)(xi:ảng)(hảo)(ping`)(ch'uy-)(nan`)(xi:ao-)(yê`)(trưa`)(xi:ê-)(rấn)(pi`)(xuy-)(tẩy)(xi:âu-)(li:en`)(fản)(pẩn)(cuây-)(trân-)(trưa`)(shi*`)(zai`)(cưa`)(trủng)(xi:âu-)(li:en`)(trung-)(tâu-)(shi*`)(trưa`)(yang`)(khan`)(tơ)",
+          "yueyin": "(yao`) (xi:ảng) (hảo) (ping`) (ch'uy-) (nan`) (xi:ao-) (yê`) (trưa`) (xi:ê-) (rấn) (pi`) (xuy-) (tẩy) (xi:âu-) (li:en`) (fản) (pẩn) (cuây-) (trân-) (trưa`) (shi*`) (zai`) (cưa`) (trủng) (xi:âu-) (li:en`) (trung-) (tâu-) (shi*`) (trưa`) (yang`) (khan`) (tơ)",
           "nghia": "Muốn hết bệnh, trừ nạn, tiêu nghiệp, thì những người này phải tu luyện, [phải] ‘phản bổn quy chân’ đó chính là điều mà các loại [môn pháp] tu luyện đều nhìn nhận."
         },
         {
           "cau_id": "b01p01-d07-007",
           "hanzi": "人要返本歸真，這才是做人的真正目地，所以這個人一想修煉，就被認為是佛性出來了。",
           "pinyin": "rén yào fǎn běn guī zhēn zhè cái shì zuò rén de zhēn zhèng mù dì suǒ yǐ zhè ge rén yì xiǎng xiū liàn jiù bèi rèn wéi shì fó xìng chū lái le",
-          "yueyin": "(rấn)(yao`)(fản)(pẩn)(cuây-)(trân-)(trưa`)(s'ái)(shi*`)(zua`)(rấn)(tơ)(trân-)(trâng`)(mu`)(ti`)(sủa)(ỷ)(trưa`)(cưa)(rấn)(y`)(xi:ảng)(xi:âu-)(li:en`)(chi:âu`)(pây`)(rân`)(guấy)(shi*`)(fúa)(xing`)(tr'u-)(lái)(lơ)",
+          "yueyin": "(rấn) (yao`) (fản) (pẩn) (cuây-) (trân-) (trưa`) (s'ái) (shi*`) (zua`) (rấn) (tơ) (trân-) (trâng`) (mu`) (ti`) (sủa) (ỷ) (trưa`) (cưa) (rấn) (y`) (xi:ảng) (xi:âu-) (li:en`) (chi:âu`) (pây`) (rân`) (guấy) (shi*`) (fúa) (xing`) (tr'u-) (lái) (lơ)",
           "nghia": "Con người phải phản bổn quy chân, đó mới là mục đích chân chính để làm người; do vậy một cá nhân hễ muốn tu luyện, thì được [xác] nhận là Phật tính đã xuất hiện."
         },
         {
           "cau_id": "b01p01-d07-008",
           "hanzi": "這一念就最珍貴，因為他想返本歸真，想從常人這個層次中跳出去。",
           "pinyin": "zhè yí niàn jiù zuì zhēn guì yīn wèi tā xiǎng fǎn běn guī zhēn xiǎng cóng cháng rén zhè ge céng cì zhōng tiào chū qù",
-          "yueyin": "(trưa`)(ý)(ni:en`)(chi:âu`)(zuây`)(trân-)(cuây`)(yin-)(guây`)(tha-)(xi:ảng)(fản)(pẩn)(cuây-)(trân-)(xi:ảng)(s'úng)(tr'áng)(rấn)(trưa`)(cưa)(s'ấng)(s'ư`)(trung-)(thi:ao`)(tr'u-)(ch'uy`)",
+          "yueyin": "(trưa`) (ý) (ni:en`) (chi:âu`) (zuây`) (trân-) (cuây`) (yin-) (guây`) (tha-) (xi:ảng) (fản) (pẩn) (cuây-) (trân-) (xi:ảng) (s'úng) (tr'áng) (rấn) (trưa`) (cưa) (s'ấng) (s'ư`) (trung-) (thi:ao`) (tr'u-) (ch'uy`)",
           "nghia": "Niệm ấy trân quý nhất, vì vị ấy muốn phản bổn quy chân, muốn từ tầng của người thường mà nhảy ra."
         }
       ]
