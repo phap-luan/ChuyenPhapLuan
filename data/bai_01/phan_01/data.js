@@ -939,7 +939,7 @@ window.CURRENT_PHAN_DATA = {
         },
         {
           "cau_id": "b01p01-d09-004",
-          "hanzi": "清理的話，帶著這樣一個渾濁的身體，黑乎乎的身體和一個骯髒的思想，怎麼能達到往高層次上修煉呢？",
+          "hanzi": "不清理的話，帶著這樣一個渾濁的身體，黑乎乎的身體和一個骯髒的思想，怎麼能達到往高層次上修煉呢？",
           "pinyin": "bù qīng lǐ de huà dài zhe zhè yàng yí gè hún zhuó de shēn tǐ hēi hū hū de shēn tǐ hé yí gè āng zāng de sī xiǎng zěn me néng dá dào wǎng gāo céng cì shàng xiū liàn ne",
           "yueyin": "(pu`) (ch'ing-) (lỉ) (tơ) (hoa`) (tai`) (trơ) (trưa`) (yang`) (ý) (cưa`) (huấn) (trúa) (tơ) (shân-) (thỉ) (hây-) (hu-) (hu-) (tơ) (shân-) (thỉ) (hứa) (ý) (cưa`) (ang-) (zang-) (tơ) (sư-) (xi:ảng) (zẩn) (mơ) (nấng) (tá) (tao`) (goảng) (cao-) (s'ấng) (s'ư`) (shang`) (xi:âu-) (li:en`) (nưa)",
           "nghia": "Nếu chẳng thanh lý, mang theo thân thể nhơ nhớp, thân thể đen bẩn và tư tưởng dơ xấu như vậy, thử hỏi có thể đạt đến tu luyện lên cao tầng được không?"
@@ -957,6 +957,67 @@ window.CURRENT_PHAN_DATA = {
           "pinyin": "tóng shí wǒ men zài bǎ dī céng cì shàng suǒ yào dǎ jī chǔ de zhè xiē dōng xi gěi nǐ xià shàng yí tào xiàn chéng de zhè yàng yì lái wǒ men jiù zài hěn gāo céng cì shàng liàn gōng le",
           "yueyin": "(thúng) (shí*) (gủa) (mân) (zai`) (pả) (ti-) (s'ấng) (s'ư`) (shang`) (sủa) (yao`) (tả) (chi-) (tr'ủ) (tơ) (trưa`) (xi:ê-) (tung-) (xi) (cẩy) (nỉ) (xi:a`) (shang`) (ý) (thao`) (xi:en`) (tr'ấng) (tơ) (trưa`) (yang`) (y`) (lái) (gủa) (mân) (chi:âu`) (zai`) (hẩn) (cao-) (s'ấng) (s'ư`) (shang`) (li:en`) (cung-) (lơ)",
           "nghia": "Đồng thời chúng tôi còn cấp cho chư vị một bộ đã hình thành đầy đủ mọi thứ cần thiết cho [việc tạo] cơ sở của tầng thấp; như thế, chúng ta sẽ ở trên tầng rất cao [mà] luyện công."
+        }
+      ]
+    },
+    {
+      "doan_so": 10,
+      "content": [
+        {
+          "cau_id": "b01p01-d10-001",
+          "hanzi": "  按照修煉的說法，氣要算呢，有三個層次。",
+          "pinyin": "àn zhào xiū liàn de shuō fǎ qì yào suàn ne yǒu sān gè céng cì",
+          "yueyin": "(an`) (trao`) (xi:âu-) (li:en`) (tơ) (shua-) (fả) (ch'i`) (yao`) (soan`) (nưa) (yẩu) (san-) (cưa`) (s'ấng) (s'ư`)",
+          "nghia": "Chiểu theo thuyết pháp tu luyện, khí được tính [thế nào]: có ba tầng."
+        },
+        {
+          "cau_id": "b01p01-d10-002",
+          "hanzi": "但真正的修煉（練氣不算），共有兩大層次：一個是世間法修煉；一個是出世間法修煉。",
+          "pinyin": "dàn zhēn zhèng de xiū liàn liàn qì bú suàn gòng yǒu liǎng dà céng cì yí gè shì shì jiān fǎ xiū liàn yí gè shì chū shì jiān fǎ xiū liàn",
+          "yueyin": "(tan`) (trân-) (trâng`) (tơ) (xi:âu-) (li:en`) (li:en`) (ch'i`) (pú) (soan`) (cung`) (yẩu) (li:ảng) (ta`) (s'ấng) (s'ư`) (ý) (cưa`) (shi*`) (shi*`) (chi:en-) (fả) (xi:âu-) (li:en`) (ý) (cưa`) (shi*`) (tr'u-) (shi*`) (chi:en-) (fả) (xi:âu-) (li:en`)",
+          "nghia": "Nhưng tu luyện chân chính (không tính phần luyện khí), gồm có hai tầng lớn tất cả: một là tu luyện ‘thế gian pháp’, hai là tu luyện ‘xuất thế gian pháp’."
+        },
+        {
+          "cau_id": "b01p01-d10-003",
+          "hanzi": "這個世間法、出世間法和廟裏的出世間、入世間是兩回事，那是理論上的東西。",
+          "pinyin": "zhè ge shì jiān fǎ chū shì jiān fǎ hé miào lǐ de chū shì jiān rù shì jiān shì liǎng huí shì nà shì lǐ lùn shàng de dōng xi",
+          "yueyin": "(trưa`) (cưa) (shi*`) (chi:en-) (fả) (tr'u-) (shi*`) (chi:en-) (fả) (hứa) (mi:ao`) (lỉ) (tơ) (tr'u-) (shi*`) (chi:en-) (ru`) (shi*`) (chi:en-) (shi*`) (li:ảng) (huấy) (shi*`) (na`) (shi*`) (lỉ) (luân`) (shang`) (tơ) (tung-) (xi)",
+          "nghia": "Thế gian pháp và xuất thế gian pháp này khác với ‘xuất thế gian’ và ‘nhập thế gian’ [được giảng] trong chùa, vốn chỉ là lý luận."
+        },
+        {
+          "cau_id": "b01p01-d10-004",
+          "hanzi": "我們是真正人體修煉的兩大層次的變化。",
+          "pinyin": "wǒ men shì zhēn zhèng rén tǐ xiū liàn de liǎng dà céng cì de biàn huà",
+          "yueyin": "(gủa) (mân) (shi*`) (trân-) (trâng`) (rấn) (thỉ) (xi:âu-) (li:en`) (tơ) (li:ảng) (ta`) (s'ấng) (s'ư`) (tơ) (pi:en`) (hoa`)",
+          "nghia": "[Của] chúng tôi là biến hoá tại hai tầng lớn tu luyện [thân] thể người một cách chân chính."
+        },
+        {
+          "cau_id": "b01p01-d10-005",
+          "hanzi": "因為在世間法修煉過程當中，人的身體都是在不斷的淨化，不斷的淨化，",
+          "pinyin": "yīn wèi zài shì jiān fǎ xiū liàn guò chéng dāng zhōng rén de shēn tǐ dōu shì zài bú duàn de jìng huà bú duàn de jìng huà",
+          "yueyin": "(yin-) (guây`) (zai`) (shi*`) (chi:en-) (fả) (xi:âu-) (li:en`) (cua`) (tr'ấng) (tang-) (trung-) (rấn) (tơ) (shân-) (thỉ) (tâu-) (shi*`) (zai`) (pú) (toan`) (tơ) (ching`) (hoa`) (pú) (toan`) (tơ) (ching`) (hoa`)",
+          "nghia": "Bởi vì trong quá trình tu luyện thế gian pháp thân thể người được tịnh hoá liên tục, tịnh hoá không ngừng;"
+        },
+        {
+          "cau_id": "b01p01-d10-006",
+          "hanzi": "所以走到世間法最高形式的時候，身體已經完全被高能量物質代替了。",
+          "pinyin": "suǒ yǐ zǒu dào shì jiān fǎ zuì gāo xíng shì de shí hou shēn tǐ yǐ jīng wán quán bèi gāo néng liàng wù zhì dài tì le",
+          "yueyin": "(sủa) (ỷ) (zẩu) (tao`) (shi*`) (chi:en-) (fả) (zuây`) (cao-) (xíng) (shi*`) (tơ) (shí*) (hâu) (shân-) (thỉ) (ỷ) (ching-) (goán) (ch'oán) (pây`) (cao-) (nấng) (li:ang`) (u`) (tri*`) (tai`) (thi`) (lơ)",
+          "nghia": "do đó khi đến hình thức cao nhất của thế gian pháp, thân thể đã hoàn toàn được thay thế bằng vật chất cao năng lượng."
+        },
+        {
+          "cau_id": "b01p01-d10-007",
+          "hanzi": "而出世間法修煉，那基本就是佛體修煉了，是一個高能量物質構成的身體了，所有功能從新再出。",
+          "pinyin": "ér chū shì jiān fǎ xiū liàn nà jī běn jiù shì fó tǐ xiū liàn le shì yí gè gāo néng liàng wù zhì gòu chéng de shēn tǐ le suǒ yǒu gōng néng cóng xīn zài chū",
+          "yueyin": "(ớ) (tr'u-) (shi*`) (chi:en-) (fả) (xi:âu-) (li:en`) (na`) (chi-) (pẩn) (chi:âu`) (shi*`) (fúa) (thỉ) (xi:âu-) (li:en`) (lơ) (shi*`) (ý) (cưa`) (cao-) (nấng) (li:ang`) (u`) (tri*`) (câu`) (tr'ấng) (tơ) (shân-) (thỉ) (lơ) (sủa) (yẩu) (cung-) (nấng) (s'úng) (xin-) (zai`) (tr'u-)",
+          "nghia": "Còn tu luyện xuất thế gian pháp cơ bản là tu luyện Phật thể, là thân thể cấu thành từ vật chất cao năng lượng, [trong đó] tất cả công năng đều tái xuất lại mới."
+        },
+        {
+          "cau_id": "b01p01-d10-008",
+          "hanzi": "我們指的是這兩大層次。",
+          "pinyin": "wǒ men zhǐ de shì zhè liǎng dà céng cì",
+          "yueyin": "(gủa) (mân) (trỉ*) (tơ) (shi*`) (trưa`) (li:ảng) (ta`) (s'ấng) (s'ư`)",
+          "nghia": "Chúng tôi nói về hai tầng lớn như vậy."
         }
       ]
     }
