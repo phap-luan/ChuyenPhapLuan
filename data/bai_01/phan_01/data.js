@@ -857,7 +857,7 @@ window.CURRENT_PHAN_DATA = {
       "content": [
         {
           "cau_id": "b01p01-d08-001",
-          "hanzi": "可能大家聽到佛教中有這樣一句話：佛性一出，震動十方世界。",
+          "hanzi": "  可能大家聽到佛教中有這樣一句話：佛性一出，震動十方世界。",
           "pinyin": "kě néng dà jiā tīng dào fó jiào zhōng yǒu zhè yàng yí jù huà fó xìng yì chū zhèn dòng shí fāng shì jiè",
           "yueyin": "(khửa) (nấng) (ta`) (chi:a-) (thing-) (tao`) (fúa) (chi:ao`) (trung-) (yẩu) (trưa`) (yang`) (ý) (chuy`) (hoa`) (fúa) (xing`) (y`) (tr'u-) (trân`) (tung`) (shí*) (fang-) (shi*`) (chi:ê`)",
           "nghia": "Có thể mọi người đã từng nghe câu này trong Phật giáo: ‘Phật tính nhất xuất, chấn động thập phương thế giới’."
@@ -910,6 +910,53 @@ window.CURRENT_PHAN_DATA = {
           "pinyin": "yǒu de rén gēn běn méi yǒu liàn guò gōng yě yǒu de rén liàn le jǐ shí nián gōng hái zài qì zhōng pái huái zhe yě méi yǒu xiū shàng qù",
           "yueyin": "(yẩu) (tơ) (rấn) (cân-) (pẩn) (mấy) (yẩu) (li:en`) (cua`) (cung-) (yể) (yẩu) (tơ) (rấn) (li:en`) (lơ) (chỉ) (shí*) (ni:én) (cung-) (hái) (zai`) (ch'i`) (trung-) (p'ái) (hoái) (trơ) (yể) (mấy) (yẩu) (xi:âu-) (shang`) (ch'uy`)",
           "nghia": "có người chưa từng luyện công; cũng có người đã luyện công hàng chục năm, nhưng vẫn loanh quanh ở [tầng luyện] khí, cũng chưa tu được lên trên."
+        }
+      ]
+    },
+    {
+      "doan_so": 9,
+      "content": [
+        {
+          "cau_id": "b01p01-d09-001",
+          "hanzi": "  怎麼辦呢？我們就要把他的身體給以淨化，使他能夠往高層次上修煉。",
+          "pinyin": "zěn me bàn ne wǒ men jiù yào bǎ tā de shēn tǐ gěi yǐ jìng huà shǐ tā néng gòu wǎng gāo céng cì shàng xiū liàn",
+          "yueyin": "(zẩn) (mơ) (pan`) (nưa) (gủa) (mân) (chi:âu`) (yao`) (pả) (tha-) (tơ) (shân-) (thỉ) (cẩy) (ỷ) (ching`) (hoa`) (shỉ*) (tha-) (nấng) (câu`) (goảng) (cao-) (s'ấng) (s'ư`) (shang`) (xi:âu-) (li:en`)",
+          "nghia": "Vậy làm sao đây? Chúng tôi sẽ tịnh hoá thân thể họ, để họ có thể tu luyện lên cao tầng."
+        },
+        {
+          "cau_id": "b01p01-d09-002",
+          "hanzi": "在最低層次上修煉的時候，有一個過程，就是把你的身體完完全全淨化下來，",
+          "pinyin": "zài zuì dī céng cì shàng xiū liàn de shí hou yǒu yí gè guò chéng jiù shì bǎ nǐ de shēn tǐ wán wán quán quán jìng huà xià lái",
+          "yueyin": "(zai`) (zuây`) (ti-) (s'ấng) (s'ư`) (shang`) (xi:âu-) (li:en`) (tơ) (shí*) (hâu) (yẩu) (ý) (cưa`) (cua`) (tr'ấng) (chi:âu`) (shi*`) (pả) (nỉ) (tơ) (shân-) (thỉ) (goán) (goán) (ch'oán) (ch'oán) (ching`) (hoa`) (xi:a`) (lái)",
+          "nghia": "Trong khi tu luyện tại tầng thấp nhất, có một quá trình, chính là thân thể chư vị được hoàn toàn tịnh hoá cho đến triệt để;"
+        },
+        {
+          "cau_id": "b01p01-d09-003",
+          "hanzi": "所有思想中存在的不好的東西，身體周圍存在的業力場和造成身體不健康的因素，全部都清理出去。",
+          "pinyin": "suǒ yǒu sī xiǎng zhōng cún zài de bù hǎo de dōng xi shēn tǐ zhōu wéi cún zài de yè lì chǎng hé zào chéng shēn tǐ bù jiàn kāng de yīn sù quán bù dōu qīng lǐ chū qù",
+          "yueyin": "(sủa) (yẩu) (sư-) (xi:ảng) (trung-) (s'uấn) (zai`) (tơ) (pu`) (hảo) (tơ) (tung-) (xi) (shân-) (thỉ) (trâu-) (guấy) (s'uấn) (zai`) (tơ) (yê`) (li`) (tr'ảng) (hứa) (zao`) (tr'ấng) (shân-) (thỉ) (pu`) (chi:en`) (khang-) (tơ) (yin-) (su`) (ch'oán) (pu`) (tâu-) (ch'ing-) (lỉ) (tr'u-) (ch'uy`)",
+          "nghia": "tất cả những gì không tốt tồn tại trong tư tưởng, quanh thân thể tồn tại trường nghiệp lực và những nhân tố làm thân thể không được khoẻ mạnh; toàn bộ những thứ ấy phải được thanh lý ra hết."
+        },
+        {
+          "cau_id": "b01p01-d09-004",
+          "hanzi": "清理的話，帶著這樣一個渾濁的身體，黑乎乎的身體和一個骯髒的思想，怎麼能達到往高層次上修煉呢？",
+          "pinyin": "bù qīng lǐ de huà dài zhe zhè yàng yí gè hún zhuó de shēn tǐ hēi hū hū de shēn tǐ hé yí gè āng zāng de sī xiǎng zěn me néng dá dào wǎng gāo céng cì shàng xiū liàn ne",
+          "yueyin": "(pu`) (ch'ing-) (lỉ) (tơ) (hoa`) (tai`) (trơ) (trưa`) (yang`) (ý) (cưa`) (huấn) (trúa) (tơ) (shân-) (thỉ) (hây-) (hu-) (hu-) (tơ) (shân-) (thỉ) (hứa) (ý) (cưa`) (ang-) (zang-) (tơ) (sư-) (xi:ảng) (zẩn) (mơ) (nấng) (tá) (tao`) (goảng) (cao-) (s'ấng) (s'ư`) (shang`) (xi:âu-) (li:en`) (nưa)",
+          "nghia": "Nếu chẳng thanh lý, mang theo thân thể nhơ nhớp, thân thể đen bẩn và tư tưởng dơ xấu như vậy, thử hỏi có thể đạt đến tu luyện lên cao tầng được không?"
+        },
+        {
+          "cau_id": "b01p01-d09-005",
+          "hanzi": "我們這裏不練氣，低層次上這些東西不需要你練了，我們把你推過去，讓你身體達到無病狀態。",
+          "pinyin": "wǒ men zhè lǐ bú liàn qì dī céng cì shàng zhè xiē dōng xi bù xū yào nǐ liàn le wǒ men bǎ nǐ tuī guò qù ràng nǐ shēn tǐ dá dào wú bìng zhuàng tài",
+          "yueyin": "(gủa) (mân) (trưa`) (lỉ) (pú) (li:en`) (ch'i`) (ti-) (s'ấng) (s'ư`) (shang`) (trưa`) (xi:ê-) (tung-) (xi) (pu`) (xuy-) (yao`) (nỉ) (li:en`) (lơ) (gủa) (mân) (pả) (nỉ) (thuây-) (cua`) (ch'uy`) (rang`) (nỉ) (shân-) (thỉ) (tá) (tao`) (ú) (ping`) (troang`) (thai`)",
+          "nghia": "Ở đây chúng ta không luyện khí, không yêu [cầu] chư vị luyện gì ở tầng thấp ấy hết; chúng tôi đẩy chư vị vượt qua, để cho thân thể chư vị đạt đến trạng thái vô bệnh."
+        },
+        {
+          "cau_id": "b01p01-d09-006",
+          "hanzi": "同時我們再把低層次上所要打基礎的這些東西給你下上一套現成的，這樣一來，我們就在很高層次上煉功了。",
+          "pinyin": "tóng shí wǒ men zài bǎ dī céng cì shàng suǒ yào dǎ jī chǔ de zhè xiē dōng xi gěi nǐ xià shàng yí tào xiàn chéng de zhè yàng yì lái wǒ men jiù zài hěn gāo céng cì shàng liàn gōng le",
+          "yueyin": "(thúng) (shí*) (gủa) (mân) (zai`) (pả) (ti-) (s'ấng) (s'ư`) (shang`) (sủa) (yao`) (tả) (chi-) (tr'ủ) (tơ) (trưa`) (xi:ê-) (tung-) (xi) (cẩy) (nỉ) (xi:a`) (shang`) (ý) (thao`) (xi:en`) (tr'ấng) (tơ) (trưa`) (yang`) (y`) (lái) (gủa) (mân) (chi:âu`) (zai`) (hẩn) (cao-) (s'ấng) (s'ư`) (shang`) (li:en`) (cung-) (lơ)",
+          "nghia": "Đồng thời chúng tôi còn cấp cho chư vị một bộ đã hình thành đầy đủ mọi thứ cần thiết cho [việc tạo] cơ sở của tầng thấp; như thế, chúng ta sẽ ở trên tầng rất cao [mà] luyện công."
         }
       ]
     }
