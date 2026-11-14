@@ -1,0 +1,32 @@
+/* Exported Rich Text & Table Data */
+(function() {
+  window.RENDER_PAYLOAD = {
+    cau_id: "b01p01-d10-003",
+    editorHtml: "<div style=\"margin-bottom: 12px; line-height: 1.5\">\n        <p>\n          <span style=\"font-size: 10px; font-weight: bold; color: #64748b;\"> Nguyên Văn:</span> [(b01p01-d10-003)]<br>\n          <span id=\"matrixTableWrapper\"><table class=\"matrix-table\"><tbody><tr class=\"row-audio\"><td id=\"m_audio_0\">[(zhe4)(ge)]</td><td id=\"m_audio_1\">[(shi4)(jian1)(fa3)]</td><td id=\"m_audio_2\"></td><td id=\"m_audio_3\">[(chu1)(shi4)(jian1)(fa3)]</td><td id=\"m_audio_4\">[(he2)]</td><td id=\"m_audio_5\">[(miao4)(li3)(de)]</td><td id=\"m_audio_6\">[(chu1)(shi4)(jian1)]</td><td id=\"m_audio_7\"></td><td id=\"m_audio_8\">[(ru4)(shi4)(jian1)]</td><td id=\"m_audio_9\">[(shi4)(liang3)(hui2)(shi4)]</td><td id=\"m_audio_10\"></td><td id=\"m_audio_11\">[(na4)(shi4)]</td><td id=\"m_audio_12\">[(li3)(lun4)(shang4)(de)(dong1)(xi)]</td><td id=\"m_audio_13\"></td></tr><tr class=\"row-yueyin\"><td id=\"m_yueyin_0\">(trưa` cưa)</td><td id=\"m_yueyin_1\">(shi*` chi:en- fả)</td><td id=\"m_yueyin_2\"></td><td id=\"m_yueyin_3\">(tr'u- shi*` chi:en- fả)</td><td id=\"m_yueyin_4\">(hứa)</td><td id=\"m_yueyin_5\">(mi:ao`)(lỉ)(tơ)</td><td id=\"m_yueyin_6\">(tr'u- shi*` chi:en-)</td><td id=\"m_yueyin_7\"></td><td id=\"m_yueyin_8\">(ru` shi*` chi:en-)</td><td id=\"m_yueyin_9\">(shi*`)(li:ảng)(huấy)(shi*`)</td><td id=\"m_yueyin_10\"></td><td id=\"m_yueyin_11\">(na`)(shi*`)</td><td id=\"m_yueyin_12\">(lỉ luân`)(shang`)(tơ)(tung- xi)</td><td id=\"m_yueyin_13\"></td></tr><tr class=\"row-hanzi\"><td id=\"m_hanzi_0\">這個</td><td id=\"m_hanzi_1\">世間法</td><td id=\"m_hanzi_2\">,</td><td id=\"m_hanzi_3\">出世間法</td><td id=\"m_hanzi_4\"><font color=\"#f97316\">和</font></td><td id=\"m_hanzi_5\">廟裏<font color=\"#3b82f6\">的</font></td><td id=\"m_hanzi_6\">出世間</td><td id=\"m_hanzi_7\">,</td><td id=\"m_hanzi_8\">入世間</td><td id=\"m_hanzi_9\">是兩回事</td><td id=\"m_hanzi_10\">,</td><td id=\"m_hanzi_11\">那是</td><td id=\"m_hanzi_12\"><font color=\"#a855f7\">理論上</font>的<font color=\"#22c55e\">東西</font></td><td id=\"m_hanzi_13\">。</td></tr><tr class=\"row-pinyin\"><td id=\"m_pinyin_0\">zhège</td><td id=\"m_pinyin_1\">shìjiānfǎ</td><td id=\"m_pinyin_2\"></td><td id=\"m_pinyin_3\">chūshìjiānfǎ</td><td id=\"m_pinyin_4\">hé</td><td id=\"m_pinyin_5\">miào lǐ de</td><td id=\"m_pinyin_6\">chūshìjiān</td><td id=\"m_pinyin_7\"></td><td id=\"m_pinyin_8\">rùshìjiān</td><td id=\"m_pinyin_9\">shì liǎng huí shì</td><td id=\"m_pinyin_10\"></td><td id=\"m_pinyin_11\">nà shì</td><td id=\"m_pinyin_12\">lǐlùn shàng de dōngxi</td><td id=\"m_pinyin_13\"></td></tr><tr class=\"row-nghia\"><td id=\"m_nghia_0\">Cái này</td><td id=\"m_nghia_1\">Thế gian pháp</td><td id=\"m_nghia_2\"></td><td id=\"m_nghia_3\">Xuất thế gian pháp</td><td id=\"m_nghia_4\">và</td><td id=\"m_nghia_5\">trong chùa về</td><td id=\"m_nghia_6\">xuất thế gian</td><td id=\"m_nghia_7\"></td><td id=\"m_nghia_8\">nhập thế gian</td><td id=\"m_nghia_9\">là hai chuyện khác</td><td id=\"m_nghia_10\"></td><td id=\"m_nghia_11\">đó là</td><td id=\"m_nghia_12\">trên lý luận về các thứ</td><td id=\"m_nghia_13\"></td></tr></tbody></table><br></span><span style=\"color: rgb(100, 116, 139); font-size: 10px; font-weight: bold;\">Tạm Dịch:</span></p><p><b style=\"\"><font color=\"#000000\">cái này Thế gian pháp, Xuất thế gian pháp </font><font color=\"#f97316\">và</font><font color=\"#000000\"> trong chùa </font><font color=\"#3b82f6\">về</font><font color=\"#000000\"> Xuất thế gian, Nhập thế gian là hai chuyện khác, đó là </font><font color=\"#a855f7\">trên lý luận </font><font color=\"#000000\">về</font><font color=\"#a855f7\"> </font><font color=\"#22c55e\">các thứ</font><font color=\"#000000\">.</font></b></p>\n        <p style=\"margin-top: 5px;\">\n          <span style=\"font-size: 10px; font-weight: bold; color: #64748b;\"> Bản dịch trong sách:</span><br>\n          <span style=\"font-size: 16px; font-weight: bold; color: #000000;\">Thế gian pháp và xuất thế gian pháp này khác với ‘xuất thế gian’ và ‘nhập thế gian’ [được giảng] trong chùa, vốn chỉ là lý luận.</span>\n        </p>\n      </div>",
+    tableData: [{"hanzi":"這個","audio":"[(zhe4)(ge)]","pinyin":"zhège","yueyin":"(trưa` cưa)","nghia":"Cái này"},{"hanzi":"世間法","audio":"[(shi4)(jian1)(fa3)]","pinyin":"shìjiānfǎ","yueyin":"(shi*` chi:en- fả)","nghia":"Thế gian pháp"},{"hanzi":"出世間法","audio":"[(chu1)(shi4)(jian1)(fa3)]","pinyin":"chūshìjiānfǎ","yueyin":"(tr'u- shi*` chi:en- fả)","nghia":"Xuất thế gian pháp"},{"hanzi":"和","audio":"[(he2)]","pinyin":"hé","yueyin":"(hứa)","nghia":"và, với"},{"hanzi":"廟裏的","audio":"[(miao4)(li3)(de)]","pinyin":"miào lǐ de","yueyin":"(mi:ao`)(lỉ)(tơ)","nghia":"trong chùa về"},{"hanzi":"出世間","audio":"[(chu1)(shi4)(jian1)]","pinyin":"chūshìjiān","yueyin":"(tr'u- shi*` chi:en-)","nghia":"xuất thế gian"},{"hanzi":"入世間","audio":"[(ru4)(shi4)(jian1)]","pinyin":"rùshìjiān","yueyin":"(ru` shi*` chi:en-)","nghia":"nhập thế gian"},{"hanzi":"是兩回事","audio":"[(shi4)(liang3)(hui2)(shi4)]","pinyin":"shì liǎng huí shì","yueyin":"(shi*`)(li:ảng)(huấy)(shi*`)","nghia":"là hai chuyện khác"},{"hanzi":"那是","audio":"[(na4)(shi4)]","pinyin":"nà shì","yueyin":"(na`)(shi*`)","nghia":"đó là"},{"hanzi":"理論上的東西","audio":"[(li3)(lun4)(shang4)(de)(dong1)(xi)]","pinyin":"lǐlùn shàng de dōngxi","yueyin":"(lỉ luân`)(shang`)(tơ)(tung- xi)","nghia":"trên lý luận về các thứ"}]
+  };
+
+  window.renderContent = function(targetEditorId, targetTableId) {
+    if (targetEditorId) {
+      var editorEl = document.getElementById(targetEditorId);
+      if (editorEl) editorEl.innerHTML = window.RENDER_PAYLOAD.editorHtml;
+    }
+    
+    if (targetTableId) {
+      var tableEl = document.getElementById(targetTableId);
+      if (tableEl) {
+        var html = '<table border="1" style="border-collapse: collapse; width: 100%;">';
+        html += '<thead><tr><th>Hanzi</th><th>Audio</th><th>Pinyin</th><th>Yueyin</th><th>Nghĩa</th></tr></thead><tbody>';
+        window.RENDER_PAYLOAD.tableData.forEach(function(item) {
+          html += '<tr><td>' + item.hanzi + '</td><td>' + item.audio + '</td><td>' + item.pinyin + '</td><td>' + item.yueyin + '</td><td>' + item.nghia + '</td></tr>';
+        });
+        html += '</tbody></table>';
+        tableEl.innerHTML = html;
+      }
+    }
+  };
+
+  document.addEventListener("DOMContentLoaded", function() {
+    window.renderContent("rendered-editor", "rendered-table");
+  });
+})();

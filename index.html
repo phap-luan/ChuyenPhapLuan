@@ -376,6 +376,16 @@
             transform: translateX(10px) translateY(-10px) !important; /*Vị trí dấu câu*/
         }
 
+        /* Dấu ngoặc trong chữ dọc: xoay 90° theo chiều kim đồng hồ
+           （ => ︵ (mở xuống)   ） => ︶ (mở lên) */
+        .cell-hanzi.hanzi-bracket {
+            display: block;
+            width: 1em;
+            text-align: center;
+            transform: rotate(90deg);
+            transform-origin: center center;
+        }
+
         .cell-pinyin, .cell-yueyin {
             font-size: 11px;
             font-family: Arial, sans-serif;
@@ -1015,6 +1025,12 @@
             renderPage(currentPageIdx);
         }
 
+        // Các dấu ngoặc cần xoay ngang khi hiển thị chữ dọc
+        const BRACKET_REGEX = /^[（）()「」『』《》〈〉【】〔〕［］\[\]｛｝{}]$/;
+        function isBracketChar(ch) {
+            return BRACKET_REGEX.test(ch);
+        }
+
         function createTitleColumnElement(titleText, titlePinyin, titleYueyin, titleId, colIndex) {
             const colDiv = document.createElement('div');
             colDiv.className = 'title-column-container';
@@ -1053,6 +1069,7 @@
                     const char = chars[i];
                     const hanziDiv = document.createElement('div');
                     hanziDiv.className = 'cell-hanzi';
+                    if (isBracketChar(char)) hanziDiv.classList.add('hanzi-bracket');
                     hanziDiv.textContent = char;
                     cell.appendChild(hanziDiv);
 
@@ -1247,7 +1264,8 @@
                     const colorClass = (cellData.sentenceIdx % 2 === 0) ? 'cell-even' : 'cell-odd';
                     cell.className = `cell ${colorClass}`;
 
-                    const isPunctuation = /^[$；,。、、，,.\s《》""''“”‘’]+$/.test(cellData.char);
+                    const isBracket = isBracketChar(cellData.char);
+                    const isPunctuation = !isBracket && /^[$；,。、、，,.\s""''“”‘’]+$/.test(cellData.char);
                     if (isPunctuation) {
                         cell.classList.add('cell-punctuation');
                     }
@@ -1267,6 +1285,7 @@
 
                     const hanziDiv = document.createElement('div');
                     hanziDiv.className = 'cell-hanzi';
+                    if (isBracket) hanziDiv.classList.add('hanzi-bracket');
                     hanziDiv.textContent = cellData.char;
 
                     const pinyinDiv = document.createElement('div');
