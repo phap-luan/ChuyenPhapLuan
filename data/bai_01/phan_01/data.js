@@ -1020,6 +1020,74 @@ window.CURRENT_PHAN_DATA = {
           "nghia": "Chúng tôi nói về hai tầng lớn như vậy."
         }
       ]
+    },
+    {
+      "doan_so": 11,
+      "content": [
+        {
+          "cau_id": "b01p01-d11-001",
+          "hanzi": "我們講緣份，大家坐在這裏，我可以給大家做這件事情。",
+          "pinyin": "wǒ men jiǎng yuán fèn dà jiā zuò zài zhè lǐ wǒ kě yǐ gěi dà jiā zuò zhè jiàn shì qing",
+          "yueyin": "(gủa) (mân) (chi:ảng) (doán) (fân`) (ta`) (chi:a-) (zua`) (zai`) (trưa`) (lỉ) (gủa) (khửa) (ỷ) (cẩy) (ta`) (chi:a-) (zua`) (trưa`) (chi:en`) (shi*`) (ch'ing)",
+          "nghia": "Chúng tôi giảng duyên phận; với mọi người ngồi đây, tôi có thể làm cho mọi người những sự việc này."
+        },
+        {
+          "cau_id": "b01p01-d11-002",
+          "hanzi": "我們現在也就是兩千多人，幾千人，甚至於更多的人，上萬人，",
+          "pinyin": "wǒ men xiàn zài yě jiù shì liǎng qiān duō rén jǐ qiān rén shèn zhì yú gèng duō de rén shàng wàn rén",
+          "yueyin": "(gủa) (mân) (xi:en`) (zai`) (yể) (chi:âu`) (shi*`) (li:ảng) (ch'i:en-) (tua-) (rấn) (chỉ) (ch'i:en-) (rấn) (shân`) (tri*`) (úy) (câng`) (tua-) (tơ) (rấn) (shang`) (goan`) (rấn)",
+          "nghia": "Chúng ta hiện nay cũng đã hơn hai nghìn người; với vài nghìn người, thậm chí nhiều hơn nữa, trên vạn người,"
+        },
+        {
+          "cau_id": "b01p01-d11-003",
+          "hanzi": "我都可以做的到的，也就是說，在低層次上不需要你再練了。",
+          "pinyin": "wǒ dōu kě yǐ zuò de dào de yě jiù shì shuō zài dī céng cì shàng bù xū yào nǐ zài liàn le",
+          "yueyin": "(gủa) (tâu-) (khửa) (ỷ) (zua`) (tơ) (tao`) (tơ) (yể) (chi:âu`) (shi*`) (shua-) (zai`) (ti-) (s'ấng) (s'ư`) (shang`) (pu`) (xuy-) (yao`) (nỉ) (zai`) (li:en`) (lơ)",
+          "nghia": "tôi cũng có thể làm được; nghĩa là, chư vị không cần luyện lại những gì ở tầng thấp."
+        },
+        {
+          "cau_id": "b01p01-d11-004",
+          "hanzi": "把你的身體淨化之後，給你推過去，我給你下上一套完整的修煉系統，你一上來直接就在高層次上修煉。",
+          "pinyin": "bǎ nǐ de shēn tǐ jìng huà zhī hòu gěi nǐ tuī guò qù wǒ gěi nǐ xià shàng yí tào wán zhěng de xiū liàn xì tǒng nǐ yí shàng lái zhí jiē jiù zài gāo céng cì shàng xiū liàn",
+          "yueyin": "(pả) (nỉ) (tơ) (shân-) (thỉ) (ching`) (hoa`) (tri*-) (hâu`) (cẩy) (nỉ) (thuây-) (cua`) (ch'uy`) (gủa) (cẩy) (nỉ) (xi:a`) (shang`) (ý) (thao`) (goán) (trẩng) (tơ) (xi:âu-) (li:en`) (xi`) (thủng) (nỉ) (ý) (shang`) (lái) (trí*) (chi:ê-) (chi:âu`) (zai`) (cao-) (s'ấng) (s'ư`) (shang`) (xi:âu-) (li:en`)",
+          "nghia": "Sau khi tịnh hoá thân thể của chư vị và đẩy chư vị vượt qua, tôi sẽ cài cho chư vị một bộ hoàn chỉnh một hệ thống tu luyện; chư vị lên ngay trực tiếp tu luyện tại cao tầng."
+        },
+        {
+          "cau_id": "b01p01-d11-005",
+          "hanzi": "但是，只限於給真正來修煉的學員，不是說你坐在這裏，你就是個修煉者。",
+          "pinyin": "dàn shì zhǐ xiàn yú gěi zhēn zhèng lái xiū liàn de xué yuán bú shì shuō nǐ zuò zài zhè lǐ nǐ jiù shì gè xiū liàn zhě",
+          "yueyin": "(tan`) (shi*`) (trỉ*) (xi:en`) (úy) (cẩy) (trân-) (trâng`) (lái) (xi:âu-) (li:en`) (tơ) (xuế) (doán) (pú) (shi*`) (shua-) (nỉ) (zua`) (zai`) (trưa`) (lỉ) (nỉ) (chi:âu`) (shi*`) (cưa`) (xi:âu-) (li:en`) (trửa)",
+          "nghia": "Nhưng [điều này] chỉ giới hạn cho những học viên đến tu luyện chân chính; không thể nói rằng [hễ] chư vị ngồi ở đây, [thì] chư vị là người tu luyện."
+        },
+        {
+          "cau_id": "b01p01-d11-006",
+          "hanzi": "從思想上根本的轉變過來了，我們就可以給的，還不止是這些，以後你們會明白，我都給了大家一些甚麼東西。",
+          "pinyin": "cóng sī xiǎng shàng gēn běn de zhuǎn biàn guò lái le wǒ men jiù kě yǐ gěi de hái bù zhǐ shì zhè xiē yǐ hòu nǐ men huì míng bai wǒ dōu gěi le dà jiā yì xiē shén me dōng xi",
+          "yueyin": "(s'úng) (sư-) (xi:ảng) (shang`) (cân-) (pẩn) (tơ) (troản) (pi:en`) (cua`) (lái) (lơ) (gủa) (mân) (chi:âu`) (khửa) (ỷ) (cẩy) (tơ) (hái) (pu`) (trỉ*) (shi*`) (trưa`) (xi:ê-) (ỷ) (hâu`) (nỉ) (mân) (huây`) (míng) (pai) (gủa) (tâu-) (cẩy) (lơ) (ta`) (chi:a-) (y`) (xi:ê-) (shấn) (mơ) (tung-) (xi)",
+          "nghia": "Khi trong tư tưởng [chư vị] có chuyển biến căn bản, thì chúng tôi có thể cấp [cho chư vị]; không chỉ những thứ ấy; sau này chư vị sẽ hiểu rõ ràng minh bạch rằng tôi đã cấp cho mọi người rốt ráo những gì."
+        },
+        {
+          "cau_id": "b01p01-d11-007",
+          "hanzi": "我們這裏也不講治病，但是我們講整體調整學員的身體，使你能夠煉功。",
+          "pinyin": "wǒ men zhè lǐ yě bù jiǎng zhì bìng dàn shì wǒ men jiǎng zhěng tǐ tiáo zhěng xué yuán de shēn tǐ shǐ nǐ néng gòu liàn gōng",
+          "yueyin": "(gủa) (mân) (trưa`) (lỉ) (yể) (pu`) (chi:ảng) (tri*`) (ping`) (tan`) (shi*`) (gủa) (mân) (chi:ảng) (trẩng) (thỉ) (thi:áo) (trẩng) (xuế) (doán) (tơ) (shân-) (thỉ) (shỉ*) (nỉ) (nấng) (câu`) (li:en`) (cung-)",
+          "nghia": "Tại đây chúng tôi cũng không giảng trị bệnh; nhưng chúng tôi nói điều chỉnh toàn thể thân thể của học viên, sao cho chư vị có thể luyện công."
+        },
+        {
+          "cau_id": "b01p01-d11-008",
+          "hanzi": "你帶著一個有病的身體，你根本就不會出功的，所以大家也不要找我治病，我也不做這件事情。",
+          "pinyin": "nǐ dài zhe yí gè yǒu bìng de shēn tǐ nǐ gēn běn jiù bú huì chū gōng de suǒ yǐ dà jiā yě bú yào zhǎo wǒ zhì bìng wǒ yě bú zuò zhè jiàn shì qing",
+          "yueyin": "(nỉ) (tai`) (trơ) (ý) (cưa`) (yẩu) (ping`) (tơ) (shân-) (thỉ) (nỉ) (cân-) (pẩn) (chi:âu`) (pú) (huây`) (tr'u-) (cung-) (tơ) (sủa) (ỷ) (ta`) (chi:a-) (yể) (pú) (yao`) (trảo) (gủa) (tri*`) (ping`) (gủa) (yể) (pú) (zua`) (trưa`) (chi:en`) (shi*`) (ch'ing)",
+          "nghia": "Chư vị mang cái thân thể có bệnh, thì chư vị hoàn toàn không thể xuất [hiện] công; do đó mọi người cũng không nên tìm tôi để trị bệnh; tôi cũng không làm việc ấy."
+        },
+        {
+          "cau_id": "b01p01-d11-009",
+          "hanzi": "我出山的首要目地，就是往高層次上帶人，真正的往高層次上帶人。",
+          "pinyin": "wǒ chū shān de shǒu yào mù dì jiù shì wǎng gāo céng cì shàng dài rén zhēn zhèng de wǎng gāo céng cì shàng dài rén",
+          "yueyin": "(gủa) (tr'u-) (shan-) (tơ) (shẩu) (yao`) (mu`) (ti`) (chi:âu`) (shi*`) (goảng) (cao-) (s'ấng) (s'ư`) (shang`) (tai`) (rấn) (trân-) (trâng`) (tơ) (goảng) (cao-) (s'ấng) (s'ư`) (shang`) (tai`) (rấn)",
+          "nghia": "Tôi ra công chúng có mục đích chủ yếu là đưa con người lên cao tầng, đưa con người lên cao tầng một cách chân chính."
+        }
+      ]
     }
   ]
 };
