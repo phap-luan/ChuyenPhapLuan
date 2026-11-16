@@ -1,0 +1,32 @@
+/* Exported Rich Text & Table Data */
+(function() {
+  window.RENDER_PAYLOAD = {
+    cau_id: "b01p02-d01-012",
+    editorHtml: "<div style=\"margin-bottom: 12px; line-height: 1.5\">\n        <p>\n          <span style=\"font-size: 10px; font-weight: bold; color: #64748b;\"> Nguyên Văn:</span> [(b01p02-d01-012)]<br>\n          <span id=\"matrixTableWrapper\"><table class=\"matrix-table\"><tbody><tr class=\"row-audio\"><td id=\"m_audio_0\">[(yao4)]</td><td id=\"m_audio_1\">[(cong2)(gen1)(ben3)(shang4)]</td><td id=\"m_audio_2\">[(jie3)(jue2)]</td><td id=\"m_audio_3\">[(zhe4)(xie1)(wen4)(ti2)]</td><td id=\"m_audio_4\"></td><td id=\"m_audio_5\">[(wo3)(men)(jiu4)(bi4)(xu1)]</td><td id=\"m_audio_6\">[(ba3)(da4)(jia1)(dang4)(zuo4)]</td><td id=\"m_audio_7\">[(zhen1)(zheng4)(xiu1)(lian4)(de)(ren2)]</td><td id=\"m_audio_8\">[(cai2)(neng2)]</td><td id=\"m_audio_9\">[(zhe4)(yang4)(zuo4)(de)]</td><td id=\"m_audio_10\"></td></tr><tr class=\"row-yueyin\"><td id=\"m_yueyin_0\">(yao`)</td><td id=\"m_yueyin_1\">(s'úng)(cân- pẩn)(shang`)</td><td id=\"m_yueyin_2\">(chi:ể chuế)</td><td id=\"m_yueyin_3\">(trưa` xi:ê-)(guân` thí)</td><td id=\"m_yueyin_4\"></td><td id=\"m_yueyin_5\">(gủa mân)(chi:âu`)(pi` xuy-)</td><td id=\"m_yueyin_6\">(pả)(ta` chi:a-)(tang` zua`)</td><td id=\"m_yueyin_7\">(trân- trâng`)(xi:âu- li:en`)(tơ)(rấn)</td><td id=\"m_yueyin_8\">(s'ái)(nấng)</td><td id=\"m_yueyin_9\">(trưa` yang`)(zua`)(tơ)</td><td id=\"m_yueyin_10\"></td></tr><tr class=\"row-hanzi\"><td id=\"m_hanzi_0\">要</td><td id=\"m_hanzi_1\">從根本<font color=\"#3b82f6\">上</font></td><td id=\"m_hanzi_2\">解決</td><td id=\"m_hanzi_3\"><font color=\"#3b82f6\">這</font>些問題</td><td id=\"m_hanzi_4\">,</td><td id=\"m_hanzi_5\">我們就必須</td><td id=\"m_hanzi_6\">把大家當作</td><td id=\"m_hanzi_7\">真正修煉<font color=\"#f97316\">的人</font></td><td id=\"m_hanzi_8\">才能</td><td id=\"m_hanzi_9\">這樣做<font color=\"#3b82f6\">的</font></td><td id=\"m_hanzi_10\">。</td></tr><tr class=\"row-pinyin\"><td id=\"m_pinyin_0\">yào</td><td id=\"m_pinyin_1\">cóng gēnběn shàng</td><td id=\"m_pinyin_2\">jiějué</td><td id=\"m_pinyin_3\">zhèxiē wèntí</td><td id=\"m_pinyin_4\"></td><td id=\"m_pinyin_5\">wǒmen jiù bìxū</td><td id=\"m_pinyin_6\">bǎ dàjiā dàngzuò</td><td id=\"m_pinyin_7\">zhēnzhèng xiūliàn de rén</td><td id=\"m_pinyin_8\">cái néng</td><td id=\"m_pinyin_9\">zhèyàng zuò de</td><td id=\"m_pinyin_10\"></td></tr><tr class=\"row-nghia\"><td id=\"m_nghia_0\">muốn</td><td id=\"m_nghia_1\">từ trên căn bản</td><td id=\"m_nghia_2\">giải quyết</td><td id=\"m_nghia_3\">những vấn đề này</td><td id=\"m_nghia_4\"></td><td id=\"m_nghia_5\">chúng tôi sẽ cần phải</td><td id=\"m_nghia_6\">đem mọi người coi như</td><td id=\"m_nghia_7\">người chân chính tu luyện</td><td id=\"m_nghia_8\">mới có thể</td><td id=\"m_nghia_9\">như vậy làm (de)</td><td id=\"m_nghia_10\"></td></tr></tbody></table><br></span><span style=\"color: rgb(100, 116, 139); font-size: 10px; font-weight: bold;\">Tạm Dịch:</span></p><p style=\"margin-top: 0px;\"><font color=\"#000000\" style=\"font-weight: bold;\">muốn từ [</font><font color=\"#3b82f6\" style=\"font-weight: bold;\">trên</font><font color=\"#000000\" style=\"font-weight: bold;\"> căn bản] giải quyết những vấn đề </font><font color=\"#3b82f6\" style=\"font-weight: bold;\">này</font><font color=\"#000000\" style=\"font-weight: bold;\">, chúng tôi sẽ cần phải đem mọi người coi như [</font><font color=\"#f97316\" style=\"font-weight: bold;\">người</font><font color=\"#000000\" style=\"font-weight: bold;\"> chân chính tu luyện] mới có thể như vậy làm </font><font color=\"#3b82f6\" style=\"\"><i style=\"\">(de)</i></font><font color=\"#000000\" style=\"font-weight: bold;\">.</font></p>\n        <p style=\"margin-top: 5px;\">\n          <span style=\"font-size: 10px; font-weight: bold; color: #64748b;\"> Bản dịch trong sách:</span><br>\n          <span style=\"font-size: 16px; font-weight: bold; color: #000000;\">Muốn giải quyết tận gốc những vấn đề đó, chúng tôi cần phải coi mọi người [học viên] như những người tu luyện chân chính thì mới làm vậy được.</span>\n        </p>\n      </div>",
+    tableData: [{"hanzi":"要","audio":"[(yao4)]","pinyin":"yào","yueyin":"(yao`)","nghia":"muốn"},{"hanzi":"從根本上","audio":"[(cong2)(gen1)(ben3)(shang4)]","pinyin":"cóng gēnběn shàng","yueyin":"(s'úng)(cân- pẩn)(shang`)","nghia":"từ trên căn bản"},{"hanzi":"解決","audio":"[(jie3)(jue2)]","pinyin":"jiějué","yueyin":"(chi:ể chuế)","nghia":"giải quyết"},{"hanzi":"這些問題","audio":"[(zhe4)(xie1)(wen4)(ti2)]","pinyin":"zhèxiē wèntí","yueyin":"(trưa` xi:ê-)(guân` thí)","nghia":"những vấn đề này"},{"hanzi":"我們就必須","audio":"[(wo3)(men)(jiu4)(bi4)(xu1)]","pinyin":"wǒmen jiù bìxū","yueyin":"(gủa mân)(chi:âu`)(pi` xuy-)","nghia":"chúng tôi sẽ cần phải"},{"hanzi":"把大家當作","audio":"[(ba3)(da4)(jia1)(dang4)(zuo4)]","pinyin":"bǎ dàjiā dàngzuò","yueyin":"(pả)(ta` chi:a-)(tang` zua`)","nghia":"đem mọi người coi như"},{"hanzi":"真正修煉的人","audio":"[(zhen1)(zheng4)(xiu1)(lian4)(de)(ren2)]","pinyin":"zhēnzhèng xiūliàn de rén","yueyin":"(trân- trâng`)(xi:âu- li:en`)(tơ)(rấn)","nghia":"người chân chính tu luyện"},{"hanzi":"才能","audio":"[(cai2)(neng2)]","pinyin":"cái néng","yueyin":"(s'ái)(nấng)","nghia":"mới có thể"},{"hanzi":"這樣做的","audio":"[(zhe4)(yang4)(zuo4)(de)]","pinyin":"zhèyàng zuò de","yueyin":"(trưa` yang`)(zua`)(tơ)","nghia":"như vậy làm (de)"}]
+  };
+
+  window.renderContent = function(targetEditorId, targetTableId) {
+    if (targetEditorId) {
+      var editorEl = document.getElementById(targetEditorId);
+      if (editorEl) editorEl.innerHTML = window.RENDER_PAYLOAD.editorHtml;
+    }
+    
+    if (targetTableId) {
+      var tableEl = document.getElementById(targetTableId);
+      if (tableEl) {
+        var html = '<table border="1" style="border-collapse: collapse; width: 100%;">';
+        html += '<thead><tr><th>Hanzi</th><th>Audio</th><th>Pinyin</th><th>Yueyin</th><th>Nghĩa</th></tr></thead><tbody>';
+        window.RENDER_PAYLOAD.tableData.forEach(function(item) {
+          html += '<tr><td>' + item.hanzi + '</td><td>' + item.audio + '</td><td>' + item.pinyin + '</td><td>' + item.yueyin + '</td><td>' + item.nghia + '</td></tr>';
+        });
+        html += '</tbody></table>';
+        tableEl.innerHTML = html;
+      }
+    }
+  };
+
+  document.addEventListener("DOMContentLoaded", function() {
+    window.renderContent("rendered-editor", "rendered-table");
+  });
+})();

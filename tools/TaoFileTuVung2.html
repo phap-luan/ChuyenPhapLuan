@@ -414,7 +414,10 @@
   <div class="table-section">
     <div class="table-header-panel">
       <h3 style="font-size: 1rem; color: #334155;">📋 Bảng Chi Tiết (Dán được từ Excel/Sheets)</h3>
-      <button class="btn" onclick="addRow()">➕ Thêm hàng</button>
+      <div style="display: flex; gap: 8px;">
+        <button class="btn" id="copyBtn" onclick="copyNghiaRow()">📋 Copy</button>
+        <button class="btn" onclick="addRow()">➕ Thêm hàng</button>
+      </div>
     </div>
     
     <table class="data-table" id="dataTable">
@@ -781,6 +784,51 @@
       <td style="text-align: center;"><button class="btn btn-danger" onclick="deleteRow(this)">❌</button></td>
     `;
     tbody.appendChild(tr);
+  }
+
+  // Copy toàn bộ hàng 5 (Nghĩa) của bảng ma trận, các cột cách nhau 1 dấu cách
+  function copyNghiaRow() {
+    const tables = document.querySelectorAll('#editor .matrix-table');
+    const lines = [];
+
+    tables.forEach(table => {
+      const row = table.querySelector('tr:nth-child(5)');
+      if (!row) return;
+      const cells = Array.from(row.querySelectorAll('td'))
+        .map(td => td.innerText.trim())
+        .filter(t => t !== '');
+      if (cells.length) lines.push(cells.join(' '));
+    });
+
+    const text = lines.join('\n');
+    const btn = document.getElementById('copyBtn');
+
+    const done = (ok) => {
+      const old = '📋 Copy';
+      btn.textContent = ok ? '✓ Đã copy' : '⚠ Không có dữ liệu';
+      setTimeout(() => { btn.textContent = old; }, 1500);
+    };
+
+    if (!text) { done(false); return; }
+
+    if (navigator.clipboard && window.isSecureContext) {
+      navigator.clipboard.writeText(text).then(() => done(true)).catch(() => fallbackCopy(text, done));
+    } else {
+      fallbackCopy(text, done);
+    }
+  }
+
+  function fallbackCopy(text, done) {
+    const ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    let ok = false;
+    try { ok = document.execCommand('copy'); } catch (e) {}
+    document.body.removeChild(ta);
+    done(ok);
   }
 
   function deleteRow(btn) {

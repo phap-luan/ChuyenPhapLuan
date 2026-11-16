@@ -1,0 +1,32 @@
+/* Exported Rich Text & Table Data */
+(function() {
+  window.RENDER_PAYLOAD = {
+    cau_id: "b01p02-d01-002",
+    editorHtml: "<div style=\"margin-bottom: 12px; line-height: 1.5\">\n        <p>\n          <span style=\"font-size: 10px; font-weight: bold; color: #64748b;\"> Nguyên Văn:</span> [(b01p02-d01-002)]<br>\n          <span id=\"matrixTableWrapper\"></span></p><table class=\"matrix-table\"><tbody><tr class=\"row-audio\"><td id=\"m_audio_0\">[(na4)(dou1)(shi4)(qi4)]</td><td id=\"m_audio_1\"></td><td id=\"m_audio_2\">[(dou1)(shi4)]</td><td id=\"m_audio_3\">[(lian4)(qi4)]</td><td id=\"m_audio_4\">[(na4)(yi4)(ceng2)(ci4)(zhong1)]</td><td id=\"m_audio_5\">[(de)(dong1)(xi)]</td><td id=\"m_audio_6\"></td><td id=\"m_audio_7\">[(hai2)(fen1)(cheng2)]</td><td id=\"m_audio_8\">[(chu1)(ji2)]</td><td id=\"m_audio_9\"></td><td id=\"m_audio_10\">[(zhong1)(ji2)]</td><td id=\"m_audio_11\"></td><td id=\"m_audio_12\">[(gao1)(ji2)(de)]</td><td id=\"m_audio_13\"></td></tr><tr class=\"row-yueyin\"><td id=\"m_yueyin_0\">(na`)(tâu-)(shi*`)(ch'i`)</td><td id=\"m_yueyin_1\"></td><td id=\"m_yueyin_2\">(tâu-)(shi*`)</td><td id=\"m_yueyin_3\">(li:en`)(ch'i`)</td><td id=\"m_yueyin_4\">(na`)(y`)(s'ấng s'ư`)(trung-)</td><td id=\"m_yueyin_5\">(tơ)(tung- xi)</td><td id=\"m_yueyin_6\"></td><td id=\"m_yueyin_7\">(hái)(fân- tr'ấng)</td><td id=\"m_yueyin_8\">(tr'u- chí)</td><td id=\"m_yueyin_9\"></td><td id=\"m_yueyin_10\">(trung- chí)</td><td id=\"m_yueyin_11\"></td><td id=\"m_yueyin_12\">(cao- chí)(tơ)</td><td id=\"m_yueyin_13\"></td></tr><tr class=\"row-hanzi\"><td id=\"m_hanzi_0\">那都是氣</td><td id=\"m_hanzi_1\">,</td><td id=\"m_hanzi_2\">都是</td><td id=\"m_hanzi_3\">練氣</td><td id=\"m_hanzi_4\"><font color=\"#a855f7\">那</font>一層次<font color=\"#3b82f6\">中</font></td><td id=\"m_hanzi_5\"><font color=\"#f97316\">的</font>東西</td><td id=\"m_hanzi_6\">,</td><td id=\"m_hanzi_7\">還分成</td><td id=\"m_hanzi_8\">初級</td><td id=\"m_hanzi_9\">,</td><td id=\"m_hanzi_10\">中級</td><td id=\"m_hanzi_11\">,</td><td id=\"m_hanzi_12\">高級<font color=\"#3b82f6\">的</font></td><td id=\"m_hanzi_13\">。</td></tr><tr class=\"row-pinyin\"><td id=\"m_pinyin_0\">nà dōu shì qì</td><td id=\"m_pinyin_1\"></td><td id=\"m_pinyin_2\">dōu shì</td><td id=\"m_pinyin_3\">liàn qì</td><td id=\"m_pinyin_4\">nà yì céngcì zhōng</td><td id=\"m_pinyin_5\">de dōngxi</td><td id=\"m_pinyin_6\"></td><td id=\"m_pinyin_7\">hái fēnchéng</td><td id=\"m_pinyin_8\">chūjí</td><td id=\"m_pinyin_9\"></td><td id=\"m_pinyin_10\">zhōngjí</td><td id=\"m_pinyin_11\"></td><td id=\"m_pinyin_12\">gāojí de</td><td id=\"m_pinyin_13\"></td></tr><tr class=\"row-nghia\"><td id=\"m_nghia_0\">đó đều là khí</td><td id=\"m_nghia_1\"></td><td id=\"m_nghia_2\">đều là</td><td id=\"m_nghia_3\">luyện khí</td><td id=\"m_nghia_4\">trong một tầng thứ đó</td><td id=\"m_nghia_5\">về các thứ</td><td id=\"m_nghia_6\"></td><td id=\"m_nghia_7\">còn phân thành</td><td id=\"m_nghia_8\">sơ cấp</td><td id=\"m_nghia_9\"></td><td id=\"m_nghia_10\">trung cấp</td><td id=\"m_nghia_11\"></td><td id=\"m_nghia_12\">cao cấp (de)</td><td id=\"m_nghia_13\"></td></tr></tbody></table><br><span style=\"color: rgb(100, 116, 139); font-size: 10px; font-weight: bold;\">Tạm Dịch:</span><p></p><p style=\"margin-top: 0px;\"><b style=\"color: rgb(0, 0, 0);\">đó đều là khí, đều là luyện khí </b><b style=\"\"><font color=\"#3b82f6\">trong</font></b><b style=\"color: rgb(0, 0, 0);\"> một tầng thứ </b><b style=\"\"><font color=\"#a855f7\">đó</font></b><b style=\"color: rgb(0, 0, 0);\">&nbsp;</b><b style=\"\"><font color=\"#f97316\">về</font></b><b style=\"color: rgb(0, 0, 0);\"> các thứ, còn phân thành sơ cấp, trung cấp, cao cấp </b><i style=\"\"><font color=\"#3b82f6\">(de)</font></i><span style=\"color: rgb(0, 0, 0); font-weight: 700;\">.</span></p>\n        <p style=\"margin-top: 5px;\">\n          <span style=\"font-size: 10px; font-weight: bold; color: #64748b;\"> Bản dịch trong sách:</span><br>\n          <span style=\"font-size: 16px; font-weight: bold; color: #000000;\">Cái đó toàn là khí, đều là những thứ tại cùng một tầng luyện khí, mà cũng phân thành sơ cấp, trung cấp, cao cấp.</span>\n        </p>\n      </div>",
+    tableData: [{"hanzi":"那都是氣","audio":"[(na4)(dou1)(shi4)(qi4)]","pinyin":"nà dōu shì qì","yueyin":"(na`)(tâu-)(shi*`)(ch'i`)","nghia":"đó đều là khí"},{"hanzi":"都是","audio":"[(dou1)(shi4)]","pinyin":"dōu shì","yueyin":"(tâu-)(shi*`)","nghia":"đều là"},{"hanzi":"練氣","audio":"[(lian4)(qi4)]","pinyin":"liàn qì","yueyin":"(li:en`)(ch'i`)","nghia":"luyện khí"},{"hanzi":"那一層次中","audio":"[(na4)(yi4)(ceng2)(ci4)(zhong1)]","pinyin":"nà yì céngcì zhōng","yueyin":"(na`)(y`)(s'ấng s'ư`)(trung-)","nghia":"trong một tầng thứ đó"},{"hanzi":"的東西","audio":"[(de)(dong1)(xi)]","pinyin":"de dōngxi","yueyin":"(tơ)(tung- xi)","nghia":"về các thứ"},{"hanzi":"還分成","audio":"[(hai2)(fen1)(cheng2)]","pinyin":"hái fēnchéng","yueyin":"(hái)(fân- tr'ấng)","nghia":"còn phân thành"},{"hanzi":"初級","audio":"[(chu1)(ji2)]","pinyin":"chūjí","yueyin":"(tr'u- chí)","nghia":"sơ cấp"},{"hanzi":"中級","audio":"[(zhong1)(ji2)]","pinyin":"zhōngjí","yueyin":"(trung- chí)","nghia":"trung cấp"},{"hanzi":"高級的","audio":"[(gao1)(ji2)(de)]","pinyin":"gāojí de","yueyin":"(cao- chí)(tơ)","nghia":"cao cấp (de)"}]
+  };
+
+  window.renderContent = function(targetEditorId, targetTableId) {
+    if (targetEditorId) {
+      var editorEl = document.getElementById(targetEditorId);
+      if (editorEl) editorEl.innerHTML = window.RENDER_PAYLOAD.editorHtml;
+    }
+    
+    if (targetTableId) {
+      var tableEl = document.getElementById(targetTableId);
+      if (tableEl) {
+        var html = '<table border="1" style="border-collapse: collapse; width: 100%;">';
+        html += '<thead><tr><th>Hanzi</th><th>Audio</th><th>Pinyin</th><th>Yueyin</th><th>Nghĩa</th></tr></thead><tbody>';
+        window.RENDER_PAYLOAD.tableData.forEach(function(item) {
+          html += '<tr><td>' + item.hanzi + '</td><td>' + item.audio + '</td><td>' + item.pinyin + '</td><td>' + item.yueyin + '</td><td>' + item.nghia + '</td></tr>';
+        });
+        html += '</tbody></table>';
+        tableEl.innerHTML = html;
+      }
+    }
+  };
+
+  document.addEventListener("DOMContentLoaded", function() {
+    window.renderContent("rendered-editor", "rendered-table");
+  });
+})();

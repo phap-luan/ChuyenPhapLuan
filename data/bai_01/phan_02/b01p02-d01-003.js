@@ -1,0 +1,32 @@
+/* Exported Rich Text & Table Data */
+(function() {
+  window.RENDER_PAYLOAD = {
+    cau_id: "b01p02-d01-003",
+    editorHtml: "<div style=\"margin-bottom: 12px; line-height: 1.5\">\n        <p>\n          <span style=\"font-size: 10px; font-weight: bold; color: #64748b;\"> Nguyên Văn:</span> [(b01p02-d01-003)]<br>\n          <span id=\"matrixTableWrapper\"><table class=\"matrix-table\"><tbody><tr class=\"row-audio\"><td id=\"m_audio_0\">[(zhen1)(zheng4)]</td><td id=\"m_audio_1\">[(gao1)(ceng2)(ci4)(shang4)(de)(dong1)(xi)]</td><td id=\"m_audio_2\"></td><td id=\"m_audio_3\">[(zai4)(wo3)(men)]</td><td id=\"m_audio_4\">[(guang3)(da4)]</td><td id=\"m_audio_5\">[(qi4)(gong1)(xiu1)(lian4)(zhe3)]</td><td id=\"m_audio_6\">[(de)(tou2)(nao3)(li3)]</td><td id=\"m_audio_7\">[(shi4)(yi2)(pian4)(kong1)(bai2)]</td><td id=\"m_audio_8\"></td><td id=\"m_audio_9\">[(gen1)(ben3)(jiu4)]</td><td id=\"m_audio_10\">[(bu4)(zhi1)(dao4)]</td><td id=\"m_audio_11\"></td></tr><tr class=\"row-yueyin\"><td id=\"m_yueyin_0\">(trân- trâng`)</td><td id=\"m_yueyin_1\">(cao-)(s'ấng s'ư`)(shang`)(tơ)(tung- xi)</td><td id=\"m_yueyin_2\"></td><td id=\"m_yueyin_3\">(zai`)(gủa mân)</td><td id=\"m_yueyin_4\">(coảng ta`)</td><td id=\"m_yueyin_5\">(ch'i` cung-)(xi:âu- li:en` trửa)</td><td id=\"m_yueyin_6\">(tơ)(thấu nảo)(lỉ)</td><td id=\"m_yueyin_7\">(shi*`)(ý)(p'i:en`)(khung- pái)</td><td id=\"m_yueyin_8\"></td><td id=\"m_yueyin_9\">(cân- pẩn)(chi:âu`)</td><td id=\"m_yueyin_10\">(pu`)(tri*- tao`)</td><td id=\"m_yueyin_11\"></td></tr><tr class=\"row-hanzi\"><td id=\"m_hanzi_0\">真正</td><td id=\"m_hanzi_1\">高層次<font color=\"#3b82f6\">上</font><font color=\"#f97316\">的</font>東西</td><td id=\"m_hanzi_2\">,</td><td id=\"m_hanzi_3\">在我們</td><td id=\"m_hanzi_4\">廣大</td><td id=\"m_hanzi_5\">氣功修煉者</td><td id=\"m_hanzi_6\">的頭腦<font color=\"#3b82f6\">裏</font></td><td id=\"m_hanzi_7\">是一片空白</td><td id=\"m_hanzi_8\">,</td><td id=\"m_hanzi_9\">根本就</td><td id=\"m_hanzi_10\">不知道</td><td id=\"m_hanzi_11\">。</td></tr><tr class=\"row-pinyin\"><td id=\"m_pinyin_0\">zhēnzhèng</td><td id=\"m_pinyin_1\">gāo céngcì shàng de dōngxi</td><td id=\"m_pinyin_2\"></td><td id=\"m_pinyin_3\">zài wǒmen</td><td id=\"m_pinyin_4\">guǎngdà</td><td id=\"m_pinyin_5\">qìgōng xiūliànzhě</td><td id=\"m_pinyin_6\">de tóunǎo lǐ</td><td id=\"m_pinyin_7\">shì yí piàn kōngbái</td><td id=\"m_pinyin_8\"></td><td id=\"m_pinyin_9\">gēnběn jiù</td><td id=\"m_pinyin_10\">bù zhīdào</td><td id=\"m_pinyin_11\"></td></tr><tr class=\"row-nghia\"><td id=\"m_nghia_0\">chân chính</td><td id=\"m_nghia_1\">trên cao tầng thứ về mọi thứ</td><td id=\"m_nghia_2\"></td><td id=\"m_nghia_3\">ở chúng ta</td><td id=\"m_nghia_4\">quảng đại</td><td id=\"m_nghia_5\">khí công tu luyện giả</td><td id=\"m_nghia_6\">về bên trong đầu não</td><td id=\"m_nghia_7\">là một khoảng trống rỗng</td><td id=\"m_nghia_8\"></td><td id=\"m_nghia_9\">căn bản là</td><td id=\"m_nghia_10\">không biết</td><td id=\"m_nghia_11\"></td></tr></tbody></table><br></span><span style=\"color: rgb(100, 116, 139); font-size: 10px; font-weight: bold;\">Tạm Dịch:</span></p><p style=\"margin-top: 0px;\"><b style=\"\"><font color=\"#000000\">chân chính </font><font color=\"#3b82f6\">trên</font><font color=\"#000000\">&nbsp;cao tầng thứ&nbsp;</font><font color=\"#f97316\">về</font><font color=\"#000000\"> mọi thứ, ở chúng ta quảng đại khí công tu luyện giả </font><font color=\"#f97316\">về</font><font color=\"#000000\">&nbsp;</font><font color=\"#3b82f6\">bên&nbsp;trong</font><font color=\"#000000\"> đầu não là một khoảng trống rỗng, căn bản là không biết.</font></b></p>\n        <p style=\"margin-top: 5px;\">\n          <span style=\"font-size: 10px; font-weight: bold; color: #64748b;\"> Bản dịch trong sách:</span><br>\n          <span style=\"font-size: 16px; font-weight: bold; color: #000000;\">Về những gì thực sự tại cao tầng, hầu hết những người tu luyện khí công chúng ta không có gì trong đầu hết, [họ] hoàn toàn chẳng biết gì.</span>\n        </p>\n      </div>",
+    tableData: [{"hanzi":"真正","audio":"[(zhen1)(zheng4)]","pinyin":"zhēnzhèng","yueyin":"(trân- trâng`)","nghia":"chân chính"},{"hanzi":"高層次上的東西","audio":"[(gao1)(ceng2)(ci4)(shang4)(de)(dong1)(xi)]","pinyin":"gāo céngcì shàng de dōngxi","yueyin":"(cao-)(s'ấng s'ư`)(shang`)(tơ)(tung- xi)","nghia":"trên cao tầng thứ về mọi thứ"},{"hanzi":"在我們","audio":"[(zai4)(wo3)(men)]","pinyin":"zài wǒmen","yueyin":"(zai`)(gủa mân)","nghia":"ở chúng ta"},{"hanzi":"廣大","audio":"[(guang3)(da4)]","pinyin":"guǎngdà","yueyin":"(coảng ta`)","nghia":"quảng đại, đông đảo"},{"hanzi":"氣功修煉者","audio":"[(qi4)(gong1)(xiu1)(lian4)(zhe3)]","pinyin":"qìgōng xiūliànzhě","yueyin":"(ch'i` cung-)(xi:âu- li:en` trửa)","nghia":"khí công tu luyện giả"},{"hanzi":"的頭腦裏","audio":"[(de)(tou2)(nao3)(li3)]","pinyin":"de tóunǎo lǐ","yueyin":"(tơ)(thấu nảo)(lỉ)","nghia":"về bên trong đầu não"},{"hanzi":"是一片空白","audio":"[(shi4)(yi2)(pian4)(kong1)(bai2)]","pinyin":"shì yí piàn kōngbái","yueyin":"(shi*`)(ý)(p'i:en`)(khung- pái)","nghia":"là một khoảng trống rỗng"},{"hanzi":"根本就","audio":"[(gen1)(ben3)(jiu4)]","pinyin":"gēnběn jiù","yueyin":"(cân- pẩn)(chi:âu`)","nghia":"căn bản là"},{"hanzi":"不知道","audio":"[(bu4)(zhi1)(dao4)]","pinyin":"bù zhīdào","yueyin":"(pu`)(tri*- tao`)","nghia":"không biết"}]
+  };
+
+  window.renderContent = function(targetEditorId, targetTableId) {
+    if (targetEditorId) {
+      var editorEl = document.getElementById(targetEditorId);
+      if (editorEl) editorEl.innerHTML = window.RENDER_PAYLOAD.editorHtml;
+    }
+    
+    if (targetTableId) {
+      var tableEl = document.getElementById(targetTableId);
+      if (tableEl) {
+        var html = '<table border="1" style="border-collapse: collapse; width: 100%;">';
+        html += '<thead><tr><th>Hanzi</th><th>Audio</th><th>Pinyin</th><th>Yueyin</th><th>Nghĩa</th></tr></thead><tbody>';
+        window.RENDER_PAYLOAD.tableData.forEach(function(item) {
+          html += '<tr><td>' + item.hanzi + '</td><td>' + item.audio + '</td><td>' + item.pinyin + '</td><td>' + item.yueyin + '</td><td>' + item.nghia + '</td></tr>';
+        });
+        html += '</tbody></table>';
+        tableEl.innerHTML = html;
+      }
+    }
+  };
+
+  document.addEventListener("DOMContentLoaded", function() {
+    window.renderContent("rendered-editor", "rendered-table");
+  });
+})();
