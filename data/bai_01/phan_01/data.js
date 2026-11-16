@@ -1026,7 +1026,7 @@ window.CURRENT_PHAN_DATA = {
       "content": [
         {
           "cau_id": "b01p01-d11-001",
-          "hanzi": "我們講緣份，大家坐在這裏，我可以給大家做這件事情。",
+          "hanzi": "  我們講緣份，大家坐在這裏，我可以給大家做這件事情。",
           "pinyin": "wǒ men jiǎng yuán fèn dà jiā zuò zài zhè lǐ wǒ kě yǐ gěi dà jiā zuò zhè jiàn shì qing",
           "yueyin": "(gủa) (mân) (chi:ảng) (doán) (fân`) (ta`) (chi:a-) (zua`) (zai`) (trưa`) (lỉ) (gủa) (khửa) (ỷ) (cẩy) (ta`) (chi:a-) (zua`) (trưa`) (chi:en`) (shi*`) (ch'ing)",
           "nghia": "Chúng tôi giảng duyên phận; với mọi người ngồi đây, tôi có thể làm cho mọi người những sự việc này."

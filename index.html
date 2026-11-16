@@ -941,9 +941,9 @@
             const t1 = meta.tieude1 || '';
             const t2 = meta.tieude2 || '';
 
-            let maxColsPage1 = 13;
-            if (t1 && t2) maxColsPage1 = 9;
-            else if (t1) maxColsPage1 = 11;
+            // Mỗi cột tiêu đề chiếm chỗ của ~2 cột thường (đếm theo số tiêu đề thực có)
+            const titleCount = (t1 ? 1 : 0) + (t2 ? 1 : 0);
+            let maxColsPage1 = 13 - titleCount * 2;
 
             let maxColsCurrentPage = maxColsPage1;
 
@@ -1227,9 +1227,10 @@
             const t2_id = meta.tieude2_id || '';
 
             if (pageIdx === 0) {
-                if (t1 && t2) {
+                const titleCount = (t1 ? 1 : 0) + (t2 ? 1 : 0);
+                if (titleCount === 2) {
                     pageGrid.className = "page-grid grid-title-2";
-                } else if (t1) {
+                } else if (titleCount === 1) {
                     pageGrid.className = "page-grid grid-title-1";
                 } else {
                     pageGrid.className = "page-grid grid-normal";
