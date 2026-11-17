@@ -1,0 +1,32 @@
+/* Exported Rich Text & Table Data */
+(function() {
+  window.RENDER_PAYLOAD = {
+    cau_id: "b01p02-d02-006",
+    editorHtml: "<div style=\"margin-bottom: 12px; line-height: 1.5\">\n        <p>\n          <span style=\"font-size: 10px; font-weight: bold; color: #64748b;\"> Nguyên Văn:</span> [(b01p02-d02-006)]<br>\n          <span id=\"matrixTableWrapper\"><table class=\"matrix-table\"><tbody><tr class=\"row-audio\"><td id=\"m_audio_0\">[(ta1)(ren4)(wei2)]</td><td id=\"m_audio_1\">[(zhe4)(xie1)(jiu4)(shi4)]</td><td id=\"m_audio_2\">[(qi4)(gong1)(de)(zhen1)(di4)]</td><td id=\"m_audio_3\">[(he2)(quan2)(bu4)(le)]</td><td id=\"m_audio_4\"></td><td id=\"m_audio_5\">[(bu2)(shi4)]</td><td id=\"m_audio_6\"></td><td id=\"m_audio_7\">[(ta1)(zhi3)(shi4)]</td><td id=\"m_audio_8\">[(qi4)(gong1)(de)(pi2)(mao2)]</td><td id=\"m_audio_9\"></td><td id=\"m_audio_10\">[(zui4)(di1)(ceng2)(ci4)(shang4)(de)(dong1)(xi)]</td><td id=\"m_audio_11\"></td></tr><tr class=\"row-yueyin\"><td id=\"m_yueyin_0\">(tha-)(rân` guấy)</td><td id=\"m_yueyin_1\">(trưa` xi:ê-)(chi:âu`)(shi*`)</td><td id=\"m_yueyin_2\">(ch'i` cung-)(tơ)(trân- ti`)</td><td id=\"m_yueyin_3\">(hứa)(ch'oán pu`)(lơ)</td><td id=\"m_yueyin_4\"></td><td id=\"m_yueyin_5\">(pú)(shi*`)</td><td id=\"m_yueyin_6\"></td><td id=\"m_yueyin_7\">(tha-)(trỉ* shi*`)</td><td id=\"m_yueyin_8\">(ch'i` cung-)(tơ)(p'í máo)</td><td id=\"m_yueyin_9\"></td><td id=\"m_yueyin_10\">(zuây`)(ti-)(s'ấng s'ư`)(shang`)(tơ)(tung- xi)</td><td id=\"m_yueyin_11\"></td></tr><tr class=\"row-hanzi\"><td id=\"m_hanzi_0\">他認為</td><td id=\"m_hanzi_1\"><font color=\"#f97316\">這些</font>就是</td><td id=\"m_hanzi_2\">氣功<font color=\"#3b82f6\">的</font>真諦</td><td id=\"m_hanzi_3\">和全部了</td><td id=\"m_hanzi_4\">,</td><td id=\"m_hanzi_5\">不是</td><td id=\"m_hanzi_6\">,</td><td id=\"m_hanzi_7\">它只是</td><td id=\"m_hanzi_8\">氣功<font color=\"#3b82f6\">的</font>皮毛</td><td id=\"m_hanzi_9\">,</td><td id=\"m_hanzi_10\"><font color=\"#a855f7\">最</font>低層次<font color=\"#f97316\">上</font><font color=\"#3b82f6\">的</font>東西</td><td id=\"m_hanzi_11\">。</td></tr><tr class=\"row-pinyin\"><td id=\"m_pinyin_0\">tā rènwéi</td><td id=\"m_pinyin_1\">zhèxiē jiù shì</td><td id=\"m_pinyin_2\">qìgōng de zhēndì</td><td id=\"m_pinyin_3\">hé quánbù le</td><td id=\"m_pinyin_4\"></td><td id=\"m_pinyin_5\">bú shì</td><td id=\"m_pinyin_6\"></td><td id=\"m_pinyin_7\">tā zhǐshì</td><td id=\"m_pinyin_8\">qìgōng de pímáo</td><td id=\"m_pinyin_9\"></td><td id=\"m_pinyin_10\">zuì dī céngcì shàng de dōngxi</td><td id=\"m_pinyin_11\"></td></tr><tr class=\"row-nghia\"><td id=\"m_nghia_0\">anh ta cho rằng</td><td id=\"m_nghia_1\">những thứ này chính là</td><td id=\"m_nghia_2\">khí công về chân đế</td><td id=\"m_nghia_3\">và toàn bộ rồi</td><td id=\"m_nghia_4\"></td><td id=\"m_nghia_5\">không phải</td><td id=\"m_nghia_6\"></td><td id=\"m_nghia_7\">nó chỉ là</td><td id=\"m_nghia_8\">khí công về da lông</td><td id=\"m_nghia_9\"></td><td id=\"m_nghia_10\">trên tầng thứ thấp nhất về các thứ</td><td id=\"m_nghia_11\"></td></tr></tbody></table><br></span><span style=\"color: rgb(100, 116, 139); font-size: 10px; font-weight: bold;\">Tạm Dịch:</span></p><p style=\"margin-top: 0px;\"><b style=\"\"><font color=\"#000000\">anh ta cho rằng </font><font color=\"#f97316\">những thứ này</font><font color=\"#000000\"> chính là khí công </font><font color=\"#3b82f6\">về</font><font color=\"#000000\"> chân đế và toàn bộ rồi, không phải, nó chỉ là khí công </font><font color=\"#3b82f6\">về</font><font color=\"#000000\"> da lông, </font><font color=\"#f97316\">trên</font><font color=\"#000000\"> tầng thứ thấp </font><font color=\"#a855f7\">nhất</font><font color=\"#000000\"> </font><font color=\"#3b82f6\">về</font><font color=\"#000000\"> các thứ.</font></b></p>\n        <p style=\"margin-top: 5px;\">\n          <span style=\"font-size: 10px; font-weight: bold; color: #64748b;\"> Bản dịch trong sách:</span><br>\n          <span style=\"font-size: 16px; font-weight: bold; color: #000000;\">Họ cho rằng những thứ đó chính là nghĩa lý chân chính và toàn bộ khí công; không phải thế, đó chỉ là phần vỏ nông cạn của khí công, [là] những thứ tại tầng thấp nhất.</span>\n        </p>\n      </div>",
+    tableData: [{"hanzi":"他認為","audio":"[(ta1)(ren4)(wei2)]","pinyin":"tā rènwéi","yueyin":"(tha-)(rân` guấy)","nghia":"anh ta cho rằng"},{"hanzi":"這些就是","audio":"[(zhe4)(xie1)(jiu4)(shi4)]","pinyin":"zhèxiē jiù shì","yueyin":"(trưa` xi:ê-)(chi:âu`)(shi*`)","nghia":"những thứ này chính là"},{"hanzi":"氣功的真諦","audio":"[(qi4)(gong1)(de)(zhen1)(di4)]","pinyin":"qìgōng de zhēndì","yueyin":"(ch'i` cung-)(tơ)(trân- ti`)","nghia":"khí công về chân đế (=chân lý)"},{"hanzi":"和全部了","audio":"[(he2)(quan2)(bu4)(le)]","pinyin":"hé quánbù le","yueyin":"(hứa)(ch'oán pu`)(lơ)","nghia":"và toàn bộ rồi"},{"hanzi":"不是","audio":"[(bu2)(shi4)]","pinyin":"bú shì","yueyin":"(pú)(shi*`)","nghia":"không phải"},{"hanzi":"它只是","audio":"[(ta1)(zhi3)(shi4)]","pinyin":"tā zhǐshì","yueyin":"(tha-)(trỉ* shi*`)","nghia":"nó chỉ là"},{"hanzi":"氣功的皮毛","audio":"[(qi4)(gong1)(de)(pi2)(mao2)]","pinyin":"qìgōng de pímáo","yueyin":"(ch'i` cung-)(tơ)(p'í máo)","nghia":"khí công về da lông"},{"hanzi":"最低層次上的東西","audio":"[(zui4)(di1)(ceng2)(ci4)(shang4)(de)(dong1)(xi)]","pinyin":"zuì dī céngcì shàng de dōngxi","yueyin":"(zuây`)(ti-)(s'ấng s'ư`)(shang`)(tơ)(tung- xi)","nghia":"trên tầng thứ thấp nhất về các thứ"}]
+  };
+
+  window.renderContent = function(targetEditorId, targetTableId) {
+    if (targetEditorId) {
+      var editorEl = document.getElementById(targetEditorId);
+      if (editorEl) editorEl.innerHTML = window.RENDER_PAYLOAD.editorHtml;
+    }
+    
+    if (targetTableId) {
+      var tableEl = document.getElementById(targetTableId);
+      if (tableEl) {
+        var html = '<table border="1" style="border-collapse: collapse; width: 100%;">';
+        html += '<thead><tr><th>Hanzi</th><th>Audio</th><th>Pinyin</th><th>Yueyin</th><th>Nghĩa</th></tr></thead><tbody>';
+        window.RENDER_PAYLOAD.tableData.forEach(function(item) {
+          html += '<tr><td>' + item.hanzi + '</td><td>' + item.audio + '</td><td>' + item.pinyin + '</td><td>' + item.yueyin + '</td><td>' + item.nghia + '</td></tr>';
+        });
+        html += '</tbody></table>';
+        tableEl.innerHTML = html;
+      }
+    }
+  };
+
+  document.addEventListener("DOMContentLoaded", function() {
+    window.renderContent("rendered-editor", "rendered-table");
+  });
+})();
