@@ -210,6 +210,214 @@ window.CURRENT_PHAN_DATA = {
           "nghia": "Chư vị học càng lắm khí công tại tầng thấp, nhận càng nhiều những thứ ấy, thì trái lại lại càng có hại, [vì] thân của chư vị đã bị loạn mất rồi."
         }
       ]
+    },
+    {
+      "doan_so": 3,
+      "content": [
+        {
+          "cau_id": "b01p02-d03-001",
+          "hanzi": "  我還要強調一個問題，我們修煉，是要傳功講法的。",
+          "pinyin": "wǒ hái yào qiáng diào yí gè wèn tí wǒ men xiū liàn shì yào chuán gōng jiǎng fǎ de",
+          "yueyin": "(gủa) (hái) (yao`) (ch'i:áng) (ti:ao`) (ý) (cưa`) (guân`) (thí) (gủa) (mân) (xi:âu-) (li:en`) (shi*`) (yao`) (tr'oán) (cung-) (chi:ảng) (fả) (tơ)",
+          "nghia": "Tôi cũng cần phải nhấn mạnh một vấn đề, tu luyện chúng ta cần phải có truyền công [và] giảng Pháp."
+        },
+        {
+          "cau_id": "b01p02-d03-002",
+          "hanzi": "有些寺院中的和尚，特別是禪宗的，可能有些想法。",
+          "pinyin": "yǒu xiē sì yuàn zhōng de hé shang tè bié shì chán zōng de kě néng yǒu xiē xiǎng fǎ",
+          "yueyin": "(yẩu) (xi:ê-) (sư`) (doan`) (trung-) (tơ) (hứa) (shang) (thưa`) (pi:ế) (shi*`) (tr'án) (zung-) (tơ) (khửa) (nấng) (yẩu) (xi:ê-) (xi:ảng) (fả)",
+          "nghia": "Một số hoà thượng ở chùa, đặc biệt là [hoà thượng] Thiền tông có thể có cách nghĩ khác."
+        },
+        {
+          "cau_id": "b01p02-d03-003",
+          "hanzi": "一聽說講法，他就不愛聽了。為甚麼呢？",
+          "pinyin": "yì tīng shuō jiǎng fǎ tā jiù bú ài tīng lewèi shén me ne",
+          "yueyin": "(y`) (thing-) (shua-) (chi:ảng) (fả) (tha-) (chi:âu`) (pú) (ai`) (thing-) (lơ guây`) (shấn) (mơ) (nưa)",
+          "nghia": "Hễ nghe đến giảng Pháp, họ liền không thích nghe. Tại sao?"
+        },
+        {
+          "cau_id": "b01p02-d03-004",
+          "hanzi": "禪宗認為：這個法不能講，法一講出來，就不是法了，沒有法可講，只能是心領神會，",
+          "pinyin": "chán zōng rèn wéi zhè ge fǎ bù néng jiǎng fǎ yì jiǎng chū lái jiù bú shì fǎ le méi yǒu fǎ kě jiǎng zhǐ néng shì xīn lǐng shén huì",
+          "yueyin": "(tr'án) (zung-) (rân`) (guấy) (trưa`) (cưa) (fả) (pu`) (nấng) (chi:ảng) (fả) (y`) (chi:ảng) (tr'u-) (lái) (chi:âu`) (pú) (shi*`) (fả) (lơ) (mấy) (yẩu) (fả) (khửa) (chi:ảng) (trỉ*) (nấng) (shi*`) (xin-) (lỉng) (shấn) (huây`)",
+          "nghia": "Thiền tông [nhìn] nhận rằng: Pháp ấy không thể giảng, Pháp đã giảng ra [thành lời] thì không còn là Pháp nữa; không có Pháp có thể giảng; chỉ có thể tâm lĩnh thần hội;"
+        },
+        {
+          "cau_id": "b01p02-d03-005",
+          "hanzi": "所以禪宗到今天，甚麼法都講不了。",
+          "pinyin": "suǒ yǐ chán zōng dào jīn tiān shén me fǎ dōu jiǎng bu liǎo",
+          "yueyin": "(sủa) (ỷ) (tr'án) (zung-) (tao`) (chin-) (thi:en-) (shấn) (mơ) (fả) (tâu-) (chi:ảng) (pu) (li:ảo)",
+          "nghia": "vậy nên đến ngày nay Thiền tông không giảng Pháp gì hết."
+        },
+        {
+          "cau_id": "b01p02-d03-006",
+          "hanzi": "禪宗達摩傳這個東西，是根據釋迦牟尼說的一句話。",
+          "pinyin": "chán zōng dá mó chuán zhè ge dōng xi shì gēn jù shì jiā móu ní shuō de yí jù huà",
+          "yueyin": "(tr'án) (zung-) (tá) (múa) (tr'oán) (trưa`) (cưa) (tung-) (xi) (shi*`) (cân-) (chuy`) (shi*`) (chi:a-) (mấu) (ní) (shua-) (tơ) (ý) (chuy`) (hoa`)",
+          "nghia": "Đạt Ma [bên] Thiền tông truyền [dạy] điều ấy; [đó] là căn cứ theo một câu của Thích Ca Mâu Ni."
+        },
+        {
+          "cau_id": "b01p02-d03-007",
+          "hanzi": "釋迦牟尼講：法無定法。他就根據釋迦牟尼講的這句話創立了禪宗法門。",
+          "pinyin": "shì jiā móu ní jiǎng fǎ wú dìng fǎtā jiù gēn jù shì jiā móu ní jiǎng de zhè jù huà chuàng lì le chán zōng fǎ mén",
+          "yueyin": "(shi*`) (chi:a-) (mấu) (ní) (chi:ảng) (fả) (ú) (ting`) (fả tha-) (chi:âu`) (cân-) (chuy`) (shi*`) (chi:a-) (mấu) (ní) (chi:ảng) (tơ) (trưa`) (chuy`) (hoa`) (tr'oang`) (li`) (lơ) (tr'án) (zung-) (fả) (mấn)",
+          "nghia": "Thích Ca Mâu Ni giảng: ‘Pháp vô định Pháp’. Ông ấy căn cứ trên câu thoại của Thích Ca Mâu Ni mà sáng lập pháp môn Thiền tông."
+        },
+        {
+          "cau_id": "b01p02-d03-008",
+          "hanzi": "我們說這一法門就是鑽牛角尖。",
+          "pinyin": "wǒ men shuō zhè yì fǎ mén jiù shì zuān niú jiǎo jiān",
+          "yueyin": "(gủa) (mân) (shua-) (trưa`) (y`) (fả) (mấn) (chi:âu`) (shi*`) (zoan-) (ni:ấu) (chi:ảo) (chi:en-)",
+          "nghia": "Chúng tôi nói cái pháp môn ấy là thứ dùi sừng bò."
+        },
+        {
+          "cau_id": "b01p02-d03-009",
+          "hanzi": "怎麼叫鑽牛角尖呢？達摩開頭往裏鑽的時候，還覺的挺寬敞；",
+          "pinyin": "zěn me jiào zuān niú jiǎo jiān nedá mó kāi tóu wǎng lǐ zuān de shí hou hái jué de tǐng kuān chang",
+          "yueyin": "(zẩn) (mơ) (chi:ao`) (zoan-) (ni:ấu) (chi:ảo) (chi:en-) (nưa tá) (múa) (khai-) (thấu) (goảng) (lỉ) (zoan-) (tơ) (shí*) (hâu) (hái) (chuế) (tơ) (thỉng) (khoan-) (tr'ang)",
+          "nghia": "Sao lại gọi là dùi sừng bò? Khởi đầu khi Đạt Ma dùi vào trong thì thấy còn rộng;"
+        },
+        {
+          "cau_id": "b01p02-d03-010",
+          "hanzi": "二祖鑽就不太寬敞；三祖還湊合事兒；四祖就已經很窄了；五祖基本上沒啥可鑽的了；",
+          "pinyin": "èr zǔ zuān jiù bú tài kuān chang sān zǔ hái còu he shìr sì zǔ jiù yǐ jīng hěn zhǎi le wǔ zǔ jī běn shàng méi shá kě zuān de le",
+          "yueyin": "(ơ`) (zủ) (zoan-) (chi:âu`) (pú) (thai`) (khoan-) (tr'ang) (san-) (zủ) (hái) (s'âu`) (hưa) (shi*` r) (sư`) (zủ) (chi:âu`) (ỷ) (ching-) (hẩn) (trải) (lơ) (ủ) (zủ) (chi-) (pẩn) (shang`) (mấy) (shá) (khửa) (zoan-) (tơ) (lơ)",
+          "nghia": "nhị tổ dùi vào thì thấy không còn rộng nữa; tam tổ thì thấy còn lọt được; tứ tổ thì thấy hẹp lắm rồi; ngũ tổ về cơ bản chẳng còn gì để dùi nữa;"
+        },
+        {
+          "cau_id": "b01p02-d03-011",
+          "hanzi": "到六祖慧能這兒，就到頂了，再也鑽不進去了。",
+          "pinyin": "dào liù zǔ huì néng zhèr jiù dào dǐng le zài yě zuān bu jìn qù le",
+          "yueyin": "(tao`) (li:âu`) (zủ) (huây`) (nấng) (trưa` r) (chi:âu`) (tao`) (tỉng) (lơ) (zai`) (yể) (zoan-) (pu) (chin`) (ch'uy`) (lơ)",
+          "nghia": "tới lục tổ Huệ Năng thì đã đến đỉnh [sừng bò] và có dùi cũng chẳng đi đến đâu được nữa."
+        },
+        {
+          "cau_id": "b01p02-d03-012",
+          "hanzi": "今天你要是到禪宗去學法，你別問，你有甚麼問題要問他，回頭照腦袋上就給你一棒子，叫「棒喝」。",
+          "pinyin": "jīn tiān nǐ yào shi dào chán zōng qù xué fǎ nǐ bié wèn nǐ yǒu shén me wèn tí yào wèn tā huí tóu zhào nǎo dai shàng jiù gěi nǐ yí bàng zi jiào bàng hè",
+          "yueyin": "(chin-) (thi:en-) (nỉ) (yao`) (shi*) (tao`) (tr'án) (zung-) (ch'uy`) (xuế) (fả) (nỉ) (pi:ế) (guân`) (nỉ) (yẩu) (shấn) (mơ) (guân`) (thí) (yao`) (guân`) (tha-) (huấy) (thấu) (trao`) (nảo) (tai) (shang`) (chi:âu`) (cẩy) (nỉ) (ý) (pang`) (zư) (chi:ao`) (pang`) (hưa`)",
+          "nghia": "Ngày nay chư vị nếu muốn đến Thiền tông học Pháp, chư vị chớ hỏi; nếu chư vị hỏi ông [thầy] bất kể vấn đề gì, [ông ta] sẽ quay lại cho vào đầu chư vị một gậy, gọi là “bổng hát”."
+        },
+        {
+          "cau_id": "b01p02-d03-013",
+          "hanzi": "那意思是你不要問，要自己悟。",
+          "pinyin": "nà yì si shì nǐ bú yào wèn yào zì jǐ wù",
+          "yueyin": "(na`) (y`) (sư) (shi*`) (nỉ) (pú) (yao`) (guân`) (yao`) (zư`*) (chỉ) (u`)",
+          "nghia": "Đó nghĩa là chư vị không được hỏi, phải tự mình ngộ."
+        },
+        {
+          "cau_id": "b01p02-d03-014",
+          "hanzi": "你說：我甚麼都不知道才來學的，悟甚麼呢？你給我一棒子？！",
+          "pinyin": "nǐ shuō wǒ shén me dōu bù zhī dào cái lái xué de wù shén me ne nǐ gěi wǒ yí bàng zi",
+          "yueyin": "(nỉ) (shua-) (gủa) (shấn) (mơ) (tâu-) (pu`) (tri*-) (tao`) (s'ái) (lái) (xuế) (tơ) (u`) (shấn) (mơ) (nưa) (nỉ) (cẩy) (gủa) (ý) (pang`) (zư)",
+          "nghia": "Chư vị nói: ‘Tôi chưa biết nên mới đến học, ngộ được gì đây? Ông lại cho tôi một gậy [là sao]?!’"
+        },
+        {
+          "cau_id": "b01p02-d03-015",
+          "hanzi": "這就是牛角尖已經鑽到頭了，再也沒有甚麼可講的了。",
+          "pinyin": "zhè jiù shì niú jiǎo jiān yǐ jīng zuān dào tóu le zài yě méi yǒu shén me kě jiǎng de le",
+          "yueyin": "(trưa`) (chi:âu`) (shi*`) (ni:ấu) (chi:ảo) (chi:en-) (ỷ) (ching-) (zoan-) (tao`) (thấu) (lơ) (zai`) (yể) (mấy) (yẩu) (shấn) (mơ) (khửa) (chi:ảng) (tơ) (lơ)",
+          "nghia": "Đó là cái sừng bò kia đã dùi đến đỉnh rồi, không còn gì có thể giảng nữa."
+        },
+        {
+          "cau_id": "b01p02-d03-016",
+          "hanzi": "達摩都講他只能傳六祖，以後就不行了。",
+          "pinyin": "dá mó dōu jiǎng tā zhǐ néng chuán liù zǔ yǐ hòu jiù bù xíng le",
+          "yueyin": "(tá) (múa) (tâu-) (chi:ảng) (tha-) (trỉ*) (nấng) (tr'oán) (li:âu`) (zủ) (ỷ) (hâu`) (chi:âu`) (pu`) (xíng) (lơ)",
+          "nghia": "Đạt Ma giảng rõ là nó chỉ có thể truyền đến lục tổ, sau đó không dùng được nữa."
+        },
+        {
+          "cau_id": "b01p02-d03-017",
+          "hanzi": "幾百年都過去了，可現在還有人死抱著禪宗的理不放。",
+          "pinyin": "jǐ bǎi nián dōu guò qù le kě xiàn zài hái yǒu rén sǐ bào zhe chán zōng de lǐ bú fàng",
+          "yueyin": "(chỉ) (pải) (ni:én) (tâu-) (cua`) (ch'uy`) (lơ) (khửa) (xi:en`) (zai`) (hái) (yẩu) (rấn) (sử) (pao`) (trơ) (tr'án) (zung-) (tơ) (lỉ) (pú) (fang`)",
+          "nghia": "Mấy trăm năm qua rồi, đến nay vẫn có người ôm chết cứng cái lý của Thiền tông mà không bỏ."
+        },
+        {
+          "cau_id": "b01p02-d03-018",
+          "hanzi": "釋迦牟尼講的「法無定法」的真正涵義是甚麼呢？",
+          "pinyin": "shì jiā móu ní jiǎng de fǎ wú dìng fǎ de zhēn zhèng hán yì shì shén me ne",
+          "yueyin": "(shi*`) (chi:a-) (mấu) (ní) (chi:ảng) (tơ) (fả) (ú) (ting`) (fả) (tơ) (trân-) (trâng`) (hán) (y`) (shi*`) (shấn) (mơ) (nưa)",
+          "nghia": "Hàm nghĩa chân chính của lời giảng “Pháp vô định Pháp” của Thích Ca Mâu Ni là gì?"
+        },
+        {
+          "cau_id": "b01p02-d03-019",
+          "hanzi": "釋迦牟尼所在的層次是如來，包括後來許多僧人都沒有悟到釋迦牟尼所在的層次、",
+          "pinyin": "shì jiā móu ní suǒ zài de céng cì shì rú lái bāo kuò hòu lái xǔ duō sēng rén dōu méi yǒu wù dào shì jiā móu ní suǒ zài de céng cì",
+          "yueyin": "(shi*`) (chi:a-) (mấu) (ní) (sủa) (zai`) (tơ) (s'ấng) (s'ư`) (shi*`) (rú) (lái) (pao-) (khua`) (hâu`) (lái) (xủy) (tua-) (sâng-) (rấn) (tâu-) (mấy) (yẩu) (u`) (tao`) (shi*`) (chi:a-) (mấu) (ní) (sủa) (zai`) (tơ) (s'ấng) (s'ư`)",
+          "nghia": "Tầng của Thích Ca Mâu Ni là [tầng] Như Lai; [nhưng] các tăng nhân sau này có rất nhiều vị không hề ngộ đến tầng của Thích Ca Mâu Ni,"
+        },
+        {
+          "cau_id": "b01p02-d03-020",
+          "hanzi": "他的思想境界中的心態、他講的法的真正涵義，他說出話的真正涵義。",
+          "pinyin": "tā de sī xiǎng jìng jiè zhōng de xīn tài tā jiǎng de fǎ de zhēn zhèng hán yì tā shuō chū huà de zhēn zhèng hán yì",
+          "yueyin": "(tha-) (tơ) (sư-) (xi:ảng) (ching`) (chi:ê`) (trung-) (tơ) (xin-) (thai`) (tha-) (chi:ảng) (tơ) (fả) (tơ) (trân-) (trâng`) (hán) (y`) (tha-) (shua-) (tr'u-) (hoa`) (tơ) (trân-) (trâng`) (hán) (y`)",
+          "nghia": "[không ngộ được] tâm thái trong cảnh giới tư tưởng của Ông, hàm nghĩa chân chính trong Pháp mà Ông giảng, [cũng như] hàm nghĩa chân chính trong lời mà Ông nói."
+        },
+        {
+          "cau_id": "b01p02-d03-021",
+          "hanzi": "所以後來人這麼解釋，那麼解釋，解釋的很混亂，認為法無定法就是你別講，講出來就不是法了。",
+          "pinyin": "suǒ yǐ hòu lái rén zhè me jiě shì nà me jiě shì jiě shì de hěn hùn luàn rèn wéi fǎ wú dìng fǎ jiù shì nǐ bié jiǎng jiǎng chū lái jiù bú shì fǎ le",
+          "yueyin": "(sủa) (ỷ) (hâu`) (lái) (rấn) (trưa`) (mơ) (chi:ể) (shi*`) (na`) (mơ) (chi:ể) (shi*`) (chi:ể) (shi*`) (tơ) (hẩn) (huân`) (loan`) (rân`) (guấy) (fả) (ú) (ting`) (fả) (chi:âu`) (shi*`) (nỉ) (pi:ế) (chi:ảng) (chi:ảng) (tr'u-) (lái) (chi:âu`) (pú) (shi*`) (fả) (lơ)",
+          "nghia": "Vậy nên đời sau người giải thích thế này, người giải thích thế kia, giải thích đến độ hỗn loạn; cho rằng ‘Pháp vô định Pháp’ nghĩa là chư vị không được giảng, đã giảng ra thì không còn là Pháp nữa."
+        },
+        {
+          "cau_id": "b01p02-d03-022",
+          "hanzi": "其實不是這個意思。釋迦牟尼在菩提樹下開功開悟之後，不是一下就達到如來這個層次了。",
+          "pinyin": "qí shí bú shì zhè ge yì sishì jiā móu ní zài pú tí shù xià kāi gōng kāi wù zhī hòu bú shì yí xià jiù dá dào rú lái zhè ge céng cì le",
+          "yueyin": "(ch'í) (shí*) (pú) (shi*`) (trưa`) (cưa) (y`) (sư shi*`) (chi:a-) (mấu) (ní) (zai`) (p'ú) (thí) (shu`) (xi:a`) (khai-) (cung-) (khai-) (u`) (tri*-) (hâu`) (pú) (shi*`) (ý) (xi:a`) (chi:âu`) (tá) (tao`) (rú) (lái) (trưa`) (cưa) (s'ấng) (s'ư`) (lơ)",
+          "nghia": "Thật ra không phải nghĩa như vậy. Thích Ca Mâu Ni dưới cội bồ đề khai công khai ngộ rồi, chưa lập tức đạt đến tầng Như Lai."
+        },
+        {
+          "cau_id": "b01p02-d03-023",
+          "hanzi": "他在整個四十九年的傳法當中，也是在不斷的提高著自己。",
+          "pinyin": "tā zài zhěng gè sì shí jiǔ nián de chuán fǎ dāng zhōng yě shì zài bú duàn de tí gāo zhe zì jǐ",
+          "yueyin": "(tha-) (zai`) (trẩng) (cưa`) (sư`) (shí*) (chi:ẩu) (ni:én) (tơ) (tr'oán) (fả) (tang-) (trung-) (yể) (shi*`) (zai`) (pú) (toan`) (tơ) (thí) (cao-) (trơ) (zư`*) (chỉ)",
+          "nghia": "Trong suốt 49 năm truyền Pháp, Ông liên tục tự mình đề cao."
+        },
+        {
+          "cau_id": "b01p02-d03-024",
+          "hanzi": "他每提高一個層次的時候，回頭一看自己剛剛講過的法都不對了。",
+          "pinyin": "tā měi tí gāo yí gè céng cì de shí hou huí tóu yí kàn zì jǐ gāng gāng jiǎng guo de fǎ dōu bú duì le",
+          "yueyin": "(tha-) (mẩy) (thí) (cao-) (ý) (cưa`) (s'ấng) (s'ư`) (tơ) (shí*) (hâu) (huấy) (thấu) (ý) (khan`) (zư`*) (chỉ) (cang-) (cang-) (chi:ảng) (cua) (tơ) (fả) (tâu-) (pú) (tuây`) (lơ)",
+          "nghia": "Mỗi khi đề cao [lên] một tầng, Ông quay lại xét thấy Pháp mình vừa giảng xong không còn đúng nữa."
+        },
+        {
+          "cau_id": "b01p02-d03-025",
+          "hanzi": "再提高之後，他發現講過的法又不對了。",
+          "pinyin": "zài tí gāo zhī hòu tā fā xiàn jiǎng guo de fǎ yòu bú duì le",
+          "yueyin": "(zai`) (thí) (cao-) (tri*-) (hâu`) (tha-) (fa-) (xi:en`) (chi:ảng) (cua) (tơ) (fả) (yâu`) (pú) (tuây`) (lơ)",
+          "nghia": "Lại đề cao lên, Ông phát hiện rằng Pháp mình vừa giảng xong lại cũng không đúng nữa."
+        },
+        {
+          "cau_id": "b01p02-d03-026",
+          "hanzi": "等他再提高，他發現剛剛講過的法又不對了。",
+          "pinyin": "děng tā zài tí gāo tā fā xiàn gāng gāng jiǎng guo de fǎ yòu bú duì le",
+          "yueyin": "(tẩng) (tha-) (zai`) (thí) (cao-) (tha-) (fa-) (xi:en`) (cang-) (cang-) (chi:ảng) (cua) (tơ) (fả) (yâu`) (pú) (tuây`) (lơ)",
+          "nghia": "Cứ đề cao lên, Ông lại phát hiện rằng Pháp vừa giảng xong lại không còn đúng."
+        },
+        {
+          "cau_id": "b01p02-d03-027",
+          "hanzi": "整個四十九年，他都是這樣不斷的昇華著，每提高一個層次之後，發現他以前講過的法在認識上都是很低的。",
+          "pinyin": "zhěng gè sì shí jiǔ nián tā dōu shì zhè yàng bú duàn de shēng huá zhe měi tí gāo yí gè céng cì zhī hòu fā xiàn tā yǐ qián jiǎng guo de fǎ zài rèn shi shàng dōu shì hěn dī de",
+          "yueyin": "(trẩng) (cưa`) (sư`) (shí*) (chi:ẩu) (ni:én) (tha-) (tâu-) (shi*`) (trưa`) (yang`) (pú) (toan`) (tơ) (shâng-) (hóa) (trơ) (mẩy) (thí) (cao-) (ý) (cưa`) (s'ấng) (s'ư`) (tri*-) (hâu`) (fa-) (xi:en`) (tha-) (ỷ) (ch'i:én) (chi:ảng) (cua) (tơ) (fả) (zai`) (rân`) (shi*) (shang`) (tâu-) (shi*`) (hẩn) (ti-) (tơ)",
+          "nghia": "Trong toàn bộ 49 năm, Ông không ngừng thăng hoa như thế; mỗi lần đề cao [lên] một tầng, [Ông] lại phát hiện Pháp Ông giảng trước đó về nhận thức đều là rất thấp."
+        },
+        {
+          "cau_id": "b01p02-d03-028",
+          "hanzi": "他還發現每一個層次的法都是法在每一層次中的體現，每一層次都有法，但都不是宇宙中的絕對真理。",
+          "pinyin": "tā hái fā xiàn měi yí gè céng cì de fǎ dōu shì fǎ zài měi yì céng cì zhōng de tǐ xiàn měi yì céng cì dōu yǒu fǎ dàn dōu bú shì yǔ zhòu zhōng de jué duì zhēn lǐ",
+          "yueyin": "(tha-) (hái) (fa-) (xi:en`) (mẩy) (ý) (cưa`) (s'ấng) (s'ư`) (tơ) (fả) (tâu-) (shi*`) (fả) (zai`) (mẩy) (y`) (s'ấng) (s'ư`) (trung-) (tơ) (thỉ) (xi:en`) (mẩy) (y`) (s'ấng) (s'ư`) (tâu-) (yẩu) (fả) (tan`) (tâu-) (pú) (shi*`) (ủy) (trâu`) (trung-) (tơ) (chuế) (tuây`) (trân-) (lỉ)",
+          "nghia": "Ông cũng phát hiện rằng Pháp của mỗi một tầng là thể hiện của Pháp tại mỗi một tầng đó; mỗi một tầng đều có Pháp, nhưng đó không phải là chân lý tuyệt đối của vũ trụ."
+        },
+        {
+          "cau_id": "b01p02-d03-029",
+          "hanzi": "而高一層次的法比低一層次的法更接近宇宙特性，所以，他就講了：法無定法。",
+          "pinyin": "ér gāo yì céng cì de fǎ bǐ dī yì céng cì de fǎ gèng jiē jìn yǔ zhòu tè xìng suǒ yǐ tā jiù jiǎng le fǎ wú dìng fǎ",
+          "yueyin": "(ớ) (cao-) (y`) (s'ấng) (s'ư`) (tơ) (fả) (pỉ) (ti-) (y`) (s'ấng) (s'ư`) (tơ) (fả) (câng`) (chi:ê-) (chin`) (ủy) (trâu`) (thưa`) (xing`) (sủa) (ỷ) (tha-) (chi:âu`) (chi:ảng) (lơ) (fả) (ú) (ting`) (fả)",
+          "nghia": "Vả lại Pháp của tầng cao so với Pháp của tầng thấp thì [tiếp cận] gần đặc tính của vũ trụ hơn; vậy nên, Ông bèn giảng: ‘Pháp vô định Pháp’."
+        }
+      ]
     }
   ]
 };

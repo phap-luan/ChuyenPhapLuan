@@ -1,0 +1,32 @@
+/* Exported Rich Text & Table Data */
+(function() {
+  window.RENDER_PAYLOAD = {
+    cau_id: "b01p02-d02-007",
+    editorHtml: "<div style=\"margin-bottom: 12px; line-height: 1.5\">\n        <p>\n          <span style=\"font-size: 10px; font-weight: bold; color: #64748b;\"> Nguyên Văn:</span> [(b01p02-d02-007)]<br>\n          <span id=\"matrixTableWrapper\"><table class=\"matrix-table\"><tbody><tr class=\"row-audio\"><td id=\"m_audio_0\">[(qi4)(gong1)]</td><td id=\"m_audio_1\">[(bu4)(zhi3)(shi4)]</td><td id=\"m_audio_2\">[(zhe4)(xie1)]</td><td id=\"m_audio_3\"></td><td id=\"m_audio_4\">[(ta1)(shi4)(xiu1)(lian4)]</td><td id=\"m_audio_5\"></td><td id=\"m_audio_6\">[(shi4)(yi2)(ge4)]</td><td id=\"m_audio_7\">[(bo2)(da4)(jing1)(shen1)(de)(dong1)(xi)]</td><td id=\"m_audio_8\"></td><td id=\"m_audio_9\">[(er2)(qie3)]</td><td id=\"m_audio_10\">[(bu4)(tong2)(ceng2)(ci4)]</td><td id=\"m_audio_11\">[(hai2)(cun2)(zai4)(zhe)]</td><td id=\"m_audio_12\">[(bu4)(tong2)(de)(fa3)]</td><td id=\"m_audio_13\"></td></tr><tr class=\"row-yueyin\"><td id=\"m_yueyin_0\">(ch'i` cung-)</td><td id=\"m_yueyin_1\">(pu` trỉ*)(shi*`)</td><td id=\"m_yueyin_2\">(trưa` xi:ê-)</td><td id=\"m_yueyin_3\"></td><td id=\"m_yueyin_4\">(tha-)(shi*`)(xi:âu- li:en`)</td><td id=\"m_yueyin_5\"></td><td id=\"m_yueyin_6\">(shi*`)(ý)(cưa`)</td><td id=\"m_yueyin_7\">(púa ta`)(ching- shân-)(tơ)(tung- xi)</td><td id=\"m_yueyin_8\"></td><td id=\"m_yueyin_9\">(ớ ch'i:ể)</td><td id=\"m_yueyin_10\">(pu` thúng)(s'ấng s'ư`)</td><td id=\"m_yueyin_11\">(hái)(s'uấn zai` trơ)</td><td id=\"m_yueyin_12\">(pu` thúng)(tơ)(fả)</td><td id=\"m_yueyin_13\"></td></tr><tr class=\"row-hanzi\"><td id=\"m_hanzi_0\">氣功</td><td id=\"m_hanzi_1\">不止是</td><td id=\"m_hanzi_2\">這些</td><td id=\"m_hanzi_3\">,</td><td id=\"m_hanzi_4\">它是修煉</td><td id=\"m_hanzi_5\">,</td><td id=\"m_hanzi_6\">是一個</td><td id=\"m_hanzi_7\">博大精深的東西</td><td id=\"m_hanzi_8\">,</td><td id=\"m_hanzi_9\">而且</td><td id=\"m_hanzi_10\">不同層次</td><td id=\"m_hanzi_11\">還存在<font color=\"#f97316\">著</font></td><td id=\"m_hanzi_12\">不同的法</td><td id=\"m_hanzi_13\">,</td></tr><tr class=\"row-pinyin\"><td id=\"m_pinyin_0\">qìgōng</td><td id=\"m_pinyin_1\">bùzhǐ shì</td><td id=\"m_pinyin_2\">zhèxiē</td><td id=\"m_pinyin_3\"></td><td id=\"m_pinyin_4\">tā shì xiūliàn</td><td id=\"m_pinyin_5\"></td><td id=\"m_pinyin_6\">shì yí gè</td><td id=\"m_pinyin_7\">bódà jīngshēn de dōngxi</td><td id=\"m_pinyin_8\"></td><td id=\"m_pinyin_9\">érqiě</td><td id=\"m_pinyin_10\">bùtóng céngcì</td><td id=\"m_pinyin_11\">hái cúnzàizhe</td><td id=\"m_pinyin_12\">bùtóng de fǎ</td><td id=\"m_pinyin_13\"></td></tr><tr class=\"row-nghia\"><td id=\"m_nghia_0\">khí công</td><td id=\"m_nghia_1\">không chỉ là</td><td id=\"m_nghia_2\">những thứ này</td><td id=\"m_nghia_3\"></td><td id=\"m_nghia_4\">nó là tu luyện</td><td id=\"m_nghia_5\"></td><td id=\"m_nghia_6\">là một cái</td><td id=\"m_nghia_7\">bác đại tinh thâm về mọi thứ</td><td id=\"m_nghia_8\"></td><td id=\"m_nghia_9\">hơn nữa</td><td id=\"m_nghia_10\">bất đồng tầng thứ</td><td id=\"m_nghia_11\">còn <font color=\"#f97316\">đang</font> tồn tại</td><td id=\"m_nghia_12\">bất đồng về Pháp</td><td id=\"m_nghia_13\"></td></tr></tbody></table><br></span><span style=\"color: rgb(100, 116, 139); font-size: 10px; font-weight: bold;\">Tạm Dịch:</span></p><p style=\"margin-top: 0px;\"><b style=\"\"><font color=\"#000000\">khí công không chỉ là những thứ này, nó là tu luyện, là một cái bác đại tinh thâm về mọi thứ, hơn nữa bất đồng tầng thứ [còn </font><font color=\"#f97316\">đang</font><font color=\"#000000\"> tồn tại] bất đồng về Pháp,</font></b></p>\n        <p style=\"margin-top: 5px;\">\n          <span style=\"font-size: 10px; font-weight: bold; color: #64748b;\"> Bản dịch trong sách:</span><br>\n          <span style=\"font-size: 16px; font-weight: bold; color: #000000;\">Khí công không chỉ là vậy; nó là tu luyện, là điều rộng lớn tinh thâm; ngoài ra tại những tầng khác nhau tồn tại những Pháp khác nhau;</span>\n        </p>\n      </div>",
+    tableData: [{"hanzi":"氣功","audio":"[(qi4)(gong1)]","pinyin":"qìgōng","yueyin":"(ch'i` cung-)","nghia":"khí công"},{"hanzi":"不止是","audio":"[(bu4)(zhi3)(shi4)]","pinyin":"bùzhǐ shì","yueyin":"(pu` trỉ*)(shi*`)","nghia":"không chỉ là"},{"hanzi":"這些","audio":"[(zhe4)(xie1)]","pinyin":"zhèxiē","yueyin":"(trưa` xi:ê-)","nghia":"những thứ này"},{"hanzi":"它是修煉","audio":"[(ta1)(shi4)(xiu1)(lian4)]","pinyin":"tā shì xiūliàn","yueyin":"(tha-)(shi*`)(xi:âu- li:en`)","nghia":"nó là tu luyện"},{"hanzi":"是一個","audio":"[(shi4)(yi2)(ge4)]","pinyin":"shì yí gè","yueyin":"(shi*`)(ý)(cưa`)","nghia":"là một cái"},{"hanzi":"博大精深的東西","audio":"[(bo2)(da4)(jing1)(shen1)(de)(dong1)(xi)]","pinyin":"bódà jīngshēn de dōngxi","yueyin":"(púa ta`)(ching- shân-)(tơ)(tung- xi)","nghia":"bác đại tinh thâm về mọi thứ"},{"hanzi":"而且","audio":"[(er2)(qie3)]","pinyin":"érqiě","yueyin":"(ớ ch'i:ể)","nghia":"hơn nữa, với lại"},{"hanzi":"不同層次","audio":"[(bu4)(tong2)(ceng2)(ci4)]","pinyin":"bùtóng céngcì","yueyin":"(pu` thúng)(s'ấng s'ư`)","nghia":"bất đồng tầng thứ"},{"hanzi":"還存在著","audio":"[(hai2)(cun2)(zai4)(zhe)]","pinyin":"hái cúnzàizhe","yueyin":"(hái)(s'uấn zai` trơ)","nghia":"còn đang tồn tại"},{"hanzi":"不同的法","audio":"[(bu4)(tong2)(de)(fa3)]","pinyin":"bùtóng de fǎ","yueyin":"(pu` thúng)(tơ)(fả)","nghia":"bất đồng về Pháp"}]
+  };
+
+  window.renderContent = function(targetEditorId, targetTableId) {
+    if (targetEditorId) {
+      var editorEl = document.getElementById(targetEditorId);
+      if (editorEl) editorEl.innerHTML = window.RENDER_PAYLOAD.editorHtml;
+    }
+    
+    if (targetTableId) {
+      var tableEl = document.getElementById(targetTableId);
+      if (tableEl) {
+        var html = '<table border="1" style="border-collapse: collapse; width: 100%;">';
+        html += '<thead><tr><th>Hanzi</th><th>Audio</th><th>Pinyin</th><th>Yueyin</th><th>Nghĩa</th></tr></thead><tbody>';
+        window.RENDER_PAYLOAD.tableData.forEach(function(item) {
+          html += '<tr><td>' + item.hanzi + '</td><td>' + item.audio + '</td><td>' + item.pinyin + '</td><td>' + item.yueyin + '</td><td>' + item.nghia + '</td></tr>';
+        });
+        html += '</tbody></table>';
+        tableEl.innerHTML = html;
+      }
+    }
+  };
+
+  document.addEventListener("DOMContentLoaded", function() {
+    window.renderContent("rendered-editor", "rendered-table");
+  });
+})();
