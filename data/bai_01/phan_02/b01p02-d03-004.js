@@ -1,0 +1,32 @@
+/* Exported Rich Text & Table Data */
+(function() {
+  window.RENDER_PAYLOAD = {
+    cau_id: "b01p02-d03-004",
+    editorHtml: "<div style=\"margin-bottom: 12px; line-height: 1.5\">\n        <p>\n          <span style=\"font-size: 10px; font-weight: bold; color: #64748b;\"> Nguyên Văn:</span> [(b01p02-d03-004)]<br>\n          <span id=\"matrixTableWrapper\"><table class=\"matrix-table\"><tbody><tr class=\"row-audio\"><td id=\"m_audio_0\">[(chan2)(zong1)]</td><td id=\"m_audio_1\">[(ren4)(wei2)]</td><td id=\"m_audio_2\"></td><td id=\"m_audio_3\">[(zhe4)(ge)(fa3)]</td><td id=\"m_audio_4\">[(bu4)(neng2)(jiang3)]</td><td id=\"m_audio_5\"></td><td id=\"m_audio_6\">[(fa3)(yi4)(jiang3)(chu1)(lai2)]</td><td id=\"m_audio_7\"></td><td id=\"m_audio_8\">[(jiu4)(bu2)(shi4)(fa3)(le)]</td><td id=\"m_audio_9\"></td><td id=\"m_audio_10\">[(mei2)(you3)(fa3)(ke2)(jiang3)]</td><td id=\"m_audio_11\"></td><td id=\"m_audio_12\">[(zhi2)(neng2)(shi4)]</td><td id=\"m_audio_13\">[(xin1)(ling3)(shen2)(hui4)]</td><td id=\"m_audio_14\"></td></tr><tr class=\"row-yueyin\"><td id=\"m_yueyin_0\">(tr'án zung-)</td><td id=\"m_yueyin_1\">(rân` guấy)</td><td id=\"m_yueyin_2\"></td><td id=\"m_yueyin_3\">(trưa` cưa)(fả)</td><td id=\"m_yueyin_4\">(pu`)(nấng)(chi:ảng)</td><td id=\"m_yueyin_5\"></td><td id=\"m_yueyin_6\">(fả)(y`)(chi:ảng)(tr'u- lái)</td><td id=\"m_yueyin_7\"></td><td id=\"m_yueyin_8\">(chi:âu`)(pú)(shi*`)(fả)(lơ)</td><td id=\"m_yueyin_9\"></td><td id=\"m_yueyin_10\">(mấy yẩu)(fả)(khửa)(chi:ảng)</td><td id=\"m_yueyin_11\"></td><td id=\"m_yueyin_12\">(trỉ*)(nấng)(shi*`)</td><td id=\"m_yueyin_13\">(xin- lỉng shấn huây`)</td><td id=\"m_yueyin_14\"></td></tr><tr class=\"row-hanzi\"><td id=\"m_hanzi_0\">禪宗</td><td id=\"m_hanzi_1\">認為</td><td id=\"m_hanzi_2\">:</td><td id=\"m_hanzi_3\"><font color=\"#a855f7\">這</font>個法</td><td id=\"m_hanzi_4\">不能講</td><td id=\"m_hanzi_5\">,</td><td id=\"m_hanzi_6\">法一講出來</td><td id=\"m_hanzi_7\">,</td><td id=\"m_hanzi_8\">就不是法了</td><td id=\"m_hanzi_9\">,</td><td id=\"m_hanzi_10\">沒有法可講</td><td id=\"m_hanzi_11\">,</td><td id=\"m_hanzi_12\">只能是</td><td id=\"m_hanzi_13\">心領神會</td><td id=\"m_hanzi_14\">,</td></tr><tr class=\"row-pinyin\"><td id=\"m_pinyin_0\">chánzōng</td><td id=\"m_pinyin_1\">rènwéi</td><td id=\"m_pinyin_2\"></td><td id=\"m_pinyin_3\">zhège fǎ</td><td id=\"m_pinyin_4\">bù néng jiǎng</td><td id=\"m_pinyin_5\"></td><td id=\"m_pinyin_6\">fǎ yì jiǎng chūlái</td><td id=\"m_pinyin_7\"></td><td id=\"m_pinyin_8\">jiù bú shì fǎ le</td><td id=\"m_pinyin_9\"></td><td id=\"m_pinyin_10\">méiyǒu fǎ kě jiǎng</td><td id=\"m_pinyin_11\"></td><td id=\"m_pinyin_12\">zhǐ néng shì</td><td id=\"m_pinyin_13\">xīnlǐngshénhuì</td><td id=\"m_pinyin_14\"></td></tr><tr class=\"row-nghia\"><td id=\"m_nghia_0\">Thiền tông</td><td id=\"m_nghia_1\">cho rằng</td><td id=\"m_nghia_2\"></td><td id=\"m_nghia_3\">Pháp này</td><td id=\"m_nghia_4\">không thể giảng</td><td id=\"m_nghia_5\"></td><td id=\"m_nghia_6\">Pháp vừa giảng xuất ra</td><td id=\"m_nghia_7\"></td><td id=\"m_nghia_8\">liền không phải là Pháp</td><td id=\"m_nghia_9\"></td><td id=\"m_nghia_10\">không có Pháp được giảng</td><td id=\"m_nghia_11\"></td><td id=\"m_nghia_12\">chỉ có thể là</td><td id=\"m_nghia_13\">tâm lĩnh thần hội</td><td id=\"m_nghia_14\"></td></tr></tbody></table><br></span><span style=\"color: rgb(100, 116, 139); font-size: 10px; font-weight: bold;\">Tạm Dịch:</span></p><p style=\"margin-top: 0px;\"><b style=\"\"><font color=\"#000000\">Thiền tông cho rằng: Pháp</font><font color=\"#a855f7\"> này</font><font color=\"#000000\"> không thể giảng, Pháp vừa giảng xuất ra, liền không phải là Pháp, không có Pháp được giảng, chỉ có thể là tâm lĩnh thần hội.</font></b></p>\n        <p style=\"margin-top: 5px;\">\n          <span style=\"font-size: 10px; font-weight: bold; color: #64748b;\"> Bản dịch trong sách:</span><br>\n          <span style=\"font-size: 16px; font-weight: bold; color: #000000;\">Thiền tông [nhìn] nhận rằng: Pháp ấy không thể giảng, Pháp đã giảng ra [thành lời] thì không còn là Pháp nữa; không có Pháp có thể giảng; chỉ có thể tâm lĩnh thần hội;</span>\n        </p>\n      </div>",
+    tableData: [{"hanzi":"禪宗","audio":"[(chan2)(zong1)]","pinyin":"chánzōng","yueyin":"(tr'án zung-)","nghia":"Thiền tông"},{"hanzi":"認為","audio":"[(ren4)(wei2)]","pinyin":"rènwéi","yueyin":"(rân` guấy)","nghia":"cho rằng"},{"hanzi":"這個法","audio":"[(zhe4)(ge)(fa3)]","pinyin":"zhège fǎ","yueyin":"(trưa` cưa)(fả)","nghia":"Pháp này"},{"hanzi":"不能講","audio":"[(bu4)(neng2)(jiang3)]","pinyin":"bù néng jiǎng","yueyin":"(pu`)(nấng)(chi:ảng)","nghia":"không thể giảng"},{"hanzi":"法一講出來","audio":"[(fa3)(yi4)(jiang3)(chu1)(lai2)]","pinyin":"fǎ yì jiǎng chūlái","yueyin":"(fả)(y`)(chi:ảng)(tr'u- lái)","nghia":"Pháp vừa giảng xuất ra"},{"hanzi":"就不是法了","audio":"[(jiu4)(bu2)(shi4)(fa3)(le)]","pinyin":"jiù bú shì fǎ le","yueyin":"(chi:âu`)(pú)(shi*`)(fả)(lơ)","nghia":"liền không phải là Pháp"},{"hanzi":"沒有法可講","audio":"[(mei2)(you3)(fa3)(ke2)(jiang3)]","pinyin":"méiyǒu fǎ kě jiǎng","yueyin":"(mấy yẩu)(fả)(khửa)(chi:ảng)","nghia":"không có Pháp được giảng"},{"hanzi":"只能是","audio":"[(zhi2)(neng2)(shi4)]","pinyin":"zhǐ néng shì","yueyin":"(trỉ*)(nấng)(shi*`)","nghia":"chỉ có thể là"},{"hanzi":"心領神會","audio":"[(xin1)(ling3)(shen2)(hui4)]","pinyin":"xīnlǐngshénhuì","yueyin":"(xin- lỉng shấn huây`)","nghia":"tâm lĩnh thần hội"}]
+  };
+
+  window.renderContent = function(targetEditorId, targetTableId) {
+    if (targetEditorId) {
+      var editorEl = document.getElementById(targetEditorId);
+      if (editorEl) editorEl.innerHTML = window.RENDER_PAYLOAD.editorHtml;
+    }
+    
+    if (targetTableId) {
+      var tableEl = document.getElementById(targetTableId);
+      if (tableEl) {
+        var html = '<table border="1" style="border-collapse: collapse; width: 100%;">';
+        html += '<thead><tr><th>Hanzi</th><th>Audio</th><th>Pinyin</th><th>Yueyin</th><th>Nghĩa</th></tr></thead><tbody>';
+        window.RENDER_PAYLOAD.tableData.forEach(function(item) {
+          html += '<tr><td>' + item.hanzi + '</td><td>' + item.audio + '</td><td>' + item.pinyin + '</td><td>' + item.yueyin + '</td><td>' + item.nghia + '</td></tr>';
+        });
+        html += '</tbody></table>';
+        tableEl.innerHTML = html;
+      }
+    }
+  };
+
+  document.addEventListener("DOMContentLoaded", function() {
+    window.renderContent("rendered-editor", "rendered-table");
+  });
+})();
