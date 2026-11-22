@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Công Cụ Phân Tích & Đóng Ngoặc Câu Mẫu</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font hỗ trợ tiếng Việt và chữ Hán Phồn/Giản thể sắc nét -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', '"Noto Sans TC"', '"Noto Sans SC"', 'sans-serif'],
+                        cjk: ['"Noto Sans TC"', '"Noto Sans SC"', 'Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Tùy chỉnh thanh cuộn cho gọn gàng */
+        ::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f5f9;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 min-h-screen flex flex-col">
+
+    <!-- Header -->
+    <header class="bg-white border-b border-slate-200 sticky top-0 z-20 shadow-sm">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 py-3.5 flex flex-wrap items-center justify-between gap-3">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-indigo-600 text-white flex items-center justify-center font-bold text-lg shadow-sm">
+                    [詞]
+                </div>
+                <div>
+                    <h1 class="text-lg sm:text-xl font-bold text-slate-900 leading-tight">Phân Tích & Đóng Ngoặc Câu Mẫu</h1>
+                    <p class="text-xs text-slate-500">Tự động khớp từ vựng từ cột Excel & chèn dấu câu theo câu gốc</p>
+                </div>
+            </div>
+            <div class="flex items-center gap-2">
+                <button id="btnLoadExample" type="button" class="px-3.5 py-2 text-xs sm:text-sm font-medium text-indigo-700 bg-indigo-50 hover:bg-indigo-100 rounded-xl transition flex items-center gap-1.5 cursor-pointer">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                    Nạp ví dụ mẫu
+                </button>
+                <button id="btnClearAll" type="button" class="px-3.5 py-2 text-xs sm:text-sm font-medium text-rose-600 bg-rose-50 hover:bg-rose-100 rounded-xl transition flex items-center gap-1.5 cursor-pointer">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg>
+                    Xóa tất cả
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="max-w-6xl w-full mx-auto px-4 sm:px-6 py-6 space-y-6 flex-1">
+
+        <!-- 1. Phần trên: Ô dán Câu mẫu -->
+        <section class="bg-white rounded-2xl border border-slate-200 shadow-sm p-4 sm:p-5">
+            <div class="flex flex-wrap items-center justify-between gap-2 mb-2.5">
+                <label for="sampleSentence" class="text-sm font-semibold text-slate-700 flex items-center gap-2">
+                    <span class="w-6 h-6 rounded-lg bg-slate-100 text-slate-700 flex items-center justify-center text-xs font-bold">1</span>
+                    Câu mẫu (Reference Sentence)
+                </label>
+                <span id="sampleCharCount" class="text-xs text-slate-400 font-medium">0 ký tự</span>
+            </div>
+            <textarea
+                id="sampleSentence"
+                rows="2"
+                placeholder="Dán câu mẫu vào đây (Ví dụ: 他其實是講了,這麼一個理。)"
+                class="w-full font-cjk text-lg sm:text-xl text-slate-900 bg-slate-50 focus:bg-white border border-slate-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 rounded-xl p-3.5 transition outline-none resize-y"
+            ></textarea>
+
+            <!-- Tùy chọn nhỏ -->
+            <div class="mt-3 pt-3 border-t border-slate-100 flex flex-wrap items-center gap-x-6 gap-y-2 text-xs sm:text-sm text-slate-600">
+                <label class="inline-flex items-center gap-2 cursor-pointer select-none">
+                    <input type="checkbox" id="optSplitPunct" checked class="w-4 h-4 rounded text-indigo-600 border-slate-300 focus:ring-indigo-500">
+                    <span>Tách riêng từng dấu câu liên tiếp (ví dụ: <code>[，][」]</code> thay vì <code>[，」]</code>)</span>
+                </label>
+                <label class="inline-flex items-center gap-2 cursor-pointer select-none">
+                    <input type="checkbox" id="optIgnoreSpaces" checked class="w-4 h-4 rounded text-indigo-600 border-slate-300 focus:ring-indigo-500">
+                    <span>Bỏ qua khoảng trắng thừa đầu/cuối ô Excel</span>
+                </label>
+            </div>
+        </section>
+
+        <!-- 2. Khu vực Kết quả tổng hợp -->
+        <section class="bg-white rounded-2xl border border-indigo-200 shadow-sm p-4 sm:p-5 relative overflow-hidden">
+            <div class="flex flex-wrap items-center justify-between gap-3 mb-3">
+                <div class="flex items-center gap-2">
+                    <span class="w-6 h-6 rounded-lg bg-indigo-100 text-indigo-700 flex items-center justify-center text-xs font-bold">2</span>
+                    <h2 class="text-sm font-semibold text-slate-800">Kết quả tổng hợp</h2>
+                    <span id="statusBadge" class="hidden text-xs font-medium px-2.5 py-0.5 rounded-full"></span>
+                </div>
+                <button id="btnCopyResult" type="button" class="px-4 py-2 bg-indigo-600 hover:bg-indigo-700 active:scale-[0.99] text-white text-xs sm:text-sm font-medium rounded-xl shadow-sm transition flex items-center gap-1.5 cursor-pointer">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"/></svg>
+                    <span>Sao chép kết quả</span>
+                </button>
+            </div>
+
+            <!-- Chuỗi kết quả thô -->
+            <div class="relative">
+                <textarea
+                    id="finalResultOutput"
+                    readonly
+                    rows="2"
+                    placeholder="Kết quả dạng [từ][dấu câu]... sẽ hiển thị tại đây"
+                    class="w-full font-cjk text-lg sm:text-xl font-medium text-indigo-950 bg-indigo-50/60 border border-indigo-200 rounded-xl p-3.5 outline-none resize-y select-all"
+                ></textarea>
+            </div>
+
+            <!-- Hiển thị trực quan dạng thẻ (Visual Tokens) -->
+            <div class="mt-3">
+                <div class="text-xs font-medium text-slate-400 mb-2 flex items-center justify-between">
+                    <span>Xem trực quan từng thành phần:</span>
+                    <div class="flex items-center gap-3 text-[11px]">
+                        <span class="flex items-center gap-1"><span class="w-2.5 h-2.5 rounded-sm bg-emerald-100 border border-emerald-300 inline-block"></span> Từ khớp</span>
+                        <span class="flex items-center gap-1"><span class="w-2.5 h-2.5 rounded-sm bg-amber-100 border border-amber-300 inline-block"></span> Dấu/Ký tự bổ sung</span>
+                        <span class="flex items-center gap-1"><span class="w-2.5 h-2.5 rounded-sm bg-rose-100 border border-rose-300 inline-block"></span> Không khớp</span>
+                    </div>
+                </div>
+                <div id="visualTokensContainer" class="min-h-[44px] p-3 bg-slate-50 border border-slate-200/80 rounded-xl flex flex-wrap items-center gap-1.5 font-cjk text-base">
+                    <span class="text-slate-400 text-xs italic">Chưa có dữ liệu phân tích...</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Phần dưới: Bảng 2 cột (Cột dán Excel & Cột Kết quả đối chiếu từng dòng) -->
+        <section class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
+            <div class="p-4 sm:p-5 border-b border-slate-200 flex flex-wrap items-center justify-between gap-3 bg-slate-50/50">
+                <div>
+                    <h2 class="text-sm font-semibold text-slate-800 flex items-center gap-2">
+                        <span class="w-6 h-6 rounded-lg bg-slate-200 text-slate-700 flex items-center justify-center text-xs font-bold">3</span>
+                        Bảng nhập liệu từ Excel & Kết quả từng dòng
+                    </h2>
+                    <p class="text-xs text-slate-500 mt-1">
+                        Mẹo: Sao chép một cột nhiều dòng từ <strong>Excel</strong> và nhấn <kbd class="px-1.5 py-0.5 bg-white border border-slate-300 rounded text-[11px] font-sans">Ctrl + V</kbd> vào ô đầu tiên của <strong>Cột Dữ Liệu</strong>.
+                    </p>
+                </div>
+                <div class="flex items-center gap-2">
+                    <button id="btnPasteClipboard" type="button" class="px-3 py-1.5 text-xs font-medium text-slate-700 bg-white hover:bg-slate-100 border border-slate-300 rounded-xl transition flex items-center gap-1.5 cursor-pointer">
+                        <svg class="w-3.5 h-3.5 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+                        Dán nhanh vào cột
+                    </button>
+                    <button id="btnAddRow" type="button" class="px-3 py-1.5 text-xs font-medium text-indigo-700 bg-indigo-50 hover:bg-indigo-100 rounded-xl transition flex items-center gap-1 cursor-pointer">
+                        + Thêm dòng
+                    </button>
+                </div>
+            </div>
+
+            <!-- Table Container -->
+            <div class="overflow-x-auto">
+                <table class="w-full text-left border-collapse">
+                    <thead>
+                        <tr class="bg-slate-100/80 border-b border-slate-200 text-xs font-semibold text-slate-600 uppercase tracking-wider">
+                            <th class="py-3 px-3 w-12 text-center">#</th>
+                            <th class="py-3 px-4 w-1/2 border-l border-slate-200">Cột Dữ Liệu (Từ / Cụm từ Excel)</th>
+                            <th class="py-3 px-4 w-1/2 border-l border-slate-200">Cột Kết Quả Đối Chiếu (Kèm dấu câu)</th>
+                            <th class="py-3 px-2 w-10 text-center border-l border-slate-200"></th>
+                        </tr>
+                    </thead>
+                    <tbody id="excelTableBody" class="divide-y divide-slate-200 text-sm">
+                        <!-- Các dòng sẽ được render bằng JS -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="fixed bottom-5 right-5 z-50 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none">
+        <div class="bg-slate-900 text-white px-4 py-2.5 rounded-xl shadow-lg text-sm font-medium flex items-center gap-2">
+            <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+            <span id="toastMessage">Đã sao chép vào bộ nhớ tạm!</span>
+        </div>
+    </div>
+
+    <!-- Modal Dán Nhanh (Dự phòng khi trình duyệt chặn navigator.clipboard.readText) -->
+    <div id="pasteModal" class="fixed inset-0 bg-slate-900/50 backdrop-blur-xs z-50 hidden items-center justify-center p-4">
+        <div class="bg-white rounded-2xl max-w-md w-full p-5 shadow-xl border border-slate-200">
+            <h3 class="text-base font-bold text-slate-800 mb-1">Dán cột dữ liệu từ Excel</h3>
+            <p class="text-xs text-slate-500 mb-3">Nhấn Ctrl+V (hoặc Cmd+V) dữ liệu cột vào ô bên dưới rồi bấm Áp dụng:</p>
+            <textarea id="bulkPasteArea" rows="6" placeholder="他其實&#10;是講了&#10;這麼一個理" class="w-full font-cjk text-base border border-slate-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 rounded-xl p-3 outline-none"></textarea>
+            <div class="mt-4 flex justify-end gap-2">
+                <button id="btnCancelPaste" type="button" class="px-4 py-2 text-xs font-medium text-slate-600 hover:bg-slate-100 rounded-xl transition cursor-pointer">Hủy</button>
+                <button id="btnConfirmPaste" type="button" class="px-4 py-2 text-xs font-medium text-white bg-indigo-600 hover:bg-indigo-700 rounded-xl transition cursor-pointer">Áp dụng vào bảng</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        /**
+         * Quản lý trạng thái ứng dụng
+         */
+        const state = {
+            sampleSentence: '',
+            rows: ['', '', '', '', ''], // Mặc định 5 dòng trống
+        };
+
+        // DOM Elements
+        const elSample = document.getElementById('sampleSentence');
+        const elSampleCount = document.getElementById('sampleCharCount');
+        const elFinalResult = document.getElementById('finalResultOutput');
+        const elVisualTokens = document.getElementById('visualTokensContainer');
+        const elTableBody = document.getElementById('excelTableBody');
+        const elStatusBadge = document.getElementById('statusBadge');
+        const elOptSplitPunct = document.getElementById('optSplitPunct');
+        const elOptIgnoreSpaces = document.getElementById('optIgnoreSpaces');
+
+        /**
+         * Hàm tách chuỗi ký tự xen giữa (dấu câu, khoảng trắng) thành các token
+         */
+        function tokenizeGap(gapStr, splitPunct) {
+            if (!gapStr) return [];
+            if (!splitPunct) {
+                return [gapStr];
+            }
+            // Tách từng ký tự (hỗ trợ cả surrogate pairs / emoji nếu có)
+            return Array.from(gapStr);
+        }
+
+        /**
+         * Thuật toán lõi: Khớp từng từ trong cột với câu mẫu và bọc ngoặc vuông []
+         */
+        function processAlignment() {
+            const sample = elSample.value;
+            const splitPunct = elOptSplitPunct.checked;
+            const ignoreSpaces = elOptIgnoreSpaces.checked;
+
+            elSampleCount.textContent = `${Array.from(sample).length} ký tự`;
+
+            let currentIndex = 0;
+            const allTokens = []; // Lưu danh sách { text, type: 'word' | 'punct' | 'error' }
+            const rowResults = new Array(state.rows.length).fill(null);
+
+            let hasError = false;
+            let nonEmptyCount = 0;
+
+            state.rows.forEach((rawWord, rowIdx) => {
+                const word = ignoreSpaces ? rawWord.trim() : rawWord;
+
+                if (word === '') {
+                    rowResults[rowIdx] = { tokens: [], matched: true, empty: true };
+                    return;
+                }
+
+                nonEmptyCount++;
+
+                // Nếu câu mẫu trống, đánh dấu từ chưa khớp
+                if (!sample) {
+                    const errToken = { text: word, type: 'error' };
+                    allTokens.push(errToken);
+                    rowResults[rowIdx] = { tokens: [errToken], matched: false, empty: false };
+                    hasError = true;
+                    return;
+                }
+
+                // Tìm vị trí xuất hiện tiếp theo của word trong sample từ currentIndex
+                const foundIndex = sample.indexOf(word, currentIndex);
+
+                if (foundIndex !== -1) {
+                    const currentRowTokens = [];
+
+                    // 1. Lấy phần ký tự/dấu câu xen giữa currentIndex và foundIndex
+                    if (foundIndex > currentIndex) {
+                        const gap = sample.slice(currentIndex, foundIndex);
+                        const gapParts = tokenizeGap(gap, splitPunct);
+                        gapParts.forEach(part => {
+                            const pToken = { text: part, type: 'punct' };
+                            allTokens.push(pToken);
+                            currentRowTokens.push(pToken);
+                        });
+                    }
+
+                    // 2. Bọc từ khớp được
+                    const wToken = { text: word, type: 'word' };
+                    allTokens.push(wToken);
+                    currentRowTokens.push(wToken);
+
+                    // Cập nhật con trỏ
+                    currentIndex = foundIndex + word.length;
+                    rowResults[rowIdx] = { tokens: currentRowTokens, matched: true, empty: false };
+                } else {
+                    // Không tìm thấy từ này ở phần còn lại của câu mẫu
+                    const errToken = { text: word, type: 'error' };
+                    allTokens.push(errToken);
+                    rowResults[rowIdx] = { tokens: [errToken], matched: false, empty: false };
+                    hasError = true;
+                }
+            });
+
+            // 3. Kiểm tra phần dấu câu/ký tự còn sót lại ở cuối câu mẫu (sau từ cuối cùng)
+            const trailingTokens = [];
+            if (sample && nonEmptyCount > 0 && currentIndex < sample.length) {
+                const remaining = sample.slice(currentIndex);
+                const remParts = tokenizeGap(remaining, splitPunct);
+                remParts.forEach(part => {
+                    const pToken = { text: part, type: 'punct' };
+                    allTokens.push(pToken);
+                    trailingTokens.push(pToken);
+                });
+
+                // Gắn phần dấu câu cuối này vào dòng có dữ liệu cuối cùng để hiển thị đối chiếu trực quan
+                for (let i = state.rows.length - 1; i >= 0; i--) {
+                    if (rowResults[i] && !rowResults[i].empty) {
+                        rowResults[i].tokens.push(...trailingTokens);
+                        break;
+                    }
+                }
+            }
+
+            // Xuất chuỗi kết quả tổng hợp
+            const formattedString = allTokens.map(t => `[${t.text}]`).join('');
+            elFinalResult.value = formattedString;
+
+            // Cập nhật huy hiệu trạng thái
+            updateStatusBadge(sample, nonEmptyCount, hasError);
+
+            // Render các thẻ trực quan (Visual Tokens)
+            renderVisualTokens(allTokens);
+
+            // Cập nhật cột kết quả trong bảng mà không làm mất focus ô input đang gõ
+            updateTableResultCells(rowResults);
+        }
+
+        /**
+         * Hiển thị trạng thái khớp
+         */
+        function updateStatusBadge(sample, nonEmptyCount, hasError) {
+            if (!sample && nonEmptyCount === 0) {
+                elStatusBadge.classList.add('hidden');
+                return;
+            }
+            elStatusBadge.classList.remove('hidden');
+
+            if (hasError) {
+                elStatusBadge.className = 'text-xs font-medium px-2.5 py-0.5 rounded-full bg-rose-100 text-rose-700';
+                elStatusBadge.textContent = 'Có từ không khớp với câu mẫu';
+            } else if (sample && nonEmptyCount > 0) {
+                elStatusBadge.className = 'text-xs font-medium px-2.5 py-0.5 rounded-full bg-emerald-100 text-emerald-700';
+                elStatusBadge.textContent = 'Khớp hoàn hảo';
+            } else {
+                elStatusBadge.className = 'text-xs font-medium px-2.5 py-0.5 rounded-full bg-amber-100 text-amber-700';
+                elStatusBadge.textContent = 'Đang chờ nhập đủ dữ liệu';
+            }
+        }
+
+        /**
+         * Render danh sách token màu sắc bên dưới ô kết quả
+         */
+        function renderVisualTokens(tokens) {
+            if (tokens.length === 0) {
+                elVisualTokens.innerHTML = '<span class="text-slate-400 text-xs italic">Chưa có dữ liệu phân tích...</span>';
+                return;
+            }
+
+            elVisualTokens.innerHTML = '';
+            tokens.forEach(token => {
+                const span = document.createElement('span');
+                let colorClass = '';
+                if (token.type === 'word') {
+                    colorClass = 'bg-emerald-50 text-emerald-900 border-emerald-300';
+                } else if (token.type === 'punct') {
+                    colorClass = 'bg-amber-50 text-amber-900 border-amber-300 font-bold';
+                } else {
+                    colorClass = 'bg-rose-50 text-rose-800 border-rose-300 line-through decoration-rose-400';
+                }
+
+                // Hiển thị rõ ký tự khoảng trắng nếu có
+                const displayChar = token.text === ' ' ? '␣' : token.text;
+
+                span.className = `inline-flex items-center px-2 py-0.5 rounded-lg border text-sm sm:text-base shadow-2xs ${colorClass}`;
+                span.textContent = `[${displayChar}]`;
+                if (token.type === 'error') {
+                    span.title = 'Không tìm thấy từ/cụm từ này theo thứ tự trong câu mẫu';
+                }
+                elVisualTokens.appendChild(span);
+            });
+        }
+
+        /**
+         * Render toàn bộ các hàng của bảng Excel
+         */
+        function renderTable() {
+            elTableBody.innerHTML = '';
+
+            state.rows.forEach((val, index) => {
+                const tr = document.createElement('tr');
+                tr.className = 'hover:bg-slate-50/80 transition-colors group';
+
+                // Cột STT
+                const tdIndex = document.createElement('td');
+                tdIndex.className = 'py-2 px-3 text-center text-xs font-medium text-slate-400 select-none';
+                tdIndex.textContent = index + 1;
+
+                // Cột Input (Dữ liệu Excel)
+                const tdInput = document.createElement('td');
+                tdInput.className = 'p-1.5 border-l border-slate-200';
+
+                const input = document.createElement('input');
+                input.type = 'text';
+                input.value = val;
+                input.dataset.index = index;
+                input.placeholder = index === 0 ? 'Dán cột Excel vào đây...' : '';
+                input.className = 'w-full font-cjk text-base sm:text-lg text-slate-900 bg-transparent focus:bg-white px-2.5 py-1.5 rounded-lg border border-transparent focus:border-indigo-400 focus:ring-2 focus:ring-indigo-100 outline-none transition';
+
+                // Sự kiện nhập liệu từng ký tự
+                input.addEventListener('input', (e) => {
+                    state.rows[index] = e.target.value;
+                    processAlignment();
+                });
+
+                // Sự kiện phím Enter (chuyển xuống dòng dưới hoặc tạo dòng mới) hoặc Backspace khi trống
+                input.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter') {
+                        e.preventDefault();
+                        if (index === state.rows.length - 1) {
+                            state.rows.push('');
+                            renderTable();
+                            processAlignment();
+                        }
+                        const nextInput = elTableBody.querySelector(`input[data-index="${index + 1}"]`);
+                        if (nextInput) nextInput.focus();
+                    } else if (e.key === 'ArrowDown') {
+                        const nextInput = elTableBody.querySelector(`input[data-index="${index + 1}"]`);
+                        if (nextInput) {
+                            e.preventDefault();
+                            nextInput.focus();
+                        }
+                    } else if (e.key === 'ArrowUp') {
+                        const prevInput = elTableBody.querySelector(`input[data-index="${index - 1}"]`);
+                        if (prevInput) {
+                            e.preventDefault();
+                            prevInput.focus();
+                        }
+                    }
+                });
+
+                // Sự kiện Paste thông minh (Hỗ trợ dán cả cột từ Excel)
+                input.addEventListener('paste', (e) => {
+                    const pasteData = (e.clipboardData || window.clipboardData).getData('text');
+                    if (!pasteData) return;
+
+                    // Kiểm tra xem dữ liệu dán có chứa nhiều dòng không
+                    if (pasteData.includes('\n') || pasteData.includes('\r')) {
+                        e.preventDefault();
+                        handleMultiLinePaste(pasteData, index);
+                    }
+                });
+
+                tdInput.appendChild(input);
+
+                // Cột Kết quả đối chiếu từng dòng
+                const tdResult = document.createElement('td');
+                tdResult.className = 'py-2 px-4 border-l border-slate-200 font-cjk text-base sm:text-lg align-middle';
+                tdResult.id = `row-result-${index}`;
+
+                // Cột Nút xóa dòng
+                const tdAction = document.createElement('td');
+                tdAction.className = 'py-2 px-2 text-center border-l border-slate-200';
+                const btnDel = document.createElement('button');
+                btnDel.type = 'button';
+                btnDel.title = 'Xóa dòng này';
+                btnDel.className = 'text-slate-300 hover:text-rose-500 p-1 rounded-lg transition cursor-pointer';
+                btnDel.innerHTML = `<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>`;
+                btnDel.addEventListener('click', () => {
+                    if (state.rows.length > 1) {
+                        state.rows.splice(index, 1);
+                    } else {
+                        state.rows[0] = '';
+                    }
+                    renderTable();
+                    processAlignment();
+                });
+                tdAction.appendChild(btnDel);
+
+                tr.appendChild(tdIndex);
+                tr.appendChild(tdInput);
+                tr.appendChild(tdResult);
+                tr.appendChild(tdAction);
+                elTableBody.appendChild(tr);
+            });
+        }
+
+        /**
+         * Xử lý tách nhiều dòng khi dán từ Excel vào vị trí startIndex
+         */
+        function handleMultiLinePaste(rawText, startIndex) {
+            // Tách theo \r\n hoặc \n
+            let lines = rawText.split(/\r?\n/);
+
+            // Excel thường thêm 1 ký tự xuống dòng trống ở cuối cùng khi copy cột
+            if (lines.length > 1 && lines[lines.length - 1] === '') {
+                lines.pop();
+            }
+
+            if (lines.length === 0) return;
+
+            // Điền vào mảng state.rows bắt đầu từ startIndex
+            lines.forEach((line, offset) => {
+                const targetIdx = startIndex + offset;
+                if (targetIdx < state.rows.length) {
+                    state.rows[targetIdx] = line;
+                } else {
+                    state.rows.push(line);
+                }
+            });
+
+            renderTable();
+            processAlignment();
+            showToast(`Đã dán ${lines.length} dòng từ dữ liệu!`);
+        }
+
+        /**
+         * Cập nhật nội dung cột kết quả của từng dòng
+         */
+        function updateTableResultCells(rowResults) {
+            rowResults.forEach((res, idx) => {
+                const cell = document.getElementById(`row-result-${idx}`);
+                if (!cell) return;
+
+                if (!res || res.empty || res.tokens.length === 0) {
+                    cell.innerHTML = '<span class="text-slate-300 text-xs">—</span>';
+                    return;
+                }
+
+                cell.innerHTML = res.tokens.map(t => {
+                    if (t.type === 'word') {
+                        return `<span class="text-slate-800 font-medium">[${escapeHtml(t.text)}]</span>`;
+                    } else if (t.type === 'punct') {
+                        return `<span class="text-amber-700 bg-amber-100/80 px-1 rounded font-bold">[${escapeHtml(t.text)}]</span>`;
+                    } else {
+                        return `<span class="text-rose-600 bg-rose-50 px-1 rounded line-through" title="Không khớp câu mẫu">[${escapeHtml(t.text)}]</span>`;
+                    }
+                }).join('');
+            });
+        }
+
+        /**
+         * Escape HTML an toàn
+         */
+        function escapeHtml(str) {
+            return str
+                .replace(/&/g, "&amp;")
+                .replace(/</g, "&lt;")
+                .replace(/>/g, "&gt;")
+                .replace(/"/g, "&quot;")
+                .replace(/'/g, "&#039;");
+        }
+
+        /**
+         * Hiển thị thông báo Toast nhỏ gọn
+         */
+        let toastTimer = null;
+        function showToast(msg) {
+            const toast = document.getElementById('toast');
+            const toastMsg = document.getElementById('toastMessage');
+            toastMsg.textContent = msg;
+            toast.classList.remove('translate-y-20', 'opacity-0');
+            clearTimeout(toastTimer);
+            toastTimer = setTimeout(() => {
+                toast.classList.add('translate-y-20', 'opacity-0');
+            }, 2500);
+        }
+
+        /**
+         * Sao chép văn bản sử dụng document.execCommand('copy') đảm bảo tương thích iframe
+         */
+        function copyToClipboard(text) {
+            if (!text) {
+                showToast('Chưa có kết quả để sao chép!');
+                return;
+            }
+            const tempTextarea = document.createElement('textarea');
+            tempTextarea.value = text;
+            tempTextarea.style.position = 'fixed';
+            tempTextarea.style.left = '-9999px';
+            document.body.appendChild(tempTextarea);
+            tempTextarea.select();
+            try {
+                document.execCommand('copy');
+                showToast('Đã sao chép kết quả: ' + (text.length > 30 ? text.slice(0, 30) + '...' : text));
+            } catch (err) {
+                showToast('Không thể sao chép tự động, vui lòng bôi đen và nhấn Ctrl+C.');
+            }
+            document.body.removeChild(tempTextarea);
+        }
+
+        // --- Khởi tạo các sự kiện ---
+
+        elSample.addEventListener('input', () => {
+            state.sampleSentence = elSample.value;
+            processAlignment();
+        });
+
+        elOptSplitPunct.addEventListener('change', processAlignment);
+        elOptIgnoreSpaces.addEventListener('change', processAlignment);
+
+        // Nút Nạp ví dụ mẫu đúng như yêu cầu người dùng
+        document.getElementById('btnLoadExample').addEventListener('click', () => {
+            elSample.value = '他其實是講了,這麼一個理。';
+            state.sampleSentence = elSample.value;
+            state.rows = ['他其實', '是講了', '這麼一個理', '', ''];
+            renderTable();
+            processAlignment();
+            showToast('Đã nạp ví dụ mẫu!');
+        });
+
+        // Nút Xóa tất cả
+        document.getElementById('btnClearAll').addEventListener('click', () => {
+            elSample.value = '';
+            state.sampleSentence = '';
+            state.rows = ['', '', '', '', ''];
+            renderTable();
+            processAlignment();
+            elSample.focus();
+            showToast('Đã xóa toàn bộ dữ liệu!');
+        });
+
+        // Nút Copy kết quả
+        document.getElementById('btnCopyResult').addEventListener('click', () => {
+            copyToClipboard(elFinalResult.value);
+        });
+
+        // Nút Thêm dòng
+        document.getElementById('btnAddRow').addEventListener('click', () => {
+            state.rows.push('');
+            renderTable();
+            processAlignment();
+            const lastInput = elTableBody.querySelector(`input[data-index="${state.rows.length - 1}"]`);
+            if (lastInput) lastInput.focus();
+        });
+
+        // Nút Dán nhanh từ Clipboard / Mở hộp thoại dán cột
+        const pasteModal = document.getElementById('pasteModal');
+        const bulkPasteArea = document.getElementById('bulkPasteArea');
+
+        document.getElementById('btnPasteClipboard').addEventListener('click', () => {
+            bulkPasteArea.value = '';
+            pasteModal.classList.remove('hidden');
+            pasteModal.classList.add('flex');
+            setTimeout(() => bulkPasteArea.focus(), 50);
+        });
+
+        document.getElementById('btnCancelPaste').addEventListener('click', () => {
+            pasteModal.classList.add('hidden');
+            pasteModal.classList.remove('flex');
+        });
+
+        document.getElementById('btnConfirmPaste').addEventListener('click', () => {
+            const text = bulkPasteArea.value;
+            pasteModal.classList.add('hidden');
+            pasteModal.classList.remove('flex');
+            if (text.trim() !== '') {
+                // Thay thế toàn bộ cột từ dòng đầu tiên
+                state.rows = [];
+                handleMultiLinePaste(text, 0);
+            }
+        });
+
+        // Đóng modal khi click ra ngoài
+        pasteModal.addEventListener('click', (e) => {
+            if (e.target === pasteModal) {
+                pasteModal.classList.add('hidden');
+                pasteModal.classList.remove('flex');
+            }
+        });
+
+        // Khởi chạy lần đầu với ví dụ mẫu sẵn để bạn dễ hình dung ngay
+        window.addEventListener('DOMContentLoaded', () => {
+            elSample.value = '他其實是講了,這麼一個理。';
+            state.sampleSentence = elSample.value;
+            state.rows = ['他其實', '是講了', '這麼一個理', '', ''];
+            renderTable();
+            processAlignment();
+        });
+    </script>
+</body>
+</html>

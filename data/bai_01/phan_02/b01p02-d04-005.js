@@ -1,0 +1,32 @@
+/* Exported Rich Text & Table Data */
+(function() {
+  window.RENDER_PAYLOAD = {
+    cau_id: "b01p02-d04-005",
+    editorHtml: "<div style=\"margin-bottom: 12px; line-height: 1.5\">\n        <p>\n          <span style=\"font-size: 10px; font-weight: bold; color: #64748b;\"> Nguyên Văn:</span> [(b01p02-d04-005)]<br>\n          <span id=\"matrixTableWrapper\"><table class=\"matrix-table\"><tbody><tr class=\"row-audio\"><td id=\"m_audio_0\">[(ta1)(shi4)(shuo1)]</td><td id=\"m_audio_1\"></td><td id=\"m_audio_2\">[(da2)(dao4)]</td><td id=\"m_audio_3\">[(wo3)(ru2)(lai2)]</td><td id=\"m_audio_4\">[(zhe4)(yang4)(de)(ceng2)(ci4)]</td><td id=\"m_audio_5\"></td><td id=\"m_audio_6\">[(wo3)(dou1)]</td><td id=\"m_audio_7\">[(mei2)(you3)(kan4)(dao4)]</td><td id=\"m_audio_8\">[(yu3)(zhou4)(de)]</td><td id=\"m_audio_9\">[(zui4)(zhong1)(de)(li3)]</td><td id=\"m_audio_10\"></td><td id=\"m_audio_11\">[(zui4)(zhong1)(de)(fa3)]</td><td id=\"m_audio_12\">[(shi4)(shen2)(me)]</td><td id=\"m_audio_13\"></td></tr><tr class=\"row-yueyin\"><td id=\"m_yueyin_0\">(tha-)(shi*`)(shua-)</td><td id=\"m_yueyin_1\"></td><td id=\"m_yueyin_2\">(tá tao`)</td><td id=\"m_yueyin_3\">(gủa)(rú lái)</td><td id=\"m_yueyin_4\">(trưa` yang`)(tơ)(s'ấng s'ư`)</td><td id=\"m_yueyin_5\"></td><td id=\"m_yueyin_6\">(gủa)(tâu-)</td><td id=\"m_yueyin_7\">(mấy yẩu)(khan` tao`)</td><td id=\"m_yueyin_8\">(ủy trâu`)(tơ)</td><td id=\"m_yueyin_9\">(zuây` trung-)(tơ)(lỉ)</td><td id=\"m_yueyin_10\"></td><td id=\"m_yueyin_11\">(zuây` trung-)(tơ)(fả)</td><td id=\"m_yueyin_12\">(shi*`)(shấn mơ)</td><td id=\"m_yueyin_13\"></td></tr><tr class=\"row-hanzi\"><td id=\"m_hanzi_0\">他是說</td><td id=\"m_hanzi_1\">:</td><td id=\"m_hanzi_2\">達到</td><td id=\"m_hanzi_3\">我如來</td><td id=\"m_hanzi_4\">這樣的層次</td><td id=\"m_hanzi_5\">,</td><td id=\"m_hanzi_6\">我都</td><td id=\"m_hanzi_7\">沒有看到</td><td id=\"m_hanzi_8\">宇宙<font color=\"#f97316\">的</font></td><td id=\"m_hanzi_9\">最終的理</td><td id=\"m_hanzi_10\">、</td><td id=\"m_hanzi_11\">最終的法</td><td id=\"m_hanzi_12\">是甚麼</td><td id=\"m_hanzi_13\">。</td></tr><tr class=\"row-pinyin\"><td id=\"m_pinyin_0\">tā shì shuō</td><td id=\"m_pinyin_1\"></td><td id=\"m_pinyin_2\">dádào</td><td id=\"m_pinyin_3\">wǒ rúlái</td><td id=\"m_pinyin_4\">zhèyàng de céngcì</td><td id=\"m_pinyin_5\"></td><td id=\"m_pinyin_6\">wǒ dōu</td><td id=\"m_pinyin_7\">méiyǒu kàndào</td><td id=\"m_pinyin_8\">yǔzhòu de</td><td id=\"m_pinyin_9\">zuìzhōng de lǐ</td><td id=\"m_pinyin_10\"></td><td id=\"m_pinyin_11\">zuìzhōng de fǎ</td><td id=\"m_pinyin_12\">shì shénme</td><td id=\"m_pinyin_13\"></td></tr><tr class=\"row-nghia\"><td id=\"m_nghia_0\">ông là nói</td><td id=\"m_nghia_1\"></td><td id=\"m_nghia_2\">đạt đến</td><td id=\"m_nghia_3\">ta Như lai</td><td id=\"m_nghia_4\">như này về tầng thứ</td><td id=\"m_nghia_5\"></td><td id=\"m_nghia_6\">ta đều</td><td id=\"m_nghia_7\">chưa có thấy được</td><td id=\"m_nghia_8\">Vũ trụ <font color=\"#f97316\">về</font></td><td id=\"m_nghia_9\">tận cùng về Lý</td><td id=\"m_nghia_10\"></td><td id=\"m_nghia_11\">tận cùng về Pháp</td><td id=\"m_nghia_12\">là cái gì</td><td id=\"m_nghia_13\"></td></tr></tbody></table><br></span><span style=\"color: rgb(100, 116, 139); font-size: 10px; font-weight: bold;\">Tạm Dịch:</span></p><p style=\"margin-top: 0px;\"><b style=\"\"><font color=\"#000000\">ông là nói: đạt đến ta Như lai như này về tầng thứ, ta đều chưa có thấy được Vũ trụ </font><font color=\"#a855f7\">về</font><font color=\"#000000\">&nbsp;[tận cùng về Lý, tận cùng về Pháp] là cái gì.</font></b></p>\n        <p style=\"margin-top: 5px;\">\n          <span style=\"font-size: 10px; font-weight: bold; color: #64748b;\"> Bản dịch trong sách:</span><br>\n          <span style=\"font-size: 16px; font-weight: bold; color: #000000;\">Ông [muốn] nói: ‘Đạt đến tầng Như Lai như ta, ta chưa thể thấy được [chân] lý tối hậu của vũ trụ, Pháp tối hậu của vũ trụ là gì’.</span>\n        </p>\n      </div>",
+    tableData: [{"hanzi":"他是說","audio":"[(ta1)(shi4)(shuo1)]","pinyin":"tā shì shuō","yueyin":"(tha-)(shi*`)(shua-)","nghia":"ông là nói"},{"hanzi":"達到","audio":"[(da2)(dao4)]","pinyin":"dádào","yueyin":"(tá tao`)","nghia":"đạt đến"},{"hanzi":"我如來","audio":"[(wo3)(ru2)(lai2)]","pinyin":"wǒ rúlái","yueyin":"(gủa)(rú lái)","nghia":"ta Như lai"},{"hanzi":"這樣的層次","audio":"[(zhe4)(yang4)(de)(ceng2)(ci4)]","pinyin":"zhèyàng de céngcì","yueyin":"(trưa` yang`)(tơ)(s'ấng s'ư`)","nghia":"như này về tầng thứ"},{"hanzi":"我都","audio":"[(wo3)(dou1)]","pinyin":"wǒ dōu","yueyin":"(gủa)(tâu-)","nghia":"ta đều"},{"hanzi":"沒有看到","audio":"[(mei2)(you3)(kan4)(dao4)]","pinyin":"méiyǒu kàndào","yueyin":"(mấy yẩu)(khan` tao`)","nghia":"chưa có thấy được"},{"hanzi":"宇宙的","audio":"[(yu3)(zhou4)(de)]","pinyin":"yǔzhòu de","yueyin":"(ủy trâu`)(tơ)","nghia":"Vũ trụ về"},{"hanzi":"最終的理","audio":"[(zui4)(zhong1)(de)(li3)]","pinyin":"zuìzhōng de lǐ","yueyin":"(zuây` trung-)(tơ)(lỉ)","nghia":"tận cùng về Lý"},{"hanzi":"最終的法","audio":"[(zui4)(zhong1)(de)(fa3)]","pinyin":"zuìzhōng de fǎ","yueyin":"(zuây` trung-)(tơ)(fả)","nghia":"tận cùng về Pháp"},{"hanzi":"是甚麼","audio":"[(shi4)(shen2)(me)]","pinyin":"shì shénme","yueyin":"(shi*`)(shấn mơ)","nghia":"là cái gì"}]
+  };
+
+  window.renderContent = function(targetEditorId, targetTableId) {
+    if (targetEditorId) {
+      var editorEl = document.getElementById(targetEditorId);
+      if (editorEl) editorEl.innerHTML = window.RENDER_PAYLOAD.editorHtml;
+    }
+    
+    if (targetTableId) {
+      var tableEl = document.getElementById(targetTableId);
+      if (tableEl) {
+        var html = '<table border="1" style="border-collapse: collapse; width: 100%;">';
+        html += '<thead><tr><th>Hanzi</th><th>Audio</th><th>Pinyin</th><th>Yueyin</th><th>Nghĩa</th></tr></thead><tbody>';
+        window.RENDER_PAYLOAD.tableData.forEach(function(item) {
+          html += '<tr><td>' + item.hanzi + '</td><td>' + item.audio + '</td><td>' + item.pinyin + '</td><td>' + item.yueyin + '</td><td>' + item.nghia + '</td></tr>';
+        });
+        html += '</tbody></table>';
+        tableEl.innerHTML = html;
+      }
+    }
+  };
+
+  document.addEventListener("DOMContentLoaded", function() {
+    window.renderContent("rendered-editor", "rendered-table");
+  });
+})();
