@@ -418,6 +418,88 @@ window.CURRENT_PHAN_DATA = {
           "nghia": "Vả lại Pháp của tầng cao so với Pháp của tầng thấp thì [tiếp cận] gần đặc tính của vũ trụ hơn; vậy nên, Ông bèn giảng: ‘Pháp vô định Pháp’."
         }
       ]
+    },
+    {
+      "doan_so": 4,
+      "content": [
+        {
+          "cau_id": "b01p02-d04-001",
+          "hanzi": "最後釋迦牟尼還講：我一輩子甚麼法都沒有講。",
+          "pinyin": "zuì hòu shì jiā móu ní hái jiǎng wǒ yí bèi zi shén me fǎ dōu méi yǒu jiǎng",
+          "yueyin": "(zuây`) (hâu`) (shi*`) (chi:a-) (mấu) (ní) (hái) (chi:ảng) (gủa) (ý) (pây`) (zư) (shấn) (mơ) (fả) (tâu-) (mấy) (yẩu) (chi:ảng)",
+          "nghia": "Cuối cùng Thích Ca Mâu Ni lại giảng: ‘Ta đời này chưa có giảng Pháp nào hết’."
+        },
+        {
+          "cau_id": "b01p02-d04-002",
+          "hanzi": "禪宗又理解為無法可講了。",
+          "pinyin": "chán zōng yòu lǐ jiě wéi wú fǎ kě jiǎng le",
+          "yueyin": "(tr'án) (zung-) (yâu`) (lỉ) (chi:ể) (guấy) (ú) (fả) (khửa) (chi:ảng) (lơ)",
+          "nghia": "Thiền tông lại lý giải rằng không Pháp có thể giảng."
+        },
+        {
+          "cau_id": "b01p02-d04-003",
+          "hanzi": "釋迦牟尼晚年的時候已經達到如來的層次了，他為甚麼說甚麼法都沒有講？",
+          "pinyin": "shì jiā móu ní wǎn nián de shí hou yǐ jīng dá dào rú lái de céng cì le tā wèi shén me shuō shén me fǎ dōu méi yǒu jiǎng",
+          "yueyin": "(shi*`) (chi:a-) (mấu) (ní) (goản) (ni:én) (tơ) (shí*) (hâu) (ỷ) (ching-) (tá) (tao`) (rú) (lái) (tơ) (s'ấng) (s'ư`) (lơ) (tha-) (guây`) (shấn) (mơ) (shua-) (shấn) (mơ) (fả) (tâu-) (mấy) (yẩu) (chi:ảng)",
+          "nghia": "Vào những năm cuối, Thích Ca Mâu Ni đã đạt đến tầng Như Lai; hỏi tại sao Ông nói Ông chưa có giảng Pháp nào hết?"
+        },
+        {
+          "cau_id": "b01p02-d04-004",
+          "hanzi": "他其實講了一個甚麼問題呀？",
+          "pinyin": "tā qí shí jiǎng le yí gè shén me wèn tí ya",
+          "yueyin": "(tha-) (ch'í) (shí*) (chi:ảng) (lơ) (ý) (cưa`) (shấn) (mơ) (guân`) (thí) (ya)",
+          "nghia": "Thực ra Ông đã nêu ra một vấn đề gì?"
+        },
+        {
+          "cau_id": "b01p02-d04-005",
+          "hanzi": "他是說：達到我如來這樣的層次，我都沒有看到宇宙的最終的理、最終的法是甚麼。",
+          "pinyin": "tā shì shuō dá dào wǒ rú lái zhè yàng de céng cì wǒ dōu méi yǒu kàn dào yǔ zhòu de zuì zhōng de lǐ zuì zhōng de fǎ shì shén me",
+          "yueyin": "(tha-) (shi*`) (shua-) (tá) (tao`) (gủa) (rú) (lái) (trưa`) (yang`) (tơ) (s'ấng) (s'ư`) (gủa) (tâu-) (mấy) (yẩu) (khan`) (tao`) (ủy) (trâu`) (tơ) (zuây`) (trung-) (tơ) (lỉ) (zuây`) (trung-) (tơ) (fả) (shi*`) (shấn) (mơ)",
+          "nghia": "Ông [muốn] nói: ‘Đạt đến tầng Như Lai như ta, ta chưa thể thấy được [chân] lý tối hậu của vũ trụ, Pháp tối hậu của vũ trụ là gì’."
+        },
+        {
+          "cau_id": "b01p02-d04-006",
+          "hanzi": "所以他叫後人不要把他講的話當作絕對的真理、不變的真理，",
+          "pinyin": "suǒ yǐ tā jiào hòu rén bú yào bǎ tā jiǎng de huà dàng zuò jué duì de zhēn lǐ bú biàn de zhēn lǐ",
+          "yueyin": "(sủa) (ỷ) (tha-) (chi:ao`) (hâu`) (rấn) (pú) (yao`) (pả) (tha-) (chi:ảng) (tơ) (hoa`) (tang`) (zua`) (chuế) (tuây`) (tơ) (trân-) (lỉ) (pú) (pi:en`) (tơ) (trân-) (lỉ)",
+          "nghia": "Vậy nên Ông muốn nói người đời sau không được lấy những lời Ông giảng làm chân lý tuyệt đối, chân lý bất biến;"
+        },
+        {
+          "cau_id": "b01p02-d04-007",
+          "hanzi": "那樣會把後人侷限在如來或者如來以下的層次中，不能向更高層次突破。",
+          "pinyin": "nà yàng huì bǎ hòu rén jú xiàn zài rú lái huò zhě rú lái yǐ xià de céng cì zhōng bù néng xiàng gèng gāo céng cì tū pò",
+          "yueyin": "(na`) (yang`) (huây`) (pả) (hâu`) (rấn) (chúy) (xi:en`) (zai`) (rú) (lái) (hua`) (trửa) (rú) (lái) (ỷ) (xi:a`) (tơ) (s'ấng) (s'ư`) (trung-) (pu`) (nấng) (xi:ang`) (câng`) (cao-) (s'ấng) (s'ư`) (thu-) (p'ua`)",
+          "nghia": "nếu không người đời sau sẽ bị hạn cuộc vào tầng Như Lai hoặc thấp hơn Như Lai, mà không thể đột phá lên tầng cao hơn."
+        },
+        {
+          "cau_id": "b01p02-d04-008",
+          "hanzi": "後來人理解不了這句話的真義，就認為法講出來就不是法了，這樣去理解。",
+          "pinyin": "hòu lái rén lǐ jiě bu liǎo zhè jù huà de zhēn yì jiù rèn wéi fǎ jiǎng chū lái jiù bú shì fǎ le zhè yàng qù lǐ jiě",
+          "yueyin": "(hâu`) (lái) (rấn) (lỉ) (chi:ể) (pu) (li:ảo) (trưa`) (chuy`) (hoa`) (tơ) (trân-) (y`) (chi:âu`) (rân`) (guấy) (fả) (chi:ảng) (tr'u-) (lái) (chi:âu`) (pú) (shi*`) (fả) (lơ) (trưa`) (yang`) (ch'uy`) (lỉ) (chi:ể)",
+          "nghia": "Người đời sau không lý giải được nghĩa chân chính của câu nói ấy, [nên nhìn] nhận rằng Pháp đã giảng ra thì không còn là Pháp, [họ] lý giải kiểu như thế."
+        },
+        {
+          "cau_id": "b01p02-d04-009",
+          "hanzi": "其實釋迦牟尼是講：不同層次有不同層次的法，每一層次的法都不是宇宙中絕對的真理，",
+          "pinyin": "qí shí shì jiā móu ní shì jiǎng bù tóng céng cì yǒu bù tóng céng cì de fǎ měi yì céng cì de fǎ dōu bú shì yǔ zhòu zhōng jué duì de zhēn lǐ",
+          "yueyin": "(ch'í) (shí*) (shi*`) (chi:a-) (mấu) (ní) (shi*`) (chi:ảng) (pu`) (thúng) (s'ấng) (s'ư`) (yẩu) (pu`) (thúng) (s'ấng) (s'ư`) (tơ) (fả) (mẩy) (y`) (s'ấng) (s'ư`) (tơ) (fả) (tâu-) (pú) (shi*`) (ủy) (trâu`) (trung-) (chuế) (tuây`) (tơ) (trân-) (lỉ)",
+          "nghia": "Kỳ thực Thích Ca Mâu Ni [muốn] giảng rằng: Các tầng khác nhau có Pháp của các tầng khác nhau, Pháp của mỗi một tầng không phải là chân lý tuyệt đối của vũ trụ;"
+        },
+        {
+          "cau_id": "b01p02-d04-010",
+          "hanzi": "但是這一層次中的法在這一層次中是有指導作用的。",
+          "pinyin": "dàn shì zhè yì céng cì zhōng de fǎ zài zhè yì céng cì zhōng shì yǒu zhǐ dǎo zuò yòng de",
+          "yueyin": "(tan`) (shi*`) (trưa`) (y`) (s'ấng) (s'ư`) (trung-) (tơ) (fả) (zai`) (trưa`) (y`) (s'ấng) (s'ư`) (trung-) (shi*`) (yẩu) (trỉ*) (tảo) (zua`) (yung`) (tơ)",
+          "nghia": "nhưng Pháp của mỗi một tầng có tác dụng [làm Pháp lý] chỉ đạo tại mỗi một tầng."
+        },
+        {
+          "cau_id": "b01p02-d04-011",
+          "hanzi": "他其實是講了這麼一個理。",
+          "pinyin": "tā qí shí shì jiǎng le zhè me yí gè lǐ",
+          "yueyin": "(tha-) (ch'í) (shí*) (shi*`) (chi:ảng) (lơ) (trưa`) (mơ) (ý) (cưa`) (lỉ)",
+          "nghia": "Thật ra Ông đã giảng chính [Pháp] lý này."
+        }
+      ]
     }
   ]
 };
