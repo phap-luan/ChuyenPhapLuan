@@ -424,7 +424,7 @@ window.CURRENT_PHAN_DATA = {
       "content": [
         {
           "cau_id": "b01p02-d04-001",
-          "hanzi": "最後釋迦牟尼還講：我一輩子甚麼法都沒有講。",
+          "hanzi": "  最後釋迦牟尼還講：我一輩子甚麼法都沒有講。",
           "pinyin": "zuì hòu shì jiā móu ní hái jiǎng wǒ yí bèi zi shén me fǎ dōu méi yǒu jiǎng",
           "yueyin": "(zuây`) (hâu`) (shi*`) (chi:a-) (mấu) (ní) (hái) (chi:ảng) (gủa) (ý) (pây`) (zư) (shấn) (mơ) (fả) (tâu-) (mấy) (yẩu) (chi:ảng)",
           "nghia": "Cuối cùng Thích Ca Mâu Ni lại giảng: ‘Ta đời này chưa có giảng Pháp nào hết’."
@@ -498,6 +498,74 @@ window.CURRENT_PHAN_DATA = {
           "pinyin": "tā qí shí shì jiǎng le zhè me yí gè lǐ",
           "yueyin": "(tha-) (ch'í) (shí*) (shi*`) (chi:ảng) (lơ) (trưa`) (mơ) (ý) (cưa`) (lỉ)",
           "nghia": "Thật ra Ông đã giảng chính [Pháp] lý này."
+        }
+      ]
+    },
+    {
+      "doan_so": 5,
+      "content": [
+        {
+          "cau_id": "b01p02-d05-001",
+          "hanzi": "  過去有許多人，特別是禪宗，一直保持著這樣一種偏見和極端錯誤的認識。",
+          "pinyin": "guò qù yǒu xǔ duō rén tè bié shì chán zōng yì zhí bǎo chí zhe zhè yàng yì zhǒng piān jiàn hé jí duān cuò wù de rèn shi",
+          "yueyin": "(cua`) (ch'uy`) (yẩu) (xủy) (tua-) (rấn) (thưa`) (pi:ế) (shi*`) (tr'án) (zung-) (y`) (trí*) (pảo) (tr'í*) (trơ) (trưa`) (yang`) (y`) (trủng) (p'i:en-) (chi:en`) (hứa) (chí) (toan-) (s'ua`) (u`) (tơ) (rân`) (shi*)",
+          "nghia": "Trước đây có nhiều người, đặc biệt [bên] Thiền tông, cứ nhất mực bảo trì nhận thức thiên kiến và sai lầm cực đoan ấy."
+        },
+        {
+          "cau_id": "b01p02-d05-002",
+          "hanzi": "不教你，怎麼指導去煉，如何去煉，如何去修啊？",
+          "pinyin": "bù jiāo nǐ zěn me zhǐ dǎo qù liàn rú hé qù liàn rú hé qù xiū a",
+          "yueyin": "(pu`) (chi:ao-) (nỉ) (zẩn) (mơ) (trỉ*) (tảo) (ch'uy`) (li:en`) (rú) (hứa) (ch'uy`) (li:en`) (rú) (hứa) (ch'uy`) (xi:âu-) (a)",
+          "nghia": "Không dạy chư vị, thử hỏi chỉ đạo [tu] luyện làm sao, luyện thế nào, rồi tu ra sao?"
+        },
+        {
+          "cau_id": "b01p02-d05-003",
+          "hanzi": "佛教中有許多佛教故事，可能有的人看了，說上天了，到了天國之後，",
+          "pinyin": "fó jiào zhōng yǒu xǔ duō fó jiào gù shi kě néng yǒu de rén kàn le shuō shàng tiān le dào le tiān guó zhī hòu",
+          "yueyin": "(fúa) (chi:ao`) (trung-) (yẩu) (xủy) (tua-) (fúa) (chi:ao`) (cu`) (shi*) (khửa) (nấng) (yẩu) (tơ) (rấn) (khan`) (lơ) (shua-) (shang`) (thi:en-) (lơ) (tao`) (lơ) (thi:en-) (cúa) (tri*-) (hâu`)",
+          "nghia": "Trong Phật giáo có nhiều chuyện cổ Phật giáo, có thể có người đã từng xem; kể rằng lên trên trời, sau khi đến thiên quốc,"
+        },
+        {
+          "cau_id": "b01p02-d05-004",
+          "hanzi": "發現上面的《金剛經》和下面的《金剛經》每一個字都不一樣，意義都不一樣。",
+          "pinyin": "fā xiàn shàng miàn de jīn gāng jīng hé xià miàn de jīn gāng jīng měi yí gè zì dōu bù yí yàng yì yì dōu bù yí yàng",
+          "yueyin": "(fa-) (xi:en`) (shang`) (mi:en`) (tơ) (chin-) (cang-) (ching-) (hứa) (xi:a`) (mi:en`) (tơ) (chin-) (cang-) (ching-) (mẩy) (ý) (cưa`) (zư`*) (tâu-) (pu`) (ý) (yang`) (y`) (y`) (tâu-) (pu`) (ý) (yang`)",
+          "nghia": "rồi phát hiện rằng kinh «Kim Cương» ở đó so với kinh «Kim Cương» ở dưới [hạ giới], từng chữ đều khác nhau, ý nghĩa cũng khác nhau."
+        },
+        {
+          "cau_id": "b01p02-d05-005",
+          "hanzi": "這個《金剛經》怎麼和常人間那個《金剛經》不一樣了呢？",
+          "pinyin": "zhè ge jīn gāng jīng zěn me hé cháng rén jiān nà ge jīn gāng jīng bù yí yàng le ne",
+          "yueyin": "(trưa`) (cưa) (chin-) (cang-) (ching-) (zẩn) (mơ) (hứa) (tr'áng) (rấn) (chi:en-) (na`) (cưa) (chin-) (cang-) (ching-) (pu`) (ý) (yang`) (lơ) (nưa)",
+          "nghia": "Tại sao kinh «Kim Cương» kia lại khác với kinh «Kim Cương» tại nhân gian?"
+        },
+        {
+          "cau_id": "b01p02-d05-006",
+          "hanzi": "還有的人說：極樂世界的經書和下面的簡直面目皆非，根本就不是一回事了，",
+          "pinyin": "hái yǒu de rén shuō jí lè shì jiè de jīng shū hé xià miàn de jiǎn zhí miàn mù jiē fēi gēn běn jiù bú shì yì huí shì le",
+          "yueyin": "(hái) (yẩu) (tơ) (rấn) (shua-) (chí) (lưa`) (shi*`) (chi:ê`) (tơ) (ching-) (shu-) (hứa) (xi:a`) (mi:en`) (tơ) (chi:ẻn) (trí*) (mi:en`) (mu`) (chi:ê-) (fây-) (cân-) (pẩn) (chi:âu`) (pú) (shi*`) (y`) (huấy) (shi*`) (lơ)",
+          "nghia": "Lại có người nói: Kinh sách của thế giới Cực Lạc so với [kinh thư] dưới [hạ giới] quả là khác hẳn, hoàn toàn khác nhau,"
+        },
+        {
+          "cau_id": "b01p02-d05-007",
+          "hanzi": "不但字不一樣，涵義、意義全都不一樣了，發生變化了。",
+          "pinyin": "bú dàn zì bù yí yàng hán yì yì yì quán dōu bù yí yàng le fā shēng biàn huà le",
+          "yueyin": "(pú) (tan`) (zư`*) (pu`) (ý) (yang`) (hán) (y`) (y`) (y`) (ch'oán) (tâu-) (pu`) (ý) (yang`) (lơ) (fa-) (shâng-) (pi:en`) (hoa`) (lơ)",
+          "nghia": "không chỉ các chữ khác nhau mà hàm nghĩa, ý nghĩa cũng khác nhau, chúng đã thay đổi hẳn rồi."
+        },
+        {
+          "cau_id": "b01p02-d05-008",
+          "hanzi": "其實就是同一個法在不同層次上都有不同的變化和顯現形式，",
+          "pinyin": "qí shí jiù shì tóng yí gè fǎ zài bù tóng céng cì shàng dōu yǒu bù tóng de biàn huà hé xiǎn xiàn xíng shì",
+          "yueyin": "(ch'í) (shí*) (chi:âu`) (shi*`) (thúng) (ý) (cưa`) (fả) (zai`) (pu`) (thúng) (s'ấng) (s'ư`) (shang`) (tâu-) (yẩu) (pu`) (thúng) (tơ) (pi:en`) (hoa`) (hứa) (xi:ẻn) (xi:en`) (xíng) (shi*`)",
+          "nghia": "Thật ra, chính là cùng một Pháp đồng nhất [nhưng] tại các tầng khác nhau [thì] có các biến hoá và hình thức hiển hiện khác nhau;"
+        },
+        {
+          "cau_id": "b01p02-d05-009",
+          "hanzi": "對修煉者在不同層次能起到不同的指導作用。",
+          "pinyin": "duì xiū liàn zhě zài bù tóng céng cì néng qǐ dào bù tóng de zhǐ dǎo zuò yòng",
+          "yueyin": "(tuây`) (xi:âu-) (li:en`) (trửa) (zai`) (pu`) (thúng) (s'ấng) (s'ư`) (nấng) (ch'ỉ) (tao`) (pu`) (thúng) (tơ) (trỉ*) (tảo) (zua`) (yung`)",
+          "nghia": "đối với người tu luyện tại các tầng khác nhau, có thể phát huy tác dụng chỉ đạo khác nhau."
         }
       ]
     }
