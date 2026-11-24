@@ -568,6 +568,53 @@ window.CURRENT_PHAN_DATA = {
           "nghia": "đối với người tu luyện tại các tầng khác nhau, có thể phát huy tác dụng chỉ đạo khác nhau."
         }
       ]
+    },
+    {
+      "doan_so": 6,
+      "content": [
+        {
+          "cau_id": "b01p02-d06-001",
+          "hanzi": "  大家知道，佛教中有一本小冊子叫《西方極樂世界遊記》，",
+          "pinyin": "dà jiā zhī dào fó jiào zhōng yǒu yì běn xiǎo cè zi jiào xī fāng jí lè shì jiè yóu jì",
+          "yueyin": "(ta`) (chi:a-) (tri*-) (tao`) (fúa) (chi:ao`) (trung-) (yẩu) (y`) (pẩn) (xi:ảo) (s'ưa`) (zư) (chi:ao`) (xi-) (fang-) (chí) (lưa`) (shi*`) (chi:ê`) (yấu) (chi`)",
+          "nghia": "Mọi người đều biết, trong Phật giáo có cuốn sách nhỏ tên là «Tây phương Cực Lạc thế giới du ký»,"
+        },
+        {
+          "cau_id": "b01p02-d06-002",
+          "hanzi": "說有一個僧人打坐煉功，元神到了極樂世界看到了景象，轉了一天，回到人間已經六年過去了。",
+          "pinyin": "shuō yǒu yí gè sēng rén dǎ zuò liàn gōng yuán shén dào le jí lè shì jiè kàn dào le jǐng xiàng zhuàn le yì tiān huí dào rén jiān yǐ jīng liù nián guò qù le",
+          "yueyin": "(shua-) (yẩu) (ý) (cưa`) (sâng-) (rấn) (tả) (zua`) (li:en`) (cung-) (doán) (shấn) (tao`) (lơ) (chí) (lưa`) (shi*`) (chi:ê`) (khan`) (tao`) (lơ) (chỉng) (xi:ang`) (troan`) (lơ) (y`) (thi:en-) (huấy) (tao`) (rấn) (chi:en-) (ỷ) (ching-) (li:âu`) (ni:én) (cua`) (ch'uy`) (lơ)",
+          "nghia": "kể rằng một tăng nhân kia đả toạ luyện công, nguyên thần [bay] đến thế giới Cực Lạc xem ngắm cảnh tượng [nơi ấy]; hết một ngày; rồi quay về nhân gian đã thấy sáu năm trôi qua."
+        },
+        {
+          "cau_id": "b01p02-d06-003",
+          "hanzi": "他看沒看到呢？看到了，可是他看到的不是真相。",
+          "pinyin": "tā kàn méi kàn dào ne kàn dào le kě shì tā kàn dào de bú shì zhēn xiàng",
+          "yueyin": "(tha-) (khan`) (mấy) (khan`) (tao`) (nưa) (khan`) (tao`) (lơ) (khửa) (shi*`) (tha-) (khan`) (tao`) (tơ) (pú) (shi*`) (trân-) (xi:ang`)",
+          "nghia": "Vị ấy thấy được không? Đã thấy, nhưng điều vị ấy đã thấy không phải là chân tướng."
+        },
+        {
+          "cau_id": "b01p02-d06-004",
+          "hanzi": "為甚麼呢？因為他的層次不夠，只能在他這個層次中給他顯現出來他應該看到的佛法的體現。",
+          "pinyin": "wèi shén me ne yīn wèi tā de céng cì bú gòu zhǐ néng zài tā zhè ge céng cì zhōng gěi tā xiǎn xiàn chū lái tā yīng gāi kàn dào de fó fǎ de tǐ xiàn",
+          "yueyin": "(guây`) (shấn) (mơ) (nưa) (yin-) (guây`) (tha-) (tơ) (s'ấng) (s'ư`) (pú) (câu`) (trỉ*) (nấng) (zai`) (tha-) (trưa`) (cưa) (s'ấng) (s'ư`) (trung-) (cẩy) (tha-) (xi:ẻn) (xi:en`) (tr'u-) (lái) (tha-) (ying-) (cai-) (khan`) (tao`) (tơ) (fúa) (fả) (tơ) (thỉ) (xi:en`)",
+          "nghia": "Tại sao? Bởi vì tầng của vị ấy không đủ, [nên] chỉ có thể ở tầng của vị ấy mà hiển hiện cho vị ấy những thể hiện của Phật Pháp mà vị ấy nên được thấy."
+        },
+        {
+          "cau_id": "b01p02-d06-005",
+          "hanzi": "因為那樣一個世界就是法的構成體現，所以他不能看到真相。",
+          "pinyin": "yīn wèi nà yàng yí gè shì jiè jiù shì fǎ de gòu chéng tǐ xiàn suǒ yǐ tā bù néng kàn dào zhēn xiàng",
+          "yueyin": "(yin-) (guây`) (na`) (yang`) (ý) (cưa`) (shi*`) (chi:ê`) (chi:âu`) (shi*`) (fả) (tơ) (câu`) (tr'ấng) (thỉ) (xi:en`) (sủa) (ỷ) (tha-) (pu`) (nấng) (khan`) (tao`) (trân-) (xi:ang`)",
+          "nghia": "Bởi vì một thế giới kiểu như vậy chính là thể hiện cấu thành của Pháp; cho nên, vị ấy không thể thấy được chân tướng."
+        },
+        {
+          "cau_id": "b01p02-d06-006",
+          "hanzi": "我講這個法無定法就是這樣一個涵義。",
+          "pinyin": "wǒ jiǎng zhè ge fǎ wú dìng fǎ jiù shì zhè yàng yí gè hán yì",
+          "yueyin": "(gủa) (chi:ảng) (trưa`) (cưa) (fả) (ú) (ting`) (fả) (chi:âu`) (shi*`) (trưa`) (yang`) (ý) (cưa`) (hán) (y`)",
+          "nghia": "Tôi giảng rằng ‘Pháp vô định Pháp’ chính là có hàm nghĩa như thế."
+        }
+      ]
     }
   ]
 };
