@@ -1,0 +1,32 @@
+/* Exported Rich Text & Table Data */
+(function() {
+  window.RENDER_PAYLOAD = {
+    cau_id: "b01p03-d01-008",
+    editorHtml: "<div style=\"margin-bottom: 12px; line-height: 1.5\">\n        <p>\n          <span style=\"font-size: 10px; font-weight: bold; color: #64748b;\"> Nguyên Văn:</span> [(b01p03-d01-008)]<br>\n          <span id=\"matrixTableWrapper\"><table class=\"matrix-table\"><tbody><tr class=\"row-audio\"><td id=\"m_audio_0\">[(er2)]</td><td id=\"m_audio_1\">[(ta1)(ye3)(mei2)(you3)(ba3)]</td><td id=\"m_audio_2\">[(zi4)(ji3)(suo3)(zai4)(ceng2)(ci4)]</td><td id=\"m_audio_3\">[(zhi1)(dao4)(de)(quan2)(bu4)(fo2)(fa3)]</td><td id=\"m_audio_4\">[(dou1)(jiang3)(chu1)(lai2)]</td><td id=\"m_audio_5\"></td></tr><tr class=\"row-yueyin\"><td id=\"m_yueyin_0\">(ớ)</td><td id=\"m_yueyin_1\">(tha-)(yể)(mấy yẩu)(pả)</td><td id=\"m_yueyin_2\">(zư`* chỉ)(sủa)(zai`)(s'ấng s'ư`)</td><td id=\"m_yueyin_3\">(tri*- tao`)(tơ)(ch'oán pu`)(fúa fả)</td><td id=\"m_yueyin_4\">(tâu-)(chi:ảng)(tr'u- lái)</td><td id=\"m_yueyin_5\"></td></tr><tr class=\"row-hanzi\"><td id=\"m_hanzi_0\">而</td><td id=\"m_hanzi_1\">他也沒有把</td><td id=\"m_hanzi_2\">自己所在層次</td><td id=\"m_hanzi_3\">知道的全部佛法</td><td id=\"m_hanzi_4\">都講出來</td><td id=\"m_hanzi_5\">,</td></tr><tr class=\"row-pinyin\"><td id=\"m_pinyin_0\">ér</td><td id=\"m_pinyin_1\">tā yě méiyǒu bǎ</td><td id=\"m_pinyin_2\">zìjǐ suǒ zài céngcì</td><td id=\"m_pinyin_3\">zhīdào de quánbù fófǎ</td><td id=\"m_pinyin_4\">dōu jiǎng chūlái</td><td id=\"m_pinyin_5\"></td></tr><tr class=\"row-nghia\"><td id=\"m_nghia_0\">mà</td><td id=\"m_nghia_1\">ông cũng chưa có đem</td><td id=\"m_nghia_2\">của mình sở tại tầng thứ</td><td id=\"m_nghia_3\">biết về toàn bộ Phật pháp</td><td id=\"m_nghia_4\">đều giảng xuất ra</td><td id=\"m_nghia_5\"></td></tr></tbody></table><br><table class=\"matrix-table\"><tbody><tr class=\"row-audio\"><td id=\"m_audio_6\">[(yao4)(xiang3)(rang4)(ta1)]</td><td id=\"m_audio_7\">[(yong2)(yuan3)(bao3)(chi2)(bu2)(bian4)]</td><td id=\"m_audio_8\"></td><td id=\"m_audio_9\">[(ye3)(bu4)(ke3)(neng2)]</td><td id=\"m_audio_10\"></td></tr><tr class=\"row-yueyin\"><td id=\"m_yueyin_6\">(yao`)(xi:ảng)(rang`)(tha-)</td><td id=\"m_yueyin_7\">(yúng doản)(pảo tr'í*)(pú)(pi:en`)</td><td id=\"m_yueyin_8\"></td><td id=\"m_yueyin_9\">(yể)(pu`)(khửa)(nấng)</td><td id=\"m_yueyin_10\"></td></tr><tr class=\"row-hanzi\"><td id=\"m_hanzi_6\"><font color=\"#f97316\">要想</font>讓它</td><td id=\"m_hanzi_7\">永遠保持不變</td><td id=\"m_hanzi_8\">,</td><td id=\"m_hanzi_9\">也不可能</td><td id=\"m_hanzi_10\">。</td></tr><tr class=\"row-pinyin\"><td id=\"m_pinyin_6\">yào xiǎng ràng tā</td><td id=\"m_pinyin_7\">yǒngyuǎn bǎochí bú biàn</td><td id=\"m_pinyin_8\"></td><td id=\"m_pinyin_9\">yě bù kěnéng</td><td id=\"m_pinyin_10\"></td></tr><tr class=\"row-nghia\"><td id=\"m_nghia_6\"><font color=\"#f97316\">muốn</font> để nó</td><td id=\"m_nghia_7\">vĩnh viễn bảo trì bất biến</td><td id=\"m_nghia_8\"></td><td id=\"m_nghia_9\">cũng không thể</td><td id=\"m_nghia_10\"></td></tr></tbody></table><br></span><span style=\"color: rgb(100, 116, 139); font-size: 10px; font-weight: bold;\">Tạm Dịch:</span></p><p style=\"margin-top: 0px;\"><font color=\"#000000\"><b>mà ông cũng chưa có đem của [mình sở tại tầng thứ] [biết về toàn bộ Phật pháp] đều giảng xuất ra,&nbsp;</b></font></p><p style=\"margin-top: 0px;\"><b style=\"\"><font color=\"#f97316\">muốn</font><font color=\"#000000\"> để nó vĩnh viễn bảo trì bất biến, cũng không thể.</font></b></p>\n        <p style=\"margin-top: 5px;\">\n          <span style=\"font-size: 10px; font-weight: bold; color: #64748b;\"> Bản dịch trong sách:</span><br>\n          <span style=\"font-size: 16px; font-weight: bold; color: #000000;\">ngoài ra Ông cũng không hề giảng hết ra những gì bản thân Ông tại tầng của mình biết về Phật Pháp;&nbsp;</span></p><p style=\"margin-top: 5px;\"><span style=\"font-size: 16px; font-weight: bold; color: #000000;\">muốn bảo trì bất biến vĩnh cửu [Pháp ấy], cũng không thể được.</span>\n        </p>\n      </div>",
+    tableData: [{"hanzi":"而","audio":"[(er2)]","pinyin":"ér","yueyin":"(ớ)","nghia":"mà"},{"hanzi":"他也沒有把","audio":"[(ta1)(ye3)(mei2)(you3)(ba3)]","pinyin":"tā yě méiyǒu bǎ","yueyin":"(tha-)(yể)(mấy yẩu)(pả)","nghia":"ông cũng chưa có đem"},{"hanzi":"自己所在層次","audio":"[(zi4)(ji3)(suo3)(zai4)(ceng2)(ci4)]","pinyin":"zìjǐ suǒ zài céngcì","yueyin":"(zư`* chỉ)(sủa)(zai`)(s'ấng s'ư`)","nghia":"của mình sở tại tầng thứ"},{"hanzi":"知道的全部佛法","audio":"[(zhi1)(dao4)(de)(quan2)(bu4)(fo2)(fa3)]","pinyin":"zhīdào de quánbù fófǎ","yueyin":"(tri*- tao`)(tơ)(ch'oán pu`)(fúa fả)","nghia":"biết về toàn bộ Phật pháp"},{"hanzi":"都講出來","audio":"[(dou1)(jiang3)(chu1)(lai2)]","pinyin":"dōu jiǎng chūlái","yueyin":"(tâu-)(chi:ảng)(tr'u- lái)","nghia":"đều giảng xuất ra"},{"hanzi":"要想讓它","audio":"[(yao4)(xiang3)(rang4)(ta1)]","pinyin":"yào xiǎng ràng tā","yueyin":"(yao`)(xi:ảng)(rang`)(tha-)","nghia":"muốn để nó"},{"hanzi":"永遠保持不變","audio":"[(yong2)(yuan3)(bao3)(chi2)(bu2)(bian4)]","pinyin":"yǒngyuǎn bǎochí bú biàn","yueyin":"(yúng doản)(pảo tr'í*)(pú)(pi:en`)","nghia":"vĩnh viễn bảo trì bất biến"},{"hanzi":"也不可能","audio":"[(ye3)(bu4)(ke3)(neng2)]","pinyin":"yě bù kěnéng","yueyin":"(yể)(pu`)(khửa)(nấng)","nghia":"cũng không thể"}]
+  };
+
+  window.renderContent = function(targetEditorId, targetTableId) {
+    if (targetEditorId) {
+      var editorEl = document.getElementById(targetEditorId);
+      if (editorEl) editorEl.innerHTML = window.RENDER_PAYLOAD.editorHtml;
+    }
+    
+    if (targetTableId) {
+      var tableEl = document.getElementById(targetTableId);
+      if (tableEl) {
+        var html = '<table border="1" style="border-collapse: collapse; width: 100%;">';
+        html += '<thead><tr><th>Hanzi</th><th>Audio</th><th>Pinyin</th><th>Yueyin</th><th>Nghĩa</th></tr></thead><tbody>';
+        window.RENDER_PAYLOAD.tableData.forEach(function(item) {
+          html += '<tr><td>' + item.hanzi + '</td><td>' + item.audio + '</td><td>' + item.pinyin + '</td><td>' + item.yueyin + '</td><td>' + item.nghia + '</td></tr>';
+        });
+        html += '</tbody></table>';
+        tableEl.innerHTML = html;
+      }
+    }
+  };
+
+  document.addEventListener("DOMContentLoaded", function() {
+    window.renderContent("rendered-editor", "rendered-table");
+  });
+})();
