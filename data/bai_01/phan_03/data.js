@@ -126,6 +126,102 @@ window.CURRENT_PHAN_DATA = {
           "nghia": "Bản thân Thích Ca Mâu Ni không hề truyền ra hết Pháp của mình, [Ông] chỉ nhắm thẳng vào năng lực tiếp thụ của người thời đó mà truyền một bộ phận mà thôi."
         }
       ]
+    },
+    {
+      "doan_so": 3,
+      "content": [
+        {
+          "cau_id": "b01p03-d03-001",
+          "hanzi": "  那麼甚麼是佛法呢？",
+          "pinyin": "nà me shén me shì fó fǎ ne",
+          "yueyin": "(na`) (mơ) (shấn) (mơ) (shi*`) (fúa) (fả) (nưa)",
+          "nghia": "Vậy Phật Pháp là gì?"
+        },
+        {
+          "cau_id": "b01p03-d03-002",
+          "hanzi": "這個宇宙中最根本的特性真、善、忍，他就是佛法的最高體現，他就是最根本的佛法。",
+          "pinyin": "zhè ge yǔ zhòu zhōng zuì gēn běn de tè xìng zhēn shàn rěn tā jiù shì fó fǎ de zuì gāo tǐ xiàn tā jiù shì zuì gēn běn de fó fǎ",
+          "yueyin": "(trưa`) (cưa) (ủy) (trâu`) (trung-) (zuây`) (cân-) (pẩn) (tơ) (thưa`) (xing`) (trân-) (shan`) (rẩn) (tha-) (chi:âu`) (shi*`) (fúa) (fả) (tơ) (zuây`) (cao-) (thỉ) (xi:en`) (tha-) (chi:âu`) (shi*`) (zuây`) (cân-) (pẩn) (tơ) (fúa) (fả)",
+          "nghia": "Đặc tính căn bản nhất trong vũ trụ này là Chân-Thiện-Nhẫn, Nó chính là thể hiện tối cao của Phật Pháp, Nó chính là Phật Pháp tối căn bản."
+        },
+        {
+          "cau_id": "b01p03-d03-003",
+          "hanzi": "佛法在不同層次中有不同的體現形式，在不同層次當中有不同的指導作用，層次越低表現越龐雜。",
+          "pinyin": "fó fǎ zài bù tóng céng cì zhōng yǒu bù tóng de tǐ xiàn xíng shì zài bù tóng céng cì dāng zhōng yǒu bù tóng de zhǐ dǎo zuò yòng céng cì yuè dī biǎo xiàn yuè páng zá",
+          "yueyin": "(fúa) (fả) (zai`) (pu`) (thúng) (s'ấng) (s'ư`) (trung-) (yẩu) (pu`) (thúng) (tơ) (thỉ) (xi:en`) (xíng) (shi*`) (zai`) (pu`) (thúng) (s'ấng) (s'ư`) (tang-) (trung-) (yẩu) (pu`) (thúng) (tơ) (trỉ*) (tảo) (zua`) (yung`) (s'ấng) (s'ư`) (duê`) (ti-) (pi:ảo) (xi:en`) (duê`) (p'áng) (zá)",
+          "nghia": "Phật Pháp tại các tầng khác nhau có các hình thức thể hiện khác nhau, tại các tầng khác nhau có các tác dụng chỉ đạo khác nhau; tầng càng thấp [thì] biểu hiện càng phức tạp."
+        },
+        {
+          "cau_id": "b01p03-d03-004",
+          "hanzi": "空氣微粒、石頭、木頭、土、鋼鐵、人體，一切物質中都存在著真、善、忍這種特性；",
+          "pinyin": "kōng qì wēi lì shí tou mù tou tǔ gāng tiě rén tǐ yí qiè wù zhì zhōng dōu cún zài zhe zhēn shàn rěn zhè zhǒng tè xìng",
+          "yueyin": "(khung-) (ch'i`) (guây-) (li`) (shí*) (thâu) (mu`) (thâu) (thủ) (cang-) (thi:ể) (rấn) (thỉ) (ý) (ch'i:ê`) (u`) (tri*`) (trung-) (tâu-) (s'uấn) (zai`) (trơ) (trân-) (shan`) (rẩn) (trưa`) (trủng) (thưa`) (xing`)",
+          "nghia": "Vi lạp không khí, đá, gỗ, đất, sắt thép, [thân] thể người, hết thảy vật chất đều có tồn tại trong nó cái chủng đặc tính Chân-Thiện-Nhẫn ấy;"
+        },
+        {
+          "cau_id": "b01p03-d03-005",
+          "hanzi": "古代講五行構成宇宙中的萬事萬物，也都存在著真、善、忍這種特性。",
+          "pinyin": "gǔ dài jiǎng wǔ xíng gòu chéng yǔ zhòu zhōng de wàn shì wàn wù yě dōu cún zài zhe zhēn shàn rěn zhè zhǒng tè xìng",
+          "yueyin": "(củ) (tai`) (chi:ảng) (ủ) (xíng) (câu`) (tr'ấng) (ủy) (trâu`) (trung-) (tơ) (goan`) (shi*`) (goan`) (u`) (yể) (tâu-) (s'uấn) (zai`) (trơ) (trân-) (shan`) (rẩn) (trưa`) (trủng) (thưa`) (xing`)",
+          "nghia": "thời xưa giảng rằng ngũ hành cấu thành nên vạn sự vạn vật trong vũ trụ; [ngũ hành kia] cũng có tồn tại chủng đặc tính Chân-Thiện-Nhẫn ấy."
+        },
+        {
+          "cau_id": "b01p03-d03-006",
+          "hanzi": "修煉的人修到哪一層次就只能認識哪一層次中佛法的具體體現，這就是修煉的果位、層次。",
+          "pinyin": "xiū liàn de rén xiū dào nǎ yì céng cì jiù zhǐ néng rèn shi nǎ yì céng cì zhōng fó fǎ de jù tǐ tǐ xiàn zhè jiù shì xiū liàn de guǒ wèi céng cì",
+          "yueyin": "(xi:âu-) (li:en`) (tơ) (rấn) (xi:âu-) (tao`) (nả) (y`) (s'ấng) (s'ư`) (chi:âu`) (trỉ*) (nấng) (rân`) (shi*) (nả) (y`) (s'ấng) (s'ư`) (trung-) (fúa) (fả) (tơ) (chuy`) (thỉ) (thỉ) (xi:en`) (trưa`) (chi:âu`) (shi*`) (xi:âu-) (li:en`) (tơ) (của) (guây`) (s'ấng) (s'ư`)",
+          "nghia": "Người tu luyện đến được tầng nào thì chỉ có thể nhận thức được thể hiện cụ thể của Phật Pháp tại tầng ấy; đó chính là quả vị và tầng tu luyện [của người ấy]."
+        },
+        {
+          "cau_id": "b01p03-d03-007",
+          "hanzi": "鋪開講，法很大。到了極高點上去講，那就很簡單了，因為法就像金字塔形的。",
+          "pinyin": "pū kāi jiǎng fǎ hěn dà dào le jí gāo diǎn shàng qù jiǎng nà jiù hěn jiǎn dān le yīn wèi fǎ jiù xiàng jīn zì tǎ xíng de",
+          "yueyin": "(p'u-) (khai-) (chi:ảng) (fả) (hẩn) (ta`) (tao`) (lơ) (chí) (cao-) (ti:ẻn) (shang`) (ch'uy`) (chi:ảng) (na`) (chi:âu`) (hẩn) (chi:ẻn) (tan-) (lơ) (yin-) (guây`) (fả) (chi:âu`) (xi:ang`) (chin-) (zư`*) (thả) (xíng) (tơ)",
+          "nghia": "Nói chung, Pháp rất lớn. Đến điểm cực cao mà giảng, thì rất đơn giản; bởi vì Pháp kia giống như hình dáng của kim tự tháp."
+        },
+        {
+          "cau_id": "b01p03-d03-008",
+          "hanzi": "到了極高層次上用三個字就可以概括，那就是真、善、忍，顯現到各個層次就極複雜了。",
+          "pinyin": "dào le jí gāo céng cì shàng yòng sān gè zì jiù kě yǐ gài kuò nà jiù shì zhēn shàn rěn xiǎn xiàn dào gè gè céng cì jiù jí fù zá le",
+          "yueyin": "(tao`) (lơ) (chí) (cao-) (s'ấng) (s'ư`) (shang`) (yung`) (san-) (cưa`) (zư`*) (chi:âu`) (khửa) (ỷ) (cai`) (khua`) (na`) (chi:âu`) (shi*`) (trân-) (shan`) (rẩn) (xi:ẻn) (xi:en`) (tao`) (cưa`) (cưa`) (s'ấng) (s'ư`) (chi:âu`) (chí) (fu`) (zá) (lơ)",
+          "nghia": "Đến nơi tầng cực cao thì ba chữ có thể dùng để khái quát, đó chính là Chân-Thiện-Nhẫn; thể hiện tại các tầng cực kỳ phức tạp."
+        },
+        {
+          "cau_id": "b01p03-d03-009",
+          "hanzi": "拿人來比喻，道家把人體視為小宇宙，人有物質身體，可只有物質身體還構成不了一個完整的人，",
+          "pinyin": "ná rén lái bǐ yù dào jiā bǎ rén tǐ shì wéi xiǎo yǔ zhòu rén yǒu wù zhì shēn tǐ kě zhǐ yǒu wù zhì shēn tǐ hái gòu chéng bu liǎo yí gè wán zhěng de rén",
+          "yueyin": "(ná) (rấn) (lái) (pỉ) (uy`) (tao`) (chi:a-) (pả) (rấn) (thỉ) (shi*`) (guấy) (xi:ảo) (ủy) (trâu`) (rấn) (yẩu) (u`) (tri*`) (shân-) (thỉ) (khửa) (trỉ*) (yẩu) (u`) (tri*`) (shân-) (thỉ) (hái) (câu`) (tr'ấng) (pu) (li:ảo) (ý) (cưa`) (goán) (trẩng) (tơ) (rấn)",
+          "nghia": "Lấy con người làm ví dụ, Đạo gia xem [thân] thể người như một tiểu vũ trụ; con người có thân thể vật chất; nhưng chỉ cái thân thể vật chất ấy không thể đủ cấu thành một con người hoàn chỉnh được;"
+        },
+        {
+          "cau_id": "b01p03-d03-010",
+          "hanzi": "還必須有人的脾氣、秉性、特性、元神存在，才能構成一個完整的、獨立的、帶有自我個性的人。",
+          "pinyin": "hái bì xū yǒu rén de pí qi bǐng xìng tè xìng yuán shén cún zài cái néng gòu chéng yí gè wán zhěng de dú lì de dài yǒu zì wǒ gè xìng de rén",
+          "yueyin": "(hái) (pi`) (xuy-) (yẩu) (rấn) (tơ) (p'í) (ch'i) (pỉng) (xing`) (thưa`) (xing`) (doán) (shấn) (s'uấn) (zai`) (s'ái) (nấng) (câu`) (tr'ấng) (ý) (cưa`) (goán) (trẩng) (tơ) (tú) (li`) (tơ) (tai`) (yẩu) (zư`*) (gủa) (cưa`) (xing`) (tơ) (rấn)",
+          "nghia": "còn phải có tính khí, tính cách, đặc tính, và nguyên thần mới có thể cấu thành một con người hoàn chỉnh, độc lập, và mang theo cá tính tự ngã."
+        },
+        {
+          "cau_id": "b01p03-d03-011",
+          "hanzi": "我們這個宇宙也是一樣，有銀河系、其它的星系，也有生命和水，這個宇宙中的萬事萬物，",
+          "pinyin": "wǒ men zhè ge yǔ zhòu yě shì yí yàng yǒu yín hé xì qí tā de xīng xì yě yǒu shēng mìng hé shuǐ zhè ge yǔ zhòu zhōng de wàn shì wàn wù",
+          "yueyin": "(gủa) (mân) (trưa`) (cưa) (ủy) (trâu`) (yể) (shi*`) (ý) (yang`) (yẩu) (yín) (hứa) (xi`) (ch'í) (tha-) (tơ) (xing-) (xi`) (yể) (yẩu) (shâng-) (ming`) (hứa) (shuẩy) (trưa`) (cưa) (ủy) (trâu`) (trung-) (tơ) (goan`) (shi*`) (goan`) (u`)",
+          "nghia": "Vũ trụ này của chúng ta cũng như thế; có hệ Ngân Hà, có các thiên hà khác, cũng như các sinh mệnh và nước, vạn sự vạn vật trong vũ trụ này;"
+        },
+        {
+          "cau_id": "b01p03-d03-012",
+          "hanzi": "這是物質存在的一方面；可是同時它也存在著真、善、忍特性。",
+          "pinyin": "zhè shì wù zhì cún zài de yì fāng miàn kě shì tóng shí tā yě cún zài zhe zhēn shàn rěn tè xìng",
+          "yueyin": "(trưa`) (shi*`) (u`) (tri*`) (s'uấn) (zai`) (tơ) (y`) (fang-) (mi:en`) (khửa) (shi*`) (thúng) (shí*) (tha-) (yể) (s'uấn) (zai`) (trơ) (trân-) (shan`) (rẩn) (thưa`) (xing`)",
+          "nghia": "[tất cả những thứ ấy] chúng đều có phương diện tồn tại vật chất; đồng thời chúng cũng có tồn tại đặc tính Chân-Thiện-Nhẫn."
+        },
+        {
+          "cau_id": "b01p03-d03-013",
+          "hanzi": "任何物質的微粒中都包含著這種特性，極小的微粒中都包含著這種特性。",
+          "pinyin": "rèn hé wù zhì de wēi lì zhōng dōu bāo hán zhe zhè zhǒng tè xìng jí xiǎo de wēi lì zhōng dōu bāo hán zhe zhè zhǒng tè xìng",
+          "yueyin": "(rân`) (hứa) (u`) (tri*`) (tơ) (guây-) (li`) (trung-) (tâu-) (pao-) (hán) (trơ) (trưa`) (trủng) (thưa`) (xing`) (chí) (xi:ảo) (tơ) (guây-) (li`) (trung-) (tâu-) (pao-) (hán) (trơ) (trưa`) (trủng) (thưa`) (xing`)",
+          "nghia": "Dẫu là vi lạp vật chất nào thì cũng bao hàm chủng đặc tính ấy, trong vi lạp cực nhỏ cũng bao hàm chủng đặc tính ấy."
+        }
+      ]
     }
   ]
 };

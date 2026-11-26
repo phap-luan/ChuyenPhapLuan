@@ -1,0 +1,32 @@
+/* Exported Rich Text & Table Data */
+(function() {
+  window.RENDER_PAYLOAD = {
+    cau_id: "b01p03-d03-007",
+    editorHtml: "<div style=\"margin-bottom: 12px; line-height: 1.5\">\n        <p>\n          <span style=\"font-size: 10px; font-weight: bold; color: #64748b;\"> Nguyên Văn:</span> [(b01p03-d03-007)]<br>\n          <span id=\"matrixTableWrapper\"><table class=\"matrix-table\"><tbody><tr class=\"row-audio\"><td id=\"m_audio_0\">[(pu1)(kai1)(jiang3)]</td><td id=\"m_audio_1\"></td><td id=\"m_audio_2\">[(fa3)(hen3)(da4)]</td><td id=\"m_audio_3\"></td><td id=\"m_audio_4\">[(dao4)(le)]</td><td id=\"m_audio_5\">[(ji2)(gao1)(dian3)(shang4)]</td><td id=\"m_audio_6\">[(qu4)(jiang3)]</td><td id=\"m_audio_7\"></td><td id=\"m_audio_8\">[(na4)(jiu4)(hen3)(jian3)(dan1)(le)]</td><td id=\"m_audio_9\"></td><td id=\"m_audio_10\">[(yin1)(wei4)]</td><td id=\"m_audio_11\">[(fa3)(jiu4)(xiang4)]</td><td id=\"m_audio_12\">[(jin1)(zi4)(ta3)(xing2)(de)]</td><td id=\"m_audio_13\"></td></tr><tr class=\"row-yueyin\"><td id=\"m_yueyin_0\">(p'u- khai-)(chi:ảng)</td><td id=\"m_yueyin_1\"></td><td id=\"m_yueyin_2\">(fả)(hẩn)(ta`)</td><td id=\"m_yueyin_3\"></td><td id=\"m_yueyin_4\">(tao`)(lơ)</td><td id=\"m_yueyin_5\">(chí)(cao-)(ti:ẻn)(shang`)</td><td id=\"m_yueyin_6\">(ch'uy`)(chi:ảng)</td><td id=\"m_yueyin_7\"></td><td id=\"m_yueyin_8\">(na`)(chi:âu`)(hẩn)(chi:ẻn tan-)(lơ)</td><td id=\"m_yueyin_9\"></td><td id=\"m_yueyin_10\">(yin- guây`)</td><td id=\"m_yueyin_11\">(fả)(chi:âu`)(xi:ang`)</td><td id=\"m_yueyin_12\">(chin- zư`* thả)(xíng)(tơ)</td><td id=\"m_yueyin_13\"></td></tr><tr class=\"row-hanzi\"><td id=\"m_hanzi_0\">鋪開講</td><td id=\"m_hanzi_1\">,</td><td id=\"m_hanzi_2\">法很大</td><td id=\"m_hanzi_3\">。</td><td id=\"m_hanzi_4\">到了</td><td id=\"m_hanzi_5\">極高點<font color=\"#3b82f6\">上</font></td><td id=\"m_hanzi_6\">去講</td><td id=\"m_hanzi_7\">,</td><td id=\"m_hanzi_8\">那就很簡單了</td><td id=\"m_hanzi_9\">,</td><td id=\"m_hanzi_10\">因為</td><td id=\"m_hanzi_11\">法<font color=\"#a855f7\">就像</font></td><td id=\"m_hanzi_12\">金字塔形<font color=\"#3b82f6\">的</font></td><td id=\"m_hanzi_13\">。</td></tr><tr class=\"row-pinyin\"><td id=\"m_pinyin_0\">pūkāi jiǎng</td><td id=\"m_pinyin_1\"></td><td id=\"m_pinyin_2\">fǎ hěn dà</td><td id=\"m_pinyin_3\"></td><td id=\"m_pinyin_4\">dào le</td><td id=\"m_pinyin_5\">jí gāo diǎn shàng</td><td id=\"m_pinyin_6\">qù jiǎng</td><td id=\"m_pinyin_7\"></td><td id=\"m_pinyin_8\">nà jiù hěn jiǎndān le</td><td id=\"m_pinyin_9\"></td><td id=\"m_pinyin_10\">yīnwèi</td><td id=\"m_pinyin_11\">fǎ jiù xiàng</td><td id=\"m_pinyin_12\">jīnzìtǎ xíng de</td><td id=\"m_pinyin_13\"></td></tr><tr class=\"row-nghia\"><td id=\"m_nghia_0\">triển khai giảng</td><td id=\"m_nghia_1\"></td><td id=\"m_nghia_2\">Pháp rất lớn</td><td id=\"m_nghia_3\"></td><td id=\"m_nghia_4\">đã đến</td><td id=\"m_nghia_5\"><font color=\"#3b82f6\">trên</font> điểm cực cao</td><td id=\"m_nghia_6\">mà giảng</td><td id=\"m_nghia_7\"></td><td id=\"m_nghia_8\">vậy thì rất giản đơn rồi</td><td id=\"m_nghia_9\"></td><td id=\"m_nghia_10\">bởi vì</td><td id=\"m_nghia_11\">Pháp <font color=\"#a855f7\">giống như</font></td><td id=\"m_nghia_12\">kim tự tháp hình (de)</td><td id=\"m_nghia_13\"></td></tr></tbody></table><br></span><span style=\"color: rgb(100, 116, 139); font-size: 10px; font-weight: bold;\">Tạm Dịch:</span></p><p style=\"margin-top: 0px;\"><font color=\"#000000\" style=\"font-weight: bold;\">triển khai giảng, Pháp rất lớn. đã đến </font><font color=\"#3b82f6\" style=\"font-weight: bold;\">trên</font><font color=\"#000000\" style=\"font-weight: bold;\"> điểm cực cao mà giảng, vậy thì rất giản đơn rồi, bởi vì Pháp </font><font color=\"#a855f7\" style=\"font-weight: bold;\">giống như</font><font color=\"#000000\" style=\"font-weight: bold;\"> kim tự tháp hình </font><font color=\"#3b82f6\" style=\"\"><i style=\"\">(de)</i></font><font color=\"#000000\" style=\"font-weight: bold;\">.</font></p>\n        <p style=\"margin-top: 5px;\">\n          <span style=\"font-size: 10px; font-weight: bold; color: #64748b;\"> Bản dịch trong sách:</span><br>\n          <span style=\"font-size: 16px; font-weight: bold; color: #000000;\">Nói chung, Pháp rất lớn. Đến điểm cực cao mà giảng, thì rất đơn giản; bởi vì Pháp kia giống như hình dáng của kim tự tháp.</span>\n        </p>\n      </div>",
+    tableData: [{"hanzi":"鋪開講","audio":"[(pu1)(kai1)(jiang3)]","pinyin":"pūkāi jiǎng","yueyin":"(p'u- khai-)(chi:ảng)","nghia":"triển khai giảng"},{"hanzi":"法很大","audio":"[(fa3)(hen3)(da4)]","pinyin":"fǎ hěn dà","yueyin":"(fả)(hẩn)(ta`)","nghia":"Pháp rất lớn"},{"hanzi":"到了","audio":"[(dao4)(le)]","pinyin":"dào le","yueyin":"(tao`)(lơ)","nghia":"đã đến"},{"hanzi":"極高點上","audio":"[(ji2)(gao1)(dian3)(shang4)]","pinyin":"jí gāo diǎn shàng","yueyin":"(chí)(cao-)(ti:ẻn)(shang`)","nghia":"trên điểm cực cao"},{"hanzi":"去講","audio":"[(qu4)(jiang3)]","pinyin":"qù jiǎng","yueyin":"(ch'uy`)(chi:ảng)","nghia":"mà giảng"},{"hanzi":"那就很簡單了","audio":"[(na4)(jiu4)(hen3)(jian3)(dan1)(le)]","pinyin":"nà jiù hěn jiǎndān le","yueyin":"(na`)(chi:âu`)(hẩn)(chi:ẻn tan-)(lơ)","nghia":"vậy thì rất giản đơn rồi"},{"hanzi":"因為","audio":"[(yin1)(wei4)]","pinyin":"yīnwèi","yueyin":"(yin- guây`)","nghia":"bởi vì"},{"hanzi":"法就像","audio":"[(fa3)(jiu4)(xiang4)]","pinyin":"fǎ jiù xiàng","yueyin":"(fả)(chi:âu`)(xi:ang`)","nghia":"Pháp giống như"},{"hanzi":"金字塔形的","audio":"[(jin1)(zi4)(ta3)(xing2)(de)]","pinyin":"jīnzìtǎ xíng de","yueyin":"(chin- zư`* thả)(xíng)(tơ)","nghia":"kim tự tháp hình (de)"}]
+  };
+
+  window.renderContent = function(targetEditorId, targetTableId) {
+    if (targetEditorId) {
+      var editorEl = document.getElementById(targetEditorId);
+      if (editorEl) editorEl.innerHTML = window.RENDER_PAYLOAD.editorHtml;
+    }
+    
+    if (targetTableId) {
+      var tableEl = document.getElementById(targetTableId);
+      if (tableEl) {
+        var html = '<table border="1" style="border-collapse: collapse; width: 100%;">';
+        html += '<thead><tr><th>Hanzi</th><th>Audio</th><th>Pinyin</th><th>Yueyin</th><th>Nghĩa</th></tr></thead><tbody>';
+        window.RENDER_PAYLOAD.tableData.forEach(function(item) {
+          html += '<tr><td>' + item.hanzi + '</td><td>' + item.audio + '</td><td>' + item.pinyin + '</td><td>' + item.yueyin + '</td><td>' + item.nghia + '</td></tr>';
+        });
+        html += '</tbody></table>';
+        tableEl.innerHTML = html;
+      }
+    }
+  };
+
+  document.addEventListener("DOMContentLoaded", function() {
+    window.renderContent("rendered-editor", "rendered-table");
+  });
+})();

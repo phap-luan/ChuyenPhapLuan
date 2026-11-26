@@ -1,0 +1,32 @@
+/* Exported Rich Text & Table Data */
+(function() {
+  window.RENDER_PAYLOAD = {
+    cau_id: "b01p03-d03-011",
+    editorHtml: "<div style=\"margin-bottom: 12px; line-height: 1.5\">\n        <p>\n          <span style=\"font-size: 10px; font-weight: bold; color: #64748b;\"> Nguyên Văn:</span> [(b01p03-d03-011)]<br>\n          <span id=\"matrixTableWrapper\"><table class=\"matrix-table\"><tbody><tr class=\"row-audio\"><td id=\"m_audio_0\">[(wo3)(men)(zhe4)(ge)(yu3)(zhou4)]</td><td id=\"m_audio_1\">[(ye3)(shi4)(yi2)(yang4)]</td><td id=\"m_audio_2\"></td><td id=\"m_audio_3\">[(you3)(yin2)(he2)(xi4)]</td><td id=\"m_audio_4\"></td><td id=\"m_audio_5\">[(qi2)(ta1)(de)(xing1)(xi4)]</td><td id=\"m_audio_6\"></td></tr><tr class=\"row-yueyin\"><td id=\"m_yueyin_0\">(gủa mân)(trưa` cưa)(ủy trâu`)</td><td id=\"m_yueyin_1\">(yể)(shi*`)(ý yang`)</td><td id=\"m_yueyin_2\"></td><td id=\"m_yueyin_3\">(yẩu)(yín hứa xi`)</td><td id=\"m_yueyin_4\"></td><td id=\"m_yueyin_5\">(ch'í tha-)(tơ)(xing- xi`)</td><td id=\"m_yueyin_6\"></td></tr><tr class=\"row-hanzi\"><td id=\"m_hanzi_0\"><font color=\"#f97316\">我們</font>這個宇宙</td><td id=\"m_hanzi_1\">也是<font color=\"#ec4899\">一樣</font></td><td id=\"m_hanzi_2\">,</td><td id=\"m_hanzi_3\">有銀河系</td><td id=\"m_hanzi_4\">、</td><td id=\"m_hanzi_5\"><font color=\"#a855f7\">其它</font>的星系</td><td id=\"m_hanzi_6\">,</td></tr><tr class=\"row-pinyin\"><td id=\"m_pinyin_0\">wǒmen zhège yǔzhòu</td><td id=\"m_pinyin_1\">yě shì yíyàng</td><td id=\"m_pinyin_2\"></td><td id=\"m_pinyin_3\">yǒu yínhéxì</td><td id=\"m_pinyin_4\"></td><td id=\"m_pinyin_5\">qítā de xīngxì</td><td id=\"m_pinyin_6\"></td></tr><tr class=\"row-nghia\"><td id=\"m_nghia_0\">vũ trụ này của chúng ta</td><td id=\"m_nghia_1\">cũng là giống như vậy</td><td id=\"m_nghia_2\"></td><td id=\"m_nghia_3\">có Ngân Hà Hệ</td><td id=\"m_nghia_4\"></td><td id=\"m_nghia_5\">tinh hệ khác</td><td id=\"m_nghia_6\"></td></tr></tbody></table><br><table class=\"matrix-table\"><tbody><tr class=\"row-audio\"><td id=\"m_audio_7\">[(ye2)(you3)(sheng1)(ming4)(he2)(shui3)]</td><td id=\"m_audio_8\"></td><td id=\"m_audio_9\">[(zhe4)(ge)(yu3)(zhou4)(zhong1)]</td><td id=\"m_audio_10\">[(de)(wan4)(shi4)(wan4)(wu4)]</td><td id=\"m_audio_11\"></td></tr><tr class=\"row-yueyin\"><td id=\"m_yueyin_7\">(yế)(yẩu)(shâng- ming`)(hứa)(shuẩy)</td><td id=\"m_yueyin_8\"></td><td id=\"m_yueyin_9\">(trưa` cưa)(ủy trâu`)(trung-)</td><td id=\"m_yueyin_10\">(tơ)(goan` shi*`)(goan` u`)</td><td id=\"m_yueyin_11\"></td></tr><tr class=\"row-hanzi\"><td id=\"m_hanzi_7\">也有生命和水</td><td id=\"m_hanzi_8\">,</td><td id=\"m_hanzi_9\">這個宇宙<font color=\"#3b82f6\">中</font></td><td id=\"m_hanzi_10\">的萬事萬物</td><td id=\"m_hanzi_11\">,</td></tr><tr class=\"row-pinyin\"><td id=\"m_pinyin_7\">yě yǒu shēngmìng hé shuǐ</td><td id=\"m_pinyin_8\"></td><td id=\"m_pinyin_9\">zhège yǔzhòu zhōng</td><td id=\"m_pinyin_10\">de wànshì wànwù</td><td id=\"m_pinyin_11\"></td></tr><tr class=\"row-nghia\"><td id=\"m_nghia_7\">cũng có sinh mệnh và nước</td><td id=\"m_nghia_8\"></td><td id=\"m_nghia_9\"><font color=\"#3b82f6\">trong</font> vũ trụ này về</td><td id=\"m_nghia_10\">về vạn sự vạn vật</td><td id=\"m_nghia_11\"></td></tr></tbody></table><br></span><span style=\"color: rgb(100, 116, 139); font-size: 10px; font-weight: bold;\">Tạm Dịch:</span></p><p style=\"margin-top: 0px;\"><b style=\"\"><font color=\"#000000\">vũ trụ này </font><font color=\"#f97316\">của chúng ta</font><font color=\"#000000\"> cũng là </font><font color=\"#ec4899\">giống như vậy</font><font color=\"#000000\">, có Ngân Hà Hệ, </font><font color=\"#64748b\">(và)</font><font color=\"#000000\"> tinh hệ </font><font color=\"#a855f7\">khác</font><font color=\"#000000\">,&nbsp;</font></b></p><p style=\"margin-top: 0px;\"><b style=\"\"><font color=\"#000000\">cũng có sinh mệnh và nước, </font><font color=\"#3b82f6\">trong</font><font color=\"#000000\"> vũ trụ này về về vạn sự vạn vật,</font></b></p>\n        <p style=\"margin-top: 5px;\">\n          <span style=\"font-size: 10px; font-weight: bold; color: #64748b;\"> Bản dịch trong sách:</span><br>\n          <span style=\"font-size: 16px; font-weight: bold; color: #000000;\">Vũ trụ này của chúng ta cũng như thế; có hệ Ngân Hà, có các thiên hà khác, cũng như các sinh mệnh và nước, vạn sự vạn vật trong vũ trụ này;</span>\n        </p>\n      </div>",
+    tableData: [{"hanzi":"我們這個宇宙","audio":"[(wo3)(men)(zhe4)(ge)(yu3)(zhou4)]","pinyin":"wǒmen zhège yǔzhòu","yueyin":"(gủa mân)(trưa` cưa)(ủy trâu`)","nghia":"vũ trụ này của chúng ta"},{"hanzi":"也是一樣","audio":"[(ye3)(shi4)(yi2)(yang4)]","pinyin":"yě shì yíyàng","yueyin":"(yể)(shi*`)(ý yang`)","nghia":"cũng là giống như vậy"},{"hanzi":"有銀河系","audio":"[(you3)(yin2)(he2)(xi4)]","pinyin":"yǒu yínhéxì","yueyin":"(yẩu)(yín hứa xi`)","nghia":"có Ngân Hà Hệ"},{"hanzi":"其它的星系","audio":"[(qi2)(ta1)(de)(xing1)(xi4)]","pinyin":"qítā de xīngxì","yueyin":"(ch'í tha-)(tơ)(xing- xi`)","nghia":"tinh hệ khác"},{"hanzi":"也有生命和水","audio":"[(ye2)(you3)(sheng1)(ming4)(he2)(shui3)]","pinyin":"yě yǒu shēngmìng hé shuǐ","yueyin":"(yế)(yẩu)(shâng- ming`)(hứa)(shuẩy)","nghia":"cũng có sinh mệnh và nước"},{"hanzi":"這個宇宙中","audio":"[(zhe4)(ge)(yu3)(zhou4)(zhong1)]","pinyin":"zhège yǔzhòu zhōng","yueyin":"(trưa` cưa)(ủy trâu`)(trung-)","nghia":"trong vũ trụ này về"},{"hanzi":"的萬事萬物","audio":"[(de)(wan4)(shi4)(wan4)(wu4)]","pinyin":"de wànshì wànwù","yueyin":"(tơ)(goan` shi*`)(goan` u`)","nghia":"về vạn sự vạn vật"}]
+  };
+
+  window.renderContent = function(targetEditorId, targetTableId) {
+    if (targetEditorId) {
+      var editorEl = document.getElementById(targetEditorId);
+      if (editorEl) editorEl.innerHTML = window.RENDER_PAYLOAD.editorHtml;
+    }
+    
+    if (targetTableId) {
+      var tableEl = document.getElementById(targetTableId);
+      if (tableEl) {
+        var html = '<table border="1" style="border-collapse: collapse; width: 100%;">';
+        html += '<thead><tr><th>Hanzi</th><th>Audio</th><th>Pinyin</th><th>Yueyin</th><th>Nghĩa</th></tr></thead><tbody>';
+        window.RENDER_PAYLOAD.tableData.forEach(function(item) {
+          html += '<tr><td>' + item.hanzi + '</td><td>' + item.audio + '</td><td>' + item.pinyin + '</td><td>' + item.yueyin + '</td><td>' + item.nghia + '</td></tr>';
+        });
+        html += '</tbody></table>';
+        tableEl.innerHTML = html;
+      }
+    }
+  };
+
+  document.addEventListener("DOMContentLoaded", function() {
+    window.renderContent("rendered-editor", "rendered-table");
+  });
+})();
