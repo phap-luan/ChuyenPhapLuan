@@ -222,6 +222,198 @@ window.CURRENT_PHAN_DATA = {
           "nghia": "Dẫu là vi lạp vật chất nào thì cũng bao hàm chủng đặc tính ấy, trong vi lạp cực nhỏ cũng bao hàm chủng đặc tính ấy."
         }
       ]
+    },
+    {
+      "doan_so": 4,
+      "content": [
+        {
+          "cau_id": "b01p03-d04-001",
+          "hanzi": "  真、善、忍這種特性是衡量宇宙中好與壞的標準。",
+          "pinyin": "zhēn shàn rěn zhè zhǒng tè xìng shì héng liáng yǔ zhòu zhōng hǎo yǔ huài de biāo zhǔn",
+          "yueyin": "(trân-) (shan`) (rẩn) (trưa`) (trủng) (thưa`) (xing`) (shi*`) (hấng) (li:áng) (ủy) (trâu`) (trung-) (hảo) (ủy) (hoai`) (tơ) (pi:ao-) (truẩn)",
+          "nghia": "Chủng đặc tính Chân-Thiện-Nhẫn là tiêu chuẩn để nhận định tốt và xấu trong vũ trụ."
+        },
+        {
+          "cau_id": "b01p03-d04-002",
+          "hanzi": "甚麼是好甚麼是壞？就是用他來衡量的。",
+          "pinyin": "shén me shì hǎo shén me shì huàijiù shì yòng tā lái héng liáng de",
+          "yueyin": "(shấn) (mơ) (shi*`) (hảo) (shấn) (mơ) (shi*`) (hoai` chi:âu`) (shi*`) (yung`) (tha-) (lái) (hấng) (li:áng) (tơ)",
+          "nghia": "Thế nào là tốt, thế nào là xấu? Chính là dùng Nó {Chân-Thiện-Nhẫn} mà xác định."
+        },
+        {
+          "cau_id": "b01p03-d04-003",
+          "hanzi": "我們過去說的德也是一樣。",
+          "pinyin": "wǒ men guò qù shuō de dé yě shì yí yàng",
+          "yueyin": "(gủa) (mân) (cua`) (ch'uy`) (shua-) (tơ) (tứa) (yể) (shi*`) (ý) (yang`)",
+          "nghia": "‘Đức’ mà chúng ta nói đến trong quá khứ cũng tương tự như thế."
+        },
+        {
+          "cau_id": "b01p03-d04-004",
+          "hanzi": "當然今天人類社會道德水準已經發生了變化，道德標準都扭曲了。",
+          "pinyin": "dāng rán jīn tiān rén lèi shè huì dào dé shuǐ zhǔn yǐ jīng fā shēng le biàn huà dào dé biāo zhǔn dōu niǔ qū le",
+          "yueyin": "(tang-) (rán) (chin-) (thi:en-) (rấn) (lây`) (shưa`) (huây`) (tao`) (tứa) (shuẩy) (truẩn) (ỷ) (ching-) (fa-) (shâng-) (lơ) (pi:en`) (hoa`) (tao`) (tứa) (pi:ao-) (truẩn) (tâu-) (ni:ẩu) (ch'uy-) (lơ)",
+          "nghia": "Tất nhiên chuẩn mực đạo đức của xã hội nhân loại hiện nay đã biến đổi rất nhiều, tiêu chuẩn đạo đức đã méo mó hẳn rồi."
+        },
+        {
+          "cau_id": "b01p03-d04-005",
+          "hanzi": "現在有人學雷鋒，可能就得說他是精神病。",
+          "pinyin": "xiàn zài yǒu rén xué léi fēng kě néng jiù děi shuō tā shì jīng shén bìng",
+          "yueyin": "(xi:en`) (zai`) (yẩu) (rấn) (xuế) (lấy) (fâng-) (khửa) (nấng) (chi:âu`) (tẩy) (shua-) (tha-) (shi*`) (ching-) (shấn) (ping`)",
+          "nghia": "Hiện nay [nếu] có người noi gương Lôi Phong, thì có thể bị coi là mắc bệnh tâm thần."
+        },
+        {
+          "cau_id": "b01p03-d04-006",
+          "hanzi": "可是在五、六十年代，有誰會說他是精神病呢？",
+          "pinyin": "kě shì zài wǔ liù shí nián dài yǒu shéi huì shuō tā shì jīng shén bìng ne",
+          "yueyin": "(khửa) (shi*`) (zai`) (ủ) (li:âu`) (shí*) (ni:én) (tai`) (yẩu) (shấy) (huây`) (shua-) (tha-) (shi*`) (ching-) (shấn) (ping`) (nưa)",
+          "nghia": "Nhưng nếu vào hồi thập kỷ 50, 60, thì ai dám nói người ấy bị bệnh tâm thần?"
+        },
+        {
+          "cau_id": "b01p03-d04-007",
+          "hanzi": "人類的道德水準在大滑坡，世風日下，唯利是圖，",
+          "pinyin": "rén lèi de dào dé shuǐ zhǔn zài dà huá pō shì fēng rì xià wéi lì shì tú",
+          "yueyin": "(rấn) (lây`) (tơ) (tao`) (tứa) (shuẩy) (truẩn) (zai`) (ta`) (hóa) (p'ua-) (shi*`) (fâng-) (ri*`) (xi:a`) (guấy) (li`) (shi*`) (thú)",
+          "nghia": "Chuẩn mực đạo đức của nhân loại đang trượt trên dốc lớn, đạo đức thế gian trượt xuống hàng ngày; chỉ chạy theo lợi,"
+        },
+        {
+          "cau_id": "b01p03-d04-008",
+          "hanzi": "為了個人那點利益去傷害別人，你爭我奪，不擇手段這樣幹。",
+          "pinyin": "wèi le gè rén nà diǎn lì yì qù shāng hài bié rén nǐ zhēng wǒ duó bù zé shǒu duàn zhè yàng gàn",
+          "yueyin": "(guây`) (lơ) (cưa`) (rấn) (na`) (ti:ẻn) (li`) (y`) (ch'uy`) (shang-) (hai`) (pi:ế) (rấn) (nỉ) (trâng-) (gủa) (túa) (pu`) (zứa) (shẩu) (toan`) (trưa`) (yang`) (can`)",
+          "nghia": "chỉ vì chút đỉnh lợi ích cá nhân mà làm tổn hại người khác; người tranh kẻ đoạt, chẳng từ một thủ đoạn nào."
+        },
+        {
+          "cau_id": "b01p03-d04-009",
+          "hanzi": "大家想一想，能允許這樣下去嗎？",
+          "pinyin": "dà jiā xiǎng yi xiǎng néng yǔn xǔ zhè yàng xià qù ma",
+          "yueyin": "(ta`) (chi:a-) (xi:ảng) (y) (xi:ảng) (nấng) (duỷn) (xủy) (trưa`) (yang`) (xi:a`) (ch'uy`) (ma)",
+          "nghia": "Mọi người thử nghĩ xem, có được phép tiếp tục như thế này không?"
+        },
+        {
+          "cau_id": "b01p03-d04-010",
+          "hanzi": "有的人做壞事，你告訴他是在做壞事，他都不相信，他真的不相信自己是在做壞事；",
+          "pinyin": "yǒu de rén zuò huài shì nǐ gào su tā shì zài zuò huài shì tā dōu bù xiāng xìn tā zhēn de bù xiāng xìn zì jǐ shì zài zuò huài shì",
+          "yueyin": "(yẩu) (tơ) (rấn) (zua`) (hoai`) (shi*`) (nỉ) (cao`) (su) (tha-) (shi*`) (zai`) (zua`) (hoai`) (shi*`) (tha-) (tâu-) (pu`) (xi:ang-) (xin`) (tha-) (trân-) (tơ) (pu`) (xi:ang-) (xin`) (zư`*) (chỉ) (shi*`) (zai`) (zua`) (hoai`) (shi*`)",
+          "nghia": "Có người làm điều xấu, chư vị nói rằng anh ta đã làm điều xấu, anh ta cũng không tin; anh ta thật sự không tin rằng mình đã làm điều xấu;"
+        },
+        {
+          "cau_id": "b01p03-d04-011",
+          "hanzi": "有些人他還用滑下來的道德水準衡量自己，認為自己比別人好，因為衡量的標準都發生了變化。",
+          "pinyin": "yǒu xiē rén tā hái yòng huá xià lái de dào dé shuǐ zhǔn héng liáng zì jǐ rèn wéi zì jǐ bǐ bié rén hǎo yīn wèi héng liáng de biāo zhǔn dōu fā shēng le biàn huà",
+          "yueyin": "(yẩu) (xi:ê-) (rấn) (tha-) (hái) (yung`) (hóa) (xi:a`) (lái) (tơ) (tao`) (tứa) (shuẩy) (truẩn) (hấng) (li:áng) (zư`*) (chỉ) (rân`) (guấy) (zư`*) (chỉ) (pỉ) (pi:ế) (rấn) (hảo) (yin-) (guây`) (hấng) (li:áng) (tơ) (pi:ao-) (truẩn) (tâu-) (fa-) (shâng-) (lơ) (pi:en`) (hoa`)",
+          "nghia": "có một số người dùng chuẩn mực đạo đức đang trượt dốc kia mà tự đo lường bản thân mình, cho rằng mình tốt hơn người khác, vì tiêu chuẩn để đánh giá đã thay đổi rồi."
+        },
+        {
+          "cau_id": "b01p03-d04-012",
+          "hanzi": "不管人類的道德標準怎麼變化，可是這個宇宙的特性卻不會變，他是衡量好、壞人的唯一標準。",
+          "pinyin": "bù guǎn rén lèi de dào dé biāo zhǔn zěn me biàn huà kě shì zhè ge yǔ zhòu de tè xìng què bú huì biàn tā shì héng liáng hǎo huài rén de wéi yī biāo zhǔn",
+          "yueyin": "(pu`) (coản) (rấn) (lây`) (tơ) (tao`) (tứa) (pi:ao-) (truẩn) (zẩn) (mơ) (pi:en`) (hoa`) (khửa) (shi*`) (trưa`) (cưa) (ủy) (trâu`) (tơ) (thưa`) (xing`) (ch'uê`) (pú) (huây`) (pi:en`) (tha-) (shi*`) (hấng) (li:áng) (hảo) (hoai`) (rấn) (tơ) (guấy) (y-) (pi:ao-) (truẩn)",
+          "nghia": "Dẫu tiêu chuẩn đạo đức của nhân loại có thay đổi thế nào đi nữa, đặc tính của vũ trụ không hề thay đổi; Nó chính là tiêu chuẩn duy nhất để xác định người tốt xấu."
+        },
+        {
+          "cau_id": "b01p03-d04-013",
+          "hanzi": "那麼作為一個修煉人就得按照宇宙這個特性去要求自己，不能按照常人的標準去要求自己。",
+          "pinyin": "nà me zuò wéi yí gè xiū liàn rén jiù děi àn zhào yǔ zhòu zhè ge tè xìng qù yāo qiú zì jǐ bù néng àn zhào cháng rén de biāo zhǔn qù yāo qiú zì jǐ",
+          "yueyin": "(na`) (mơ) (zua`) (guấy) (ý) (cưa`) (xi:âu-) (li:en`) (rấn) (chi:âu`) (tẩy) (an`) (trao`) (ủy) (trâu`) (trưa`) (cưa) (thưa`) (xing`) (ch'uy`) (yao-) (ch'i:ấu) (zư`*) (chỉ) (pu`) (nấng) (an`) (trao`) (tr'áng) (rấn) (tơ) (pi:ao-) (truẩn) (ch'uy`) (yao-) (ch'i:ấu) (zư`*) (chỉ)",
+          "nghia": "Là người tu luyện, phải chiểu theo tiêu chuẩn này của vũ trụ mà yêu cầu chính mình, không thể chiểu theo tiêu chuẩn của người thường mà đặt yêu cầu cho mình được."
+        },
+        {
+          "cau_id": "b01p03-d04-014",
+          "hanzi": "你要返本歸真，你要想修煉上來，你就得按照這個標準去做。",
+          "pinyin": "nǐ yào fǎn běn guī zhēn nǐ yào xiǎng xiū liàn shàng lái nǐ jiù děi àn zhào zhè ge biāo zhǔn qù zuò",
+          "yueyin": "(nỉ) (yao`) (fản) (pẩn) (cuây-) (trân-) (nỉ) (yao`) (xi:ảng) (xi:âu-) (li:en`) (shang`) (lái) (nỉ) (chi:âu`) (tẩy) (an`) (trao`) (trưa`) (cưa) (pi:ao-) (truẩn) (ch'uy`) (zua`)",
+          "nghia": "Nếu chư vị muốn phản bổn quy chân, chư vị muốn tu luyện lên trên, thì chư vị cần chiểu theo tiêu chuẩn ấy mà làm."
+        },
+        {
+          "cau_id": "b01p03-d04-015",
+          "hanzi": "作為一個人，能夠順應宇宙真、善、忍這個特性，那才是個好人；",
+          "pinyin": "zuò wéi yí gè rén néng gòu shùn yìng yǔ zhòu zhēn shàn rěn zhè ge tè xìng nà cái shì gè hǎo rén",
+          "yueyin": "(zua`) (guấy) (ý) (cưa`) (rấn) (nấng) (câu`) (shuân`) (ying`) (ủy) (trâu`) (trân-) (shan`) (rẩn) (trưa`) (cưa) (thưa`) (xing`) (na`) (s'ái) (shi*`) (cưa`) (hảo) (rấn)",
+          "nghia": "Là một cá nhân, nếu thuận với đặc tính Chân-Thiện-Nhẫn này của vũ trụ, thì mới là một người tốt;"
+        },
+        {
+          "cau_id": "b01p03-d04-016",
+          "hanzi": "背離這個特性而行的人，那是真正的壞人。",
+          "pinyin": "bèi lí zhè ge tè xìng ér xíng de rén nà shì zhēn zhèng de huài rén",
+          "yueyin": "(pây`) (lí) (trưa`) (cưa) (thưa`) (xing`) (ớ) (xíng) (tơ) (rấn) (na`) (shi*`) (trân-) (trâng`) (tơ) (hoai`) (rấn)",
+          "nghia": "còn người hành xử trái biệt với đặc tính này, thì đúng là một người xấu."
+        },
+        {
+          "cau_id": "b01p03-d04-017",
+          "hanzi": "在單位裏，在社會上，有的人可能說你壞，你可不一定真壞；",
+          "pinyin": "zài dān wèi lǐ zài shè huì shàng yǒu de rén kě néng shuō nǐ huài nǐ kě bù yí dìng zhēn huài",
+          "yueyin": "(zai`) (tan-) (guây`) (lỉ) (zai`) (shưa`) (huây`) (shang`) (yẩu) (tơ) (rấn) (khửa) (nấng) (shua-) (nỉ) (hoai`) (nỉ) (khửa) (pu`) (ý) (ting`) (trân-) (hoai`)",
+          "nghia": "Trong đơn vị [công tác], hoặc ngoài xã hội, có người có thể nói chư vị xấu, [nhưng] chư vị không nhất định đúng là xấu;"
+        },
+        {
+          "cau_id": "b01p03-d04-018",
+          "hanzi": "有的人說你好，你並不一定真好。",
+          "pinyin": "yǒu de rén shuō nǐ hǎo nǐ bìng bù yí dìng zhēn hǎo",
+          "yueyin": "(yẩu) (tơ) (rấn) (shua-) (nỉ) (hảo) (nỉ) (ping`) (pu`) (ý) (ting`) (trân-) (hảo)",
+          "nghia": "có người nói chư vị tốt, chư vị lại cũng không nhất định đúng là tốt."
+        },
+        {
+          "cau_id": "b01p03-d04-019",
+          "hanzi": "作為一個修煉者，同化於這個特性，你就是一個得道者，就這麼簡單的理。",
+          "pinyin": "zuò wéi yí gè xiū liàn zhě tóng huà yú zhè ge tè xìng nǐ jiù shì yí gè dé dào zhě jiù zhè me jiǎn dān de lǐ",
+          "yueyin": "(zua`) (guấy) (ý) (cưa`) (xi:âu-) (li:en`) (trửa) (thúng) (hoa`) (úy) (trưa`) (cưa) (thưa`) (xing`) (nỉ) (chi:âu`) (shi*`) (ý) (cưa`) (tứa) (tao`) (trửa) (chi:âu`) (trưa`) (mơ) (chi:ẻn) (tan-) (tơ) (lỉ)",
+          "nghia": "Là người tu luyện, [nếu] đồng hoá với đặc tính này, [thì] chư vị chính là người đắc Đạo; [Pháp] lý đơn giản như vậy."
+        }
+      ]
+    },
+    {
+      "doan_so": 5,
+      "content": [
+        {
+          "cau_id": "b01p03-d05-001",
+          "hanzi": "  道家修煉真、善、忍，重點修了真。",
+          "pinyin": "dào jiā xiū liàn zhēn shàn rěn zhòng diǎn xiū le zhēn",
+          "yueyin": "(tao`) (chi:a-) (xi:âu-) (li:en`) (trân-) (shan`) (rẩn) (trung`) (ti:ẻn) (xi:âu-) (lơ) (trân-)",
+          "nghia": "Đạo gia tu luyện Chân-Thiện-Nhẫn, trọng điểm tu Chân;"
+        },
+        {
+          "cau_id": "b01p03-d05-002",
+          "hanzi": "所以道家講修真養性，說真話，辦真事，做真人，返本歸真，最後修成真人。",
+          "pinyin": "suǒ yǐ dào jiā jiǎng xiū zhēn yǎng xìng shuō zhēn huà bàn zhēn shì zuò zhēn rén fǎn běn guī zhēn zuì hòu xiū chéng zhēn rén",
+          "yueyin": "(sủa) (ỷ) (tao`) (chi:a-) (chi:ảng) (xi:âu-) (trân-) (yảng) (xing`) (shua-) (trân-) (hoa`) (pan`) (trân-) (shi*`) (zua`) (trân-) (rấn) (fản) (pẩn) (cuây-) (trân-) (zuây`) (hâu`) (xi:âu-) (tr'ấng) (trân-) (rấn)",
+          "nghia": "vậy nên Đạo gia giảng tu chân dưỡng tính, nói lời chân, làm điều chân, làm chân nhân, phản bổn quy chân, cuối cùng tu thành Chân Nhân."
+        },
+        {
+          "cau_id": "b01p03-d05-003",
+          "hanzi": "但是忍也有，善也有，重點落在真上去修。",
+          "pinyin": "dàn shì rěn yě yǒu shàn yě yǒu zhòng diǎn luò zài zhēn shàng qù xiū",
+          "yueyin": "(tan`) (shi*`) (rẩn) (yể) (yẩu) (shan`) (yể) (yẩu) (trung`) (ti:ẻn) (lua`) (zai`) (trân-) (shang`) (ch'uy`) (xi:âu-)",
+          "nghia": "Nhưng cũng có Nhẫn, cũng có Thiện; [còn] trọng điểm rơi vào tu Chân."
+        },
+        {
+          "cau_id": "b01p03-d05-004",
+          "hanzi": "佛家重點落在真、善、忍的善上去修。",
+          "pinyin": "fó jiā zhòng diǎn luò zài zhēn shàn rěn de shàn shàng qù xiū",
+          "yueyin": "(fúa) (chi:a-) (trung`) (ti:ẻn) (lua`) (zai`) (trân-) (shan`) (rẩn) (tơ) (shan`) (shang`) (ch'uy`) (xi:âu-)",
+          "nghia": "Trọng điểm của Phật gia rơi vào tu Thiện của Chân-Thiện-Nhẫn."
+        },
+        {
+          "cau_id": "b01p03-d05-005",
+          "hanzi": "因為修善可以修出大慈悲心，一出慈悲心，看眾生都苦，所以就發了一個願望，要普度眾生。",
+          "pinyin": "yīn wèi xiū shàn kě yǐ xiū chū dà cí bēi xīn yì chū cí bēi xīn kàn zhòng shēng dōu kǔ suǒ yǐ jiù fā le yí gè yuàn wàng yào pǔ dù zhòng shēng",
+          "yueyin": "(yin-) (guây`) (xi:âu-) (shan`) (khửa) (ỷ) (xi:âu-) (tr'u-) (ta`) (s'ứ) (pây-) (xin-) (y`) (tr'u-) (s'ứ) (pây-) (xin-) (khan`) (trung`) (shâng-) (tâu-) (khủ) (sủa) (ỷ) (chi:âu`) (fa-) (lơ) (ý) (cưa`) (doan`) (goang`) (yao`) (p'ủ) (tu`) (trung`) (shâng-)",
+          "nghia": "Vì tu Thiện có thể tu xuất tâm đại từ bi; một khi xuất hiện tâm từ bi, thì [thấy] chúng sinh rất khổ, do vậy phát sinh nguyện vọng muốn phổ độ chúng sinh."
+        },
+        {
+          "cau_id": "b01p03-d05-006",
+          "hanzi": "但是真也有，忍也有，重點落在善上去修。",
+          "pinyin": "dàn shì zhēn yě yǒu rěn yě yǒu zhòng diǎn luò zài shàn shàng qù xiū",
+          "yueyin": "(tan`) (shi*`) (trân-) (yể) (yẩu) (rẩn) (yể) (yẩu) (trung`) (ti:ẻn) (lua`) (zai`) (shan`) (shang`) (ch'uy`) (xi:âu-)",
+          "nghia": "Nhưng cũng có Chân, cũng có Nhẫn; trọng điểm rơi vào tu Thiện."
+        },
+        {
+          "cau_id": "b01p03-d05-007",
+          "hanzi": "我們法輪大法這一法門是按照宇宙的最高標準——真、善、忍同修，我們煉的功很大。",
+          "pinyin": "wǒ men fǎ lún dà fǎ zhè yì fǎ mén shì àn zhào yǔ zhòu de zuì gāo biāo zhǔn zhēn shàn rěn tóng xiū wǒ men liàn de gōng hěn dà",
+          "yueyin": "(gủa) (mân) (fả) (luấn) (ta`) (fả) (trưa`) (y`) (fả) (mấn) (shi*`) (an`) (trao`) (ủy) (trâu`) (tơ) (zuây`) (cao-) (pi:ao-) (truẩn) (trân-) (shan`) (rẩn) (thúng) (xi:âu-) (gủa) (mân) (li:en`) (tơ) (cung-) (hẩn) (ta`)",
+          "nghia": "Pháp môn Pháp Luân Đại Pháp của chúng ta chiểu theo tiêu chuẩn tối cao của vũ trụ—Chân-Thiện-Nhẫn đồng tu—[vậy nên] công chúng ta luyện rất to lớn."
+        }
+      ]
     }
   ]
 };
